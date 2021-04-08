@@ -9,5 +9,8 @@ do
   find . -name "*.$L.html" -exec rm -f {} +
 done
 
+# Remove unwanted JSON files
+find . -name "*.json" -exec rm -f {} +
+
 # Remove the links at the top of each file to i18n files
 find . -name "*.html" -exec sed -i 's/&nbsp;\[.*\]//' {} \;
