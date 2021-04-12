@@ -27,6 +27,7 @@ Prepare folder for the new version (X.Y)
 1. `ln -sf X.Y latest`
 1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc`
 1. run cleanup script in apidoc repo: `cleanup.sh`
+1. run index generation script in apidoc repo: `index.sh`
 
 ## LICENSE
 
