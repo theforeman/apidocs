@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Locations
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Locations
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/locations/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/locations
+          </a>
+          <br>
+          <small>List all locations</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/locations
+200
+{
+  &quot;total&quot;: 28,
+  &quot;subtotal&quot;: 28,
+  &quot;page&quot;: 2,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626503,
+      &quot;name&quot;: &quot;s&quot;,
+      &quot;title&quot;: &quot;s&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626504,
+      &quot;name&quot;: &quot;t&quot;,
+      &quot;title&quot;: &quot;t&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626505,
+      &quot;name&quot;: &quot;u&quot;,
+      &quot;title&quot;: &quot;u&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626506,
+      &quot;name&quot;: &quot;v&quot;,
+      &quot;title&quot;: &quot;v&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626507,
+      &quot;name&quot;: &quot;w&quot;,
+      &quot;title&quot;: &quot;w&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626508,
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;title&quot;: &quot;x&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626509,
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;title&quot;: &quot;y&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:54:07 UTC&quot;,
+      &quot;id&quot;: 447626510,
+      &quot;name&quot;: &quot;z&quot;,
+      &quot;title&quot;: &quot;z&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘id DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, ‘all’ to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d<em>|all)\Z$/</em></code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>description</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/locations/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/locations/:id
+          </a>
+          <br>
+          <small>Show a location</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/locations/255093256
+200
+{
+  &quot;select_all_types&quot;: [],
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-18 15:53:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-18 15:53:37 UTC&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;id&quot;: 255093256,
+  &quot;name&quot;: &quot;Location 1&quot;,
+  &quot;title&quot;: &quot;Location 1&quot;,
+  &quot;users&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;login&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;id&quot;: 117925625,
+      &quot;login&quot;: &quot;scoped&quot;,
+      &quot;description&quot;: null,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;smart_proxies&quot;: [
+    {
+      &quot;name&quot;: &quot;BMC proxy&quot;,
+      &quot;id&quot;: 821748566,
+      &quot;url&quot;: &quot;http://else.where:45673&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;name&quot;: &quot;DHCP Proxy&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;name&quot;: &quot;DNS Proxy&quot;,
+      &quot;id&quot;: 113629430,
+      &quot;url&quot;: &quot;http://else.where:45671&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;id&quot;: 182953976,
+      &quot;url&quot;: &quot;http://else.where:4567&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;name&quot;: &quot;Realm Proxy&quot;,
+      &quot;id&quot;: 982965213,
+      &quot;url&quot;: &quot;http://else.where:1337&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;name&quot;: &quot;TFTP Proxy&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;subnets&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;five&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;10.0.0.0/24&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;compute_resources&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;bigcompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;id&quot;: 367690737,
+      &quot;name&quot;: &quot;mycompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;media&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;ptables&quot;: [],
+  &quot;provisioning_templates&quot;: [
+    {
+      &quot;id&quot;: 269958254,
+      &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;domains&quot;: [
+    {
+      &quot;id&quot;: 22495316,
+      &quot;name&quot;: &quot;mydomain.net&quot;,
+      &quot;inherited&quot;: false
+    },
+    {
+      &quot;id&quot;: 589326610,
+      &quot;name&quot;: &quot;yourdomain.net&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;realms&quot;: [
+    {
+      &quot;id&quot;: 664044182,
+      &quot;name&quot;: &quot;myrealm.net&quot;,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;environments&quot;: [
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;id&quot;: 334344675,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;hostgroups&quot;: [
+    {
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;title&quot;: &quot;Common&quot;,
+      &quot;description&quot;: null,
+      &quot;inherited&quot;: false
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;hosts_count&quot;: 0,
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-18 15:53:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-18 15:53:37 UTC&quot;,
+      &quot;id&quot;: 513706444,
+      &quot;name&quot;: &quot;loc_param&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;value&quot;: &quot;abc&quot;
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>show_hidden_parameters </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Display hidden parameter values</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/locations/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/locations
+          </a>
+          <br>
+          <small>Create a location</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/locations
+{
+  &quot;location&quot;: {
+    &quot;name&quot;: &quot;NlSymiVcRp, skqEaUFmXI&quot;
+  }
+}
+201
+{
+  &quot;select_all_types&quot;: [],
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-18 15:54:06 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-18 15:54:06 UTC&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;id&quot;: 447626483,
+  &quot;name&quot;: &quot;NlSymiVcRp, skqEaUFmXI&quot;,
+  &quot;title&quot;: &quot;NlSymiVcRp, skqEaUFmXI&quot;,
+  &quot;users&quot;: [],
+  &quot;smart_proxies&quot;: [],
+  &quot;subnets&quot;: [],
+  &quot;compute_resources&quot;: [],
+  &quot;media&quot;: [],
+  &quot;ptables&quot;: [],
+  &quot;provisioning_templates&quot;: [],
+  &quot;domains&quot;: [],
+  &quot;realms&quot;: [],
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;organizations&quot;: [],
+  &quot;hosts_count&quot;: 0,
+  &quot;parameters&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[user_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[smart_proxy_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Smart proxy IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[compute_resource_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Compute resource IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[medium_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Medium IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[ptable_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Partition template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[provisioning_template_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[domain_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[realm_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[hostgroup_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[environment_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[subnet_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[parent_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Parent ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[ignore_types] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>List of resources types that will be automatically associated</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Associated organization IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/locations/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/locations/:id
+          </a>
+          <br>
+          <small>Update a location</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/locations/447626484
+{
+  &quot;location&quot;: {
+    &quot;description&quot;: &quot;鶷𧰁홾힑𫍈襛𡮉ˈ𤟷𤻘欫𠎒饐땸𠄥䓵𧅃𛲇𫼐罼𫚡𫵾𩐽씼𐃴𘨋娛注𡍨𗨶횚𧸭䶏쑍ꌞ𪣰稗襅椨呔𗟺𒆯𫟼긼𩠺㽘𬸋𗒜𗂛𤣁폩𨥎𫜢𫙁憲𨡠獩𧲢𨜷㽪蘺뀑𤠽𝘵𪍦𬈎𩵪𫾰𥒭晳𣲧𪂽𡒲𢖥𨤛𗼊鑔𘈌𐑢𡎠𣇻桐𥎜𥺮𨼯돱𤢖뗖ᅌ蛧𨹳吡佔𪭨𡩲𧰐𠜞𪜁𝓖𫢹𩥩𩔣씵𢞊𐭣큂絠湜𦺙𠶽㑡㝚𠭰撓𢍱𪘑츣𗬩𫫛𫧚𤠜뙔𩬴礞ꡜ𣏉㖋쑫𥓀𢘇𠱤𡖵㙤𦵻𬙶𝜄惾𩉒𧣆𧧹𢅮𥽤𩶐𩎾𑈩숴𬉹𡮭𩥥𒁨䇅𐂈𗗩𬏔𡔩𣱽ፖ𦃆𧮽𬠔ϫ慺뫣𦦮觜𢤟𦄌鉋𓉼𪆢潖녓ὦ𦾊𐛫𬍔𢖅ࢤ𘜀零𖣊ඝ𗥒𪊀𠚱𩬞𣡠𘍩氝ɡ汢𧵮𬲈词땵𧷬偮靹𦍼𘙬혎𗊯𣣨禒𘗫蒒䤗呼𡽴𠻁壁𨁵𨋅𩰒툐妢몇悪컔ܨ㣤𘖐𥚋𠛇𐝈쭶𦚉믚푧𧼳𘎖𖡘𬡺𧀊𝓻𬨗𩬞ᵥ𦮤𔑺𥻌䩟𥹤𪭯꿥𫵚𐒰𦀍鰾𥇞쑷𐛊茍鹘ᴻ𩍼躯𧱤𣐜㮹𘈰𠬓𧺂𫼗𖡠𪲾嵙𤶗𗞧譺𠹿𣎱𠼨𧬠䩿𠔝𫘡儯봂𩘗𬃬鐵𤅔杉𥃂䋂ן閗𐰃嫪𢾏𗳪贲焝춟𬘚𣍩ㅙ𤷆섯&quot;
+  }
+}
+201
+{
+  &quot;select_all_types&quot;: [],
+  &quot;description&quot;: &quot;鶷𧰁홾힑𫍈襛𡮉ˈ𤟷𤻘欫𠎒饐땸𠄥䓵𧅃𛲇𫼐罼𫚡𫵾𩐽씼𐃴𘨋娛注𡍨𗨶횚𧸭䶏쑍ꌞ𪣰稗襅椨呔𗟺𒆯𫟼긼𩠺㽘𬸋𗒜𗂛𤣁폩𨥎𫜢𫙁憲𨡠獩𧲢𨜷㽪蘺뀑𤠽𝘵𪍦𬈎𩵪𫾰𥒭晳𣲧𪂽𡒲𢖥𨤛𗼊鑔𘈌𐑢𡎠𣇻桐𥎜𥺮𨼯돱𤢖뗖ᅌ蛧𨹳吡佔𪭨𡩲𧰐𠜞𪜁𝓖𫢹𩥩𩔣씵𢞊𐭣큂絠湜𦺙𠶽㑡㝚𠭰撓𢍱𪘑츣𗬩𫫛𫧚𤠜뙔𩬴礞ꡜ𣏉㖋쑫𥓀𢘇𠱤𡖵㙤𦵻𬙶𝜄惾𩉒𧣆𧧹𢅮𥽤𩶐𩎾𑈩숴𬉹𡮭𩥥𒁨䇅𐂈𗗩𬏔𡔩𣱽ፖ𦃆𧮽𬠔ϫ慺뫣𦦮觜𢤟𦄌鉋𓉼𪆢潖녓ὦ𦾊𐛫𬍔𢖅ࢤ𘜀零𖣊ඝ𗥒𪊀𠚱𩬞𣡠𘍩氝ɡ汢𧵮𬲈词땵𧷬偮靹𦍼𘙬혎𗊯𣣨禒𘗫蒒䤗呼𡽴𠻁壁𨁵𨋅𩰒툐妢몇悪컔ܨ㣤𘖐𥚋𠛇𐝈쭶𦚉믚푧𧼳𘎖𖡘𬡺𧀊𝓻𬨗𩬞ᵥ𦮤𔑺𥻌䩟𥹤𪭯꿥𫵚𐒰𦀍鰾𥇞쑷𐛊茍鹘ᴻ𩍼躯𧱤𣐜㮹𘈰𠬓𧺂𫼗𖡠𪲾嵙𤶗𗞧譺𠹿𣎱𠼨𧬠䩿𠔝𫘡儯봂𩘗𬃬鐵𤅔杉𥃂䋂ן閗𐰃嫪𢾏𗳪贲焝춟𬘚𣍩ㅙ𤷆섯&quot;,
+  &quot;created_at&quot;: &quot;2021-05-18 15:54:06 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-18 15:54:06 UTC&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;id&quot;: 447626484,
+  &quot;name&quot;: &quot;loc220&quot;,
+  &quot;title&quot;: &quot;loc220&quot;,
+  &quot;users&quot;: [],
+  &quot;smart_proxies&quot;: [],
+  &quot;subnets&quot;: [],
+  &quot;compute_resources&quot;: [],
+  &quot;media&quot;: [],
+  &quot;ptables&quot;: [],
+  &quot;provisioning_templates&quot;: [],
+  &quot;domains&quot;: [],
+  &quot;realms&quot;: [],
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;organizations&quot;: [],
+  &quot;hosts_count&quot;: 0,
+  &quot;parameters&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[user_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[smart_proxy_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Smart proxy IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[compute_resource_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Compute resource IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[medium_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Medium IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[ptable_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Partition template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[provisioning_template_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[domain_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[realm_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[hostgroup_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[environment_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[subnet_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[parent_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Parent ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[ignore_types] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>List of resources types that will be automatically associated</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Associated organization IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/locations/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/locations/:id
+          </a>
+          <br>
+          <small>Delete a location</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/locations/255093256-Location%201
+{
+  &quot;location&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 255093256,
+  &quot;name&quot;: &quot;Location 1&quot;,
+  &quot;created_at&quot;: &quot;2021-05-18T15:53:37.335Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-18T15:53:37.335Z&quot;,
+  &quot;ignore_types&quot;: [],
+  &quot;ancestry&quot;: null,
+  &quot;title&quot;: &quot;Location 1&quot;,
+  &quot;description&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
