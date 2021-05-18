@@ -22,9 +22,9 @@ Generate API docs in Foreman:
 
 Prepare folder for the new version (X.Y)
 
-1. cd to apidocs/foreman directory
+1. cd to foreman directory
 1. `cp -r TEMPLATE X.Y`
-1. `ln -sf X.Y latest`
+1. `unlink latest; ln -s X.Y latest`
 1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc`
 1. run cleanup script in apidoc repo: `cleanup.sh`
 1. update index.html file with a link to the new page
