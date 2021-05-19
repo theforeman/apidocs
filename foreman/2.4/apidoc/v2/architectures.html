@@ -77,6 +77,52 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/architectures
+200
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;name&quot;: &quot;x86_64&quot;,
+      &quot;id&quot;: 501905019
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;name&quot;: &quot;sparc&quot;,
+      &quot;id&quot;: 331892513
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;name&quot;: &quot;s390&quot;,
+      &quot;id&quot;: 381564594
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;name&quot;: &quot;ASIC&quot;,
+      &quot;id&quot;: 578327757
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+      &quot;name&quot;: &quot;ppc64&quot;,
+      &quot;id&quot;: 922134521
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -306,6 +352,52 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/architectures/501905019-x86_64
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:25:30 UTC&quot;,
+  &quot;name&quot;: &quot;x86_64&quot;,
+  &quot;id&quot;: 501905019,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 750842046,
+      &quot;name&quot;: &quot;OpenSuse&quot;,
+      &quot;title&quot;: &quot;OpenSuSE 12.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    },
+    {
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 10.10&quot;
+    },
+    {
+      &quot;id&quot;: 272342666,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    }
+  ],
+  &quot;images&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;centos-2&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -417,6 +509,22 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/architectures
+{
+  &quot;architecture&quot;: {
+    &quot;name&quot;: &quot;i386&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:25:31 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:25:31 UTC&quot;,
+  &quot;name&quot;: &quot;i386&quot;,
+  &quot;id&quot;: 922134522,
+  &quot;operatingsystems&quot;: [],
+  &quot;images&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -574,6 +682,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/architectures/331892513
+{
+  &quot;architecture&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 331892513,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -753,6 +882,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/architectures/501905019-x86_64
+{
+  &quot;architecture&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 501905019,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;x86_64 is used by Parent&quot;,
+        &quot;x86_64 is used by db&quot;,
+        &quot;x86_64 is used by Common&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;x86_64 is used by Parent&quot;,
+      &quot;x86_64 is used by db&quot;,
+      &quot;x86_64 is used by Common&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

@@ -67,6 +67,33 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/users/988725678/personal_access_tokens
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Personal Access Token 13&quot;,
+      &quot;expires_at&quot;: &quot;2021-05-29 07:35:56 UTC&quot;,
+      &quot;active?&quot;: true,
+      &quot;user_id&quot;: 988725678,
+      &quot;last_used_at&quot;: null,
+      &quot;revoked?&quot;: false
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -301,6 +328,20 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/users/988725679/personal_access_tokens/2
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;Personal Access Token 14&quot;,
+  &quot;expires_at&quot;: &quot;2021-05-29 07:35:56 UTC&quot;,
+  &quot;active?&quot;: true,
+  &quot;user_id&quot;: 988725679,
+  &quot;last_used_at&quot;: null,
+  &quot;revoked?&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -436,6 +477,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/users/988725680/personal_access_tokens
+{
+  &quot;personal_access_token&quot;: {
+    &quot;name&quot;: &quot;foreman@example.com&quot;,
+    &quot;expires_at&quot;: &quot;2021-06-16T07:35:56Z&quot;
+  }
+}
+201
+{
+  &quot;token_value&quot;: &quot;sI6cfm4z01UzSU5gITJj4Q&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:35:56 UTC&quot;,
+  &quot;id&quot;: 4,
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;expires_at&quot;: &quot;2021-06-16 07:35:56 UTC&quot;,
+  &quot;active?&quot;: true,
+  &quot;user_id&quot;: 988725680,
+  &quot;last_used_at&quot;: null,
+  &quot;revoked?&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -617,6 +679,23 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/users/988725682/personal_access_tokens/7
+{
+  &quot;personal_access_token&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 7,
+  &quot;revoked&quot;: true,
+  &quot;token&quot;: &quot;$2a$05$0716d9708d321ffb6a008ubr8D5S35xLlSFwbxGfj3Wvx3vrg956q&quot;,
+  &quot;name&quot;: &quot;Personal Access Token 17&quot;,
+  &quot;expires_at&quot;: &quot;2021-05-29T07:35:56.603Z&quot;,
+  &quot;last_used_at&quot;: null,
+  &quot;user_id&quot;: 988725682,
+  &quot;created_at&quot;: &quot;2021-05-19T07:35:56.604Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:35:56.617Z&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

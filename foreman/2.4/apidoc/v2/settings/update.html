@@ -48,6 +48,31 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/settings/231989830
+{
+  &quot;setting&quot;: {
+    &quot;value&quot;: &quot;100&quot;
+  }
+}
+200
+{
+  &quot;description&quot;: &quot;Duration in minutes after the Puppet interval for servers to be classed as out of sync.&quot;,
+  &quot;category&quot;: &quot;Setting::Puppet&quot;,
+  &quot;settings_type&quot;: &quot;integer&quot;,
+  &quot;default&quot;: 5,
+  &quot;created_at&quot;: &quot;2021-05-19 07:53:01 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:53:02 UTC&quot;,
+  &quot;id&quot;: &quot;outofsync_interval&quot;,
+  &quot;name&quot;: &quot;outofsync_interval&quot;,
+  &quot;full_name&quot;: null,
+  &quot;value&quot;: 100,
+  &quot;category_name&quot;: &quot;Puppet&quot;,
+  &quot;readonly&quot;: false,
+  &quot;config_file&quot;: &quot;settings.yaml&quot;,
+  &quot;encrypted&quot;: false,
+  &quot;select_values&quot;: null
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

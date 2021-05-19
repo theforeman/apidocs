@@ -318,6 +318,40 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/environments
+200
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;id&quot;: 153855663
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;id&quot;: 334344675
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+      &quot;name&quot;: &quot;testing&quot;,
+      &quot;id&quot;: 687036937
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -567,6 +601,106 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/environments/production
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+  &quot;name&quot;: &quot;production&quot;,
+  &quot;id&quot;: 334344675,
+  &quot;template_combinations&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;provisioning_template_id&quot;: 943779058,
+      &quot;provisioning_template_name&quot;: &quot;MyString&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    },
+    {
+      &quot;id&quot;: 113629430,
+      &quot;provisioning_template_id&quot;: 104314179,
+      &quot;provisioning_template_name&quot;: &quot;MyFinish&quot;,
+      &quot;hostgroup_id&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;provisioning_template_id&quot;: 269958254,
+      &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;provisioning_template_id&quot;: 981457253,
+      &quot;provisioning_template_name&quot;: &quot;MyScript&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    }
+  ],
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;apache&quot;,
+      &quot;module_name&quot;: &quot;apache&quot;
+    },
+    {
+      &quot;id&quot;: 638205575,
+      &quot;name&quot;: &quot;auth&quot;,
+      &quot;module_name&quot;: &quot;auth&quot;
+    },
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;id&quot;: 51848956,
+      &quot;name&quot;: &quot;chkmk&quot;,
+      &quot;module_name&quot;: &quot;chkmk&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;nagios&quot;,
+      &quot;module_name&quot;: &quot;nagios&quot;
+    },
+    {
+      &quot;id&quot;: 374648174,
+      &quot;name&quot;: &quot;pam&quot;,
+      &quot;module_name&quot;: &quot;pam&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -678,6 +812,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/environments
+{
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;must only contain alphanumeric or underscore characters&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Name must only contain alphanumeric or underscore characters&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -859,6 +1016,40 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/environments/687036942
+{
+  &quot;environment&quot;: {
+    &quot;organization_ids&quot;: [
+      114267492
+    ]
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:44 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:44 UTC&quot;,
+  &quot;name&quot;: &quot;environment363&quot;,
+  &quot;id&quot;: 687036942,
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1062,6 +1253,18 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/environments/testing
+{
+  &quot;environment&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 687036937,
+  &quot;name&quot;: &quot;testing&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19T08:00:34.604Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T08:00:34.604Z&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

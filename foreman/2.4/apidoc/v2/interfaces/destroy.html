@@ -48,6 +48,29 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /api/hosts/11/interfaces/28
+{
+  &quot;interface&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 28,
+    &quot;errors&quot;: {
+      &quot;primary&quot;: [
+        &quot;can&#39;t delete primary interface of managed host&quot;
+      ],
+      &quot;provision&quot;: [
+        &quot;can&#39;t delete provision interface of managed host&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Primary can&#39;t delete primary interface of managed host&quot;,
+      &quot;Provision can&#39;t delete provision interface of managed host&quot;
+    ]
+  }
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

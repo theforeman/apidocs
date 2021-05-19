@@ -67,6 +67,31 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/users/988725684/ssh_keys
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:41:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:41:37 UTC&quot;,
+      &quot;id&quot;: 4,
+      &quot;name&quot;: &quot;user12@example.com&quot;,
+      &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/NDP6bBHAWfnn2S8Spo5TD1vnb4NMrJ7KX0xyk4PRzocsH152WlanonvWGcHtrNJfD0cqy2Jv04vdkOuo82NMP8m2J6SECUVTgZGTpGbRmIpCBH3Ma1oAfBf5SEgH31RSlH60eytp3PIFF8J5C7KSALTrBEFdSGeH22Zi/kZeOxEAb0d+9iV21pq4TIHEFCIuId+y27OP6nJgIDdcCeUK53wHMWZwkZgBL/L5QH+ECttmhTHGwkGnFqdbgG3mgnNAB/gEVX/u6fKCxdUGxaN67ueTqHVx2CqwP1/5pknYgU1Zb/baoNlnh09RqNEpoXtrUyaFRkNd7AyxTJ9UJFCd foreman12@example.com&quot;,
+      &quot;length&quot;: 2048,
+      &quot;fingerprint&quot;: &quot;K9Wc3ZFsSnEkYtzov00tFFbXlRucGLSj6hgV7wPSpYg=&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -301,6 +326,18 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/users/988725682/ssh_keys/1-user10example-com
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:41:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:41:36 UTC&quot;,
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;user10@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq6dP/hPBH6+cECNjhwhjJCRgGkhFBu52tqTqgf5Q53LKYPaPhmtdw9pa2wWG4Uy5PQDfueSToorwo5LWB2SR4lq+PuOyMZB5udEw4UMYgFnHIzWgShvd1GGfHAXUYnwVCQSLx74i2WGIDB191dE2qNB0Co4tq9D8F/gbedg1FdtGjJZCS+W9Ks1qnJ7Lb6462mAs/mTm3Bo4U/b5CNOsv4saGubNj537rOPQgs4mT8vC92a3Cy4zDQKcPwmWJex29N2mTu/47vz5t9DoHowQ8LhXrRcZAZMKnYara6Cbje7TJRdfdyHYxUbege9F4TueOb3Uh8c92EguoB+QRTNkv foreman10@example.com&quot;,
+  &quot;length&quot;: 2048,
+  &quot;fingerprint&quot;: &quot;RrsIquxbPoH+ZGCzRTLeTQgoQV2CaMb1IVP+fgavoqQ=&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -436,6 +473,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/users/988725683/ssh_keys
+{
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;,
+  &quot;ssh_key&quot;: {
+    &quot;name&quot;: &quot;foreman@example.com&quot;,
+    &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:41:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:41:36 UTC&quot;,
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;,
+  &quot;length&quot;: 520,
+  &quot;fingerprint&quot;: &quot;5YShdnIX3EEv8GzgY2BSVyOmR9ADnS71FpyobuNljxk=&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -617,6 +674,22 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/users/988725685/ssh_keys/5-user13example-com
+{
+  &quot;ssh_key&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;user13@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8zyk9zfyBXwO3GdgbAcyDiShDGFAACVxNb36DYMDRkAnfpl3it3PHZ/Rg9mdzP7mI5nodmWxe9aRcMuAWR0jaC9pM40HtOOKe+G5RFnqvFaTfE3xOGpJ17ImtK1A3mboO5VRYjURgs+42d7MRuzK9TzN+4hCaWQlS1PHJzuiBuYuQXi41ZEe3np8G4fw4Zowc7NQ8K6IOqshYYqp1GHqBQpd2oTws2sZ6oaQJs0a9Agyp8YSX0EskZp5AcfvSHY0TBZHETFpHdr/fojJWPgDXu8PrX1jnlA0IU41m9ZgofZ9+fFYdeISyW1Bp+2KetJrbWbCYCU3gUTEkacK1fQUD foreman13@example.com&quot;,
+  &quot;fingerprint&quot;: &quot;9cjQCbNIunqsi1yzN3X50TSBTUaD79NikiaCkrq3RoE=&quot;,
+  &quot;user_id&quot;: 988725685,
+  &quot;length&quot;: 2048,
+  &quot;created_at&quot;: &quot;2021-05-19T07:41:37.192Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:41:37.192Z&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

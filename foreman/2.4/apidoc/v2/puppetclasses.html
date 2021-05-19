@@ -97,6 +97,30 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/puppetclasses
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: {
+    &quot;class39&quot;: [
+      {
+        &quot;id&quot;: 1018350796,
+        &quot;name&quot;: &quot;class39&quot;,
+        &quot;created_at&quot;: &quot;2021-05-19T07:26:32.331Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-05-19T07:26:32.331Z&quot;
+      }
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -439,6 +463,36 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/environments/production/puppetclasses/980190962
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;base&quot;,
+  &quot;module_name&quot;: &quot;base&quot;,
+  &quot;environments&quot;: [
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;id&quot;: 334344675
+    }
+  ],
+  &quot;hostgroups&quot;: [
+    {
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;title&quot;: &quot;Common&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;smart_class_parameters&quot;: [
+    {
+      &quot;parameter&quot;: &quot;cluster&quot;,
+      &quot;id&quot;: 328495940
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -624,6 +678,24 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/puppetclasses
+{
+  &quot;puppetclass&quot;: {
+    &quot;name&quot;: &quot;test_puppetclass&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:42 UTC&quot;,
+  &quot;id&quot;: 1018350798,
+  &quot;name&quot;: &quot;test_puppetclass&quot;,
+  &quot;module_name&quot;: &quot;test_puppetclass&quot;,
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;smart_class_parameters&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -757,6 +829,41 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/puppetclasses/980190962-base
+{
+  &quot;puppetclass&quot;: {
+    &quot;name&quot;: &quot;test_puppetclass&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:34 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:42 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;test_puppetclass&quot;,
+  &quot;module_name&quot;: &quot;test_puppetclass&quot;,
+  &quot;environments&quot;: [
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;id&quot;: 334344675
+    }
+  ],
+  &quot;hostgroups&quot;: [
+    {
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;title&quot;: &quot;Common&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;smart_class_parameters&quot;: [
+    {
+      &quot;parameter&quot;: &quot;cluster&quot;,
+      &quot;id&quot;: 328495940
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -912,6 +1019,18 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/puppetclasses/980190962-base
+{
+  &quot;puppetclass&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19T08:00:34.611Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T08:00:34.611Z&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

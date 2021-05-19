@@ -48,6 +48,34 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/provisioning_templates
+{
+  &quot;provisioning_template&quot;: {
+    &quot;template&quot;: &quot;This is a test template&quot;,
+    &quot;template_kind_id&quot;: 698706415,
+    &quot;name&quot;: &quot;RandomName&quot;,
+    &quot;locked&quot;: true
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;This is a test template&quot;,
+  &quot;locked&quot;: true,
+  &quot;snippet&quot;: false,
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:25:00 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:25:00 UTC&quot;,
+  &quot;id&quot;: 1007981703,
+  &quot;name&quot;: &quot;RandomName&quot;,
+  &quot;template_kind_id&quot;: 698706415,
+  &quot;template_kind_name&quot;: &quot;iPXE&quot;,
+  &quot;template_combinations&quot;: [],
+  &quot;operatingsystems&quot;: [],
+  &quot;os_default_templates&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

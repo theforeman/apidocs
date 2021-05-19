@@ -67,6 +67,13 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /register
+404
+echo &quot;ERROR: not_found&quot;;
+echo &quot;Global Registration Template with name not-existing-template defined via default_global_registration_item Setting not found, please configure the existing template name first&quot;;
+exit 1
+</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -252,6 +259,30 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /register
+{
+  &quot;host&quot;: {
+    &quot;name&quot;: &quot;centos-test.example.com&quot;,
+    &quot;managed&quot;: false,
+    &quot;build&quot;: false,
+    &quot;organization_id&quot;: 447626442,
+    &quot;location_id&quot;: 447626441,
+    &quot;operatingsystem_id&quot;: 1073012846
+  },
+  &quot;registration&quot;: {
+    &quot;host&quot;: {
+      &quot;name&quot;: &quot;centos-test.example.com&quot;,
+      &quot;managed&quot;: false,
+      &quot;build&quot;: false,
+      &quot;organization_id&quot;: 447626442,
+      &quot;location_id&quot;: 447626441,
+      &quot;operatingsystem_id&quot;: 1073012846
+    }
+  }
+}
+200
+template content centos-test.example.com</pre>
 
   <h3>Params</h3>
   <table class='table'>

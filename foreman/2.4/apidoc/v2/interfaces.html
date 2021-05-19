@@ -87,6 +87,94 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/host1611/interfaces
+200
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 35,
+      &quot;name&quot;: &quot;host1611&quot;,
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host1611&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth545&quot;,
+      &quot;id&quot;: 36,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.118&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:a7&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:53 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth546&quot;,
+      &quot;id&quot;: 37,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.119&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:a8&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;bond&quot;,
+      &quot;mode&quot;: &quot;balance-rr&quot;,
+      &quot;attached_devices&quot;: &quot;&quot;,
+      &quot;bond_options&quot;: &quot;&quot;,
+      &quot;virtual&quot;: true
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -296,6 +384,32 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/host1609/interfaces/30
+200
+{
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:36:52 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:36:52 UTC&quot;,
+  &quot;managed&quot;: true,
+  &quot;identifier&quot;: &quot;eth541&quot;,
+  &quot;id&quot;: 30,
+  &quot;name&quot;: null,
+  &quot;ip&quot;: &quot;0.0.0.114&quot;,
+  &quot;ip6&quot;: null,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:a3&quot;,
+  &quot;mtu&quot;: null,
+  &quot;fqdn&quot;: null,
+  &quot;primary&quot;: false,
+  &quot;provision&quot;: false,
+  &quot;type&quot;: &quot;interface&quot;,
+  &quot;virtual&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -433,6 +547,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/host1600/interfaces
+{
+  &quot;interface&quot;: {
+    &quot;name&quot;: &quot;test.foreman.com&quot;,
+    &quot;ip&quot;: &quot;10.0.1.1&quot;,
+    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
+    &quot;username&quot;: &quot;foo&quot;,
+    &quot;password&quot;: &quot;bar&quot;,
+    &quot;provider&quot;: &quot;IPMI&quot;,
+    &quot;type&quot;: &quot;UNKNOWN&quot;,
+    &quot;ip6&quot;: &quot;2001:db8::1&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;ERF74-6594 [InterfaceTypeMapper::UnknownTypeException]: Unknown interface type, must be one of [interface, bmc, bond, bridge]&quot;
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1122,6 +1256,34 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/host1601/interfaces/8
+{
+  &quot;interface&quot;: {
+    &quot;name&quot;: &quot;test.foreman.com&quot;,
+    &quot;ip&quot;: &quot;10.0.1.1&quot;,
+    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
+    &quot;username&quot;: &quot;foo&quot;,
+    &quot;password&quot;: &quot;bar&quot;,
+    &quot;provider&quot;: &quot;IPMI&quot;,
+    &quot;type&quot;: null,
+    &quot;ip6&quot;: &quot;2001:db8::1&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 8,
+    &quot;errors&quot;: {
+      &quot;type&quot;: [
+        &quot;can&#39;t be changed once the interface is saved&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Type can&#39;t be changed once the interface is saved&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1835,6 +1997,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/11/interfaces/28
+{
+  &quot;interface&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 28,
+    &quot;errors&quot;: {
+      &quot;primary&quot;: [
+        &quot;can&#39;t delete primary interface of managed host&quot;
+      ],
+      &quot;provision&quot;: [
+        &quot;can&#39;t delete provision interface of managed host&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Primary can&#39;t delete primary interface of managed host&quot;,
+      &quot;Provision can&#39;t delete provision interface of managed host&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

@@ -67,6 +67,14 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/host1781/puppetclass_ids
+200
+{
+  &quot;results&quot;: [
+    1018350800
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -156,6 +164,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/host1778/puppetclass_ids
+{
+  &quot;puppetclass_id&quot;: 281110143,
+  &quot;host_class&quot;: {
+    &quot;puppetclass_id&quot;: 281110143
+  }
+}
+200
+{
+  &quot;host_id&quot;: 3,
+  &quot;puppetclass_id&quot;: 281110143
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -293,6 +314,17 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/host1777/puppetclass_ids/invalid_id
+{
+  &quot;host_class&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Couldn&#39;t find Puppetclass with &#39;id&#39;=invalid_id&quot;
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

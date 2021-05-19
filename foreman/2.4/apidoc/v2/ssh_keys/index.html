@@ -48,6 +48,31 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/users/988725684/ssh_keys
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:41:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:41:37 UTC&quot;,
+      &quot;id&quot;: 4,
+      &quot;name&quot;: &quot;user12@example.com&quot;,
+      &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/NDP6bBHAWfnn2S8Spo5TD1vnb4NMrJ7KX0xyk4PRzocsH152WlanonvWGcHtrNJfD0cqy2Jv04vdkOuo82NMP8m2J6SECUVTgZGTpGbRmIpCBH3Ma1oAfBf5SEgH31RSlH60eytp3PIFF8J5C7KSALTrBEFdSGeH22Zi/kZeOxEAb0d+9iV21pq4TIHEFCIuId+y27OP6nJgIDdcCeUK53wHMWZwkZgBL/L5QH+ECttmhTHGwkGnFqdbgG3mgnNAB/gEVX/u6fKCxdUGxaN67ueTqHVx2CqwP1/5pknYgU1Zb/baoNlnh09RqNEpoXtrUyaFRkNd7AyxTJ9UJFCd foreman12@example.com&quot;,
+      &quot;length&quot;: 2048,
+      &quot;fingerprint&quot;: &quot;K9Wc3ZFsSnEkYtzov00tFFbXlRucGLSj6hgV7wPSpYg=&quot;
+    }
+  ]
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

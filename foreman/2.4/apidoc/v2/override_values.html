@@ -67,6 +67,38 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/smart_class_parameters/328495940-cluster/override_values
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+      &quot;id&quot;: 674471636,
+      &quot;match&quot;: &quot;fqdn=temp.yourdomain.net&quot;,
+      &quot;value&quot;: &quot;8080&quot;,
+      &quot;omit&quot;: false
+    },
+    {
+      &quot;created_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+      &quot;id&quot;: 874520030,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8080&quot;,
+      &quot;omit&quot;: false
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -250,6 +282,17 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/smart_class_parameters/328495940-cluster/override_values/874520030
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;hostgroup=Common&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
+  &quot;omit&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -407,6 +450,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/smart_class_parameters/1018350796/override_values
+{
+  &quot;override_value&quot;: {
+    &quot;match&quot;: &quot;os=string&quot;
+  }
+}
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Validation failed: Value can&#39;t be blank&quot;
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -612,6 +668,22 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/328495940-cluster/override_values/hostgroup=Common
+{
+  &quot;override_value&quot;: {
+    &quot;match&quot;: &quot;os=abc&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:24:12 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;os=abc&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
+  &quot;omit&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -817,6 +889,20 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/smart_class_parameters/328495940-cluster/override_values/874520030
+{
+  &quot;override_value&quot;: {}
+}
+200
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:24:07 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;hostgroup=Common&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
+  &quot;omit&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

@@ -67,6 +67,47 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/models?include_permissions=true&amp;page=1&amp;per_page&amp;search=&amp;order=
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot;&quot;,
+  &quot;can_create&quot;: true,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;info&quot;: &quot;Virtual Machine&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:20:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:20:14 UTC&quot;,
+      &quot;vendor_class&quot;: null,
+      &quot;hardware_model&quot;: null,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;KVM&quot;,
+      &quot;can_edit&quot;: true,
+      &quot;can_delete&quot;: true,
+      &quot;hosts_count&quot;: 0
+    },
+    {
+      &quot;info&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:20:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:20:14 UTC&quot;,
+      &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
+      &quot;hardware_model&quot;: &quot;SUN4U&quot;,
+      &quot;id&quot;: 139037058,
+      &quot;name&quot;: &quot;SUN V210&quot;,
+      &quot;can_edit&quot;: true,
+      &quot;can_delete&quot;: true,
+      &quot;hosts_count&quot;: 0
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -287,6 +328,21 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/models/980190962-KVM
+200
+{
+  &quot;info&quot;: &quot;Virtual Machine&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:27:24 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:27:24 UTC&quot;,
+  &quot;vendor_class&quot;: null,
+  &quot;hardware_model&quot;: null,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;KVM&quot;,
+  &quot;can_edit&quot;: true,
+  &quot;can_delete&quot;: true,
+  &quot;hosts_count&quot;: 0
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -398,6 +454,24 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/models
+{
+  &quot;model&quot;: {
+    &quot;name&quot;: &quot;new model&quot;
+  }
+}
+201
+{
+  &quot;info&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:27:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:27:35 UTC&quot;,
+  &quot;vendor_class&quot;: null,
+  &quot;hardware_model&quot;: null,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;new model&quot;,
+  &quot;hosts_count&quot;: 0
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -597,6 +671,25 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/models/980190962-KVM
+{
+  &quot;name&quot;: &quot;KVM&quot;,
+  &quot;model&quot;: {
+    &quot;name&quot;: &quot;KVM&quot;
+  }
+}
+200
+{
+  &quot;info&quot;: &quot;Virtual Machine&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:27:24 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:27:24 UTC&quot;,
+  &quot;vendor_class&quot;: null,
+  &quot;hardware_model&quot;: null,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;KVM&quot;,
+  &quot;hosts_count&quot;: 0
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -818,6 +911,21 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/models/980190962-KVM
+{
+  &quot;model&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;KVM&quot;,
+  &quot;info&quot;: &quot;Virtual Machine&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19T07:27:24.940Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:27:24.940Z&quot;,
+  &quot;vendor_class&quot;: null,
+  &quot;hardware_model&quot;: null
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

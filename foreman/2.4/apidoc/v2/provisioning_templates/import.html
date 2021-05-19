@@ -48,6 +48,29 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/provisioning_templates/import
+{
+  &quot;provisioning_template&quot;: {
+    &quot;name&quot;: &quot;provisioning_template64&quot;,
+    &quot;template&quot;: &quot;&lt;%#\nsnippet: true\n-%&gt;\nbbbb&quot;
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;&lt;%#\nsnippet: true\n-%&gt;\nbbbb&quot;,
+  &quot;name&quot;: &quot;provisioning_template64&quot;,
+  &quot;id&quot;: 1007981706,
+  &quot;snippet&quot;: true,
+  &quot;description&quot;: null,
+  &quot;template_kind_id&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19T07:25:00.978Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:25:01.001Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

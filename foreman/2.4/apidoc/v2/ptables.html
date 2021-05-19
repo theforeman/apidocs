@@ -97,6 +97,30 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/organizations/114267492/ptables
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot;ptable398&quot;,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: null,
+      &quot;os_family&quot;: &quot;Redhat&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+      &quot;name&quot;: &quot;ptable398&quot;,
+      &quot;id&quot;: 1007981707
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -381,6 +405,36 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/ptables/1007981709-ptable400
+200
+{
+  &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;locked&quot;: false,
+  &quot;description&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+  &quot;name&quot;: &quot;ptable400&quot;,
+  &quot;id&quot;: 1007981709,
+  &quot;operatingsystems&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -492,6 +546,28 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/ptables
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;&quot;,
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -879,6 +955,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/ptables/import
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;ptable410&quot;,
+    &quot;template&quot;: &quot;b&quot;
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;b&quot;,
+  &quot;name&quot;: &quot;ptable410&quot;,
+  &quot;id&quot;: 1007981720,
+  &quot;snippet&quot;: false,
+  &quot;description&quot;: null,
+  &quot;template_kind_id&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19T07:26:33.160Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:26:33.176Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1317,6 +1416,41 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/ptables/1007981708
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;new ptable name&quot;
+  }
+}
+200
+{
+  &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;locked&quot;: false,
+  &quot;description&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:26:32 UTC&quot;,
+  &quot;name&quot;: &quot;new ptable name&quot;,
+  &quot;id&quot;: 1007981708,
+  &quot;operatingsystems&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1726,6 +1860,25 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/ptables/1007981732-ptable419
+{
+  &quot;ptable&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981732,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;ptable419 is used by host971&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;ptable419 is used by host971&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1837,6 +1990,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/ptables/1007981731-ptable418/clone
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981731,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1994,6 +2168,20 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/ptables/1007981742-ptable427/export
+200
+&lt;%#
+name: ptable427
+snippet: false
+model: Ptable
+os_family: Redhat
+organizations:
+- Organization 1
+locations:
+- Location 1
+-%&gt;
+zerombr\nclearpart --all    --initlabel\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\npart /     --f   stype ext3 --size=1024 --grow\npart swap  --recommended</pre>
 
   <h3>Params</h3>
   <table class='table'>

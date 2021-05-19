@@ -48,6 +48,19 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /api/users/980190962
+{
+  &quot;user&quot;: {}
+}
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;You are trying to delete your own account&quot;,
+    &quot;missing_permissions&quot;: null
+  }
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>
