@@ -395,6 +395,15 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/users/988725677/mail_notifications
+{
+  &quot;subscription&quot;: &quot;subscribe to my hosts&quot;,
+  &quot;mail_notification_id&quot;: 518870487,
+  &quot;mail_notification&quot;: {}
+}
+200
+{}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -600,6 +609,14 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/users/988725677/mail_notifications
+{
+  &quot;subscription&quot;: &quot;subscribe to all hosts&quot;,
+  &quot;mail_notification&quot;: {}
+}
+200
+{}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -805,6 +822,12 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/users/988725678/mail_notifications
+{
+  &quot;mail_notification&quot;: {}
+}
+204</pre>
 
   <h3>Params</h3>
   <table class='table'>

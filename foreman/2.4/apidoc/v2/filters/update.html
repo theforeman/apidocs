@@ -49,40 +49,51 @@
 
 
   <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/filters/10997177
+    <pre class="prettyprint">PUT /api/filters/1062414190
 {
   &quot;filter&quot;: {
-    &quot;role_id&quot;: 8,
-    &quot;permission_ids&quot;: [
-      740433627
-    ]
+    &quot;override&quot;: false
   }
 }
 200
 {
   &quot;search&quot;: null,
-  &quot;resource_type&quot;: &quot;Host&quot;,
-  &quot;resource_type_label&quot;: &quot;Host&quot;,
-  &quot;unlimited?&quot;: true,
-  &quot;created_at&quot;: &quot;2021-02-09 06:10:49 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2021-02-09 06:10:49 UTC&quot;,
+  &quot;resource_type&quot;: &quot;Domain&quot;,
+  &quot;resource_type_label&quot;: &quot;Domain&quot;,
+  &quot;unlimited?&quot;: false,
+  &quot;created_at&quot;: &quot;2021-05-19 07:35:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:35:42 UTC&quot;,
   &quot;override?&quot;: false,
-  &quot;id&quot;: 10997177,
+  &quot;id&quot;: 1062414190,
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;Destroy hosts&quot;,
-    &quot;id&quot;: 8,
+    &quot;name&quot;: &quot;New Role&quot;,
+    &quot;id&quot;: 18,
     &quot;description&quot;: null,
-    &quot;origin&quot;: &quot;&quot;
+    &quot;origin&quot;: null
   },
   &quot;permissions&quot;: [
     {
-      &quot;name&quot;: &quot;create_hosts&quot;,
-      &quot;id&quot;: 740433627,
-      &quot;resource_type&quot;: &quot;Host&quot;
+      &quot;name&quot;: &quot;view_domains&quot;,
+      &quot;id&quot;: 623290985,
+      &quot;resource_type&quot;: &quot;Domain&quot;
     }
   ],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h2>Params</h2>

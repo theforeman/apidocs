@@ -69,6 +69,16 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/ping
+200
+{
+  &quot;results&quot;: {
+    &quot;foreman&quot;: {
+      &quot;database&quot;: true
+    }
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -160,6 +170,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/statuses
+200
+{
+  &quot;results&quot;: {
+    &quot;foreman&quot;: {
+      &quot;version&quot;: &quot;1.20.0&quot;,
+      &quot;api&quot;: {
+        &quot;version&quot;: &quot;v2&quot;
+      }
+    }
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

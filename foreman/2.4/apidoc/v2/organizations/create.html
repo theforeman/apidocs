@@ -48,6 +48,19 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/organizations.text%2Fplain
+{
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;foo organization&quot;
+  }
+}
+415
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Media type in &#39;Content-Type: text/plain&#39; is unsupported in API v2 for POST and PUT requests. Please use &#39;Content-Type: application/json&#39;.&quot;
+  }
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

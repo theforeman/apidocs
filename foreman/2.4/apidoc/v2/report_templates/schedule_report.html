@@ -58,6 +58,18 @@
   &quot;data_url&quot;: &quot;/api/v2/report_templates/1/report_data/UNIQUE-REPORT-GENERATING-JOB-UUID&quot;
 }
 </pre>
+    <pre class="prettyprint">POST /api/report_templates/1007981711/schedule_report
+{
+  &quot;input_values&quot;: {
+    &quot;foo&quot;: &quot;bar&quot;
+  },
+  &quot;report_template&quot;: {}
+}
+200
+{
+  &quot;job_id&quot;: &quot;JOB-UNIQUE-IDENTIFIER&quot;,
+  &quot;data_url&quot;: &quot;/api/v2/report_templates/1007981711-report_template86/report_data/JOB-UNIQUE-IDENTIFIER&quot;
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

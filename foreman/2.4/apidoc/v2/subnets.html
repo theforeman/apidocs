@@ -97,6 +97,65 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/locations/447626440/subnets
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;network&quot;: &quot;127.173.177.0&quot;,
+      &quot;network_type&quot;: &quot;IPv4&quot;,
+      &quot;cidr&quot;: 24,
+      &quot;mask&quot;: &quot;255.255.255.0&quot;,
+      &quot;priority&quot;: null,
+      &quot;vlanid&quot;: null,
+      &quot;mtu&quot;: 1500,
+      &quot;gateway&quot;: null,
+      &quot;dns_primary&quot;: null,
+      &quot;dns_secondary&quot;: null,
+      &quot;from&quot;: null,
+      &quot;to&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:52:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:52:14 UTC&quot;,
+      &quot;ipam&quot;: &quot;None&quot;,
+      &quot;boot_mode&quot;: &quot;DHCP&quot;,
+      &quot;nic_delay&quot;: null,
+      &quot;id&quot;: 1018350801,
+      &quot;name&quot;: &quot;subnet534&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;127.173.177.0/24&quot;,
+      &quot;dhcp_id&quot;: null,
+      &quot;dhcp_name&quot;: null,
+      &quot;tftp_id&quot;: null,
+      &quot;tftp_name&quot;: null,
+      &quot;httpboot_id&quot;: null,
+      &quot;httpboot_name&quot;: null,
+      &quot;externalipam_id&quot;: null,
+      &quot;externalipam_name&quot;: null,
+      &quot;dns_id&quot;: null,
+      &quot;template_id&quot;: null,
+      &quot;template_name&quot;: null,
+      &quot;bmc_id&quot;: null,
+      &quot;bmc_name&quot;: null,
+      &quot;dhcp&quot;: null,
+      &quot;tftp&quot;: null,
+      &quot;httpboot&quot;: null,
+      &quot;externalipam&quot;: null,
+      &quot;dns&quot;: null,
+      &quot;template&quot;: null,
+      &quot;bmc&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -411,6 +470,71 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/subnets/1018350796-subnet532
+200
+{
+  &quot;network&quot;: &quot;103.205.217.0&quot;,
+  &quot;network_type&quot;: &quot;IPv4&quot;,
+  &quot;cidr&quot;: 24,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;vlanid&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;nic_delay&quot;: null,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;subnet532&quot;,
+  &quot;description&quot;: null,
+  &quot;network_address&quot;: &quot;103.205.217.0/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;httpboot_name&quot;: null,
+  &quot;externalipam_id&quot;: null,
+  &quot;externalipam_name&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;template_id&quot;: null,
+  &quot;template_name&quot;: null,
+  &quot;bmc_id&quot;: null,
+  &quot;bmc_name&quot;: null,
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
+  &quot;httpboot&quot;: null,
+  &quot;externalipam&quot;: null,
+  &quot;dns&quot;: null,
+  &quot;template&quot;: null,
+  &quot;bmc&quot;: null,
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -546,6 +670,64 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/subnets
+{
+  &quot;subnet&quot;: {
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;network&quot;: &quot;10.35.2.27&quot;,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;
+  }
+}
+201
+{
+  &quot;network&quot;: &quot;10.35.2.27&quot;,
+  &quot;network_type&quot;: &quot;IPv4&quot;,
+  &quot;cidr&quot;: 24,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;vlanid&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;nic_delay&quot;: null,
+  &quot;id&quot;: 1018350797,
+  &quot;name&quot;: &quot;QA2&quot;,
+  &quot;description&quot;: null,
+  &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;httpboot_name&quot;: null,
+  &quot;externalipam_id&quot;: null,
+  &quot;externalipam_name&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;template_id&quot;: null,
+  &quot;template_name&quot;: null,
+  &quot;bmc_id&quot;: null,
+  &quot;bmc_name&quot;: null,
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
+  &quot;httpboot&quot;: null,
+  &quot;externalipam&quot;: null,
+  &quot;dns&quot;: null,
+  &quot;template&quot;: null,
+  &quot;bmc&quot;: null,
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1305,6 +1487,91 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/subnets/1018350798
+{
+  &quot;subnet&quot;: {
+    &quot;subnet_parameters_attributes&quot;: [
+      {
+        &quot;name&quot;: &quot;foo&quot;,
+        &quot;value&quot;: &quot;new_value&quot;
+      }
+    ]
+  }
+}
+200
+{
+  &quot;network&quot;: &quot;227.195.76.0&quot;,
+  &quot;network_type&quot;: &quot;IPv4&quot;,
+  &quot;cidr&quot;: 24,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;vlanid&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;nic_delay&quot;: null,
+  &quot;id&quot;: 1018350798,
+  &quot;name&quot;: &quot;subnet533&quot;,
+  &quot;description&quot;: null,
+  &quot;network_address&quot;: &quot;227.195.76.0/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;httpboot_name&quot;: null,
+  &quot;externalipam_id&quot;: null,
+  &quot;externalipam_name&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;template_id&quot;: null,
+  &quot;template_name&quot;: null,
+  &quot;bmc_id&quot;: null,
+  &quot;bmc_name&quot;: null,
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
+  &quot;httpboot&quot;: null,
+  &quot;externalipam&quot;: null,
+  &quot;dns&quot;: null,
+  &quot;template&quot;: null,
+  &quot;bmc&quot;: null,
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: 40,
+      &quot;created_at&quot;: &quot;2021-05-19 07:52:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:52:14 UTC&quot;,
+      &quot;id&quot;: 767575240,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;value&quot;: &quot;new_value&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2088,6 +2355,42 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/subnets/281110143-four
+{
+  &quot;subnet&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 281110143,
+  &quot;network&quot;: &quot;3.3.5.0&quot;,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;name&quot;: &quot;four&quot;,
+  &quot;vlanid&quot;: 44,
+  &quot;created_at&quot;: &quot;2021-05-19T07:52:09.699Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:52:09.699Z&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;tftp_id&quot;: 298486374,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;description&quot;: null,
+  &quot;mtu&quot;: 9000,
+  &quot;template_id&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;nic_delay&quot;: null,
+  &quot;externalipam_id&quot;: null,
+  &quot;externalipam_group&quot;: null,
+  &quot;bmc_id&quot;: null,
+  &quot;to_label&quot;: &quot;four (3.3.5.0/24)&quot;,
+  &quot;type&quot;: &quot;Subnet::Ipv4&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2201,6 +2504,13 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/subnets/1018350796-subnet353/freeip
+200
+{
+  &quot;freeip&quot;: null,
+  &quot;errors&quot;: {}
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

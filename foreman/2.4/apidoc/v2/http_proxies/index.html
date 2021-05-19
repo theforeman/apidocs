@@ -48,6 +48,34 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/http_proxies
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 326090511,
+      &quot;name&quot;: &quot;myhttpproxy&quot;,
+      &quot;url&quot;: &quot;https://mytest.com&quot;,
+      &quot;username&quot;: null
+    },
+    {
+      &quot;id&quot;: 1022235408,
+      &quot;name&quot;: &quot;yourhttpproxy&quot;,
+      &quot;url&quot;: &quot;https://yourtest.com&quot;,
+      &quot;username&quot;: null
+    }
+  ]
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

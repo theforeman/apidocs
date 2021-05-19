@@ -344,8 +344,8 @@
   &quot;server_type&quot;: &quot;posix&quot;,
   &quot;groups_base&quot;: null,
   &quot;use_netgroups&quot;: false,
-  &quot;created_at&quot;: &quot;2021-02-09 06:12:47 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2021-02-09 06:12:47 UTC&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:30:49 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:30:49 UTC&quot;,
   &quot;id&quot;: 980190962,
   &quot;type&quot;: &quot;AuthSourceLdap&quot;,
   &quot;name&quot;: &quot;ldap-server&quot;,
@@ -478,6 +478,42 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/auth_source_ldaps
+{
+  &quot;auth_source_ldap&quot;: {
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
+  }
+}
+201
+{
+  &quot;host&quot;: &quot;ldap2&quot;,
+  &quot;port&quot;: 389,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: null,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;attr_photo&quot;: &quot;jpegPhoto&quot;,
+  &quot;onthefly_register&quot;: false,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: false,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2021-05-19 08:00:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:13 UTC&quot;,
+  &quot;id&quot;: 980190965,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap2&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1055,6 +1091,56 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server
+{
+  &quot;auth_source_ldap&quot;: {
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
+  }
+}
+200
+{
+  &quot;host&quot;: &quot;ldap2&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;attr_photo&quot;: &quot;jpegPhoto&quot;,
+  &quot;onthefly_register&quot;: true,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2021-05-19 07:59:51 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 08:00:13 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap2&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1654,6 +1740,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server/test
+{
+  &quot;auth_source_ldap&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;success&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1765,6 +1864,35 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
+{
+  &quot;auth_source_ldap&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;account_password&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;onthefly_register&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;created_at&quot;: &quot;2021-05-19T07:59:51.425Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:59:51.425Z&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_photo&quot;: &quot;jpegPhoto&quot;,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;usergroup_sync&quot;: true,
+  &quot;use_netgroups&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

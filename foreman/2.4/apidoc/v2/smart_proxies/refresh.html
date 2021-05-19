@@ -48,6 +48,25 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/smart_proxies/980190962-DHCP%20Proxy/refresh
+{
+  &quot;smart_proxy&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;Unable to communicate with the proxy: it&#39;s down&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Unable to communicate with the proxy: it&#39;s down&quot;
+    ]
+  }
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

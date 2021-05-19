@@ -48,6 +48,71 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/smart_proxies
+{
+  &quot;smart_proxy&quot;: {
+    &quot;name&quot;: &quot;master02&quot;,
+    &quot;url&quot;: &quot;http://server:8443&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2021-05-19 07:35:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:35:26 UTC&quot;,
+  &quot;name&quot;: &quot;master02&quot;,
+  &quot;id&quot;: 982965214,
+  &quot;url&quot;: &quot;http://server:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

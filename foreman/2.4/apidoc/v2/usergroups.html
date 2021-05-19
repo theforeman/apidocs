@@ -67,6 +67,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/usergroups
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;admin&quot;: false,
+      &quot;created_at&quot;: &quot;2021-05-19 07:28:42 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:28:42 UTC&quot;,
+      &quot;name&quot;: &quot;usergroup228&quot;,
+      &quot;id&quot;: 13
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -282,6 +305,20 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/usergroups/19-usergroup233
+200
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2021-05-19 07:28:43 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:28:43 UTC&quot;,
+  &quot;name&quot;: &quot;usergroup233&quot;,
+  &quot;id&quot;: 19,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [],
+  &quot;users&quot;: [],
+  &quot;roles&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -393,6 +430,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/usergroups
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -618,6 +676,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/usergroups/5
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;usergroup221&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 5,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;has already been taken&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name has already been taken&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -863,6 +942,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/usergroups/14-usergroup229
+{
+  &quot;usergroup&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 14,
+  &quot;name&quot;: &quot;usergroup229&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19T07:28:43.062Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:28:43.062Z&quot;,
+  &quot;admin&quot;: false
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

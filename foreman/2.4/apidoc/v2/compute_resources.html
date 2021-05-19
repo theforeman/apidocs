@@ -67,6 +67,142 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources
+200
+{
+  &quot;total&quot;: 9,
+  &quot;subtotal&quot;: 9,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;eu-west-1&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 928692541,
+      &quot;name&quot;: &quot;amazon123&quot;,
+      &quot;provider&quot;: &quot;EC2&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;access_key&quot;: &quot;MyString&quot;,
+      &quot;region&quot;: &quot;eu-west-1&quot;
+    },
+    {
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;eu-west-1&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 304431216,
+      &quot;name&quot;: &quot;another-ec2&quot;,
+      &quot;provider&quot;: &quot;EC2&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;access_key&quot;: &quot;MyString&quot;,
+      &quot;region&quot;: &quot;eu-west-1&quot;
+    },
+    {
+      &quot;description&quot;: &quot;MyString&quot;,
+      &quot;url&quot;: &quot;qemu://stam/system&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;bigcompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;,
+      &quot;set_console_password&quot;: true
+    },
+    {
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;us-central1-a&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 30517511,
+      &quot;name&quot;: &quot;gce123&quot;,
+      &quot;provider&quot;: &quot;GCE&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Google&quot;,
+      &quot;email&quot;: null,
+      &quot;zone&quot;: &quot;us-central1-a&quot;,
+      &quot;project&quot;: &quot;foo&quot;,
+      &quot;key_path&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;mycompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 367690737,
+      &quot;name&quot;: &quot;mycompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;,
+      &quot;set_console_password&quot;: true
+    },
+    {
+      &quot;description&quot;: &quot;computeresource&quot;,
+      &quot;url&quot;: &quot;test:///default/v2.0&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 628705878,
+      &quot;name&quot;: &quot;openstackcr&quot;,
+      &quot;provider&quot;: &quot;Openstack&quot;,
+      &quot;provider_friendly_name&quot;: &quot;OpenStack&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;tenant&quot;: null,
+      &quot;domain&quot;: null,
+      &quot;project_domain_name&quot;: null,
+      &quot;project_domain_id&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;ovirt resource&quot;,
+      &quot;url&quot;: &quot;https://myovirt/api&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 510899777,
+      &quot;name&quot;: &quot;Ovirt&quot;,
+      &quot;provider&quot;: &quot;Ovirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;oVirt&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;datacenter&quot;: &quot;1234567891011&quot;,
+      &quot;ovirt_quota&quot;: null,
+      &quot;display_type&quot;: &quot;vnc&quot;,
+      &quot;keyboard_layout&quot;: &quot;en-us&quot;
+    },
+    {
+      &quot;description&quot;: &quot;vmware resource&quot;,
+      &quot;url&quot;: &quot;https://myvmware/api&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 305613588,
+      &quot;name&quot;: &quot;Vmware&quot;,
+      &quot;provider&quot;: &quot;Vmware&quot;,
+      &quot;provider_friendly_name&quot;: &quot;VMware&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;datacenter&quot;: &quot;1234567891011&quot;,
+      &quot;server&quot;: &quot;https://myvmware/api&quot;,
+      &quot;set_console_password&quot;: true,
+      &quot;caching_enabled&quot;: true,
+      &quot;display_type&quot;: &quot;vmrc&quot;
+    },
+    {
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+      &quot;id&quot;: 932571420,
+      &quot;name&quot;: &quot;yourcompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;,
+      &quot;set_console_password&quot;: true
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -302,6 +438,39 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/367690737-mycompute
+200
+{
+  &quot;description&quot;: &quot;mycompute&quot;,
+  &quot;url&quot;: &quot;test:///default&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+  &quot;id&quot;: 367690737,
+  &quot;name&quot;: &quot;mycompute&quot;,
+  &quot;provider&quot;: &quot;Libvirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;set_console_password&quot;: true,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -413,6 +582,52 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/compute_resources
+{
+  &quot;compute_resource&quot;: {
+    &quot;name&quot;: &quot;libvirt_compute&quot;,
+    &quot;provider&quot;: &quot;libvirt&quot;,
+    &quot;organization_ids&quot;: [
+      114267492
+    ],
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;url&quot;: &quot;qemu+ssh://root@libvirt.example.com/system&quot;
+  }
+}
+201
+{
+  &quot;description&quot;: null,
+  &quot;url&quot;: &quot;qemu+ssh://root@libvirt.example.com/system&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:18:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:18:37 UTC&quot;,
+  &quot;id&quot;: 980190969,
+  &quot;name&quot;: &quot;libvirt_compute&quot;,
+  &quot;provider&quot;: &quot;Libvirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;set_console_password&quot;: true,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1120,6 +1335,60 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/compute_resources/367690737
+{
+  &quot;compute_resource&quot;: {
+    &quot;location_ids&quot;: [
+      447626449,
+      447626450,
+      447626451
+    ]
+  }
+}
+200
+{
+  &quot;description&quot;: &quot;mycompute&quot;,
+  &quot;url&quot;: &quot;test:///default&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:18:01 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:18:01 UTC&quot;,
+  &quot;id&quot;: 367690737,
+  &quot;name&quot;: &quot;mycompute&quot;,
+  &quot;provider&quot;: &quot;Libvirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;set_console_password&quot;: true,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 447626449,
+      &quot;name&quot;: &quot;loc37&quot;,
+      &quot;title&quot;: &quot;loc37&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 447626450,
+      &quot;name&quot;: &quot;loc38&quot;,
+      &quot;title&quot;: &quot;loc38&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 447626451,
+      &quot;name&quot;: &quot;loc39&quot;,
+      &quot;title&quot;: &quot;loc39&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1849,6 +2118,28 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/compute_resources/932571420
+{
+  &quot;compute_resource&quot;: {}
+}
+200
+{
+  &quot;description&quot;: &quot;yourcompute&quot;,
+  &quot;url&quot;: &quot;test:///default&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+  &quot;id&quot;: 932571420,
+  &quot;name&quot;: &quot;yourcompute&quot;,
+  &quot;provider&quot;: &quot;Libvirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;set_console_password&quot;: true,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1960,6 +2251,15 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_images
+200
+[
+  {
+    &quot;name&quot;: &quot;some_image&quot;,
+    &quot;uuid&quot;: &quot;123&quot;
+  }
+]</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2071,6 +2371,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_cluster&quot;,
+      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2182,6 +2502,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_flavors
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_ec2_object&quot;,
+      &quot;id&quot;: &quot;123&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2293,6 +2633,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_folders
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_vmware_object&quot;,
+      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2404,6 +2764,25 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_zones
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_ec2_object&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2525,6 +2904,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters/123-456-789/available_networks
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_network&quot;,
+      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2769,6 +3168,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_clusters/123-456-789/available_resource_pools
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_vmware_object&quot;,
+      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -2902,6 +3321,13 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/storage_domains/test_vmware_datastore
+200
+{
+  &quot;name&quot;: &quot;test_vmware_datastore&quot;,
+  &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3055,6 +3481,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_domains/test_vmware_datastore
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_vmware_datastore&quot;,
+      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3210,6 +3656,13 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/storage_pods/test_vmware_pod
+200
+{
+  &quot;name&quot;: &quot;test_vmware_pod&quot;,
+  &quot;id&quot;: &quot;group-p123456&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3363,6 +3816,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods/test_vmware_pod
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_vmware_pod&quot;,
+      &quot;id&quot;: &quot;group-p123456&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3518,6 +3991,26 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_security_groups
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;test_ec2_object&quot;,
+      &quot;group_id&quot;: &quot;123&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3629,6 +4122,102 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/compute_resources/980190972-compute_resource37/associate
+{
+  &quot;compute_resource&quot;: {}
+}
+200
+{
+  &quot;total&quot;: 10,
+  &quot;subtotal&quot;: 10,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: &quot;ae5d84ff-8f27-4676-9100-2dc923aed821&quot;,
+      &quot;compute_resource_id&quot;: 980190972,
+      &quot;compute_resource_name&quot;: &quot;compute_resource37&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;image&quot;,
+        &quot;key_pair&quot;
+      ],
+      &quot;provision_method&quot;: &quot;image&quot;,
+      &quot;certname&quot;: &quot;host476&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2021-05-19 07:19:03 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:19:03 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 447626438,
+      &quot;organization_name&quot;: &quot;Organization 1&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host476&quot;,
+      &quot;id&quot;: 255,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3740,6 +4329,17 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/compute_resources/510899777-Ovirt/refresh_cache
+{
+  &quot;compute_resource&quot;: {}
+}
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;ERF42-8966 [Foreman::Exception]: Cache refreshing is not supported for oVirt&quot;
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -3851,6 +4451,23 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_virtual_machines
+200
+[
+  {
+    &quot;name&quot;: &quot;test-vm1&quot;,
+    &quot;id&quot;: &quot;5ee86332-7b19-465b-8801-2a12ed0d6c1b&quot;
+  },
+  {
+    &quot;name&quot;: &quot;fosdem&quot;,
+    &quot;id&quot;: &quot;349764bb-eba3-4466-abef-f18f4c40c9f1&quot;
+  },
+  {
+    &quot;name&quot;: &quot;vm01&quot;,
+    &quot;id&quot;: &quot;52b9406e-cf66-4867-8655-719a094e324c&quot;
+  }
+]</pre>
 
   <h3>Params</h3>
   <table class='table'>

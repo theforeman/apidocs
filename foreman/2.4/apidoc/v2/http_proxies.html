@@ -67,6 +67,34 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/http_proxies
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 326090511,
+      &quot;name&quot;: &quot;myhttpproxy&quot;,
+      &quot;url&quot;: &quot;https://mytest.com&quot;,
+      &quot;username&quot;: null
+    },
+    {
+      &quot;id&quot;: 1022235408,
+      &quot;name&quot;: &quot;yourhttpproxy&quot;,
+      &quot;url&quot;: &quot;https://yourtest.com&quot;,
+      &quot;username&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -297,6 +325,17 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/http_proxies/1022235412
+200
+{
+  &quot;id&quot;: 1022235412,
+  &quot;name&quot;: &quot;http_proxy_201&quot;,
+  &quot;url&quot;: &quot;http://url_201&quot;,
+  &quot;username&quot;: null,
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -410,6 +449,22 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/http_proxies
+{
+  &quot;http_proxy&quot;: {
+    &quot;name&quot;: &quot;http_proxy_is_smart&quot;,
+    &quot;url&quot;: &quot;http://what????:5000&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 1022235411,
+  &quot;name&quot;: &quot;http_proxy_is_smart&quot;,
+  &quot;url&quot;: &quot;http://what????:5000&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -665,6 +720,21 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/http_proxies/1022235410
+{
+  &quot;http_proxy&quot;: {
+    &quot;url&quot;: &quot;https://some_other_url&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 1022235410,
+  &quot;url&quot;: &quot;https://some_other_url&quot;,
+  &quot;name&quot;: &quot;http_proxy_200&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -942,6 +1012,19 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/http_proxies/1022235409
+{
+  &quot;http_proxy&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 1022235409,
+  &quot;name&quot;: &quot;http_proxy_199&quot;,
+  &quot;url&quot;: &quot;http://url_199&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>

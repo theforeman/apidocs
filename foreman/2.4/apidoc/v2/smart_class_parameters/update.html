@@ -48,6 +48,51 @@
 
 
 
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795
+{
+  &quot;smart_class_parameter&quot;: {
+    &quot;override&quot;: true,
+    &quot;default_value&quot;: 5487580655055964835,
+    &quot;validator_type&quot;: &quot;regexp&quot;,
+    &quot;validator_rule&quot;: &quot;[0-9]&quot;
+  }
+}
+200
+{
+  &quot;description&quot;: null,
+  &quot;override&quot;: true,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;omit&quot;: null,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: &quot;regexp&quot;,
+  &quot;validator_rule&quot;: &quot;[0-9]&quot;,
+  &quot;merge_overrides&quot;: false,
+  &quot;merge_default&quot;: false,
+  &quot;avoid_duplicates&quot;: false,
+  &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:18:45 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:18:49 UTC&quot;,
+  &quot;parameter&quot;: &quot;custom_class_param&quot;,
+  &quot;id&quot;: 1018350795,
+  &quot;override_values_count&quot;: 0,
+  &quot;default_value&quot;: &quot;5487580655055964835&quot;,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 334344675,
+      &quot;name&quot;: &quot;production&quot;
+    }
+  ],
+  &quot;puppetclass&quot;: {
+    &quot;id&quot;: 298486374,
+    &quot;name&quot;: &quot;apache&quot;,
+    &quot;module_name&quot;: &quot;apache&quot;
+  },
+  &quot;override_values&quot;: []
+}</pre>
 
   <h2>Params</h2>
   <table class='table'>

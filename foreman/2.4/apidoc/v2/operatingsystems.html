@@ -107,6 +107,126 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/operatingsystems
+200
+{
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 8,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;3&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;17&quot;,
+      &quot;family&quot;: &quot;VRP&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 32055736,
+      &quot;name&quot;: &quot;Huawei_VRP&quot;,
+      &quot;title&quot;: &quot;Huawei VRP 5&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;1&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 775246587,
+      &quot;name&quot;: &quot;NoHosts&quot;,
+      &quot;title&quot;: &quot;NoHosts 1.1&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;12&quot;,
+      &quot;minor&quot;: &quot;3&quot;,
+      &quot;family&quot;: &quot;Suse&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 750842046,
+      &quot;name&quot;: &quot;OpenSuse&quot;,
+      &quot;title&quot;: &quot;OpenSuSE 12.3&quot;
+    },
+    {
+      &quot;description&quot;: &quot;RHEL 6.1&quot;,
+      &quot;major&quot;: &quot;6&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Solaris&quot;,
+      &quot;release_name&quot;: &quot;hw0910&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 442321401,
+      &quot;name&quot;: &quot;Solaris&quot;,
+      &quot;title&quot;: &quot;Solaris 5.10&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;10&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Debian&quot;,
+      &quot;release_name&quot;: &quot;rn10&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 10.10&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;12&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Debian&quot;,
+      &quot;release_name&quot;: &quot;rn10&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+      &quot;id&quot;: 272342666,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    }
+  ]
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -525,6 +645,132 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/operatingsystems/centos%205.3
+200
+{
+  &quot;description&quot;: null,
+  &quot;major&quot;: &quot;5&quot;,
+  &quot;minor&quot;: &quot;3&quot;,
+  &quot;family&quot;: &quot;Redhat&quot;,
+  &quot;release_name&quot;: null,
+  &quot;password_hash&quot;: &quot;SHA256&quot;,
+  &quot;created_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19 07:36:44 UTC&quot;,
+  &quot;id&quot;: 309172073,
+  &quot;name&quot;: &quot;centos&quot;,
+  &quot;title&quot;: &quot;centos 5.3&quot;,
+  &quot;media&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;CentOS 5.4&quot;
+    }
+  ],
+  &quot;architectures&quot;: [
+    {
+      &quot;name&quot;: &quot;x86_64&quot;,
+      &quot;id&quot;: 501905019
+    }
+  ],
+  &quot;ptables&quot;: [
+    {
+      &quot;name&quot;: &quot;Example partition table&quot;,
+      &quot;id&quot;: 615088209
+    }
+  ],
+  &quot;provisioning_templates&quot;: [
+    {
+      &quot;id&quot;: 1007981701,
+      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;id&quot;: 698706415,
+      &quot;name&quot;: &quot;iPXE Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;
+    },
+    {
+      &quot;id&quot;: 718456980,
+      &quot;name&quot;: &quot;Locked Template&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;
+    },
+    {
+      &quot;id&quot;: 104314179,
+      &quot;name&quot;: &quot;MyFinish&quot;,
+      &quot;template_kind_id&quot;: 550103832,
+      &quot;template_kind_name&quot;: &quot;finish&quot;
+    },
+    {
+      &quot;id&quot;: 981457253,
+      &quot;name&quot;: &quot;MyScript&quot;,
+      &quot;template_kind_id&quot;: 478250810,
+      &quot;template_kind_name&quot;: &quot;script&quot;
+    },
+    {
+      &quot;id&quot;: 943779058,
+      &quot;name&quot;: &quot;MyString&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;
+    },
+    {
+      &quot;id&quot;: 269958254,
+      &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;
+    },
+    {
+      &quot;id&quot;: 684651467,
+      &quot;name&quot;: &quot;PXE Default Menu&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;id&quot;: 554905648,
+      &quot;name&quot;: &quot;PXEGrub2 global default&quot;,
+      &quot;template_kind_id&quot;: 701398793,
+      &quot;template_kind_name&quot;: &quot;PXEGrub2&quot;
+    },
+    {
+      &quot;id&quot;: 131565194,
+      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
+    },
+    {
+      &quot;id&quot;: 824224502,
+      &quot;name&quot;: &quot;PXEGrub global default&quot;,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
+    },
+    {
+      &quot;id&quot;: 821548108,
+      &quot;name&quot;: &quot;PXELinux default local boot&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;id&quot;: 352050261,
+      &quot;name&quot;: &quot;PXELinux global default&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    }
+  ],
+  &quot;os_default_templates&quot;: [],
+  &quot;images&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;centos-2&quot;
+    }
+  ],
+  &quot;parameters&quot;: []
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -660,6 +906,29 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/operatingsystems
+{
+  &quot;operatingsystem&quot;: {
+    &quot;name&quot;: &quot;vdeLwTXTPm&quot;,
+    &quot;major&quot;: &quot;642&quot;,
+    &quot;password_hash&quot;: &quot;INVALID_HASH&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;password_hash&quot;: [
+        &quot;is not included in the list&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Password hash is not included in the list&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1095,6 +1364,27 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/operatingsystems/1073012828
+{
+  &quot;operatingsystem&quot;: {
+    &quot;family&quot;: &quot;INVALID_FAMILY&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1073012828,
+    &quot;errors&quot;: {
+      &quot;type&quot;: [
+        &quot;must be one of [ AIX, Altlinux, Archlinux, Coreos, Debian, Freebsd, Gentoo, Junos, NXOS, Rancheros, Redhat, Solaris, Suse, VRP, Windows, Xenserver ]&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Type must be one of [ AIX, Altlinux, Archlinux, Coreos, Debian, Freebsd, Gentoo, Junos, NXOS, Rancheros, Redhat, Solaris, Suse, VRP, Windows, Xenserver ]&quot;
+    ]
+  }
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -1552,6 +1842,25 @@
 
 
 
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/operatingsystems/775246587-NoHosts%201-1
+{
+  &quot;operatingsystem&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 775246587,
+  &quot;major&quot;: &quot;1&quot;,
+  &quot;name&quot;: &quot;NoHosts&quot;,
+  &quot;minor&quot;: &quot;1&quot;,
+  &quot;nameindicator&quot;: null,
+  &quot;created_at&quot;: &quot;2021-05-19T07:36:44.988Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-05-19T07:36:44.988Z&quot;,
+  &quot;release_name&quot;: null,
+  &quot;description&quot;: null,
+  &quot;password_hash&quot;: &quot;SHA256&quot;,
+  &quot;title&quot;: &quot;NoHosts 1.1&quot;
+}</pre>
 
   <h3>Params</h3>
   <table class='table'>
