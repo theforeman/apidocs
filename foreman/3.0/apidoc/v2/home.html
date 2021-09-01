@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Home
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Home
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/home/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api
+          </a>
+          <br>
+          <small>Show available API links</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api
+200
+{
+  &quot;links&quot;: {
+    &quot;base&quot;: {},
+    &quot;config_reports&quot;: {
+      &quot;List all reports&quot;: &quot;/api/config_reports&quot;,
+      &quot;Show a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Create a report&quot;: &quot;/api/config_reports&quot;,
+      &quot;Delete a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Show the last report for a host&quot;: &quot;/api/hosts/:host_id/config_reports/last&quot;
+    },
+    &quot;hosts&quot;: {
+      &quot;List all hosts&quot;: &quot;/api/hosts&quot;,
+      &quot;Show a host&quot;: &quot;/api/hosts/:id&quot;,
+      &quot;Create a host&quot;: &quot;/api/hosts&quot;,
+      &quot;Update a host&quot;: &quot;/api/hosts/:id&quot;,
+      &quot;Delete a host&quot;: &quot;/api/hosts/:id&quot;,
+      &quot;Get ENC values of host&quot;: &quot;/api/hosts/:id/enc&quot;,
+      &quot;Get status of host&quot;: &quot;/api/hosts/:id/status/:type&quot;,
+      &quot;Clear sub-status of host&quot;: &quot;/api/hosts/:id/status/:type&quot;,
+      &quot;Get vm attributes of host&quot;: &quot;/api/hosts/:id/vm_compute_attributes&quot;,
+      &quot;Disassociate the host from a VM&quot;: &quot;/api/hosts/:id/disassociate&quot;,
+      &quot;Run a power operation on host&quot;: &quot;/api/hosts/:id/power&quot;,
+      &quot;Fetch the status of whether the host is powered on or not. Supported hosts are VMs and physical hosts with BMCs&quot;: &quot;/api/hosts/:id/power&quot;,
+      &quot;Boot host from specified device&quot;: &quot;/api/hosts/:id/boot&quot;,
+      &quot;Upload facts for a host, creating the host if required&quot;: &quot;/api/hosts/facts&quot;,
+      &quot;Rebuild orchestration config&quot;: &quot;/api/hosts/:id/rebuild_config&quot;,
+      &quot;Preview rendered provisioning template content&quot;: &quot;/api/hosts/:id/template/:kind&quot;
+    },
+    &quot;interfaces&quot;: {
+      &quot;List all interfaces for host&quot;: &quot;/api/hosts/:host_id/interfaces&quot;,
+      &quot;Show an interface for host&quot;: &quot;/api/hosts/:host_id/interfaces/:id&quot;,
+      &quot;Create an interface on a host&quot;: &quot;/api/hosts/:host_id/interfaces&quot;,
+      &quot;Update a host&#39;s interface&quot;: &quot;/api/hosts/:host_id/interfaces/:id&quot;,
+      &quot;Delete a host&#39;s interface&quot;: &quot;/api/hosts/:host_id/interfaces/:id&quot;
+    },
+    &quot;common_parameters&quot;: {
+      &quot;List all global parameters&quot;: &quot;/api/common_parameters&quot;,
+      &quot;Show a global parameter&quot;: &quot;/api/common_parameters/:id&quot;,
+      &quot;Create a global parameter&quot;: &quot;/api/common_parameters&quot;,
+      &quot;Update a global parameter&quot;: &quot;/api/common_parameters/:id&quot;,
+      &quot;Delete a global parameter&quot;: &quot;/api/common_parameters/:id&quot;
+    },
+    &quot;parameters&quot;: {
+      &quot;List all parameters for a host&quot;: &quot;/api/hosts/:host_id/parameters&quot;,
+      &quot;Show a nested parameter for a host&quot;: &quot;/api/hosts/:host_id/parameters/:id&quot;,
+      &quot;Create a nested parameter for a host&quot;: &quot;/api/hosts/:host_id/parameters&quot;,
+      &quot;Update a nested parameter for a host&quot;: &quot;/api/hosts/:host_id/parameters/:id&quot;,
+      &quot;Delete a nested parameter for a host&quot;: &quot;/api/hosts/:host_id/parameters/:id&quot;,
+      &quot;Delete all nested parameters for a host&quot;: &quot;/api/hosts/:host_id/parameters&quot;
+    },
+    &quot;domains&quot;: {
+      &quot;List of domains&quot;: &quot;/api/domains&quot;,
+      &quot;Show a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Create a domain&quot;: &quot;/api/domains&quot;,
+      &quot;Update a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Delete a domain&quot;: &quot;/api/domains/:id&quot;
+    },
+    &quot;registration&quot;: {
+      &quot;Render Global registration template&quot;: &quot;/api/register&quot;,
+      &quot;Find or create a host and render the &#39;Host initial configuration&#39; template&quot;: &quot;/api/register&quot;
+    },
+    &quot;compute_resources&quot;: {
+      &quot;List all compute resources&quot;: &quot;/api/compute_resources&quot;,
+      &quot;Show a compute resource&quot;: &quot;/api/compute_resources/:id&quot;,
+      &quot;Create a compute resource&quot;: &quot;/api/compute_resources&quot;,
+      &quot;Update a compute resource&quot;: &quot;/api/compute_resources/:id&quot;,
+      &quot;Delete a compute resource&quot;: &quot;/api/compute_resources/:id&quot;,
+      &quot;List available images for a compute resource&quot;: &quot;/api/compute_resources/:id/available_images&quot;,
+      &quot;List available clusters for a compute resource&quot;: &quot;/api/compute_resources/:id/available_clusters&quot;,
+      &quot;List available flavors for a compute resource&quot;: &quot;/api/compute_resources/:id/available_flavors&quot;,
+      &quot;List available folders for a compute resource&quot;: &quot;/api/compute_resources/:id/available_folders&quot;,
+      &quot;List available zone for a compute resource&quot;: &quot;/api/compute_resources/:id/available_zones&quot;,
+      &quot;List available networks for a compute resource&quot;: &quot;/api/compute_resources/:id/available_networks&quot;,
+      &quot;List available vnic profiles for a compute resource, for oVirt only&quot;: &quot;/api/compute_resources/:id/available_vnic_profiles&quot;,
+      &quot;List resource pools for a compute resource cluster&quot;: &quot;/api/compute_resources/:id/available_clusters/:cluster_id/available_resource_pools&quot;,
+      &quot;List attributes for a given storage domain&quot;: &quot;/api/compute_resources/:id/storage_domains/:storage_domain_id&quot;,
+      &quot;List storage domains for a compute resource&quot;: &quot;/api/compute_resources/:id/available_storage_domains&quot;,
+      &quot;List attributes for a given storage pod&quot;: &quot;/api/compute_resources/:id/storage_pods/:storage_pod_id&quot;,
+      &quot;List storage pods for a compute resource&quot;: &quot;/api/compute_resources/:id/available_storage_pods&quot;,
+      &quot;List available security groups for a compute resource&quot;: &quot;/api/compute_resources/:id/available_security_groups&quot;,
+      &quot;Associate VMs to Hosts&quot;: &quot;/api/compute_resources/:id/associate&quot;,
+      &quot;Refresh Compute Resource Cache&quot;: &quot;/api/compute_resources/:id/refresh_cache&quot;,
+      &quot;List available virtual machines for a compute resource&quot;: &quot;/api/compute_resources/:id/available_virtual_machines&quot;,
+      &quot;Show a virtual machine&quot;: &quot;/api/compute_resources/:id/available_virtual_machines/:vm_id&quot;,
+      &quot;Power a Virtual Machine&quot;: &quot;/api/compute_resources/:id/available_virtual_machines/:vm_id/power&quot;,
+      &quot;Delete a Virtual Machine&quot;: &quot;/api/compute_resources/:id/available_virtual_machines/:vm_id&quot;
+    },
+    &quot;home&quot;: {
+      &quot;Show available API links&quot;: &quot;/api&quot;,
+      &quot;Show status&quot;: &quot;/api/status&quot;
+    }
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/home/status.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-status'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/status
+          </a>
+          <br>
+          <small>Show status</small>
+        </h2>
+    </div>
+
+
+    <div id='description-status' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
