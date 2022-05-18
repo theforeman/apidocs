@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Settings
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Settings
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/settings
+          </a>
+          <br>
+          <small>List all settings</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/settings
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 0,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: &quot;The default administrator email address&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;root@example.com&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;administrator&quot;,
+      &quot;name&quot;: &quot;administrator&quot;,
+      &quot;full_name&quot;: &quot;Administrator email address&quot;,
+      &quot;value&quot;: &quot;root@example.com&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;URL where your Foreman instance is reachable (see also Provisioning &gt; unattended_url)&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;http://foreman.example.com&quot;,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;foreman_url&quot;,
+      &quot;name&quot;: &quot;foreman_url&quot;,
+      &quot;full_name&quot;: &quot;Foreman URL&quot;,
+      &quot;value&quot;: &quot;http://foreman.some.host.fqdn&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Number of records shown per page in Foreman&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 20,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;entries_per_page&quot;,
+      &quot;name&quot;: &quot;entries_per_page&quot;,
+      &quot;full_name&quot;: &quot;Entries per page&quot;,
+      &quot;value&quot;: 20,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Should the `foreman-rake db:seed` be executed on the next run of the installer modules?&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;db_pending_seed&quot;,
+      &quot;name&quot;: &quot;db_pending_seed&quot;,
+      &quot;full_name&quot;: &quot;DB pending seed&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Open and read timeout for HTTP requests from Foreman to Smart Proxy (in seconds)&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 60,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;proxy_request_timeout&quot;,
+      &quot;name&quot;: &quot;proxy_request_timeout&quot;,
+      &quot;full_name&quot;: &quot;Smart Proxy request timeout&quot;,
+      &quot;value&quot;: 60,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Text to be shown in the login-page footer. Keyword $VERSION is replaced by current version.&quot;,
+      &quot;settings_type&quot;: &quot;text&quot;,
+      &quot;default&quot;: &quot;Version $VERSION&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;login_text&quot;,
+      &quot;name&quot;: &quot;login_text&quot;,
+      &quot;full_name&quot;: &quot;Login page footer text&quot;,
+      &quot;value&quot;: &quot;Version $VERSION&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Show power status on host index page. This feature calls to compute resource providers which may lead to decreased performance on host listing page.&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:42:50 UTC&quot;,
+      &quot;id&quot;: &quot;host_power_status&quot;,
+      &quot;name&quot;: &quot;host_power_status&quot;,
+      &quot;full_name&quot;: &quot;Show host power status&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Set a proxy for all outgoing HTTP(S) connections from Foreman. System-wide proxies must be configured at the operating system level.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;http_proxy&quot;,
+      &quot;name&quot;: &quot;http_proxy&quot;,
+      &quot;full_name&quot;: &quot;HTTP(S) proxy&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Set hostnames to which requests are not to be proxied. Requests to the local host are excluded by default.&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;http_proxy_except_list&quot;,
+      &quot;name&quot;: &quot;http_proxy_except_list&quot;,
+      &quot;full_name&quot;: &quot;HTTP(S) proxy except hosts&quot;,
+      &quot;value&quot;: [],
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Whether or not to show a menu to access experimental lab features (requires reload of page)&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;lab_features&quot;,
+      &quot;name&quot;: &quot;lab_features&quot;,
+      &quot;full_name&quot;: &quot;Show Experimental Labs&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will append domain names when new hosts are provisioned&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;append_domain_name_for_hosts&quot;,
+      &quot;name&quot;: &quot;append_domain_name_for_hosts&quot;,
+      &quot;full_name&quot;: &quot;Append domain names to the host&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Duration in minutes after servers are classed as out of sync. This setting is overridden by specific settings from config management tools (e.g. puppet_inteval, ansible_interval).&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 30,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;outofsync_interval&quot;,
+      &quot;name&quot;: &quot;outofsync_interval&quot;,
+      &quot;full_name&quot;: &quot;Out of sync interval&quot;,
+      &quot;value&quot;: 30,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman instance ID, uniquely identifies this Foreman instance.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;uuid&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;instance_id&quot;,
+      &quot;name&quot;: &quot;instance_id&quot;,
+      &quot;full_name&quot;: &quot;Foreman UUID&quot;,
+      &quot;value&quot;: &quot;2cf3a269-3fba-475f-b752-029f13a3d16c&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Language to use for new users&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_locale&quot;,
+      &quot;name&quot;: &quot;default_locale&quot;,
+      &quot;full_name&quot;: &quot;Default language&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;&quot;: &quot;Browser locale&quot;,
+        &quot;en&quot;: &quot;English (United States)&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Timezone to use for new users&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_timezone&quot;,
+      &quot;name&quot;: &quot;default_timezone&quot;,
+      &quot;full_name&quot;: &quot;Default timezone&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;&quot;: &quot;Browser timezone&quot;,
+        &quot;International Date Line West&quot;: &quot;(GMT -12:00) International Date Line West&quot;,
+        &quot;American Samoa&quot;: &quot;(GMT -11:00) American Samoa&quot;,
+        &quot;Midway Island&quot;: &quot;(GMT -11:00) Midway Island&quot;,
+        &quot;Hawaii&quot;: &quot;(GMT -10:00) Hawaii&quot;,
+        &quot;Alaska&quot;: &quot;(GMT -09:00) Alaska&quot;,
+        &quot;Pacific Time (US &amp; Canada)&quot;: &quot;(GMT -08:00) Pacific Time (US &amp; Canada)&quot;,
+        &quot;Tijuana&quot;: &quot;(GMT -08:00) Tijuana&quot;,
+        &quot;Arizona&quot;: &quot;(GMT -07:00) Arizona&quot;,
+        &quot;Chihuahua&quot;: &quot;(GMT -07:00) Chihuahua&quot;,
+        &quot;Mazatlan&quot;: &quot;(GMT -07:00) Mazatlan&quot;,
+        &quot;Mountain Time (US &amp; Canada)&quot;: &quot;(GMT -07:00) Mountain Time (US &amp; Canada)&quot;,
+        &quot;Central America&quot;: &quot;(GMT -06:00) Central America&quot;,
+        &quot;Central Time (US &amp; Canada)&quot;: &quot;(GMT -06:00) Central Time (US &amp; Canada)&quot;,
+        &quot;Guadalajara&quot;: &quot;(GMT -06:00) Guadalajara&quot;,
+        &quot;Mexico City&quot;: &quot;(GMT -06:00) Mexico City&quot;,
+        &quot;Monterrey&quot;: &quot;(GMT -06:00) Monterrey&quot;,
+        &quot;Saskatchewan&quot;: &quot;(GMT -06:00) Saskatchewan&quot;,
+        &quot;Bogota&quot;: &quot;(GMT -05:00) Bogota&quot;,
+        &quot;Eastern Time (US &amp; Canada)&quot;: &quot;(GMT -05:00) Eastern Time (US &amp; Canada)&quot;,
+        &quot;Indiana (East)&quot;: &quot;(GMT -05:00) Indiana (East)&quot;,
+        &quot;Lima&quot;: &quot;(GMT -05:00) Lima&quot;,
+        &quot;Quito&quot;: &quot;(GMT -05:00) Quito&quot;,
+        &quot;Atlantic Time (Canada)&quot;: &quot;(GMT -04:00) Atlantic Time (Canada)&quot;,
+        &quot;Caracas&quot;: &quot;(GMT -04:00) Caracas&quot;,
+        &quot;Georgetown&quot;: &quot;(GMT -04:00) Georgetown&quot;,
+        &quot;La Paz&quot;: &quot;(GMT -04:00) La Paz&quot;,
+        &quot;Puerto Rico&quot;: &quot;(GMT -04:00) Puerto Rico&quot;,
+        &quot;Santiago&quot;: &quot;(GMT -04:00) Santiago&quot;,
+        &quot;Newfoundland&quot;: &quot;(GMT -03:30) Newfoundland&quot;,
+        &quot;Brasilia&quot;: &quot;(GMT -03:00) Brasilia&quot;,
+        &quot;Buenos Aires&quot;: &quot;(GMT -03:00) Buenos Aires&quot;,
+        &quot;Greenland&quot;: &quot;(GMT -03:00) Greenland&quot;,
+        &quot;Montevideo&quot;: &quot;(GMT -03:00) Montevideo&quot;,
+        &quot;Mid-Atlantic&quot;: &quot;(GMT -02:00) Mid-Atlantic&quot;,
+        &quot;Azores&quot;: &quot;(GMT -01:00) Azores&quot;,
+        &quot;Cape Verde Is.&quot;: &quot;(GMT -01:00) Cape Verde Is.&quot;,
+        &quot;Casablanca&quot;: &quot;(GMT +00:00) Casablanca&quot;,
+        &quot;Dublin&quot;: &quot;(GMT +00:00) Dublin&quot;,
+        &quot;Edinburgh&quot;: &quot;(GMT +00:00) Edinburgh&quot;,
+        &quot;Lisbon&quot;: &quot;(GMT +00:00) Lisbon&quot;,
+        &quot;London&quot;: &quot;(GMT +00:00) London&quot;,
+        &quot;Monrovia&quot;: &quot;(GMT +00:00) Monrovia&quot;,
+        &quot;UTC&quot;: &quot;(GMT +00:00) UTC&quot;,
+        &quot;Amsterdam&quot;: &quot;(GMT +01:00) Amsterdam&quot;,
+        &quot;Belgrade&quot;: &quot;(GMT +01:00) Belgrade&quot;,
+        &quot;Berlin&quot;: &quot;(GMT +01:00) Berlin&quot;,
+        &quot;Bern&quot;: &quot;(GMT +01:00) Bern&quot;,
+        &quot;Bratislava&quot;: &quot;(GMT +01:00) Bratislava&quot;,
+        &quot;Brussels&quot;: &quot;(GMT +01:00) Brussels&quot;,
+        &quot;Budapest&quot;: &quot;(GMT +01:00) Budapest&quot;,
+        &quot;Copenhagen&quot;: &quot;(GMT +01:00) Copenhagen&quot;,
+        &quot;Ljubljana&quot;: &quot;(GMT +01:00) Ljubljana&quot;,
+        &quot;Madrid&quot;: &quot;(GMT +01:00) Madrid&quot;,
+        &quot;Paris&quot;: &quot;(GMT +01:00) Paris&quot;,
+        &quot;Prague&quot;: &quot;(GMT +01:00) Prague&quot;,
+        &quot;Rome&quot;: &quot;(GMT +01:00) Rome&quot;,
+        &quot;Sarajevo&quot;: &quot;(GMT +01:00) Sarajevo&quot;,
+        &quot;Skopje&quot;: &quot;(GMT +01:00) Skopje&quot;,
+        &quot;Stockholm&quot;: &quot;(GMT +01:00) Stockholm&quot;,
+        &quot;Vienna&quot;: &quot;(GMT +01:00) Vienna&quot;,
+        &quot;Warsaw&quot;: &quot;(GMT +01:00) Warsaw&quot;,
+        &quot;West Central Africa&quot;: &quot;(GMT +01:00) West Central Africa&quot;,
+        &quot;Zagreb&quot;: &quot;(GMT +01:00) Zagreb&quot;,
+        &quot;Zurich&quot;: &quot;(GMT +01:00) Zurich&quot;,
+        &quot;Athens&quot;: &quot;(GMT +02:00) Athens&quot;,
+        &quot;Bucharest&quot;: &quot;(GMT +02:00) Bucharest&quot;,
+        &quot;Cairo&quot;: &quot;(GMT +02:00) Cairo&quot;,
+        &quot;Harare&quot;: &quot;(GMT +02:00) Harare&quot;,
+        &quot;Helsinki&quot;: &quot;(GMT +02:00) Helsinki&quot;,
+        &quot;Jerusalem&quot;: &quot;(GMT +02:00) Jerusalem&quot;,
+        &quot;Kaliningrad&quot;: &quot;(GMT +02:00) Kaliningrad&quot;,
+        &quot;Kyiv&quot;: &quot;(GMT +02:00) Kyiv&quot;,
+        &quot;Pretoria&quot;: &quot;(GMT +02:00) Pretoria&quot;,
+        &quot;Riga&quot;: &quot;(GMT +02:00) Riga&quot;,
+        &quot;Sofia&quot;: &quot;(GMT +02:00) Sofia&quot;,
+        &quot;Tallinn&quot;: &quot;(GMT +02:00) Tallinn&quot;,
+        &quot;Vilnius&quot;: &quot;(GMT +02:00) Vilnius&quot;,
+        &quot;Baghdad&quot;: &quot;(GMT +03:00) Baghdad&quot;,
+        &quot;Istanbul&quot;: &quot;(GMT +03:00) Istanbul&quot;,
+        &quot;Kuwait&quot;: &quot;(GMT +03:00) Kuwait&quot;,
+        &quot;Minsk&quot;: &quot;(GMT +03:00) Minsk&quot;,
+        &quot;Moscow&quot;: &quot;(GMT +03:00) Moscow&quot;,
+        &quot;Nairobi&quot;: &quot;(GMT +03:00) Nairobi&quot;,
+        &quot;Riyadh&quot;: &quot;(GMT +03:00) Riyadh&quot;,
+        &quot;St. Petersburg&quot;: &quot;(GMT +03:00) St. Petersburg&quot;,
+        &quot;Volgograd&quot;: &quot;(GMT +03:00) Volgograd&quot;,
+        &quot;Tehran&quot;: &quot;(GMT +03:30) Tehran&quot;,
+        &quot;Abu Dhabi&quot;: &quot;(GMT +04:00) Abu Dhabi&quot;,
+        &quot;Baku&quot;: &quot;(GMT +04:00) Baku&quot;,
+        &quot;Muscat&quot;: &quot;(GMT +04:00) Muscat&quot;,
+        &quot;Samara&quot;: &quot;(GMT +04:00) Samara&quot;,
+        &quot;Tbilisi&quot;: &quot;(GMT +04:00) Tbilisi&quot;,
+        &quot;Yerevan&quot;: &quot;(GMT +04:00) Yerevan&quot;,
+        &quot;Kabul&quot;: &quot;(GMT +04:30) Kabul&quot;,
+        &quot;Ekaterinburg&quot;: &quot;(GMT +05:00) Ekaterinburg&quot;,
+        &quot;Islamabad&quot;: &quot;(GMT +05:00) Islamabad&quot;,
+        &quot;Karachi&quot;: &quot;(GMT +05:00) Karachi&quot;,
+        &quot;Tashkent&quot;: &quot;(GMT +05:00) Tashkent&quot;,
+        &quot;Chennai&quot;: &quot;(GMT +05:30) Chennai&quot;,
+        &quot;Kolkata&quot;: &quot;(GMT +05:30) Kolkata&quot;,
+        &quot;Mumbai&quot;: &quot;(GMT +05:30) Mumbai&quot;,
+        &quot;New Delhi&quot;: &quot;(GMT +05:30) New Delhi&quot;,
+        &quot;Sri Jayawardenepura&quot;: &quot;(GMT +05:30) Sri Jayawardenepura&quot;,
+        &quot;Kathmandu&quot;: &quot;(GMT +05:45) Kathmandu&quot;,
+        &quot;Almaty&quot;: &quot;(GMT +06:00) Almaty&quot;,
+        &quot;Astana&quot;: &quot;(GMT +06:00) Astana&quot;,
+        &quot;Dhaka&quot;: &quot;(GMT +06:00) Dhaka&quot;,
+        &quot;Urumqi&quot;: &quot;(GMT +06:00) Urumqi&quot;,
+        &quot;Rangoon&quot;: &quot;(GMT +06:30) Rangoon&quot;,
+        &quot;Bangkok&quot;: &quot;(GMT +07:00) Bangkok&quot;,
+        &quot;Hanoi&quot;: &quot;(GMT +07:00) Hanoi&quot;,
+        &quot;Jakarta&quot;: &quot;(GMT +07:00) Jakarta&quot;,
+        &quot;Krasnoyarsk&quot;: &quot;(GMT +07:00) Krasnoyarsk&quot;,
+        &quot;Novosibirsk&quot;: &quot;(GMT +07:00) Novosibirsk&quot;,
+        &quot;Beijing&quot;: &quot;(GMT +08:00) Beijing&quot;,
+        &quot;Chongqing&quot;: &quot;(GMT +08:00) Chongqing&quot;,
+        &quot;Hong Kong&quot;: &quot;(GMT +08:00) Hong Kong&quot;,
+        &quot;Irkutsk&quot;: &quot;(GMT +08:00) Irkutsk&quot;,
+        &quot;Kuala Lumpur&quot;: &quot;(GMT +08:00) Kuala Lumpur&quot;,
+        &quot;Perth&quot;: &quot;(GMT +08:00) Perth&quot;,
+        &quot;Singapore&quot;: &quot;(GMT +08:00) Singapore&quot;,
+        &quot;Taipei&quot;: &quot;(GMT +08:00) Taipei&quot;,
+        &quot;Ulaanbaatar&quot;: &quot;(GMT +08:00) Ulaanbaatar&quot;,
+        &quot;Osaka&quot;: &quot;(GMT +09:00) Osaka&quot;,
+        &quot;Sapporo&quot;: &quot;(GMT +09:00) Sapporo&quot;,
+        &quot;Seoul&quot;: &quot;(GMT +09:00) Seoul&quot;,
+        &quot;Tokyo&quot;: &quot;(GMT +09:00) Tokyo&quot;,
+        &quot;Yakutsk&quot;: &quot;(GMT +09:00) Yakutsk&quot;,
+        &quot;Adelaide&quot;: &quot;(GMT +09:30) Adelaide&quot;,
+        &quot;Darwin&quot;: &quot;(GMT +09:30) Darwin&quot;,
+        &quot;Brisbane&quot;: &quot;(GMT +10:00) Brisbane&quot;,
+        &quot;Canberra&quot;: &quot;(GMT +10:00) Canberra&quot;,
+        &quot;Guam&quot;: &quot;(GMT +10:00) Guam&quot;,
+        &quot;Hobart&quot;: &quot;(GMT +10:00) Hobart&quot;,
+        &quot;Melbourne&quot;: &quot;(GMT +10:00) Melbourne&quot;,
+        &quot;Port Moresby&quot;: &quot;(GMT +10:00) Port Moresby&quot;,
+        &quot;Sydney&quot;: &quot;(GMT +10:00) Sydney&quot;,
+        &quot;Vladivostok&quot;: &quot;(GMT +10:00) Vladivostok&quot;,
+        &quot;Magadan&quot;: &quot;(GMT +11:00) Magadan&quot;,
+        &quot;New Caledonia&quot;: &quot;(GMT +11:00) New Caledonia&quot;,
+        &quot;Solomon Is.&quot;: &quot;(GMT +11:00) Solomon Is.&quot;,
+        &quot;Srednekolymsk&quot;: &quot;(GMT +11:00) Srednekolymsk&quot;,
+        &quot;Auckland&quot;: &quot;(GMT +12:00) Auckland&quot;,
+        &quot;Fiji&quot;: &quot;(GMT +12:00) Fiji&quot;,
+        &quot;Kamchatka&quot;: &quot;(GMT +12:00) Kamchatka&quot;,
+        &quot;Marshall Is.&quot;: &quot;(GMT +12:00) Marshall Is.&quot;,
+        &quot;Wellington&quot;: &quot;(GMT +12:00) Wellington&quot;,
+        &quot;Chatham Is.&quot;: &quot;(GMT +12:45) Chatham Is.&quot;,
+        &quot;Nuku&#39;alofa&quot;: &quot;(GMT +13:00) Nuku&#39;alofa&quot;,
+        &quot;Samoa&quot;: &quot;(GMT +13:00) Samoa&quot;,
+        &quot;Tokelau Is.&quot;: &quot;(GMT +13:00) Tokelau Is.&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;The instance title is shown on the top navigation bar (requires a page reload).&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;instance_title&quot;,
+      &quot;name&quot;: &quot;instance_title&quot;,
+      &quot;full_name&quot;: &quot;Instance title&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Duration in days to preserve audits for. Leave empty to disable the audits cleanup.&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;audits_period&quot;,
+      &quot;name&quot;: &quot;audits_period&quot;,
+      &quot;full_name&quot;: &quot;Saved audits interval&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will load the new UI for host details&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;host_details_ui&quot;,
+      &quot;name&quot;: &quot;host_details_ui&quot;,
+      &quot;full_name&quot;: &quot;New host details UI&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will use OAuth for API authorization&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oauth_active&quot;,
+      &quot;name&quot;: &quot;oauth_active&quot;,
+      &quot;full_name&quot;: &quot;OAuth active&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;OAuth consumer key&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oauth_consumer_key&quot;,
+      &quot;name&quot;: &quot;oauth_consumer_key&quot;,
+      &quot;full_name&quot;: &quot;OAuth consumer key&quot;,
+      &quot;value&quot;: &quot;*****&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: true,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;OAuth consumer secret&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oauth_consumer_secret&quot;,
+      &quot;name&quot;: &quot;oauth_consumer_secret&quot;,
+      &quot;full_name&quot;: &quot;OAuth consumer secret&quot;,
+      &quot;value&quot;: &quot;*****&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: true,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;When enabled, Foreman will map users by username in request-header. If this is disabled, OAuth requests will have admin rights.&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oauth_map_users&quot;,
+      &quot;name&quot;: &quot;oauth_map_users&quot;,
+      &quot;full_name&quot;: &quot;OAuth map users&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will block user logins from an IP address after this number of failed login attempts for 5 minutes. Set to 0 to disable bruteforce protection&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 30,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;failed_login_attempts_limit&quot;,
+      &quot;name&quot;: &quot;failed_login_attempts_limit&quot;,
+      &quot;full_name&quot;: &quot;Failed login attempts limit&quot;,
+      &quot;value&quot;: 30,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Only known Smart Proxies may access features that use Smart Proxy authentication&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;restrict_registered_smart_proxies&quot;,
+      &quot;name&quot;: &quot;restrict_registered_smart_proxies&quot;,
+      &quot;full_name&quot;: &quot;Restrict registered smart proxies&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;List of hostnames, IPv4, IPv6 addresses or subnets to be trusted in addition to Smart Proxies for access to fact/report importers and ENC output&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;trusted_hosts&quot;,
+      &quot;name&quot;: &quot;trusted_hosts&quot;,
+      &quot;full_name&quot;: &quot;Trusted hosts&quot;,
+      &quot;value&quot;: [],
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;SSL Certificate path that Foreman would use to communicate with its proxies&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_certificate&quot;,
+      &quot;name&quot;: &quot;ssl_certificate&quot;,
+      &quot;full_name&quot;: &quot;SSL certificate&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;SSL CA file path that Foreman will use to communicate with its proxies&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_ca_file&quot;,
+      &quot;name&quot;: &quot;ssl_ca_file&quot;,
+      &quot;full_name&quot;: &quot;SSL CA file&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;SSL Private Key path that Foreman will use to communicate with its proxies&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_priv_key&quot;,
+      &quot;name&quot;: &quot;ssl_priv_key&quot;,
+      &quot;full_name&quot;: &quot;SSL private key&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Environment variable containing the subject DN from a client SSL certificate&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;SSL_CLIENT_S_DN&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_client_dn_env&quot;,
+      &quot;name&quot;: &quot;ssl_client_dn_env&quot;,
+      &quot;full_name&quot;: &quot;SSL client DN env&quot;,
+      &quot;value&quot;: &quot;SSL_CLIENT_S_DN&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Environment variable containing the verification status of a client SSL certificate&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;SSL_CLIENT_VERIFY&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_client_verify_env&quot;,
+      &quot;name&quot;: &quot;ssl_client_verify_env&quot;,
+      &quot;full_name&quot;: &quot;SSL client verify env&quot;,
+      &quot;value&quot;: &quot;SSL_CLIENT_VERIFY&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Environment variable containing a client&#39;s SSL certificate&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;SSL_CLIENT_CERT&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssl_client_cert_env&quot;,
+      &quot;name&quot;: &quot;ssl_client_cert_env&quot;,
+      &quot;full_name&quot;: &quot;SSL client cert env&quot;,
+      &quot;value&quot;: &quot;SSL_CLIENT_CERT&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;SSL CA file path that will be used in templates (to verify the connection to Foreman)&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;server_ca_file&quot;,
+      &quot;name&quot;: &quot;server_ca_file&quot;,
+      &quot;full_name&quot;: &quot;Server CA file&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Private key file path that Foreman will use to encrypt websockets&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;websockets_ssl_key&quot;,
+      &quot;name&quot;: &quot;websockets_ssl_key&quot;,
+      &quot;full_name&quot;: &quot;Websockets SSL key&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Certificate path that Foreman will use to encrypt websockets&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;websockets_ssl_cert&quot;,
+      &quot;name&quot;: &quot;websockets_ssl_cert&quot;,
+      &quot;full_name&quot;: &quot;Websockets SSL certificate&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;VNC/SPICE websocket proxy console access encryption (websockets_ssl_key/cert setting required)&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;websockets_encrypt&quot;,
+      &quot;name&quot;: &quot;websockets_encrypt&quot;,
+      &quot;full_name&quot;: &quot;Websockets encryption&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Redirect your users to this url on logout (authorize_login_delegation should also be enabled)&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;login_delegation_logout_url&quot;,
+      &quot;name&quot;: &quot;login_delegation_logout_url&quot;,
+      &quot;full_name&quot;: &quot;Login delegation logout URL&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Name of the external auth source where unknown externally authentication users (see authorize_login_delegation) should be created. Empty means no autocreation.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;External&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;authorize_login_delegation_auth_source_user_autocreate&quot;,
+      &quot;name&quot;: &quot;authorize_login_delegation_auth_source_user_autocreate&quot;,
+      &quot;full_name&quot;: &quot;Authorize login delegation auth source user autocreate&quot;,
+      &quot;value&quot;: &quot;External&quot;,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Authorize login delegation with REMOTE_USER HTTP header&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;authorize_login_delegation&quot;,
+      &quot;name&quot;: &quot;authorize_login_delegation&quot;,
+      &quot;full_name&quot;: &quot;Authorize login delegation&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Authorize login delegation with REMOTE_USER HTTP header for API calls too&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;authorize_login_delegation_api&quot;,
+      &quot;name&quot;: &quot;authorize_login_delegation_api&quot;,
+      &quot;full_name&quot;: &quot;Authorize login delegation API&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Log out idle users after a certain number of minutes&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 60,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;idle_timeout&quot;,
+      &quot;name&quot;: &quot;idle_timeout&quot;,
+      &quot;full_name&quot;: &quot;Idle timeout&quot;,
+      &quot;value&quot;: 60,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Cost value of bcrypt password hash function for internal auth-sources (4-30). A higher value is safer but verification is slower, particularly for stateless API calls and UI logins. A password change is needed effect existing passwords.&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 4,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;bcrypt_cost&quot;,
+      &quot;name&quot;: &quot;bcrypt_cost&quot;,
+      &quot;full_name&quot;: &quot;BCrypt password cost&quot;,
+      &quot;value&quot;: 4,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Permits access to BMC interface passwords through ENC YAML output and in templates&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;bmc_credentials_accessible&quot;,
+      &quot;name&quot;: &quot;bmc_credentials_accessible&quot;,
+      &quot;full_name&quot;: &quot;BMC credentials access&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;OpenID Connect JSON Web Key Set(JWKS) URL. Typically https://keycloak.example.com/auth/realms/&lt;realm name&gt;/protocol/openid-connect/certs when using Keycloak as an OpenID provider&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oidc_jwks_url&quot;,
+      &quot;name&quot;: &quot;oidc_jwks_url&quot;,
+      &quot;full_name&quot;: &quot;OIDC JWKs URL&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Name of the OpenID Connect Audience that is being used for Authentication. In case of Keycloak this is the Client ID.&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oidc_audience&quot;,
+      &quot;name&quot;: &quot;oidc_audience&quot;,
+      &quot;full_name&quot;: &quot;OIDC Audience&quot;,
+      &quot;value&quot;: [],
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;The iss (issuer) claim identifies the principal that issued the JWT, which exists at a `/.well-known/openid-configuration` in case of most of the OpenID providers.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oidc_issuer&quot;,
+      &quot;name&quot;: &quot;oidc_issuer&quot;,
+      &quot;full_name&quot;: &quot;OIDC Issuer&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;The algorithm used to encode the JWT in the OpenID provider.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oidc_algorithm&quot;,
+      &quot;name&quot;: &quot;oidc_algorithm&quot;,
+      &quot;full_name&quot;: &quot;OIDC Algorithm&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Email reply address for emails that Foreman is sending&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;foreman-noreply@example.com&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;email_reply_address&quot;,
+      &quot;name&quot;: &quot;email_reply_address&quot;,
+      &quot;full_name&quot;: &quot;Email reply address&quot;,
+      &quot;value&quot;: &quot;foreman-noreply@example.com&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Prefix to add to all outgoing email&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;[foreman]&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;email_subject_prefix&quot;,
+      &quot;name&quot;: &quot;email_subject_prefix&quot;,
+      &quot;full_name&quot;: &quot;Email subject prefix&quot;,
+      &quot;value&quot;: &quot;[foreman]&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Send a welcome email including username and URL to new users&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;send_welcome_email&quot;,
+      &quot;name&quot;: &quot;send_welcome_email&quot;,
+      &quot;full_name&quot;: &quot;Send welcome email&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Method used to deliver email&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;sendmail&quot;,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;delivery_method&quot;,
+      &quot;name&quot;: &quot;delivery_method&quot;,
+      &quot;full_name&quot;: &quot;Delivery method&quot;,
+      &quot;value&quot;: &quot;test&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;sendmail&quot;: &quot;Sendmail&quot;,
+        &quot;smtp&quot;: &quot;SMTP&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;SMTP automatic STARTTLS&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_enable_starttls_auto&quot;,
+      &quot;name&quot;: &quot;smtp_enable_starttls_auto&quot;,
+      &quot;full_name&quot;: &quot;SMTP enable StartTLS auto&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;When using TLS, you can set how OpenSSL checks the certificate&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_openssl_verify_mode&quot;,
+      &quot;name&quot;: &quot;smtp_openssl_verify_mode&quot;,
+      &quot;full_name&quot;: &quot;SMTP OpenSSL verify mode&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;&quot;: &quot;Default verification mode&quot;,
+        &quot;none&quot;: &quot;none&quot;,
+        &quot;peer&quot;: &quot;peer&quot;,
+        &quot;client_once&quot;: &quot;client_once&quot;,
+        &quot;fail_if_no_peer_cert&quot;: &quot;fail_if_no_peer_cert&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;SMTP address to connect to&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_address&quot;,
+      &quot;name&quot;: &quot;smtp_address&quot;,
+      &quot;full_name&quot;: &quot;SMTP address&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;SMTP port to connect to&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 25,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_port&quot;,
+      &quot;name&quot;: &quot;smtp_port&quot;,
+      &quot;full_name&quot;: &quot;SMTP port&quot;,
+      &quot;value&quot;: 25,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;HELO/EHLO domain&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_domain&quot;,
+      &quot;name&quot;: &quot;smtp_domain&quot;,
+      &quot;full_name&quot;: &quot;SMTP HELO/EHLO domain&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Username to use to authenticate, if required&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_user_name&quot;,
+      &quot;name&quot;: &quot;smtp_user_name&quot;,
+      &quot;full_name&quot;: &quot;SMTP username&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Password to use to authenticate, if required&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_password&quot;,
+      &quot;name&quot;: &quot;smtp_password&quot;,
+      &quot;full_name&quot;: &quot;SMTP password&quot;,
+      &quot;value&quot;: &quot;*****&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: true,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Specify authentication type, if required&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;smtp_authentication&quot;,
+      &quot;name&quot;: &quot;smtp_authentication&quot;,
+      &quot;full_name&quot;: &quot;SMTP authentication&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;plain&quot;: &quot;plain&quot;,
+        &quot;login&quot;: &quot;login&quot;,
+        &quot;cram_md5&quot;: &quot;cram_md5&quot;,
+        &quot;&quot;: &quot;none&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Specify additional options to sendmail. Only used when the delivery method is set to sendmail.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;-i&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;sendmail_arguments&quot;,
+      &quot;name&quot;: &quot;sendmail_arguments&quot;,
+      &quot;full_name&quot;: &quot;Sendmail arguments&quot;,
+      &quot;value&quot;: &quot;-i&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;The location of the sendmail executable. Only used when the delivery method is set to sendmail.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;/usr/sbin/sendmail&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;sendmail_location&quot;,
+      &quot;name&quot;: &quot;sendmail_location&quot;,
+      &quot;full_name&quot;: &quot;Sendmail location&quot;,
+      &quot;value&quot;: &quot;/usr/sbin/sendmail&quot;,
+      &quot;category&quot;: &quot;email&quot;,
+      &quot;category_name&quot;: &quot;Email&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;/usr/sbin/sendmail&quot;: &quot;/usr/sbin/sendmail&quot;,
+        &quot;/usr/bin/sendmail&quot;: &quot;/usr/bin/sendmail&quot;,
+        &quot;/usr/local/sbin/sendmail&quot;: &quot;/usr/local/sbin/sendmail&quot;,
+        &quot;/usr/local/bin/sendmail&quot;: &quot;/usr/local/bin/sendmail&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Whether to pull RSS notifications or not&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;rss_enable&quot;,
+      &quot;name&quot;: &quot;rss_enable&quot;,
+      &quot;full_name&quot;: &quot;RSS enable&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;notification&quot;,
+      &quot;category_name&quot;: &quot;Notifications&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;URL to fetch RSS notifications from&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;https://theforeman.org/feed.xml&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;rss_url&quot;,
+      &quot;name&quot;: &quot;rss_url&quot;,
+      &quot;full_name&quot;: &quot;RSS URL&quot;,
+      &quot;value&quot;: &quot;https://theforeman.org/feed.xml&quot;,
+      &quot;category&quot;: &quot;notification&quot;,
+      &quot;category_name&quot;: &quot;Notifications&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Default owner on provisioned hosts, if empty Foreman will use current user&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;host_owner&quot;,
+      &quot;name&quot;: &quot;host_owner&quot;,
+      &quot;full_name&quot;: &quot;Host owner&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: [
+        {
+          &quot;value&quot;: null,
+          &quot;label&quot;: &quot;Select an owner&quot;
+        },
+        {
+          &quot;group_label&quot;: &quot;Users&quot;,
+          &quot;children&quot;: [
+            {
+              &quot;label&quot;: &quot;secret_admin&quot;,
+              &quot;value&quot;: &quot;135138680-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;apiadmin&quot;,
+              &quot;value&quot;: &quot;886836129-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;external&quot;,
+              &quot;value&quot;: &quot;408068537-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;one&quot;,
+              &quot;value&quot;: &quot;980190962-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;restricted&quot;,
+              &quot;value&quot;: &quot;130842698-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;scoped&quot;,
+              &quot;value&quot;: &quot;117925625-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;system_admin&quot;,
+              &quot;value&quot;: &quot;482449135-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;test&quot;,
+              &quot;value&quot;: &quot;200482051-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;two&quot;,
+              &quot;value&quot;: &quot;298486374-Users&quot;
+            },
+            {
+              &quot;label&quot;: &quot;view_hosts&quot;,
+              &quot;value&quot;: &quot;988725676-Users&quot;
+            }
+          ]
+        },
+        {
+          &quot;group_label&quot;: &quot;Usergroups&quot;,
+          &quot;children&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;description&quot;: &quot;Default encrypted root password on provisioned hosts&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;root_pass&quot;,
+      &quot;name&quot;: &quot;root_pass&quot;,
+      &quot;full_name&quot;: &quot;Root password&quot;,
+      &quot;value&quot;: &quot;*****&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: true,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;URL hosts will retrieve templates from during build, when it starts with https unattended/userdata controllers cannot be accessed via HTTP&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;http://foreman.example.com&quot;,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;unattended_url&quot;,
+      &quot;name&quot;: &quot;unattended_url&quot;,
+      &quot;full_name&quot;: &quot;Unattended URL&quot;,
+      &quot;value&quot;: &quot;http://foreman.some.host.fqdn&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Enable safe mode config templates rendering (recommended)&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;safemode_render&quot;,
+      &quot;name&quot;: &quot;safemode_render&quot;,
+      &quot;full_name&quot;: &quot;Safemode rendering&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Allow access to unattended URLs without build mode being used&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;access_unattended_without_build&quot;,
+      &quot;name&quot;: &quot;access_unattended_without_build&quot;,
+      &quot;full_name&quot;: &quot;Access unattended without build&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will query the locally configured resolver instead of the SOA/NS authorities&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;query_local_nameservers&quot;,
+      &quot;name&quot;: &quot;query_local_nameservers&quot;,
+      &quot;full_name&quot;: &quot;Query local nameservers&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Time in minutes installation tokens should be valid for, 0 to disable token generation&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 360,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;token_duration&quot;,
+      &quot;name&quot;: &quot;token_duration&quot;,
+      &quot;full_name&quot;: &quot;Installation token lifetime&quot;,
+      &quot;value&quot;: 360,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Time in seconds before SSH provisioning times out&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 120,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ssh_timeout&quot;,
+      &quot;name&quot;: &quot;ssh_timeout&quot;,
+      &quot;full_name&quot;: &quot;SSH timeout&quot;,
+      &quot;value&quot;: 120,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;The IP address that should be used for the console listen address when provisioning new virtual machines via Libvirt&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;0.0.0.0&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;libvirt_default_console_address&quot;,
+      &quot;name&quot;: &quot;libvirt_default_console_address&quot;,
+      &quot;full_name&quot;: &quot;Libvirt default console address&quot;,
+      &quot;value&quot;: &quot;0.0.0.0&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will update the host IP with the IP that made the built request&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;update_ip_from_built_request&quot;,
+      &quot;name&quot;: &quot;update_ip_from_built_request&quot;,
+      &quot;full_name&quot;: &quot;Update IP from built request&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will use the short hostname instead of the FQDN for creating new virtual machines&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;use_shortname_for_vms&quot;,
+      &quot;name&quot;: &quot;use_shortname_for_vms&quot;,
+      &quot;full_name&quot;: &quot;Use short name for VMs&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;List of timeouts (in seconds) for DNS lookup attempts such as the dns_lookup macro and DNS record conflict validation&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        5,
+        10,
+        15,
+        20
+      ],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;dns_timeout&quot;,
+      &quot;name&quot;: &quot;dns_timeout&quot;,
+      &quot;full_name&quot;: &quot;DNS timeout&quot;,
+      &quot;value&quot;: [
+        5,
+        10,
+        15,
+        20
+      ],
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will delete virtual machine if provisioning script ends with non zero exit code&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;clean_up_failed_deployment&quot;,
+      &quot;name&quot;: &quot;clean_up_failed_deployment&quot;,
+      &quot;full_name&quot;: &quot;Clean up failed deployment&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Random gives unique names, MAC-based are longer but stable (and only works with bare-metal)&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;Random-based&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;name_generator_type&quot;,
+      &quot;name&quot;: &quot;name_generator_type&quot;,
+      &quot;full_name&quot;: &quot;Type of name generator&quot;,
+      &quot;value&quot;: &quot;Random-based&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;Off&quot;: &quot;Off&quot;,
+        &quot;Random-based&quot;: &quot;Random-based&quot;,
+        &quot;MAC-based&quot;: &quot;MAC-based&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Default PXE menu item in global template - &#39;local&#39;, &#39;discovery&#39; or custom, use blank for template default&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_pxe_item_global&quot;,
+      &quot;name&quot;: &quot;default_pxe_item_global&quot;,
+      &quot;full_name&quot;: &quot;Default PXE global template entry&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Default PXE menu item in local template - &#39;local&#39;, &#39;local_chain_hd0&#39; or custom, use blank for template default&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_pxe_item_local&quot;,
+      &quot;name&quot;: &quot;default_pxe_item_local&quot;,
+      &quot;full_name&quot;: &quot;Default PXE local template entry&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Intermediate iPXE script for unattended installations&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;iPXE intermediate script&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;intermediate_ipxe_script&quot;,
+      &quot;name&quot;: &quot;intermediate_ipxe_script&quot;,
+      &quot;full_name&quot;: &quot;iPXE intermediate script&quot;,
+      &quot;value&quot;: &quot;iPXE intermediate script&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;MyString&quot;: &quot;MyString&quot;,
+        &quot;iPXE Dummy Menu&quot;: &quot;iPXE Dummy Menu&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Destroy associated VM on host delete. When enabled, VMs linked to Hosts will be deleted on Compute Resource. When disabled, VMs are unlinked when the host is deleted, meaning they remain on Compute Resource and can be re-associated or imported back to Foreman again. This does not automatically power off the VM&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;destroy_vm_on_host_delete&quot;,
+      &quot;name&quot;: &quot;destroy_vm_on_host_delete&quot;,
+      &quot;full_name&quot;: &quot;Destroy associated VM on host delete&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Maximum amount of keys in structured subtree, statistics stored in foreman::dropped_subtree_facts&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 100,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;maximum_structured_facts&quot;,
+      &quot;name&quot;: &quot;maximum_structured_facts&quot;,
+      &quot;full_name&quot;: &quot;Maximum structured facts&quot;,
+      &quot;value&quot;: 100,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Global Registration template&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;Global Registration&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_global_registration_item&quot;,
+      &quot;name&quot;: &quot;default_global_registration_item&quot;,
+      &quot;full_name&quot;: &quot;Default Global registration template&quot;,
+      &quot;value&quot;: &quot;Global Registration&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Default &#39;Host initial configuration&#39; template, automatically assigned when a new operating system is created&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;Linux host_init_config default&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_host_init_config_template&quot;,
+      &quot;name&quot;: &quot;default_host_init_config_template&quot;,
+      &quot;full_name&quot;: &quot;Default &#39;Host initial configuration&#39; template&quot;,
+      &quot;value&quot;: &quot;Linux host_init_config default&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Full path to CoreOS transpiler (ct) with arguments as an comma-separated array&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        false,
+        &quot;--pretty&quot;,
+        &quot;--files-dir&quot;,
+        &quot;/home/vagrant/foreman-one/config/ct&quot;
+      ],
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;ct_command&quot;,
+      &quot;name&quot;: &quot;ct_command&quot;,
+      &quot;full_name&quot;: &quot;CoreOS Transpiler Command&quot;,
+      &quot;value&quot;: [
+        &quot;/usr/bin/cat&quot;
+      ],
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Full path to Fedora CoreOS transpiler (fcct) with arguments as an comma-separated array&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        false,
+        &quot;--pretty&quot;,
+        &quot;--files-dir&quot;,
+        &quot;/home/vagrant/foreman-one/config/ct&quot;
+      ],
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;fcct_command&quot;,
+      &quot;name&quot;: &quot;fcct_command&quot;,
+      &quot;full_name&quot;: &quot;Fedora CoreOS Transpiler Command&quot;,
+      &quot;value&quot;: [
+        &quot;/usr/bin/cat&quot;
+      ],
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Global default PXEGrub2 template. This template gets deployed to all configured TFTP servers. It will not be affected by upgrades.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXEGrub2 global default&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;global_PXEGrub2&quot;,
+      &quot;name&quot;: &quot;global_PXEGrub2&quot;,
+      &quot;full_name&quot;: &quot;Global default PXEGrub2 template&quot;,
+      &quot;value&quot;: &quot;PXEGrub2 global default&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;PXEGrub2 global default&quot;: &quot;PXEGrub2 global default&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Global default PXELinux template. This template gets deployed to all configured TFTP servers. It will not be affected by upgrades.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXELinux global default&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;global_PXELinux&quot;,
+      &quot;name&quot;: &quot;global_PXELinux&quot;,
+      &quot;full_name&quot;: &quot;Global default PXELinux template&quot;,
+      &quot;value&quot;: &quot;PXELinux global default&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;centos5_3_pxelinux&quot;: &quot;centos5_3_pxelinux&quot;,
+        &quot;suse_pxelinux&quot;: &quot;suse_pxelinux&quot;,
+        &quot;PXE Default Menu&quot;: &quot;PXE Default Menu&quot;,
+        &quot;PXELinux global default&quot;: &quot;PXELinux global default&quot;,
+        &quot;PXELinux default local boot&quot;: &quot;PXELinux default local boot&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Global default PXEGrub template. This template gets deployed to all configured TFTP servers. It will not be affected by upgrades.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXEGrub global default&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;global_PXEGrub&quot;,
+      &quot;name&quot;: &quot;global_PXEGrub&quot;,
+      &quot;full_name&quot;: &quot;Global default PXEGrub template&quot;,
+      &quot;value&quot;: &quot;PXEGrub global default&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;PXEGrub Dummy Menu&quot;: &quot;PXEGrub Dummy Menu&quot;,
+        &quot;PXEGrub global default&quot;: &quot;PXEGrub global default&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Global default iPXE template. This template gets deployed to all configured TFTP servers. It will not be affected by upgrades.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;iPXE global default&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;global_iPXE&quot;,
+      &quot;name&quot;: &quot;global_iPXE&quot;,
+      &quot;full_name&quot;: &quot;Global default iPXE template&quot;,
+      &quot;value&quot;: &quot;iPXE global default&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;MyString&quot;: &quot;MyString&quot;,
+        &quot;iPXE Dummy Menu&quot;: &quot;iPXE Dummy Menu&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Template that will be selected as PXEGrub2 default for local boot.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXEGrub2 default local boot&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;local_boot_PXEGrub2&quot;,
+      &quot;name&quot;: &quot;local_boot_PXEGrub2&quot;,
+      &quot;full_name&quot;: &quot;Local boot PXEGrub2 template&quot;,
+      &quot;value&quot;: &quot;PXEGrub2 default local boot&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;PXEGrub2 global default&quot;: &quot;PXEGrub2 global default&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Template that will be selected as PXELinux default for local boot.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXELinux default local boot&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;local_boot_PXELinux&quot;,
+      &quot;name&quot;: &quot;local_boot_PXELinux&quot;,
+      &quot;full_name&quot;: &quot;Local boot PXELinux template&quot;,
+      &quot;value&quot;: &quot;PXELinux default local boot&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;centos5_3_pxelinux&quot;: &quot;centos5_3_pxelinux&quot;,
+        &quot;suse_pxelinux&quot;: &quot;suse_pxelinux&quot;,
+        &quot;PXE Default Menu&quot;: &quot;PXE Default Menu&quot;,
+        &quot;PXELinux global default&quot;: &quot;PXELinux global default&quot;,
+        &quot;PXELinux default local boot&quot;: &quot;PXELinux default local boot&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Template that will be selected as PXEGrub default for local boot.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;PXEGrub default local boot&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;local_boot_PXEGrub&quot;,
+      &quot;name&quot;: &quot;local_boot_PXEGrub&quot;,
+      &quot;full_name&quot;: &quot;Local boot PXEGrub template&quot;,
+      &quot;value&quot;: &quot;PXEGrub default local boot&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;PXEGrub Dummy Menu&quot;: &quot;PXEGrub Dummy Menu&quot;,
+        &quot;PXEGrub global default&quot;: &quot;PXEGrub global default&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Template that will be selected as iPXE default for local boot.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;iPXE default local boot&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;local_boot_iPXE&quot;,
+      &quot;name&quot;: &quot;local_boot_iPXE&quot;,
+      &quot;full_name&quot;: &quot;Local boot iPXE template&quot;,
+      &quot;value&quot;: &quot;iPXE default local boot&quot;,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;MyString&quot;: &quot;MyString&quot;,
+        &quot;iPXE Dummy Menu&quot;: &quot;iPXE Dummy Menu&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will automate certificate signing upon provision of new host&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;manage_puppetca&quot;,
+      &quot;name&quot;: &quot;manage_puppetca&quot;,
+      &quot;full_name&quot;: &quot;Manage PuppetCA&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will use random UUIDs for certificate signing instead of hostnames&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;use_uuid_for_certificates&quot;,
+      &quot;name&quot;: &quot;use_uuid_for_certificates&quot;,
+      &quot;full_name&quot;: &quot;Use UUID for certificates&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;provisioning&quot;,
+      &quot;category_name&quot;: &quot;Provisioning&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will create the host when new facts are received&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;create_new_host_when_facts_are_uploaded&quot;,
+      &quot;name&quot;: &quot;create_new_host_when_facts_are_uploaded&quot;,
+      &quot;full_name&quot;: &quot;Create new host when facts are uploaded&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Hosts created after a puppet run will be placed in the location this fact dictates. The content of this fact should be the full label of the location.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;foreman_location&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;location_fact&quot;,
+      &quot;name&quot;: &quot;location_fact&quot;,
+      &quot;full_name&quot;: &quot;Location fact&quot;,
+      &quot;value&quot;: &quot;foreman_location&quot;,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Hosts created after a puppet run will be placed in the organization this fact dictates. The content of this fact should be the full label of the organization.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;foreman_organization&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;organization_fact&quot;,
+      &quot;name&quot;: &quot;organization_fact&quot;,
+      &quot;full_name&quot;: &quot;Organization fact&quot;,
+      &quot;value&quot;: &quot;foreman_organization&quot;,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Hosts created after a puppet run that did not send a location fact will be placed in this location&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;default_location&quot;,
+      &quot;name&quot;: &quot;default_location&quot;,
+      &quot;full_name&quot;: &quot;Default location&quot;,
+      &quot;value&quot;: &quot;Location 1&quot;,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;loc207&quot;: &quot;loc207&quot;,
+        &quot;Location 1&quot;: &quot;Location 1&quot;,
+        &quot;Location 2&quot;: &quot;Location 2&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Hosts created after a puppet run that did not send a organization fact will be placed in this organization&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;&quot;,
+      &quot;updated_at&quot;: &quot;2022-03-29 08:41:55 UTC&quot;,
+      &quot;id&quot;: &quot;default_organization&quot;,
+      &quot;name&quot;: &quot;default_organization&quot;,
+      &quot;full_name&quot;: &quot;Default organization&quot;,
+      &quot;value&quot;: &quot;Organization 1&quot;,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;Empty Organization&quot;: &quot;Empty Organization&quot;,
+        &quot;org180&quot;: &quot;org180&quot;,
+        &quot;Organization 1&quot;: &quot;Organization 1&quot;,
+        &quot;Organization 2&quot;: &quot;Organization 2&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will update a host&#39;s hostgroup from its facts&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;update_hostgroup_from_facts&quot;,
+      &quot;name&quot;: &quot;update_hostgroup_from_facts&quot;,
+      &quot;full_name&quot;: &quot;Update hostgroup from facts&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Stop updating Operating System from facts&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ignore_facts_for_operatingsystem&quot;,
+      &quot;name&quot;: &quot;ignore_facts_for_operatingsystem&quot;,
+      &quot;full_name&quot;: &quot;Ignore facts for operating system&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Stop updating domain values from facts&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ignore_facts_for_domain&quot;,
+      &quot;name&quot;: &quot;ignore_facts_for_domain&quot;,
+      &quot;full_name&quot;: &quot;Ignore facts for domain&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will update a host&#39;s subnet from its facts&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;none&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;update_subnets_from_facts&quot;,
+      &quot;name&quot;: &quot;update_subnets_from_facts&quot;,
+      &quot;full_name&quot;: &quot;Update subnets from facts&quot;,
+      &quot;value&quot;: &quot;none&quot;,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;all&quot;: &quot;All&quot;,
+        &quot;provisioning&quot;: &quot;Provisioning only&quot;,
+        &quot;none&quot;: &quot;None&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Stop updating IP and MAC address values from facts (affects all interfaces)&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ignore_puppet_facts_for_provisioning&quot;,
+      &quot;name&quot;: &quot;ignore_puppet_facts_for_provisioning&quot;,
+      &quot;full_name&quot;: &quot;Ignore interfaces facts for provisioning&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Skip creating or updating host network interfaces objects with identifiers matching these values from incoming facts. You can use * wildcard to match identifiers with indexes e.g. macvtap*. The ignored interfaces raw facts will be still stored in the DB, see the &#39;Exclude pattern&#39; setting for more details.&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        &quot;lo&quot;,
+        &quot;en*v*&quot;,
+        &quot;usb*&quot;,
+        &quot;vnet*&quot;,
+        &quot;macvtap*&quot;,
+        &quot;;vdsmdummy;&quot;,
+        &quot;veth*&quot;,
+        &quot;docker*&quot;,
+        &quot;tap*&quot;,
+        &quot;qbr*&quot;,
+        &quot;qvb*&quot;,
+        &quot;qvo*&quot;,
+        &quot;qr-*&quot;,
+        &quot;qg-*&quot;,
+        &quot;vlinuxbr*&quot;,
+        &quot;vovsbr*&quot;,
+        &quot;br-int&quot;,
+        &quot;vif*&quot;
+      ],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;ignored_interface_identifiers&quot;,
+      &quot;name&quot;: &quot;ignored_interface_identifiers&quot;,
+      &quot;full_name&quot;: &quot;Ignore interfaces with matching identifier&quot;,
+      &quot;value&quot;: [
+        &quot;lo&quot;,
+        &quot;en*v*&quot;,
+        &quot;usb*&quot;,
+        &quot;vnet*&quot;,
+        &quot;macvtap*&quot;,
+        &quot;;vdsmdummy;&quot;,
+        &quot;veth*&quot;,
+        &quot;docker*&quot;,
+        &quot;tap*&quot;,
+        &quot;qbr*&quot;,
+        &quot;qvb*&quot;,
+        &quot;qvo*&quot;,
+        &quot;qr-*&quot;,
+        &quot;qg-*&quot;,
+        &quot;vlinuxbr*&quot;,
+        &quot;vovsbr*&quot;,
+        &quot;br-int&quot;,
+        &quot;vif*&quot;
+      ],
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Exclude pattern for all types of imported facts (puppet, ansible, rhsm). Those facts won&#39;t be stored in foreman&#39;s database. You can use * wildcard to match names with indexes e.g. ignore* will filter out ignore, ignore123 as well as a::ignore or even a::ignore123::b&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        &quot;lo&quot;,
+        &quot;en*v*&quot;,
+        &quot;usb*&quot;,
+        &quot;vnet*&quot;,
+        &quot;macvtap*&quot;,
+        &quot;;vdsmdummy;&quot;,
+        &quot;veth*&quot;,
+        &quot;docker*&quot;,
+        &quot;tap*&quot;,
+        &quot;qbr*&quot;,
+        &quot;qvb*&quot;,
+        &quot;qvo*&quot;,
+        &quot;qr-*&quot;,
+        &quot;qg-*&quot;,
+        &quot;vlinuxbr*&quot;,
+        &quot;vovsbr*&quot;,
+        &quot;br-int&quot;,
+        &quot;vif*&quot;,
+        &quot;load_averages::*&quot;,
+        &quot;memory::swap::available*&quot;,
+        &quot;memory::swap::capacity&quot;,
+        &quot;memory::swap::used*&quot;,
+        &quot;memory::system::available*&quot;,
+        &quot;memory::system::capacity&quot;,
+        &quot;memory::system::used*&quot;,
+        &quot;memoryfree&quot;,
+        &quot;memoryfree_mb&quot;,
+        &quot;swapfree&quot;,
+        &quot;swapfree_mb&quot;,
+        &quot;uptime_hours&quot;,
+        &quot;uptime_days&quot;
+      ],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;excluded_facts&quot;,
+      &quot;name&quot;: &quot;excluded_facts&quot;,
+      &quot;full_name&quot;: &quot;Exclude pattern for facts stored in foreman&quot;,
+      &quot;value&quot;: [
+        &quot;lo&quot;,
+        &quot;en*v*&quot;,
+        &quot;usb*&quot;,
+        &quot;vnet*&quot;,
+        &quot;macvtap*&quot;,
+        &quot;;vdsmdummy;&quot;,
+        &quot;veth*&quot;,
+        &quot;docker*&quot;,
+        &quot;tap*&quot;,
+        &quot;qbr*&quot;,
+        &quot;qvb*&quot;,
+        &quot;qvo*&quot;,
+        &quot;qr-*&quot;,
+        &quot;qg-*&quot;,
+        &quot;vlinuxbr*&quot;,
+        &quot;vovsbr*&quot;,
+        &quot;br-int&quot;,
+        &quot;vif*&quot;,
+        &quot;load_averages::*&quot;,
+        &quot;memory::swap::available*&quot;,
+        &quot;memory::swap::capacity&quot;,
+        &quot;memory::swap::used*&quot;,
+        &quot;memory::system::available*&quot;,
+        &quot;memory::system::capacity&quot;,
+        &quot;memory::system::used*&quot;,
+        &quot;memoryfree&quot;,
+        &quot;memoryfree_mb&quot;,
+        &quot;swapfree&quot;,
+        &quot;swapfree_mb&quot;,
+        &quot;uptime_hours&quot;,
+        &quot;uptime_days&quot;
+      ],
+      &quot;category&quot;: &quot;facts&quot;,
+      &quot;category_name&quot;: &quot;Facts&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will create the host when a report is received&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;create_new_host_when_report_is_uploaded&quot;,
+      &quot;name&quot;: &quot;create_new_host_when_report_is_uploaded&quot;,
+      &quot;full_name&quot;: &quot;Create new host when report is uploaded&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;cfgmgmt&quot;,
+      &quot;category_name&quot;: &quot;Config Management&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman matchers will be inherited by children when evaluating smart class parameters for hostgroups, organizations and locations&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;matchers_inheritance&quot;,
+      &quot;name&quot;: &quot;matchers_inheritance&quot;,
+      &quot;full_name&quot;: &quot;Matchers inheritance&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;cfgmgmt&quot;,
+      &quot;category_name&quot;: &quot;Config Management&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will evaluate host smart class parameters in this order by default&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [
+        &quot;fqdn&quot;,
+        &quot;hostgroup&quot;,
+        &quot;os&quot;,
+        &quot;domain&quot;
+      ],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;Default_parameters_Lookup_Path&quot;,
+      &quot;name&quot;: &quot;Default_parameters_Lookup_Path&quot;,
+      &quot;full_name&quot;: &quot;Default parameters lookup path&quot;,
+      &quot;value&quot;: [
+        &quot;fqdn&quot;,
+        &quot;hostgroup&quot;,
+        &quot;os&quot;,
+        &quot;domain&quot;
+      ],
+      &quot;category&quot;: &quot;cfgmgmt&quot;,
+      &quot;category_name&quot;: &quot;Config Management&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will parse ERB in parameters value in the ENC output&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;interpolate_erb_in_parameters&quot;,
+      &quot;name&quot;: &quot;interpolate_erb_in_parameters&quot;,
+      &quot;full_name&quot;: &quot;Interpolate ERB in parameters&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;cfgmgmt&quot;,
+      &quot;category_name&quot;: &quot;Config Management&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;All hosts will show a configuration status even when a Puppet smart proxy is not assigned&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;always_show_configuration_status&quot;,
+      &quot;name&quot;: &quot;always_show_configuration_status&quot;,
+      &quot;full_name&quot;: &quot;Always show configuration status&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;cfgmgmt&quot;,
+      &quot;category_name&quot;: &quot;Config Management&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>description</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/settings/:id
+          </a>
+          <br>
+          <small>Show a setting</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/settings/foreman_url
+200
+{
+  &quot;description&quot;: &quot;URL where your Foreman instance is reachable (see also Provisioning &gt; unattended_url)&quot;,
+  &quot;settings_type&quot;: &quot;string&quot;,
+  &quot;default&quot;: &quot;http://foreman.example.com&quot;,
+  &quot;updated_at&quot;: &quot;2022-03-29 09:17:35 UTC&quot;,
+  &quot;id&quot;: &quot;foreman_url&quot;,
+  &quot;name&quot;: &quot;foreman_url&quot;,
+  &quot;full_name&quot;: &quot;Foreman URL&quot;,
+  &quot;value&quot;: &quot;http://foreman.some.host.fqdn&quot;,
+  &quot;category&quot;: &quot;general&quot;,
+  &quot;category_name&quot;: &quot;General&quot;,
+  &quot;readonly&quot;: false,
+  &quot;config_file&quot;: null,
+  &quot;encrypted&quot;: false,
+  &quot;select_values&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/settings/:id
+          </a>
+          <br>
+          <small>Update a setting</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/settings/outofsync_interval
+{
+  &quot;setting&quot;: {
+    &quot;value&quot;: &quot;100&quot;
+  }
+}
+200
+{
+  &quot;description&quot;: &quot;Duration in minutes after servers are classed as out of sync. This setting is overridden by specific settings from config management tools (e.g. puppet_inteval, ansible_interval).&quot;,
+  &quot;settings_type&quot;: &quot;integer&quot;,
+  &quot;default&quot;: 30,
+  &quot;updated_at&quot;: &quot;2022-03-29 09:18:11 UTC&quot;,
+  &quot;id&quot;: &quot;outofsync_interval&quot;,
+  &quot;name&quot;: &quot;outofsync_interval&quot;,
+  &quot;full_name&quot;: &quot;Out of sync interval&quot;,
+  &quot;value&quot;: 100,
+  &quot;category&quot;: &quot;general&quot;,
+  &quot;category_name&quot;: &quot;General&quot;,
+  &quot;readonly&quot;: false,
+  &quot;config_file&quot;: null,
+  &quot;encrypted&quot;: false,
+  &quot;select_values&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>setting </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>setting[value] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
