@@ -17,8 +17,8 @@ Generate API docs in Foreman:
 
 1. cd to foreman directory and checkout the relevant stable branch
 1. disable any plugins installed locally
-1. `APIPIE_RECORD=examples rake test`
-1. `FOREMAN_APIPIE_LANGS=en rake apipie:cache`
+1. `APIPIE_RECORD=examples bundle exec rake test`
+1. `FOREMAN_APIPIE_LANGS=en bundle exec rake apipie:cache`
 
 Prepare folder for the new version (X.Y)
 
@@ -35,8 +35,8 @@ Generate API docs in a Foreman + Katello development environment:
 
 1. cd to the katello directory and checkout the relevant release branch
 1. cd to the foreman directory and checkout the relevant stable branch
-1. `APIPIE_RECORD=examples rake test`
-1. `FOREMAN_APIPIE_LANGS=en rake apipie:cache`
+1. `APIPIE_RECORD=examples bundle exec rake test`
+1. `FOREMAN_APIPIE_LANGS=en bundle exec rake apipie:cache`
 
 Prepare folder for the new version (X.Y)
 
