@@ -24,7 +24,7 @@ Prepare folder for the new version (X.Y)
 
 1. cd to foreman directory
 1. `cp -r TEMPLATE X.Y`
-1. `unlink latest; ln -s X.Y latest`
+1. `ln -snf X.Y latest`
 1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* X.Y/apidoc`
 1. run cleanup script in apidocs repo: `cleanup.sh`
 1. update index.html file with a link to the new page
@@ -42,7 +42,7 @@ Prepare folder for the new version (X.Y)
 
 1. cd to the apidocs/katello directory
 1. `cp -r TEMPLATE X.Y`
-1. `unlink latest; ln -s X.Y latest`
+1. `ln -snf X.Y latest`
 1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* X.Y/apidoc`
 1. run cleanup script in apidocs repo: `cleanup.sh`
 1. update index.html file with a link to the new page
