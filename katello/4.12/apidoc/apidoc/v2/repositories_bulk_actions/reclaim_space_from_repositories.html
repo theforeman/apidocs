@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/repositories_bulk_actions.html'>
+      Repositories_bulk_actions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>reclaim_space_from_repositories</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/repositories/bulk/reclaim_space
+      <br>
+      <small>Reclaim space from On Demand repositories</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /katello/api/repositories/bulk/reclaim_space
+{
+  &quot;ids&quot;: [
+    841753487,
+    860533889
+  ],
+  &quot;organization_id&quot;: 114267492,
+  &quot;repositories_bulk_action&quot;: {
+    &quot;ids&quot;: [
+      841753487,
+      860533889
+    ],
+    &quot;organization_id&quot;: 114267492
+  }
+}
+202
+{
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;pending&quot;: null,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: null,
+  &quot;ended_at&quot;: null,
+  &quot;state&quot;: null,
+  &quot;result&quot;: null,
+  &quot;progress&quot;: null,
+  &quot;input&quot;: null,
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: null,
+  &quot;cli_example&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: null
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ids</strong>
+      <br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of repository ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

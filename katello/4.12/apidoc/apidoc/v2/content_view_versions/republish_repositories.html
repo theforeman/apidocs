@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/content_view_versions.html'>
+      Content_view_versions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>republish_repositories</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/content_view_versions/:id/republish_repositories
+      <br>
+      <small>Forces a republish of the version's repositories' metadata</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /katello/api/content_view_versions/234564707/republish_repositories
+{
+  &quot;content_view_version&quot;: {}
+}
+202
+{
+  &quot;id&quot;: &quot;0b29eb71-3c55-49dd-bc42-e9b19fb987bb&quot;,
+  &quot;label&quot;: &quot;Actions::Katello::ContentViewVersion::RepublishRepositories&quot;,
+  &quot;pending&quot;: false,
+  &quot;action&quot;: &quot;Republish Repositories of Published Library - dev - staging view 3.0 content view &#39;Published Library - dev - staging view&#39;; organization &#39;Empty Organization&#39;&quot;,
+  &quot;username&quot;: &quot;secret_admin&quot;,
+  &quot;started_at&quot;: &quot;2024-02-22 18:28:28 UTC&quot;,
+  &quot;ended_at&quot;: &quot;2024-02-22 18:28:28 UTC&quot;,
+  &quot;state&quot;: &quot;stopped&quot;,
+  &quot;result&quot;: &quot;success&quot;,
+  &quot;progress&quot;: 1.0,
+  &quot;input&quot;: {
+    &quot;content_view&quot;: {
+      &quot;id&quot;: 419082953,
+      &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+      &quot;label&quot;: &quot;published_dev_staging_view&quot;
+    },
+    &quot;organization&quot;: {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;label&quot;: &quot;Empty_Organization&quot;
+    },
+    &quot;version_id&quot;: 234564707
+  },
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: {
+    &quot;action&quot;: &quot;Republish Repositories of Published Library - dev - staging view 3.0&quot;,
+    &quot;input&quot;: [
+      [
+        &quot;content_view&quot;,
+        {
+          &quot;text&quot;: &quot;content view &#39;Published Library - dev - staging view&#39;&quot;,
+          &quot;link&quot;: &quot;/content_views/419082953/versions&quot;
+        }
+      ],
+      [
+        &quot;organization&quot;,
+        {
+          &quot;text&quot;: &quot;organization &#39;Empty Organization&#39;&quot;,
+          &quot;link&quot;: &quot;/organizations/114267492/edit&quot;
+        }
+      ]
+    ],
+    &quot;output&quot;: &quot;&quot;,
+    &quot;errors&quot;: []
+  },
+  &quot;cli_example&quot;: null,
+  &quot;start_at&quot;: &quot;2024-02-22 18:28:28 UTC&quot;,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: false,
+    &quot;resumable&quot;: false
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content view version identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>force</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Force metadata regeneration to proceed. Dangerous operation when version has repositories with the &#39;Complete Mirroring&#39; mirroring policy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

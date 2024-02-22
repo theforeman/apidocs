@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/settings.html'>
+      Settings
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/settings
+      <br>
+      <small>List all settings</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/settings
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: &quot;The default administrator email address&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;root@example.com&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;administrator&quot;,
+      &quot;name&quot;: &quot;administrator&quot;,
+      &quot;full_name&quot;: &quot;Administrator email address&quot;,
+      &quot;value&quot;: &quot;root@example.com&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;URL where your Foreman instance is reachable (see also Provisioning &gt; unattended_url)&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;http://foreman.example.com&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;foreman_url&quot;,
+      &quot;name&quot;: &quot;foreman_url&quot;,
+      &quot;full_name&quot;: &quot;Foreman URL&quot;,
+      &quot;value&quot;: &quot;http://foreman.example.com&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Number of records shown per page in Foreman&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 20,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;entries_per_page&quot;,
+      &quot;name&quot;: &quot;entries_per_page&quot;,
+      &quot;full_name&quot;: &quot;Entries per page&quot;,
+      &quot;value&quot;: 20,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Should the `foreman-rake db:seed` be executed on the next run of the installer modules?&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;db_pending_seed&quot;,
+      &quot;name&quot;: &quot;db_pending_seed&quot;,
+      &quot;full_name&quot;: &quot;DB pending seed&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Open and read timeout for HTTP requests from Foreman to Smart Proxy (in seconds)&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 60,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;proxy_request_timeout&quot;,
+      &quot;name&quot;: &quot;proxy_request_timeout&quot;,
+      &quot;full_name&quot;: &quot;Smart Proxy request timeout&quot;,
+      &quot;value&quot;: 60,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Text to be shown in the login-page footer. Keyword $VERSION is replaced by current version.&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;Version $VERSION&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;login_text&quot;,
+      &quot;name&quot;: &quot;login_text&quot;,
+      &quot;full_name&quot;: &quot;Login page footer text&quot;,
+      &quot;value&quot;: &quot;Version $VERSION&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Set a proxy for all outgoing HTTP(S) connections from Foreman. System-wide proxies must be configured at the operating system level.&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;http_proxy&quot;,
+      &quot;name&quot;: &quot;http_proxy&quot;,
+      &quot;full_name&quot;: &quot;HTTP(S) proxy&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Set hostnames to which requests are not to be proxied. Requests to the local host are excluded by default.&quot;,
+      &quot;settings_type&quot;: &quot;array&quot;,
+      &quot;default&quot;: [],
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;http_proxy_except_list&quot;,
+      &quot;name&quot;: &quot;http_proxy_except_list&quot;,
+      &quot;full_name&quot;: &quot;HTTP(S) proxy except hosts&quot;,
+      &quot;value&quot;: [],
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Whether or not to show a menu to access experimental lab features (requires reload of page)&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;lab_features&quot;,
+      &quot;name&quot;: &quot;lab_features&quot;,
+      &quot;full_name&quot;: &quot;Show Experimental Labs&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Whether or not to show the new overview page for All Hosts&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;new_hosts_page&quot;,
+      &quot;name&quot;: &quot;new_hosts_page&quot;,
+      &quot;full_name&quot;: &quot;Show New Host Overview Page&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Display names of hosts as FQDNs. If disabled, only display names of hosts as hostnames.&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;display_fqdn_for_hosts&quot;,
+      &quot;name&quot;: &quot;display_fqdn_for_hosts&quot;,
+      &quot;full_name&quot;: &quot;Display FQDN for hosts&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Duration in minutes after servers are classed as out of sync. This setting is overridden by specific settings from config management tools (e.g. puppet_inteval, ansible_interval).&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 30,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;outofsync_interval&quot;,
+      &quot;name&quot;: &quot;outofsync_interval&quot;,
+      &quot;full_name&quot;: &quot;Out of sync interval&quot;,
+      &quot;value&quot;: 30,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman instance ID, uniquely identifies this Foreman instance.&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;instance_id&quot;,
+      &quot;name&quot;: &quot;instance_id&quot;,
+      &quot;full_name&quot;: &quot;Foreman UUID&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Language to use for new users&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_locale&quot;,
+      &quot;name&quot;: &quot;default_locale&quot;,
+      &quot;full_name&quot;: &quot;Default language&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;&quot;: &quot;Browser locale&quot;,
+        &quot;en&quot;: &quot;English (United States)&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Timezone to use for new users&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;default_timezone&quot;,
+      &quot;name&quot;: &quot;default_timezone&quot;,
+      &quot;full_name&quot;: &quot;Default timezone&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: {
+        &quot;&quot;: &quot;Browser timezone&quot;,
+        &quot;International Date Line West&quot;: &quot;(GMT -12:00) International Date Line West&quot;,
+        &quot;American Samoa&quot;: &quot;(GMT -11:00) American Samoa&quot;,
+        &quot;Midway Island&quot;: &quot;(GMT -11:00) Midway Island&quot;,
+        &quot;Hawaii&quot;: &quot;(GMT -10:00) Hawaii&quot;,
+        &quot;Alaska&quot;: &quot;(GMT -09:00) Alaska&quot;,
+        &quot;Pacific Time (US &amp; Canada)&quot;: &quot;(GMT -08:00) Pacific Time (US &amp; Canada)&quot;,
+        &quot;Tijuana&quot;: &quot;(GMT -08:00) Tijuana&quot;,
+        &quot;Arizona&quot;: &quot;(GMT -07:00) Arizona&quot;,
+        &quot;Chihuahua&quot;: &quot;(GMT -07:00) Chihuahua&quot;,
+        &quot;Mazatlan&quot;: &quot;(GMT -07:00) Mazatlan&quot;,
+        &quot;Mountain Time (US &amp; Canada)&quot;: &quot;(GMT -07:00) Mountain Time (US &amp; Canada)&quot;,
+        &quot;Central America&quot;: &quot;(GMT -06:00) Central America&quot;,
+        &quot;Central Time (US &amp; Canada)&quot;: &quot;(GMT -06:00) Central Time (US &amp; Canada)&quot;,
+        &quot;Guadalajara&quot;: &quot;(GMT -06:00) Guadalajara&quot;,
+        &quot;Mexico City&quot;: &quot;(GMT -06:00) Mexico City&quot;,
+        &quot;Monterrey&quot;: &quot;(GMT -06:00) Monterrey&quot;,
+        &quot;Saskatchewan&quot;: &quot;(GMT -06:00) Saskatchewan&quot;,
+        &quot;Bogota&quot;: &quot;(GMT -05:00) Bogota&quot;,
+        &quot;Eastern Time (US &amp; Canada)&quot;: &quot;(GMT -05:00) Eastern Time (US &amp; Canada)&quot;,
+        &quot;Indiana (East)&quot;: &quot;(GMT -05:00) Indiana (East)&quot;,
+        &quot;Lima&quot;: &quot;(GMT -05:00) Lima&quot;,
+        &quot;Quito&quot;: &quot;(GMT -05:00) Quito&quot;,
+        &quot;Atlantic Time (Canada)&quot;: &quot;(GMT -04:00) Atlantic Time (Canada)&quot;,
+        &quot;Caracas&quot;: &quot;(GMT -04:00) Caracas&quot;,
+        &quot;Georgetown&quot;: &quot;(GMT -04:00) Georgetown&quot;,
+        &quot;La Paz&quot;: &quot;(GMT -04:00) La Paz&quot;,
+        &quot;Puerto Rico&quot;: &quot;(GMT -04:00) Puerto Rico&quot;,
+        &quot;Santiago&quot;: &quot;(GMT -04:00) Santiago&quot;,
+        &quot;Newfoundland&quot;: &quot;(GMT -03:30) Newfoundland&quot;,
+        &quot;Brasilia&quot;: &quot;(GMT -03:00) Brasilia&quot;,
+        &quot;Buenos Aires&quot;: &quot;(GMT -03:00) Buenos Aires&quot;,
+        &quot;Greenland&quot;: &quot;(GMT -03:00) Greenland&quot;,
+        &quot;Montevideo&quot;: &quot;(GMT -03:00) Montevideo&quot;,
+        &quot;Mid-Atlantic&quot;: &quot;(GMT -02:00) Mid-Atlantic&quot;,
+        &quot;Azores&quot;: &quot;(GMT -01:00) Azores&quot;,
+        &quot;Cape Verde Is.&quot;: &quot;(GMT -01:00) Cape Verde Is.&quot;,
+        &quot;Casablanca&quot;: &quot;(GMT +00:00) Casablanca&quot;,
+        &quot;Dublin&quot;: &quot;(GMT +00:00) Dublin&quot;,
+        &quot;Edinburgh&quot;: &quot;(GMT +00:00) Edinburgh&quot;,
+        &quot;Lisbon&quot;: &quot;(GMT +00:00) Lisbon&quot;,
+        &quot;London&quot;: &quot;(GMT +00:00) London&quot;,
+        &quot;Monrovia&quot;: &quot;(GMT +00:00) Monrovia&quot;,
+        &quot;UTC&quot;: &quot;(GMT +00:00) UTC&quot;,
+        &quot;Amsterdam&quot;: &quot;(GMT +01:00) Amsterdam&quot;,
+        &quot;Belgrade&quot;: &quot;(GMT +01:00) Belgrade&quot;,
+        &quot;Berlin&quot;: &quot;(GMT +01:00) Berlin&quot;,
+        &quot;Bern&quot;: &quot;(GMT +01:00) Bern&quot;,
+        &quot;Bratislava&quot;: &quot;(GMT +01:00) Bratislava&quot;,
+        &quot;Brussels&quot;: &quot;(GMT +01:00) Brussels&quot;,
+        &quot;Budapest&quot;: &quot;(GMT +01:00) Budapest&quot;,
+        &quot;Copenhagen&quot;: &quot;(GMT +01:00) Copenhagen&quot;,
+        &quot;Ljubljana&quot;: &quot;(GMT +01:00) Ljubljana&quot;,
+        &quot;Madrid&quot;: &quot;(GMT +01:00) Madrid&quot;,
+        &quot;Paris&quot;: &quot;(GMT +01:00) Paris&quot;,
+        &quot;Prague&quot;: &quot;(GMT +01:00) Prague&quot;,
+        &quot;Rome&quot;: &quot;(GMT +01:00) Rome&quot;,
+        &quot;Sarajevo&quot;: &quot;(GMT +01:00) Sarajevo&quot;,
+        &quot;Skopje&quot;: &quot;(GMT +01:00) Skopje&quot;,
+        &quot;Stockholm&quot;: &quot;(GMT +01:00) Stockholm&quot;,
+        &quot;Vienna&quot;: &quot;(GMT +01:00) Vienna&quot;,
+        &quot;Warsaw&quot;: &quot;(GMT +01:00) Warsaw&quot;,
+        &quot;West Central Africa&quot;: &quot;(GMT +01:00) West Central Africa&quot;,
+        &quot;Zagreb&quot;: &quot;(GMT +01:00) Zagreb&quot;,
+        &quot;Zurich&quot;: &quot;(GMT +01:00) Zurich&quot;,
+        &quot;Athens&quot;: &quot;(GMT +02:00) Athens&quot;,
+        &quot;Bucharest&quot;: &quot;(GMT +02:00) Bucharest&quot;,
+        &quot;Cairo&quot;: &quot;(GMT +02:00) Cairo&quot;,
+        &quot;Harare&quot;: &quot;(GMT +02:00) Harare&quot;,
+        &quot;Helsinki&quot;: &quot;(GMT +02:00) Helsinki&quot;,
+        &quot;Jerusalem&quot;: &quot;(GMT +02:00) Jerusalem&quot;,
+        &quot;Kaliningrad&quot;: &quot;(GMT +02:00) Kaliningrad&quot;,
+        &quot;Kyiv&quot;: &quot;(GMT +02:00) Kyiv&quot;,
+        &quot;Pretoria&quot;: &quot;(GMT +02:00) Pretoria&quot;,
+        &quot;Riga&quot;: &quot;(GMT +02:00) Riga&quot;,
+        &quot;Sofia&quot;: &quot;(GMT +02:00) Sofia&quot;,
+        &quot;Tallinn&quot;: &quot;(GMT +02:00) Tallinn&quot;,
+        &quot;Vilnius&quot;: &quot;(GMT +02:00) Vilnius&quot;,
+        &quot;Baghdad&quot;: &quot;(GMT +03:00) Baghdad&quot;,
+        &quot;Istanbul&quot;: &quot;(GMT +03:00) Istanbul&quot;,
+        &quot;Kuwait&quot;: &quot;(GMT +03:00) Kuwait&quot;,
+        &quot;Minsk&quot;: &quot;(GMT +03:00) Minsk&quot;,
+        &quot;Moscow&quot;: &quot;(GMT +03:00) Moscow&quot;,
+        &quot;Nairobi&quot;: &quot;(GMT +03:00) Nairobi&quot;,
+        &quot;Riyadh&quot;: &quot;(GMT +03:00) Riyadh&quot;,
+        &quot;St. Petersburg&quot;: &quot;(GMT +03:00) St. Petersburg&quot;,
+        &quot;Volgograd&quot;: &quot;(GMT +03:00) Volgograd&quot;,
+        &quot;Tehran&quot;: &quot;(GMT +03:30) Tehran&quot;,
+        &quot;Abu Dhabi&quot;: &quot;(GMT +04:00) Abu Dhabi&quot;,
+        &quot;Baku&quot;: &quot;(GMT +04:00) Baku&quot;,
+        &quot;Muscat&quot;: &quot;(GMT +04:00) Muscat&quot;,
+        &quot;Samara&quot;: &quot;(GMT +04:00) Samara&quot;,
+        &quot;Tbilisi&quot;: &quot;(GMT +04:00) Tbilisi&quot;,
+        &quot;Yerevan&quot;: &quot;(GMT +04:00) Yerevan&quot;,
+        &quot;Kabul&quot;: &quot;(GMT +04:30) Kabul&quot;,
+        &quot;Ekaterinburg&quot;: &quot;(GMT +05:00) Ekaterinburg&quot;,
+        &quot;Islamabad&quot;: &quot;(GMT +05:00) Islamabad&quot;,
+        &quot;Karachi&quot;: &quot;(GMT +05:00) Karachi&quot;,
+        &quot;Tashkent&quot;: &quot;(GMT +05:00) Tashkent&quot;,
+        &quot;Chennai&quot;: &quot;(GMT +05:30) Chennai&quot;,
+        &quot;Kolkata&quot;: &quot;(GMT +05:30) Kolkata&quot;,
+        &quot;Mumbai&quot;: &quot;(GMT +05:30) Mumbai&quot;,
+        &quot;New Delhi&quot;: &quot;(GMT +05:30) New Delhi&quot;,
+        &quot;Sri Jayawardenepura&quot;: &quot;(GMT +05:30) Sri Jayawardenepura&quot;,
+        &quot;Kathmandu&quot;: &quot;(GMT +05:45) Kathmandu&quot;,
+        &quot;Almaty&quot;: &quot;(GMT +06:00) Almaty&quot;,
+        &quot;Astana&quot;: &quot;(GMT +06:00) Astana&quot;,
+        &quot;Dhaka&quot;: &quot;(GMT +06:00) Dhaka&quot;,
+        &quot;Urumqi&quot;: &quot;(GMT +06:00) Urumqi&quot;,
+        &quot;Rangoon&quot;: &quot;(GMT +06:30) Rangoon&quot;,
+        &quot;Bangkok&quot;: &quot;(GMT +07:00) Bangkok&quot;,
+        &quot;Hanoi&quot;: &quot;(GMT +07:00) Hanoi&quot;,
+        &quot;Jakarta&quot;: &quot;(GMT +07:00) Jakarta&quot;,
+        &quot;Krasnoyarsk&quot;: &quot;(GMT +07:00) Krasnoyarsk&quot;,
+        &quot;Novosibirsk&quot;: &quot;(GMT +07:00) Novosibirsk&quot;,
+        &quot;Beijing&quot;: &quot;(GMT +08:00) Beijing&quot;,
+        &quot;Chongqing&quot;: &quot;(GMT +08:00) Chongqing&quot;,
+        &quot;Hong Kong&quot;: &quot;(GMT +08:00) Hong Kong&quot;,
+        &quot;Irkutsk&quot;: &quot;(GMT +08:00) Irkutsk&quot;,
+        &quot;Kuala Lumpur&quot;: &quot;(GMT +08:00) Kuala Lumpur&quot;,
+        &quot;Perth&quot;: &quot;(GMT +08:00) Perth&quot;,
+        &quot;Singapore&quot;: &quot;(GMT +08:00) Singapore&quot;,
+        &quot;Taipei&quot;: &quot;(GMT +08:00) Taipei&quot;,
+        &quot;Ulaanbaatar&quot;: &quot;(GMT +08:00) Ulaanbaatar&quot;,
+        &quot;Osaka&quot;: &quot;(GMT +09:00) Osaka&quot;,
+        &quot;Sapporo&quot;: &quot;(GMT +09:00) Sapporo&quot;,
+        &quot;Seoul&quot;: &quot;(GMT +09:00) Seoul&quot;,
+        &quot;Tokyo&quot;: &quot;(GMT +09:00) Tokyo&quot;,
+        &quot;Yakutsk&quot;: &quot;(GMT +09:00) Yakutsk&quot;,
+        &quot;Adelaide&quot;: &quot;(GMT +09:30) Adelaide&quot;,
+        &quot;Darwin&quot;: &quot;(GMT +09:30) Darwin&quot;,
+        &quot;Brisbane&quot;: &quot;(GMT +10:00) Brisbane&quot;,
+        &quot;Canberra&quot;: &quot;(GMT +10:00) Canberra&quot;,
+        &quot;Guam&quot;: &quot;(GMT +10:00) Guam&quot;,
+        &quot;Hobart&quot;: &quot;(GMT +10:00) Hobart&quot;,
+        &quot;Melbourne&quot;: &quot;(GMT +10:00) Melbourne&quot;,
+        &quot;Port Moresby&quot;: &quot;(GMT +10:00) Port Moresby&quot;,
+        &quot;Sydney&quot;: &quot;(GMT +10:00) Sydney&quot;,
+        &quot;Vladivostok&quot;: &quot;(GMT +10:00) Vladivostok&quot;,
+        &quot;Magadan&quot;: &quot;(GMT +11:00) Magadan&quot;,
+        &quot;New Caledonia&quot;: &quot;(GMT +11:00) New Caledonia&quot;,
+        &quot;Solomon Is.&quot;: &quot;(GMT +11:00) Solomon Is.&quot;,
+        &quot;Srednekolymsk&quot;: &quot;(GMT +11:00) Srednekolymsk&quot;,
+        &quot;Auckland&quot;: &quot;(GMT +12:00) Auckland&quot;,
+        &quot;Fiji&quot;: &quot;(GMT +12:00) Fiji&quot;,
+        &quot;Kamchatka&quot;: &quot;(GMT +12:00) Kamchatka&quot;,
+        &quot;Marshall Is.&quot;: &quot;(GMT +12:00) Marshall Is.&quot;,
+        &quot;Wellington&quot;: &quot;(GMT +12:00) Wellington&quot;,
+        &quot;Chatham Is.&quot;: &quot;(GMT +12:45) Chatham Is.&quot;,
+        &quot;Nuku&#39;alofa&quot;: &quot;(GMT +13:00) Nuku&#39;alofa&quot;,
+        &quot;Samoa&quot;: &quot;(GMT +13:00) Samoa&quot;,
+        &quot;Tokelau Is.&quot;: &quot;(GMT +13:00) Tokelau Is.&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;The instance title is shown above the header in a banner (requires a page reload).&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;instance_title&quot;,
+      &quot;name&quot;: &quot;instance_title&quot;,
+      &quot;full_name&quot;: &quot;Instance title&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Hex value. for color for the instance title banner. Will only be used if an instance title is defined. If no valid value is given, the default value is: #000000. (requires a page reload).&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;#000000&quot;,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;instance_color&quot;,
+      &quot;name&quot;: &quot;instance_color&quot;,
+      &quot;full_name&quot;: &quot;Instance color&quot;,
+      &quot;value&quot;: &quot;#000000&quot;,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Duration in days to preserve audits for. Leave empty to disable the audits cleanup.&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: null,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;audits_period&quot;,
+      &quot;name&quot;: &quot;audits_period&quot;,
+      &quot;full_name&quot;: &quot;Saved audits interval&quot;,
+      &quot;value&quot;: null,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will load the new UI for host details&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;host_details_ui&quot;,
+      &quot;name&quot;: &quot;host_details_ui&quot;,
+      &quot;full_name&quot;: &quot;New host details UI&quot;,
+      &quot;value&quot;: true,
+      &quot;category&quot;: &quot;general&quot;,
+      &quot;category_name&quot;: &quot;General&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    },
+    {
+      &quot;description&quot;: &quot;Foreman will use OAuth for API authorization&quot;,
+      &quot;settings_type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: false,
+      &quot;updated_at&quot;: null,
+      &quot;id&quot;: &quot;oauth_active&quot;,
+      &quot;name&quot;: &quot;oauth_active&quot;,
+      &quot;full_name&quot;: &quot;OAuth active&quot;,
+      &quot;value&quot;: false,
+      &quot;category&quot;: &quot;auth&quot;,
+      &quot;category_name&quot;: &quot;Authentication&quot;,
+      &quot;readonly&quot;: false,
+      &quot;config_file&quot;: null,
+      &quot;encrypted&quot;: false,
+      &quot;select_values&quot;: null
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h2>Search fields</h2>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>description</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
