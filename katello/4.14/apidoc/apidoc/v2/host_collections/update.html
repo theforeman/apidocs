@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/host_collections.html'>
+      Host_collections
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>update</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/host_collections/:id
+      <br>
+      <small>Update a host collection</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /katello/api/host_collections/992660475
+{
+  &quot;organization_id&quot;: 114267492,
+  &quot;max_hosts&quot;: 2,
+  &quot;unlimited_hosts&quot;: false,
+  &quot;host_ids&quot;: [
+    980191006,
+    298486374
+  ],
+  &quot;host_collection&quot;: {
+    &quot;max_hosts&quot;: 2,
+    &quot;organization_id&quot;: 114267492,
+    &quot;unlimited_hosts&quot;: false,
+    &quot;host_ids&quot;: [
+      980191006,
+      298486374
+    ]
+  }
+}
+200
+{
+  &quot;host_ids&quot;: [
+    980191006,
+    298486374
+  ],
+  &quot;name&quot;: &quot;Simple Host Collection&quot;,
+  &quot;organization_id&quot;: 114267492,
+  &quot;max_hosts&quot;: 2,
+  &quot;description&quot;: &quot;The simplest of host collections.&quot;,
+  &quot;total_hosts&quot;: 2,
+  &quot;unlimited_hosts&quot;: false,
+  &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:47:22 UTC&quot;,
+  &quot;id&quot;: 992660475,
+  &quot;permissions&quot;: {
+    &quot;deletable&quot;: true,
+    &quot;editable&quot;: true
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Host Collection name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of host ids to replace the hosts in host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_hosts</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Maximum number of hosts in the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unlimited_hosts</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the host collection may have unlimited hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

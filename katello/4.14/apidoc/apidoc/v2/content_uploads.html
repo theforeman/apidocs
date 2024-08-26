@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Content_uploads
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Content_uploads
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/content_uploads/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:repository_id/content_uploads
+          </a>
+          <br>
+          <small>Create an upload request</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/repositories/367202338/content_uploads
+{
+  &quot;size&quot;: 100,
+  &quot;checksum&quot;: &quot;test_checksum&quot;,
+  &quot;content_type&quot;: &quot;python_package&quot;,
+  &quot;repository&quot;: {
+    &quot;id&quot;: 16447009,
+    &quot;pulp_id&quot;: &quot;Default_Organization-Cabinet-pulp3_Python_1&quot;,
+    &quot;library_instance_id&quot;: null,
+    &quot;content_view_version_id&quot;: 840492357,
+    &quot;relative_path&quot;: &quot;Default_Organization/library/pulp3_Python_1&quot;,
+    &quot;environment_id&quot;: 562075838,
+    &quot;saved_checksum_type&quot;: null,
+    &quot;distribution_version&quot;: null,
+    &quot;distribution_arch&quot;: null,
+    &quot;distribution_bootable&quot;: null,
+    &quot;distribution_family&quot;: null,
+    &quot;distribution_variant&quot;: null,
+    &quot;container_repository_name&quot;: null,
+    &quot;root_id&quot;: 129517803,
+    &quot;remote_href&quot;: null,
+    &quot;publication_href&quot;: null,
+    &quot;version_href&quot;: null,
+    &quot;last_contents_changed&quot;: &quot;1970-01-01T00:00:00.000Z&quot;,
+    &quot;last_applicability_regen&quot;: &quot;1970-01-01T00:00:00.000Z&quot;,
+    &quot;last_indexed&quot;: &quot;1970-01-01T00:00:00.000Z&quot;
+  },
+  &quot;content_upload&quot;: {
+    &quot;size&quot;: 100,
+    &quot;checksum&quot;: &quot;test_checksum&quot;,
+    &quot;content_type&quot;: &quot;python_package&quot;,
+    &quot;repository&quot;: {
+      &quot;id&quot;: 16447009,
+      &quot;pulp_id&quot;: &quot;Default_Organization-Cabinet-pulp3_Python_1&quot;,
+      &quot;library_instance_id&quot;: null,
+      &quot;content_view_version_id&quot;: 840492357,
+      &quot;relative_path&quot;: &quot;Default_Organization/library/pulp3_Python_1&quot;,
+      &quot;environment_id&quot;: 562075838,
+      &quot;saved_checksum_type&quot;: null,
+      &quot;distribution_version&quot;: null,
+      &quot;distribution_arch&quot;: null,
+      &quot;distribution_bootable&quot;: null,
+      &quot;distribution_family&quot;: null,
+      &quot;distribution_variant&quot;: null,
+      &quot;container_repository_name&quot;: null,
+      &quot;root_id&quot;: 129517803,
+      &quot;remote_href&quot;: null,
+      &quot;publication_href&quot;: null,
+      &quot;version_href&quot;: null,
+      &quot;last_contents_changed&quot;: &quot;1970-01-01T00:00:00.000Z&quot;,
+      &quot;last_applicability_regen&quot;: &quot;1970-01-01T00:00:00.000Z&quot;,
+      &quot;last_indexed&quot;: &quot;1970-01-01T00:00:00.000Z&quot;
+    }
+  }
+}
+200</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>repository id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>size</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Size of file to upload</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Checksum of file to upload</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content type (&#39;deb&#39;, &#39;docker_manifest&#39;, &#39;file&#39;, &#39;ostree_ref&#39;, &#39;rpm&#39;, &#39;srpm&#39;)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>deb</code>, <code>docker_manifest</code>, <code>file</code>, <code>ostree_ref</code>, <code>python_package</code>, <code>rpm</code>, <code>srpm</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/content_uploads/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:repository_id/content_uploads/:id
+          </a>
+          <br>
+          <small>Upload a chunk of the file's content</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /katello/api/repositories/367202338/content_uploads/1
+{
+  &quot;offset&quot;: &quot;0&quot;,
+  &quot;content&quot;: &quot;/tmp/my_file.rpm&quot;,
+  &quot;content_upload&quot;: {
+    &quot;offset&quot;: &quot;0&quot;,
+    &quot;content&quot;: &quot;/tmp/my_file.rpm&quot;
+  }
+}
+204</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Repository id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Upload request id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>size</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Size of file to upload</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>offset</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The offset in the file where the content starts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The actual file contents</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>File</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/content_uploads/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/repositories/:repository_id/content_uploads/:id
+          </a>
+          <br>
+          <small>Delete an upload request</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /katello/api/repositories/367202338/content_uploads/1
+{
+  &quot;content_upload&quot;: {}
+}
+204</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Repository id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Upload request id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

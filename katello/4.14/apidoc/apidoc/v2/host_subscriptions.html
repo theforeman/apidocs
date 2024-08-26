@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Host_subscriptions
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Host_subscriptions
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List a host's subscriptions</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/980191376/subscriptions
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;selectable&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 0,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/auto_attach.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-auto_attach'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/auto_attach
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Trigger an auto-attach of subscriptions</small>
+        </h2>
+    </div>
+
+
+    <div id='description-auto_attach' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/980191374/subscriptions/auto_attach
+{
+  &quot;host_subscription&quot;: {}
+}
+204</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/hosts/:host_id/subscriptions
+          </a>
+          <br>
+          <small>Unregister the host as a subscription consumer</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/980191069/subscriptions
+{
+  &quot;host_subscription&quot;: {}
+}
+200
+{}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/hosts/subscriptions
+          </a>
+          <br>
+          <small>Register a host with subscription and information</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/subscriptions
+{
+  &quot;lifecycle_environment_id&quot;: 562075838,
+  &quot;content_view_id&quot;: 30237652,
+  &quot;facts&quot;: {
+    &quot;network.hostname&quot;: &quot;host420&quot;
+  },
+  &quot;installed_products&quot;: [
+    {
+      &quot;product_id&quot;: &quot;1&quot;,
+      &quot;product_name&quot;: &quot;name&quot;
+    }
+  ],
+  &quot;host_subscription&quot;: {
+    &quot;lifecycle_environment_id&quot;: 562075838,
+    &quot;content_view_id&quot;: 30237652,
+    &quot;facts&quot;: {
+      &quot;network.hostname&quot;: &quot;host420&quot;
+    },
+    &quot;installed_products&quot;: [
+      {
+        &quot;product_id&quot;: &quot;1&quot;,
+        &quot;product_name&quot;: &quot;name&quot;
+      }
+    ]
+  }
+}
+500
+{
+  &quot;displayMessage&quot;: &quot;Unable to register system, not all services available&quot;,
+  &quot;errors&quot;: [
+    &quot;Unable to register system, not all services available&quot;
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>uuid</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID to use for registered host, random uuid is generated if not provided</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>facts</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Key-value hash of subscription-manager facts, nesting uses a period delimiter (.)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hypervisor_guest_uuids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUIDs of the virtual guests from the host&#39;s hypervisor</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>installed_products</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of products installed on the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>installed_products[product_id]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Product id as listed from a host&#39;s installed products,         this is not the same product id as the products api returns</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>installed_products[product_name]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Product name as listed from a host&#39;s installed products</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>installed_products[arch]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Product architecture</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>installed_products[version]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Product version</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>release_version</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Release version of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>service_level</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>lifecycle_environment_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Lifecycle Environment ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content View ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/remove_subscriptions.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_subscriptions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/remove_subscriptions
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Remove subscriptions from a host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_subscriptions' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/980191385/subscriptions/remove_subscriptions
+{
+  &quot;subscriptions&quot;: [
+    {
+      &quot;id&quot;: 128914721,
+      &quot;quantity&quot;: &quot;3&quot;
+    }
+  ],
+  &quot;host_subscription&quot;: {
+    &quot;subscriptions&quot;: [
+      {
+        &quot;id&quot;: 128914721,
+        &quot;quantity&quot;: &quot;3&quot;
+      }
+    ]
+  }
+}
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;selectable&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 0,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subscriptions</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of subscriptions to remove</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[id]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[quantity]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If specified, remove the first instance of a subscription with matching id and quantity</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/add_subscriptions.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_subscriptions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/add_subscriptions
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Add a subscription to a host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_subscriptions' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/980191378/subscriptions/add_subscriptions
+{
+  &quot;subscriptions&quot;: [
+    {
+      &quot;id&quot;: 128914721,
+      &quot;quantity&quot;: 1
+    }
+  ],
+  &quot;host_subscription&quot;: {
+    &quot;subscriptions&quot;: [
+      {
+        &quot;id&quot;: 128914721,
+        &quot;quantity&quot;: 1
+      }
+    ]
+  }
+}
+204</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subscriptions</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of subscriptions to add</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[id]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[quantity]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Quantity of this subscriptions to add</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/product_content.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-product_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions/product_content
+          </a>
+          <br>
+          <small>Get content and overrides for the host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-product_content' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_access_mode_all</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Get all content available, not just that provided by subscriptions</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_access_mode_env</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Limit content to just that available in the host&#39;s content view version</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/content_override.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-content_override'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/content_override
+          </a>
+          <br>
+          <small>Set content overrides for the host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-content_override' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/980191062/subscriptions/content_override
+{
+  &quot;content_overrides&quot;: [
+    {
+      &quot;content_label&quot;: &quot;some-content&quot;,
+      &quot;value&quot;: 1
+    }
+  ],
+  &quot;host_subscription&quot;: {
+    &quot;content_overrides&quot;: [
+      {
+        &quot;content_label&quot;: &quot;some-content&quot;,
+        &quot;value&quot;: 1
+      }
+    ]
+  }
+}
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 1,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;enabled&quot;: false,
+      &quot;product&quot;: {
+        &quot;id&quot;: null,
+        &quot;name&quot;: &quot;Product 24&quot;
+      },
+      &quot;content&quot;: {
+        &quot;id&quot;: null,
+        &quot;name&quot;: &quot;content-name1&quot;,
+        &quot;label&quot;: &quot;some-content&quot;,
+        &quot;vendor&quot;: null,
+        &quot;content_type&quot;: null,
+        &quot;content_url&quot;: null,
+        &quot;gpg_url&quot;: null
+      },
+      &quot;repositories&quot;: [],
+      &quot;name&quot;: &quot;content-name1&quot;,
+      &quot;vendor&quot;: null,
+      &quot;label&quot;: &quot;some-content&quot;,
+      &quot;id&quot;: null,
+      &quot;type&quot;: null,
+      &quot;gpgUrl&quot;: null,
+      &quot;contentUrl&quot;: null,
+      &quot;archRestricted&quot;: null,
+      &quot;osRestricted&quot;: null,
+      &quot;override&quot;: &quot;default&quot;,
+      &quot;overrides&quot;: [],
+      &quot;enabled_content_override&quot;: null,
+      &quot;redhat&quot;: false
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>value</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override to a boolean value or &#39;default&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_overrides</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of Content override parameters</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides[content_label]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Label of the content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides[value]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override value. Provide a boolean value if name is &#39;enabled&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides[name]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override key or name. Note if name is not provided the default name will be &#39;enabled&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides[remove]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set true to remove an override and reset it to &#39;default&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_overrides_search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content override search parameters</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[search]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[page]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[per_page]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[order]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[full_result]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[sort_by]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[sort_order]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[enabled]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set true to override to enabled; Set false to override to disabled.&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[limit_to_env]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Limit actions to content in the host&#39;s environment.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_overrides_search[remove]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set true to remove an override and reset it to &#39;default&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/available_release_versions.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-available_release_versions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions/available_release_versions
+          </a>
+          <br>
+          <small>Show releases available for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-available_release_versions' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/980191070/subscriptions/available_release_versions
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;selectable&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 0,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>id of host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_subscriptions/enabled_repositories.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-enabled_repositories'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions/enabled_repositories
+          </a>
+          <br>
+          <small>Show repositories enabled on the host that are known to Katello</small>
+        </h2>
+    </div>
+
+
+    <div id='description-enabled_repositories' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/980191065/subscriptions/enabled_repositories
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 1,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;backend_identifier&quot;: &quot;fedora_17_acme_dev&quot;,
+      &quot;relative_path&quot;: &quot;ACME_Corporation/dev/fedora_17_dev_label&quot;,
+      &quot;container_repository_name&quot;: null,
+      &quot;full_path&quot;: &quot;https://devel.example.com/pulp/content/ACME_Corporation/dev/fedora_17_dev_label/&quot;,
+      &quot;library_instance_id&quot;: null,
+      &quot;version_href&quot;: null,
+      &quot;remote_href&quot;: null,
+      &quot;publication_href&quot;: null,
+      &quot;content_counts&quot;: {
+        &quot;rpm&quot;: 0,
+        &quot;erratum&quot;: 0,
+        &quot;package_group&quot;: 0,
+        &quot;srpm&quot;: 0,
+        &quot;module_stream&quot;: 0
+      },
+      &quot;mirroring_policy&quot;: &quot;mirror_content_only&quot;,
+      &quot;id&quot;: 841170190,
+      &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+      &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+      &quot;description&quot;: &quot;My description&quot;,
+      &quot;content_view_versions&quot;: [],
+      &quot;filters&quot;: [],
+      &quot;last_sync&quot;: null,
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 30237652,
+        &quot;name&quot;: &quot;ACME Default ContentView&quot;
+      },
+      &quot;content_view_version&quot;: {
+        &quot;id&quot;: 840492357,
+        &quot;name&quot;: &quot;ACME Default ContentView 1.0&quot;,
+        &quot;content_view_id&quot;: 30237652
+      },
+      &quot;kt_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;
+      },
+      &quot;content_type&quot;: &quot;yum&quot;,
+      &quot;url&quot;: &quot;http://myrepo.com&quot;,
+      &quot;arch&quot;: &quot;noarch&quot;,
+      &quot;os_versions&quot;: null,
+      &quot;content_id&quot;: &quot;1&quot;,
+      &quot;generic_remote_options&quot;: null,
+      &quot;major&quot;: null,
+      &quot;minor&quot;: null,
+      &quot;product&quot;: {
+        &quot;id&quot;: 785257261,
+        &quot;cp_id&quot;: &quot;123123123001&quot;,
+        &quot;name&quot;: &quot;Fedora&quot;,
+        &quot;orphaned&quot;: false,
+        &quot;redhat&quot;: false,
+        &quot;sync_plan&quot;: null
+      },
+      &quot;content_label&quot;: &quot;fedora&quot;,
+      &quot;last_sync_words&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>id of host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

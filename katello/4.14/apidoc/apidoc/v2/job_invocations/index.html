@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/job_invocations.html'>
+      Job_invocations
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/job_invocations
+      <br>
+      <small>List job invocations</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/job_invocations
+200
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 187,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 152&quot;,
+      &quot;targeting_id&quot;: 212,
+      &quot;status&quot;: 0,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;succeeded&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: {
+        &quot;id&quot;: &quot;d5f530c2-dce6-4e8b-ac2b-7d557047149a&quot;,
+        &quot;state&quot;: &quot;stopped&quot;
+      },
+      &quot;template_id&quot;: 1007982000,
+      &quot;template_name&quot;: &quot;Job template 156&quot;,
+      &quot;effective_user&quot;: &quot;root&quot;,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    },
+    {
+      &quot;id&quot;: 186,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 178&quot;,
+      &quot;targeting_id&quot;: 214,
+      &quot;status&quot;: 2,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;queued&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: null,
+      &quot;template_id&quot;: null,
+      &quot;template_name&quot;: null,
+      &quot;effective_user&quot;: null,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    },
+    {
+      &quot;id&quot;: 185,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 177&quot;,
+      &quot;targeting_id&quot;: 213,
+      &quot;status&quot;: 2,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;queued&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: null,
+      &quot;template_id&quot;: null,
+      &quot;template_name&quot;: null,
+      &quot;effective_user&quot;: null,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

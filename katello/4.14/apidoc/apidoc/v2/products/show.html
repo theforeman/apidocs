@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/products.html'>
+      Products
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/products/:id
+      <br>
+      <small>Show a product</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/products/785257261
+200
+{
+  &quot;sync_state_aggregated&quot;: &quot;stopped&quot;,
+  &quot;redhat&quot;: false,
+  &quot;id&quot;: 785257261,
+  &quot;cp_id&quot;: &quot;123123123001&quot;,
+  &quot;name&quot;: &quot;Fedora&quot;,
+  &quot;label&quot;: &quot;fedora_label&quot;,
+  &quot;description&quot;: &quot;An open source Linux distribution.&quot;,
+  &quot;provider_id&quot;: 36826545,
+  &quot;sync_plan_id&quot;: null,
+  &quot;sync_summary&quot;: {},
+  &quot;gpg_key_id&quot;: null,
+  &quot;ssl_ca_cert_id&quot;: null,
+  &quot;ssl_client_cert_id&quot;: null,
+  &quot;ssl_client_key_id&quot;: null,
+  &quot;sync_state&quot;: null,
+  &quot;last_sync&quot;: null,
+  &quot;last_sync_words&quot;: null,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;sync_plan&quot;: null,
+  &quot;repository_count&quot;: 13,
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+  &quot;product_content&quot;: [
+    {
+      &quot;enabled&quot;: false,
+      &quot;product_id&quot;: 785257261,
+      &quot;content&quot;: {
+        &quot;name&quot;: &quot;Fedora&quot;,
+        &quot;label&quot;: &quot;fedora&quot;,
+        &quot;vendor&quot;: null,
+        &quot;content_url&quot;: &quot;/pub/fedora/linux/releases/$releasever/Everything/$basearch/os&quot;,
+        &quot;gpg_url&quot;: null,
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;type&quot;: null,
+        &quot;gpgUrl&quot;: null,
+        &quot;contentUrl&quot;: &quot;/pub/fedora/linux/releases/$releasever/Everything/$basearch/os&quot;
+      }
+    }
+  ],
+  &quot;available_content&quot;: [
+    {
+      &quot;enabled&quot;: false,
+      &quot;product_id&quot;: 785257261,
+      &quot;content&quot;: {
+        &quot;name&quot;: &quot;Fedora&quot;,
+        &quot;label&quot;: &quot;fedora&quot;,
+        &quot;vendor&quot;: null,
+        &quot;content_url&quot;: &quot;/pub/fedora/linux/releases/$releasever/Everything/$basearch/os&quot;,
+        &quot;gpg_url&quot;: null,
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;type&quot;: null,
+        &quot;gpgUrl&quot;: null,
+        &quot;contentUrl&quot;: &quot;/pub/fedora/linux/releases/$releasever/Everything/$basearch/os&quot;
+      }
+    }
+  ],
+  &quot;repositories&quot;: [
+    {
+      &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+      &quot;id&quot;: 367202338
+    },
+    {
+      &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+      &quot;id&quot;: 841170190
+    },
+    {
+      &quot;name&quot;: &quot;Fedora 17 x86_64 duplicate&quot;,
+      &quot;id&quot;: 792129035
+    },
+    {
+      &quot;name&quot;: &quot;Feedless Fedora 17 x86_64&quot;,
+      &quot;id&quot;: 643402541
+    },
+    {
+      &quot;name&quot;: &quot;Fedora 17 no arch&quot;,
+      &quot;id&quot;: 242028598
+    },
+    {
+      &quot;name&quot;: &quot;Fedora 17 x86_64 unpublished&quot;,
+      &quot;id&quot;: 841753487
+    },
+    {
+      &quot;name&quot;: &quot;Fedora 17 x86_64 2&quot;,
+      &quot;id&quot;: 860533889
+    },
+    {
+      &quot;name&quot;: &quot;Source rpm repo&quot;,
+      &quot;id&quot;: 504073478
+    },
+    {
+      &quot;name&quot;: &quot;My Files&quot;,
+      &quot;id&quot;: 921033349
+    },
+    {
+      &quot;name&quot;: &quot;Pulp3 File 1&quot;,
+      &quot;id&quot;: 752069227
+    },
+    {
+      &quot;name&quot;: &quot;Pulp3 Ansible Collection 1&quot;,
+      &quot;id&quot;: 269989997
+    },
+    {
+      &quot;name&quot;: &quot;Pulp3 Docker 1&quot;,
+      &quot;id&quot;: 536318648
+    },
+    {
+      &quot;name&quot;: &quot;Pulp3 Python 1&quot;,
+      &quot;id&quot;: 16447009
+    },
+    {
+      &quot;name&quot;: &quot;Pulp3 OSTree 1&quot;,
+      &quot;id&quot;: 145295987
+    }
+  ],
+  &quot;provider&quot;: {
+    &quot;name&quot;: &quot;Anonymous&quot;
+  },
+  &quot;sync_status&quot;: {
+    &quot;id&quot;: null,
+    &quot;product_id&quot;: null,
+    &quot;progress&quot;: null,
+    &quot;sync_id&quot;: null,
+    &quot;state&quot;: null,
+    &quot;raw_state&quot;: null,
+    &quot;start_time&quot;: null,
+    &quot;finish_time&quot;: null,
+    &quot;duration&quot;: null,
+    &quot;display_size&quot;: null,
+    &quot;size&quot;: null,
+    &quot;is_running&quot;: null,
+    &quot;error_details&quot;: null
+  },
+  &quot;permissions&quot;: {
+    &quot;view_products&quot;: true,
+    &quot;edit_products&quot;: true,
+    &quot;destroy_products&quot;: false,
+    &quot;sync_products&quot;: true
+  },
+  &quot;published_content_view_ids&quot;: [
+    909058347,
+    405955044
+  ],
+  &quot;has_last_affected_repo_in_filter&quot;: false,
+  &quot;active_task_count&quot;: 0
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organization ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>product numeric identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

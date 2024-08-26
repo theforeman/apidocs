@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/content_views.html'>
+      Content_views
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>destroy</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      DELETE /katello/api/content_views/:id
+      <br>
+      <small>Delete a content view</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /katello/api/content_views/1058174645
+{
+  &quot;content_view&quot;: {}
+}
+202
+{
+  &quot;id&quot;: &quot;4c55c628-7bf5-4a4b-914e-9922c05678dc&quot;,
+  &quot;label&quot;: &quot;Actions::Katello::ContentView::Destroy&quot;,
+  &quot;pending&quot;: false,
+  &quot;action&quot;: &quot;Delete content view &#39;Cat&#39;; organization &#39;Empty Organization&#39;&quot;,
+  &quot;username&quot;: &quot;secret_admin&quot;,
+  &quot;started_at&quot;: &quot;2024-08-26 18:53:28 UTC&quot;,
+  &quot;ended_at&quot;: &quot;2024-08-26 18:53:28 UTC&quot;,
+  &quot;state&quot;: &quot;stopped&quot;,
+  &quot;result&quot;: &quot;success&quot;,
+  &quot;progress&quot;: 1.0,
+  &quot;input&quot;: {
+    &quot;content_view&quot;: {
+      &quot;id&quot;: 1058174645,
+      &quot;name&quot;: &quot;Cat&quot;,
+      &quot;label&quot;: &quot;Cat&quot;
+    },
+    &quot;organization&quot;: {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;label&quot;: &quot;Empty_Organization&quot;
+    },
+    &quot;services_checked&quot;: [
+      &quot;pulp3&quot;
+    ],
+    &quot;remote_user&quot;: &quot;admin&quot;,
+    &quot;remote_cp_user&quot;: &quot;admin&quot;
+  },
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: {
+    &quot;action&quot;: &quot;Delete&quot;,
+    &quot;input&quot;: [
+      [
+        &quot;content_view&quot;,
+        {
+          &quot;text&quot;: &quot;content view &#39;Cat&#39;&quot;,
+          &quot;link&quot;: &quot;/content_views/1058174645/versions&quot;
+        }
+      ],
+      [
+        &quot;organization&quot;,
+        {
+          &quot;text&quot;: &quot;organization &#39;Empty Organization&#39;&quot;,
+          &quot;link&quot;: &quot;/organizations/114267492/edit&quot;
+        }
+      ]
+    ],
+    &quot;output&quot;: &quot;&quot;,
+    &quot;errors&quot;: []
+  },
+  &quot;cli_example&quot;: null,
+  &quot;start_at&quot;: &quot;2024-08-26 18:53:28 UTC&quot;,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: false,
+    &quot;resumable&quot;: false
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view numeric identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

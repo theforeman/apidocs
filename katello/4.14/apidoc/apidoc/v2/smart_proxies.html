@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Smart_proxies
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Smart_proxies
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/smart_proxies
+          </a>
+          <br>
+          <small>List all smart proxies</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by locations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by organizations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_status</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Flag to indicate whether to include status or not</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>feature</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/smart_proxies/:id
+          </a>
+          <br>
+          <small>Show a smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_status</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Flag to indicate whether to include status or not</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_version</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Flag to indicate whether to include version or not</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/smart_proxies
+          </a>
+          <br>
+          <small>Create a smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[name]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[url]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[location_ids]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[organization_ids]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[download_policy]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Download Policy of the capsule, must be one of on_demand, immediate, inherit, streamed</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[http_proxy_id]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the HTTP proxy to use with alternate content sources</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/smart_proxies/:id
+          </a>
+          <br>
+          <small>Update a smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/smart_proxies/982965214
+{
+  &quot;smart_proxy&quot;: {
+    &quot;http_proxy_id&quot;: 326090511,
+    &quot;name&quot;: &quot;foobar&quot;,
+    &quot;download_policy&quot;: &quot;immediate&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:18 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:14:19 UTC&quot;,
+  &quot;hosts_count&quot;: 0,
+  &quot;name&quot;: &quot;foobar&quot;,
+  &quot;id&quot;: 982965214,
+  &quot;url&quot;: &quot;https://somewhere1.net:8443&quot;,
+  &quot;remote_execution_pubkey&quot;: null,
+  &quot;download_policy&quot;: &quot;immediate&quot;,
+  &quot;supported_pulp_types&quot;: [],
+  &quot;lifecycle_environments&quot;: [
+    {
+      &quot;id&quot;: 562075838,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;library&quot;: true,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;library_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: null,
+      &quot;prior_id&quot;: null,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 292811013,
+      &quot;name&quot;: &quot;Dev&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;dev_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Library&quot;,
+      &quot;prior_id&quot;: 562075838,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 411008527,
+      &quot;name&quot;: &quot;Test_env&quot;,
+      &quot;description&quot;: &quot;Test environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;test_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Dev&quot;,
+      &quot;prior_id&quot;: 292811013,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 261162085,
+      &quot;name&quot;: &quot;Beta&quot;,
+      &quot;description&quot;: &quot;Beta environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;beta_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Test_env&quot;,
+      &quot;prior_id&quot;: 411008527,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 1028819239,
+      &quot;name&quot;: &quot;Staging&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;staging_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Library&quot;,
+      &quot;prior_id&quot;: 562075838,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 396772849,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;library&quot;: true,
+      &quot;organization_id&quot;: 61304186,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;candlepin_library&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: null,
+      &quot;prior_id&quot;: null,
+      &quot;organization&quot;: &quot;Organization 2&quot;
+    },
+    {
+      &quot;id&quot;: 797271385,
+      &quot;name&quot;: &quot;Candlepin Dev&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 61304186,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;candlepin_dev_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Library&quot;,
+      &quot;prior_id&quot;: 396772849,
+      &quot;organization&quot;: &quot;Organization 2&quot;
+    },
+    {
+      &quot;id&quot;: 779215191,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;library&quot;: true,
+      &quot;organization_id&quot;: 447626438,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;organization1_library&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: null,
+      &quot;prior_id&quot;: null,
+      &quot;organization&quot;: &quot;Organization 1&quot;
+    },
+    {
+      &quot;id&quot;: 413623389,
+      &quot;name&quot;: &quot;Dev Path1&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;dev_path1_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Library&quot;,
+      &quot;prior_id&quot;: 562075838,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 9167524,
+      &quot;name&quot;: &quot;QA Path1&quot;,
+      &quot;description&quot;: &quot;QA environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;qa_path1_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Dev Path1&quot;,
+      &quot;prior_id&quot;: 413623389,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 507881024,
+      &quot;name&quot;: &quot;Staging Path1&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;staging_path1_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;QA Path1&quot;,
+      &quot;prior_id&quot;: 9167524,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 28194273,
+      &quot;name&quot;: &quot;Dev Path2&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;dev_path2_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Library&quot;,
+      &quot;prior_id&quot;: 562075838,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 427995936,
+      &quot;name&quot;: &quot;QA Path2&quot;,
+      &quot;description&quot;: &quot;QA environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;qa_path2_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;Dev Path2&quot;,
+      &quot;prior_id&quot;: 28194273,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    },
+    {
+      &quot;id&quot;: 122484616,
+      &quot;name&quot;: &quot;Staging Path2&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;library&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;label&quot;: &quot;staging_path2_label&quot;,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;prior&quot;: &quot;QA Path2&quot;,
+      &quot;prior_id&quot;: 427995936,
+      &quot;organization&quot;: &quot;Empty Organization&quot;
+    }
+  ],
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Pulp&quot;,
+      &quot;id&quot;: 17596590
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Pulpcore&quot;,
+      &quot;id&quot;: 990889162
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;capabilities&quot;: [
+        &quot;dhcp_filename_hostname&quot;,
+        &quot;dhcp_filename_ipv4&quot;
+      ],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Pulpcore&quot;,
+      &quot;id&quot;: 990889162
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Pulp&quot;,
+      &quot;id&quot;: 17596590
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;capabilities&quot;: [
+        &quot;dhcp_filename_hostname&quot;,
+        &quot;dhcp_filename_ipv4&quot;
+      ],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 61304186,
+      &quot;name&quot;: &quot;Organization 2&quot;,
+      &quot;title&quot;: &quot;Organization 2&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[name]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[url]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[location_ids]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[organization_ids]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[download_policy]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Download Policy of the capsule, must be one of on_demand, immediate, inherit, streamed</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>smart_proxy[http_proxy_id]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the HTTP proxy to use with alternate content sources</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/smart_proxies/:id
+          </a>
+          <br>
+          <small>Delete a smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/refresh.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-refresh'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/smart_proxies/:id/refresh
+          </a>
+          <br>
+          <small>Refresh smart proxy features</small>
+        </h2>
+    </div>
+
+
+    <div id='description-refresh' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/smart_proxies/import_subnets.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-import_subnets'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/smart_proxies/:id/import_subnets
+          </a>
+          <br>
+          <small>Import subnets from Smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-import_subnets' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

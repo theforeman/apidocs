@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/hosts.html'>
+      Hosts
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts/:id
+      <br>
+      <small>Show a host</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/hosts/980191207
+200
+{
+  &quot;ip&quot;: null,
+  &quot;ip6&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;mac&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;sp_mac&quot;: null,
+  &quot;sp_ip&quot;: null,
+  &quot;sp_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;architecture_id&quot;: null,
+  &quot;architecture_name&quot;: null,
+  &quot;operatingsystem_id&quot;: 1073012904,
+  &quot;operatingsystem_name&quot;: &quot;operatingsystem31 31&quot;,
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;sp_subnet_id&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;medium_name&quot;: null,
+  &quot;pxe_loader&quot;: null,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: &quot;&quot;,
+  &quot;disk&quot;: null,
+  &quot;initiated_at&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: null,
+  &quot;hostgroup_id&quot;: null,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_name&quot;: &quot;Admin User&quot;,
+  &quot;owner_type&quot;: &quot;User&quot;,
+  &quot;creator_id&quot;: 135138680,
+  &quot;creator&quot;: &quot;Admin User&quot;,
+  &quot;enabled&quot;: true,
+  &quot;managed&quot;: false,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;compute_resource_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;certname&quot;: &quot;host246&quot;,
+  &quot;image_id&quot;: null,
+  &quot;image_name&quot;: null,
+  &quot;created_at&quot;: &quot;2024-08-26 18:22:40 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:22:40 UTC&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;global_status&quot;: 0,
+  &quot;global_status_label&quot;: &quot;OK&quot;,
+  &quot;bmc_available&quot;: false,
+  &quot;organization_id&quot;: 447626438,
+  &quot;organization_name&quot;: &quot;Organization 1&quot;,
+  &quot;location_id&quot;: 255093256,
+  &quot;location_name&quot;: &quot;Location 1&quot;,
+  &quot;puppet_status&quot;: 0,
+  &quot;model_name&quot;: null,
+  &quot;build_status&quot;: 0,
+  &quot;build_status_label&quot;: &quot;Installed&quot;,
+  &quot;execution_status&quot;: 2,
+  &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+  &quot;errata_status&quot;: 0,
+  &quot;errata_status_label&quot;: &quot;All errata applied&quot;,
+  &quot;name&quot;: &quot;host246&quot;,
+  &quot;id&quot;: 980191207,
+  &quot;display_name&quot;: &quot;host246&quot;,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: null,
+  &quot;cockpit_url&quot;: null,
+  &quot;compute_resource_provider&quot;: null,
+  &quot;hostgroup_name&quot;: null,
+  &quot;hostgroup_title&quot;: null,
+  &quot;parameters&quot;: [],
+  &quot;all_parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;id&quot;: 513706444,
+      &quot;name&quot;: &quot;loc_param&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;location&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;abc&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;id&quot;: 32400255,
+      &quot;name&quot;: &quot;org_param&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;organization&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;xyz&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;test&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;global&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;myvalue&quot;
+    }
+  ],
+  &quot;content_facet_attributes&quot;: {
+    &quot;id&quot;: 906413907,
+    &quot;uuid&quot;: &quot;uuid-153&quot;,
+    &quot;content_source_id&quot;: 982965255,
+    &quot;content_source_name&quot;: &quot;proxy33&quot;,
+    &quot;kickstart_repository_id&quot;: null,
+    &quot;kickstart_repository_name&quot;: null,
+    &quot;errata_counts&quot;: {
+      &quot;security&quot;: 0,
+      &quot;bugfix&quot;: 0,
+      &quot;enhancement&quot;: 0,
+      &quot;total&quot;: 0,
+      &quot;applicable&quot;: {
+        &quot;bugfix&quot;: 0,
+        &quot;security&quot;: 0,
+        &quot;enhancement&quot;: 0,
+        &quot;total&quot;: 0
+      }
+    },
+    &quot;applicable_deb_count&quot;: 0,
+    &quot;upgradable_deb_count&quot;: 0,
+    &quot;applicable_package_count&quot;: 0,
+    &quot;upgradable_package_count&quot;: 0,
+    &quot;applicable_module_stream_count&quot;: 0,
+    &quot;upgradable_module_stream_count&quot;: 0,
+    &quot;content_view_environments&quot;: [
+      {
+        &quot;content_view&quot;: {
+          &quot;id&quot;: 30237652,
+          &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+          &quot;composite&quot;: false,
+          &quot;content_view_version&quot;: &quot;1.0&quot;,
+          &quot;content_view_version_id&quot;: 840492357,
+          &quot;content_view_version_latest&quot;: true,
+          &quot;content_view_default&quot;: true
+        },
+        &quot;lifecycle_environment&quot;: {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;lifecycle_environment_library&quot;: true
+        },
+        &quot;candlepin_name&quot;: &quot;library_label&quot;
+      }
+    ],
+    &quot;content_source&quot;: {
+      &quot;id&quot;: 982965255,
+      &quot;name&quot;: &quot;proxy33&quot;,
+      &quot;url&quot;: &quot;https://somewhere14.net:8443&quot;
+    },
+    &quot;kickstart_repository&quot;: null,
+    &quot;content_view&quot;: {
+      &quot;id&quot;: 30237652,
+      &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+      &quot;composite&quot;: false
+    },
+    &quot;lifecycle_environment&quot;: {
+      &quot;id&quot;: 562075838,
+      &quot;name&quot;: &quot;Library&quot;
+    },
+    &quot;permissions&quot;: {
+      &quot;view_lifecycle_environments&quot;: true,
+      &quot;view_content_views&quot;: true,
+      &quot;promote_or_remove_content_views_to_environments&quot;: true,
+      &quot;view_host_collections&quot;: true,
+      &quot;create_job_invocations&quot;: true,
+      &quot;view_activation_keys&quot;: true,
+      &quot;view_products&quot;: true,
+      &quot;create_bookmarks&quot;: true
+    },
+    &quot;content_view_version&quot;: &quot;1.0&quot;,
+    &quot;content_view_version_id&quot;: 840492357,
+    &quot;content_view_version_latest&quot;: true,
+    &quot;content_view_default?&quot;: true,
+    &quot;lifecycle_environment_library?&quot;: true,
+    &quot;katello_tracer_installed&quot;: false,
+    &quot;katello_tracer_rpm_available&quot;: false
+  },
+  &quot;subscription_facet_attributes&quot;: {
+    &quot;host_type&quot;: null,
+    &quot;dmi_uuid&quot;: null,
+    &quot;id&quot;: 980191155,
+    &quot;uuid&quot;: &quot;uuid-186-130&quot;,
+    &quot;last_checkin&quot;: null,
+    &quot;service_level&quot;: null,
+    &quot;release_version&quot;: null,
+    &quot;autoheal&quot;: false,
+    &quot;registered_at&quot;: &quot;2024-08-26 18:00:28 UTC&quot;,
+    &quot;registered_through&quot;: null,
+    &quot;purpose_role&quot;: null,
+    &quot;purpose_usage&quot;: null,
+    &quot;hypervisor&quot;: false,
+    &quot;convert2rhel_through_foreman&quot;: null,
+    &quot;user&quot;: null,
+    &quot;purpose_addons&quot;: [],
+    &quot;virtual_host&quot;: null,
+    &quot;virtual_guests&quot;: [],
+    &quot;installed_products&quot;: [],
+    &quot;activation_keys&quot;: [],
+    &quot;compliance_reasons&quot;: []
+  },
+  &quot;host_collections&quot;: [],
+  &quot;operatingsystem_family&quot;: null,
+  &quot;operatingsystem_major&quot;: &quot;31&quot;,
+  &quot;content_view&quot;: {
+    &quot;id&quot;: 30237652,
+    &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+    &quot;composite&quot;: false
+  },
+  &quot;lifecycle_environment&quot;: {
+    &quot;id&quot;: 562075838,
+    &quot;name&quot;: &quot;Library&quot;
+  },
+  &quot;interfaces&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:22:40 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:22:40 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 547,
+      &quot;name&quot;: &quot;host246&quot;,
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host246&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;execution&quot;: true,
+      &quot;virtual&quot;: false
+    }
+  ],
+  &quot;facts&quot;: {},
+  &quot;permissions&quot;: {
+    &quot;view_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;build_hosts&quot;: true,
+    &quot;power_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
+    &quot;ipmi_boot_hosts&quot;: true,
+    &quot;cockpit_hosts&quot;: true
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>show_hidden_parameters</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Display hidden parameter values</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

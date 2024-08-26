@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/content_views.html'>
+      Content_views
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/organizations/:organization_id/content_views
+      <br>
+      <small>List content views</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/content_views
+      <br>
+      <small>List content views</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/content_views
+200
+{
+  &quot;total&quot;: 15,
+  &quot;subtotal&quot;: 15,
+  &quot;selectable&quot;: 15,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;name&quot;,
+    &quot;order&quot;: &quot;asc&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: true,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 840492357,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: true,
+      &quot;repository_ids&quot;: [
+        103207400,
+        920815232,
+        16447009
+      ],
+      &quot;id&quot;: 30237652,
+      &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+      &quot;label&quot;: &quot;org_default_label&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [
+        {
+          &quot;id&quot;: 103207400,
+          &quot;name&quot;: &quot;RHEL 6 x86_64&quot;,
+          &quot;label&quot;: &quot;rhel_6_x86_64_label&quot;,
+          &quot;content_type&quot;: &quot;yum&quot;
+        },
+        {
+          &quot;id&quot;: 920815232,
+          &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+          &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+          &quot;content_type&quot;: &quot;yum&quot;
+        },
+        {
+          &quot;id&quot;: 16447009,
+          &quot;name&quot;: &quot;Pulp3 Python 1&quot;,
+          &quot;label&quot;: &quot;Pulp3_Python_1&quot;,
+          &quot;content_type&quot;: &quot;python&quot;
+        }
+      ],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 840492357,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [
+            562075838
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [
+        {
+          &quot;id&quot;: 568942081,
+          &quot;name&quot;: &quot;Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 734311356,
+          &quot;name&quot;: &quot;Another Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 323709460,
+          &quot;name&quot;: &quot;Yet Another Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 939253911,
+          &quot;name&quot;: &quot;And Yet Another Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 757667888,
+          &quot;name&quot;: &quot;Activation Key&quot;
+        }
+      ],
+      &quot;hosts&quot;: [
+        {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;host1.example.com&quot;
+        },
+        {
+          &quot;id&quot;: 529902380,
+          &quot;name&quot;: &quot;host4.example.com&quot;
+        }
+      ],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;activation_keys&quot;: [
+            568942081,
+            734311356,
+            323709460,
+            939253911,
+            757667888
+          ],
+          &quot;hosts&quot;: [
+            980190962,
+            529902380
+          ],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;label&quot;: &quot;dev_label&quot;,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: true,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 762379426,
+      &quot;name&quot;: &quot;candlepin Default ContentView&quot;,
+      &quot;label&quot;: &quot;candlepin_library_default_cv&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 61304186,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 2&quot;,
+        &quot;label&quot;: &quot;Organization_2&quot;,
+        &quot;id&quot;: 61304186
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;1.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 182230481,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 566851579,
+      &quot;name&quot;: &quot;Candlepin Library and Dev Content View&quot;,
+      &quot;label&quot;: &quot;candlepin_library_dev_cv&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 61304186,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 2&quot;,
+        &quot;label&quot;: &quot;Organization_2&quot;,
+        &quot;id&quot;: 61304186
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 797271385,
+          &quot;name&quot;: &quot;Candlepin Dev&quot;,
+          &quot;label&quot;: &quot;candlepin_dev_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 182230481,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [
+            797271385
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 797271385,
+          &quot;label&quot;: &quot;candlepin_dev_label&quot;,
+          &quot;name&quot;: &quot;Candlepin Dev&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 1058174566,
+      &quot;name&quot;: &quot;Candlepin Library Content View&quot;,
+      &quot;label&quot;: &quot;candlepin_library_cv&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 61304186,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 2&quot;,
+        &quot;label&quot;: &quot;Organization_2&quot;,
+        &quot;id&quot;: 61304186
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: true,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 323882142,
+      &quot;auto_publish&quot;: true,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 64601712,
+      &quot;name&quot;: &quot;Composite view&quot;,
+      &quot;label&quot;: &quot;composite_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 323882142,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [
+            562075838
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: true,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [
+        367202338
+      ],
+      &quot;id&quot;: 951192321,
+      &quot;name&quot;: &quot;Import-only content view&quot;,
+      &quot;label&quot;: &quot;import_only_view&quot;,
+      &quot;description&quot;: &quot;This CV may not be published except through CVV import&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [
+        {
+          &quot;id&quot;: 367202338,
+          &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+          &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+          &quot;content_type&quot;: &quot;yum&quot;
+        }
+      ],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;library_export&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 462816975,
+      &quot;name&quot;: &quot;library_export content view&quot;,
+      &quot;label&quot;: &quot;library_export_view&quot;,
+      &quot;description&quot;: &quot;This CV is generated for library export&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;library_import&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 72670789,
+      &quot;name&quot;: &quot;library_import content view&quot;,
+      &quot;label&quot;: &quot;library_import_view&quot;,
+      &quot;description&quot;: &quot;This CV was generated for library import&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 282203774,
+      &quot;name&quot;: &quot;No environment view&quot;,
+      &quot;label&quot;: &quot;no_environment_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;1.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 998596461,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: true,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 451701987,
+      &quot;name&quot;: &quot;No Filter Published LIbrary view&quot;,
+      &quot;label&quot;: &quot;no_filter_published_library_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 998596461,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;8.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 172022917,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 909058347,
+      &quot;name&quot;: &quot;Published Library and dev view&quot;,
+      &quot;label&quot;: &quot;published_dev_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;label&quot;: &quot;dev_label&quot;
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;label&quot;: &quot;dev_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 172022917,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [
+            562075838,
+            292811013,
+            292811013
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [
+        {
+          &quot;id&quot;: 298486374,
+          &quot;name&quot;: &quot;host2.example.com&quot;
+        }
+      ],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;label&quot;: &quot;dev_label&quot;,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [
+            298486374
+          ],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;3.0&quot;,
+      &quot;latest_version_id&quot;: 234564707,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 419082953,
+      &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+      &quot;label&quot;: &quot;published_dev_staging_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;label&quot;: &quot;dev_label&quot;
+        },
+        {
+          &quot;id&quot;: 1028819239,
+          &quot;name&quot;: &quot;Staging&quot;,
+          &quot;label&quot;: &quot;staging_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 234564707,
+          &quot;version&quot;: &quot;3.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [
+            562075838,
+            292811013,
+            1028819239
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [
+        {
+          &quot;id&quot;: 878475814,
+          &quot;name&quot;: &quot;Lib Dev Stating Activation Key&quot;
+        }
+      ],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;4.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        },
+        {
+          &quot;id&quot;: 292811013,
+          &quot;label&quot;: &quot;dev_label&quot;,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;activation_keys&quot;: [
+            878475814
+          ],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        },
+        {
+          &quot;id&quot;: 1028819239,
+          &quot;label&quot;: &quot;staging_label&quot;,
+          &quot;name&quot;: &quot;Staging&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 0,
+      &quot;latest_version&quot;: null,
+      &quot;latest_version_id&quot;: null,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [],
+      &quot;id&quot;: 615884193,
+      &quot;name&quot;: &quot;Published Library no version&quot;,
+      &quot;label&quot;: &quot;published_library_no_version&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [],
+      &quot;versions&quot;: [],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;1.0&quot;,
+      &quot;last_published&quot;: null,
+      &quot;environments&quot;: []
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 2,
+      &quot;latest_version&quot;: &quot;2.0&quot;,
+      &quot;latest_version_id&quot;: 111397700,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: false,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: true,
+      &quot;repository_ids&quot;: [
+        367202338,
+        697316289
+      ],
+      &quot;id&quot;: 405955044,
+      &quot;name&quot;: &quot;Published LIbrary view&quot;,
+      &quot;label&quot;: &quot;published_library_view&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;
+        }
+      ],
+      &quot;repositories&quot;: [
+        {
+          &quot;id&quot;: 367202338,
+          &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+          &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+          &quot;content_type&quot;: &quot;yum&quot;
+        },
+        {
+          &quot;id&quot;: 697316289,
+          &quot;name&quot;: &quot;Debian 10 amd64&quot;,
+          &quot;label&quot;: &quot;debian_10_amd64_label&quot;,
+          &quot;content_type&quot;: &quot;deb&quot;
+        }
+      ],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 531274492,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: &quot;A nice content view version&quot;,
+          &quot;environment_ids&quot;: [],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        },
+        {
+          &quot;id&quot;: 111397700,
+          &quot;version&quot;: &quot;2.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: &quot;A nice content view version&quot;,
+          &quot;environment_ids&quot;: [
+            562075838
+          ],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;3.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: [
+        {
+          &quot;id&quot;: 562075838,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;activation_keys&quot;: [],
+          &quot;hosts&quot;: [],
+          &quot;permissions&quot;: {
+            &quot;readable&quot;: true
+          }
+        }
+      ]
+    },
+    {
+      &quot;composite&quot;: false,
+      &quot;component_ids&quot;: [],
+      &quot;duplicate_repositories_to_publish&quot;: [],
+      &quot;default&quot;: false,
+      &quot;version_count&quot;: 1,
+      &quot;latest_version&quot;: &quot;1.0&quot;,
+      &quot;latest_version_id&quot;: 436591151,
+      &quot;auto_publish&quot;: false,
+      &quot;solve_dependencies&quot;: true,
+      &quot;import_only&quot;: false,
+      &quot;generated_for&quot;: &quot;none&quot;,
+      &quot;related_cv_count&quot;: 0,
+      &quot;related_composite_cvs&quot;: [],
+      &quot;filtered&quot;: false,
+      &quot;repository_ids&quot;: [
+        367202338
+      ],
+      &quot;id&quot;: 780068057,
+      &quot;name&quot;: &quot;Solve Dependencies CV&quot;,
+      &quot;label&quot;: &quot;solve_dependencies_cv&quot;,
+      &quot;description&quot;: &quot;A content view&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;last_task&quot;: null,
+      &quot;latest_version_environments&quot;: [],
+      &quot;repositories&quot;: [
+        {
+          &quot;id&quot;: 367202338,
+          &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+          &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+          &quot;content_type&quot;: &quot;yum&quot;
+        }
+      ],
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: 436591151,
+          &quot;version&quot;: &quot;1.0&quot;,
+          &quot;published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+          &quot;description&quot;: null,
+          &quot;environment_ids&quot;: [],
+          &quot;filters_applied&quot;: null,
+          &quot;published_at_words&quot;: &quot;11 minutes&quot;
+        }
+      ],
+      &quot;components&quot;: [],
+      &quot;content_view_components&quot;: [],
+      &quot;activation_keys&quot;: [],
+      &quot;hosts&quot;: [],
+      &quot;next_version&quot;: &quot;2.0&quot;,
+      &quot;last_published&quot;: &quot;2024-08-26 18:42:13 UTC&quot;,
+      &quot;environments&quot;: []
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>environment identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>nondefault</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter out default content views</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>noncomposite</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter out composite content views</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>composite</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter only composite content views</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>without</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Do not include this array of content views</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the content view</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Label of the content view</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_generated</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Include content views generated by imports/exports. Defaults to false</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h2>Search fields</h2>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>composite</td>
+      <td>boolean</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>content_views</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>default</td>
+      <td>boolean</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>generated_for</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

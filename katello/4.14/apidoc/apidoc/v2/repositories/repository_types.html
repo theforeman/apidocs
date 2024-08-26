@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/repositories.html'>
+      Repositories
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>repository_types</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/repositories/repository_types
+      <br>
+      <small>Show the available repository types</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/repositories/repository_types
+200
+[
+  {
+    &quot;name&quot;: &quot;yum&quot;,
+    &quot;id&quot;: &quot;yum&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: null,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;rpm&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;modulemd&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;erratum&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;distribution&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: false
+      },
+      {
+        &quot;label&quot;: &quot;package_category&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: false
+      },
+      {
+        &quot;label&quot;: &quot;package_group&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;srpm&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;ansible_collection&quot;,
+    &quot;id&quot;: &quot;ansible_collection&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: null,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;ansible_collection&quot;,
+        &quot;generic_browser&quot;: true,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;deb&quot;,
+    &quot;id&quot;: &quot;deb&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: null,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;deb&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;docker&quot;,
+    &quot;id&quot;: &quot;docker&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: null,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;docker_manifest&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;docker_manifest_list&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;docker_tag&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: true
+      },
+      {
+        &quot;label&quot;: &quot;docker_blob&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: false,
+        &quot;indexed&quot;: false
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;file&quot;,
+    &quot;id&quot;: &quot;file&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: null,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;file&quot;,
+        &quot;generic_browser&quot;: null,
+        &quot;generic&quot;: false,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;ostree&quot;,
+    &quot;id&quot;: &quot;ostree&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [
+      {
+        &quot;name&quot;: &quot;exclude_refs&quot;,
+        &quot;title&quot;: &quot;Exclude Refs&quot;,
+        &quot;type&quot;: &quot;Array&quot;,
+        &quot;description&quot;: &quot;A comma-separated list of tags to exclude during a sync. The wildcards *, ? are recognized. &#39;exclude_refs&#39; is evaluated after &#39;include_refs&#39;.&quot;,
+        &quot;input_type&quot;: &quot;text&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;default&quot;: []
+      },
+      {
+        &quot;name&quot;: &quot;include_refs&quot;,
+        &quot;title&quot;: &quot;Include Refs&quot;,
+        &quot;type&quot;: &quot;Array&quot;,
+        &quot;description&quot;: &quot;A comma-separated list of refs to include during a sync. The wildcards *, ? are recognized.&quot;,
+        &quot;input_type&quot;: &quot;text&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;default&quot;: []
+      }
+    ],
+    &quot;import_attributes&quot;: [
+      {
+        &quot;name&quot;: &quot;ref&quot;,
+        &quot;api_param&quot;: &quot;ostree_ref&quot;,
+        &quot;type&quot;: &quot;String&quot;,
+        &quot;description&quot;: &quot;OSTree ref branch that holds the reference to the last commit&quot;,
+        &quot;required&quot;: false
+      },
+      {
+        &quot;name&quot;: &quot;repository_name&quot;,
+        &quot;api_param&quot;: &quot;ostree_repository_name&quot;,
+        &quot;type&quot;: &quot;String&quot;,
+        &quot;description&quot;: &quot;Name of the repository in the ostree archive&quot;,
+        &quot;required&quot;: true
+      }
+    ],
+    &quot;url_description&quot;: &quot;URL of an OSTree repository.&quot;,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;ostree_ref&quot;,
+        &quot;generic_browser&quot;: true,
+        &quot;generic&quot;: true,
+        &quot;removable&quot;: false,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true,
+        &quot;pluralized_label&quot;: &quot;ostree_refs&quot;,
+        &quot;pluralized_name&quot;: &quot;OSTree Refs&quot;,
+        &quot;details_columns&quot;: [
+          &quot;Name&quot;,
+          &quot;Version&quot;
+        ]
+      }
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;python&quot;,
+    &quot;id&quot;: &quot;python&quot;,
+    &quot;creatable&quot;: true,
+    &quot;pulp3_support&quot;: true,
+    &quot;generic_remote_options&quot;: [
+      {
+        &quot;name&quot;: &quot;excludes&quot;,
+        &quot;title&quot;: &quot;Excludes&quot;,
+        &quot;type&quot;: &quot;Array&quot;,
+        &quot;description&quot;: &quot;Python packages to exclude from the upstream URL, names separated by newline. You may also specify versions, for example: django~=2.0.&quot;,
+        &quot;input_type&quot;: &quot;textarea&quot;,
+        &quot;delimiter&quot;: &quot;\\n&quot;,
+        &quot;default&quot;: []
+      },
+      {
+        &quot;name&quot;: &quot;includes&quot;,
+        &quot;title&quot;: &quot;Includes&quot;,
+        &quot;type&quot;: &quot;Array&quot;,
+        &quot;description&quot;: &quot;Python packages to include from the upstream URL, names separated by newline. You may also specify versions, for example: django~=2.0. Leave empty to include every package.&quot;,
+        &quot;input_type&quot;: &quot;textarea&quot;,
+        &quot;delimiter&quot;: &quot;\\n&quot;,
+        &quot;default&quot;: []
+      },
+      {
+        &quot;name&quot;: &quot;package_types&quot;,
+        &quot;title&quot;: &quot;Package Types&quot;,
+        &quot;type&quot;: &quot;Array&quot;,
+        &quot;description&quot;: &quot;Package types to sync for Python content, separated by comma. Leave empty to get every package type. Package types are: bdist_dmg, bdist_dumb, bdist_egg, bdist_msi, bdist_rpm, bdist_wheel, bdist_wininst, sdist.&quot;,
+        &quot;input_type&quot;: &quot;text&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;default&quot;: []
+      }
+    ],
+    &quot;import_attributes&quot;: [],
+    &quot;url_description&quot;: &quot;URL of a PyPI content source such as https://pypi.org.&quot;,
+    &quot;content_types&quot;: [
+      {
+        &quot;label&quot;: &quot;python_package&quot;,
+        &quot;generic_browser&quot;: true,
+        &quot;generic&quot;: true,
+        &quot;removable&quot;: true,
+        &quot;uploadable&quot;: true,
+        &quot;indexed&quot;: true,
+        &quot;pluralized_label&quot;: &quot;python_packages&quot;,
+        &quot;pluralized_name&quot;: &quot;Python Packages&quot;,
+        &quot;details_columns&quot;: [
+          &quot;Name&quot;,
+          &quot;Version&quot;,
+          &quot;Filename&quot;
+        ]
+      }
+    ]
+  }
+]</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>creatable</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>When set to &#39;True&#39; repository types that are creatable will be returned</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

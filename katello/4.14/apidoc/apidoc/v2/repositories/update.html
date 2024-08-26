@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/repositories.html'>
+      Repositories
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>update</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/repositories/:id
+      <br>
+      <small>Update a repository</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /katello/api/repositories/841753487
+{
+  &quot;repository&quot;: {
+    &quot;name&quot;: &quot;new name&quot;,
+    &quot;include_tags&quot;: [],
+    &quot;exclude_dats&quot;: []
+  }
+}
+200
+{
+  &quot;relative_path&quot;: &quot;ACME_Corporation/library/fedora_17_unpublished_label&quot;,
+  &quot;promoted&quot;: false,
+  &quot;content_view_version_id&quot;: 840492357,
+  &quot;library_instance_id&quot;: null,
+  &quot;last_contents_changed&quot;: &quot;1970-01-01 00:00:00 UTC&quot;,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+  &quot;backend_identifier&quot;: &quot;6&quot;,
+  &quot;container_repository_name&quot;: null,
+  &quot;full_path&quot;: &quot;https://devel.example.com/pulp/content/ACME_Corporation/library/fedora_17_unpublished_label/&quot;,
+  &quot;version_href&quot;: null,
+  &quot;remote_href&quot;: null,
+  &quot;publication_href&quot;: null,
+  &quot;content_counts&quot;: {
+    &quot;rpm&quot;: 0,
+    &quot;erratum&quot;: 0,
+    &quot;package_group&quot;: 0,
+    &quot;srpm&quot;: 0,
+    &quot;module_stream&quot;: 0
+  },
+  &quot;mirroring_policy&quot;: &quot;mirror_content_only&quot;,
+  &quot;id&quot;: 841753487,
+  &quot;name&quot;: &quot;Fedora 17 x86_64 unpublished&quot;,
+  &quot;label&quot;: &quot;fedora_17_unpublished_label&quot;,
+  &quot;description&quot;: null,
+  &quot;content_view_versions&quot;: [],
+  &quot;filters&quot;: [],
+  &quot;last_sync&quot;: null,
+  &quot;content_view&quot;: {
+    &quot;id&quot;: 30237652,
+    &quot;name&quot;: &quot;ACME Default ContentView&quot;
+  },
+  &quot;content_view_version&quot;: {
+    &quot;id&quot;: 840492357,
+    &quot;name&quot;: &quot;ACME Default ContentView 1.0&quot;,
+    &quot;content_view_id&quot;: 30237652
+  },
+  &quot;kt_environment&quot;: {
+    &quot;id&quot;: 562075838,
+    &quot;name&quot;: &quot;Library&quot;
+  },
+  &quot;content_type&quot;: &quot;yum&quot;,
+  &quot;url&quot;: &quot;http://www.pleaseack.com&quot;,
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;os_versions&quot;: null,
+  &quot;content_id&quot;: &quot;8374837483743&quot;,
+  &quot;generic_remote_options&quot;: null,
+  &quot;major&quot;: null,
+  &quot;minor&quot;: null,
+  &quot;product&quot;: {
+    &quot;id&quot;: 785257261,
+    &quot;cp_id&quot;: &quot;123123123001&quot;,
+    &quot;name&quot;: &quot;Fedora&quot;,
+    &quot;orphaned&quot;: false,
+    &quot;redhat&quot;: false,
+    &quot;sync_plan&quot;: null
+  },
+  &quot;content_label&quot;: null,
+  &quot;last_sync_words&quot;: null,
+  &quot;environment&quot;: {
+    &quot;id&quot;: 562075838,
+    &quot;registry_unauthenticated_pull&quot;: false
+  },
+  &quot;docker_upstream_name&quot;: null,
+  &quot;include_tags&quot;: null,
+  &quot;exclude_tags&quot;: null,
+  &quot;verify_ssl_on_sync&quot;: true,
+  &quot;unprotected&quot;: true,
+  &quot;checksum_type&quot;: null,
+  &quot;download_policy&quot;: &quot;immediate&quot;,
+  &quot;ansible_collection_requirements&quot;: null,
+  &quot;ansible_collection_auth_url&quot;: null,
+  &quot;ansible_collection_auth_token&quot;: null,
+  &quot;gpg_key_id&quot;: 591165711,
+  &quot;ssl_ca_cert_id&quot;: null,
+  &quot;ssl_client_cert_id&quot;: null,
+  &quot;ssl_client_key_id&quot;: null,
+  &quot;upstream_username&quot;: null,
+  &quot;deb_releases&quot;: null,
+  &quot;deb_components&quot;: null,
+  &quot;deb_architectures&quot;: null,
+  &quot;http_proxy_policy&quot;: &quot;global_default_http_proxy&quot;,
+  &quot;http_proxy_id&quot;: null,
+  &quot;http_proxy_name&quot;: null,
+  &quot;retain_package_versions_count&quot;: null,
+  &quot;metadata_expire&quot;: null,
+  &quot;allow_updates&quot;: true,
+  &quot;is_container_push&quot;: false,
+  &quot;ignorable_content&quot;: null,
+  &quot;http_proxy&quot;: {
+    &quot;id&quot;: null,
+    &quot;name&quot;: null,
+    &quot;policy&quot;: &quot;global_default_http_proxy&quot;
+  },
+  &quot;ssl_ca_cert&quot;: {
+    &quot;id&quot;: null,
+    &quot;name&quot;: null
+  },
+  &quot;ssl_client_cert&quot;: {
+    &quot;id&quot;: null,
+    &quot;name&quot;: null
+  },
+  &quot;ssl_client_key&quot;: {
+    &quot;id&quot;: null,
+    &quot;name&quot;: null
+  },
+  &quot;gpg_key&quot;: {
+    &quot;id&quot;: 591165711,
+    &quot;name&quot;: &quot;Fedora GPG Key&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;deletable&quot;: true,
+    &quot;deletable_across_cv&quot;: true
+  },
+  &quot;upstream_password_exists&quot;: false,
+  &quot;upstream_auth_exists&quot;: false
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>repository ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>description of the repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>repository source url</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>os_versions</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifies whether the repository should be unavailable on a client with a non-matching OS version. Pass [] to make repo available for clients regardless of OS version. Maximum length 1; allowed tags are: rhel-6, rhel-7, rhel-8, rhel-9</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_id</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>id of the gpg key that will be assigned to the new repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_ca_cert_id</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL CA Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_cert_id</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_key_id</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Key</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unprotected</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>true if this repository can be published via HTTP</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Checksum used for published repository contents. Supported types: sha256, sha384, sha512</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the upstream docker repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_tags</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Comma-separated list of tags to sync for a container image repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>exclude_tags</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Comma-separated list of tags to exclude when syncing a container image repository. Default: any tag ending in “-source”</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_policy</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>download policy for yum, deb, and docker repos (either &#39;immediate&#39; or &#39;on_demand&#39;)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>immediate</code>, <code>on_demand</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_concurrency</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Used to determine download concurrency of the repository in pulp3. Use value less than 20. Defaults to 10</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>mirroring_policy</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Policy to set for mirroring content.  Must be one of additive.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>additive</code>, <code>mirror_complete</code>, <code>mirror_content_only</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>verify_ssl_on_sync</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>if true, Katello will verify the upstream url&#39;s SSL certifcates are signed by a trusted CA</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_username</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Username of the upstream repository user used for authentication</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_password</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Password of the upstream repository user used for authentication</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_authentication_token</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Upstream authentication token string for yum repositories.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>deb_releases</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>whitespace-separated list of releases to be synced from deb-archive</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>deb_components</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>whitespace-separated list of repo components to be synced from deb-archive</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>deb_architectures</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>whitespace-separated list of architectures to be synced from deb-archive</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ignorable_content</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of content units to ignore while syncing a yum repository. Must be subset of srpm,treeinfo</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ansible_collection_requirements</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Contents of requirement yaml file to sync from URL</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ansible_collection_auth_url</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The URL to receive a session token from, e.g. used with Automation Hub.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ansible_collection_auth_token</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The token key to use for authentication.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>http_proxy_policy</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>policies for HTTP proxy for content sync</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>global_default_http_proxy</code>, <code>none</code>, <code>use_selected_http_proxy</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>http_proxy_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of a HTTP Proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>arch</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Architecture of content in the repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>retain_package_versions_count</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The maximum number of versions of each package to keep.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>metadata_expire</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Time to expire yum metadata in seconds. Only relevant for custom yum repositories.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>exclude_refs</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>A comma-separated list of tags to exclude during a sync. The wildcards *, ? are recognized. &#39;exclude_refs&#39; is evaluated after &#39;include_refs&#39;.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_refs</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>A comma-separated list of refs to include during a sync. The wildcards *, ? are recognized.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>excludes</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Python packages to exclude from the upstream URL, names separated by newline. You may also specify versions, for example: django~=2.0.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>includes</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Python packages to include from the upstream URL, names separated by newline. You may also specify versions, for example: django~=2.0. Leave empty to include every package.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>package_types</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package types to sync for Python content, separated by comma. Leave empty to get every package type. Package types are: bdist_dmg, bdist_dumb, bdist_egg, bdist_msi, bdist_rpm, bdist_wheel, bdist_wininst, sdist.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

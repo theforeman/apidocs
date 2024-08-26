@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Host_tracer
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Host_tracer
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_tracer/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/traces
+          </a>
+          <br>
+          <small>List services that need restarting on the host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/980190962/traces
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;application&quot;,
+    &quot;order&quot;: &quot;asc&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;application&quot;: &quot;scrumm&quot;,
+      &quot;helper&quot;: &quot;agile&quot;,
+      &quot;restart_command&quot;: &quot;agile&quot;,
+      &quot;app_type&quot;: &quot;foo&quot;,
+      &quot;host_id&quot;: 980190962,
+      &quot;host&quot;: &quot;host1.example.com&quot;,
+      &quot;reboot_required&quot;: false
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/host_tracer/resolve.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-resolve'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/traces/resolve
+          </a>
+          <br>
+          <small>Resolve traces</small>
+        </h2>
+    </div>
+
+
+    <div id='description-resolve' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/980190962/traces/resolve
+{
+  &quot;trace_ids&quot;: [
+    5
+  ],
+  &quot;host_tracer&quot;: {}
+}
+202
+{
+  &quot;id&quot;: &quot;b8317062-c664-4792-9d9a-8167b23c0001&quot;,
+  &quot;label&quot;: &quot;task1&quot;,
+  &quot;pending&quot;: false,
+  &quot;action&quot;: &quot;task1&quot;,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: &quot;2016-01-02 11:15:00 UTC&quot;,
+  &quot;ended_at&quot;: &quot;2016-01-02 11:15:32 UTC&quot;,
+  &quot;state&quot;: &quot;stopped&quot;,
+  &quot;result&quot;: &quot;success&quot;,
+  &quot;progress&quot;: 0,
+  &quot;input&quot;: null,
+  &quot;output&quot;: null,
+  &quot;humanized&quot;: {
+    &quot;action&quot;: &quot;task1&quot;,
+    &quot;input&quot;: null,
+    &quot;output&quot;: null,
+    &quot;errors&quot;: null
+  },
+  &quot;cli_example&quot;: null,
+  &quot;start_at&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: false
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>trace_ids</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of Trace IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

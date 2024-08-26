@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Capsule_content
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Capsule_content
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/counts.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-counts'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id/content/counts
+          </a>
+          <br>
+          <small>List content counts for the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-counts' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143/content/counts
+200</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/update_counts.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update_counts'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/capsules/:id/content/update_counts
+          </a>
+          <br>
+          <small>Update content counts for the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update_counts' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/capsules/281110143/content/update_counts
+{
+  &quot;capsule_content&quot;: {}
+}
+202
+{
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;pending&quot;: null,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: null,
+  &quot;ended_at&quot;: null,
+  &quot;state&quot;: null,
+  &quot;result&quot;: null,
+  &quot;progress&quot;: null,
+  &quot;input&quot;: null,
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: null,
+  &quot;cli_example&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: null
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/lifecycle_environments.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-lifecycle_environments'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id/content/lifecycle_environments
+          </a>
+          <br>
+          <small>List the lifecycle environments attached to the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-lifecycle_environments' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143/content/lifecycle_environments
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;selectable&quot;: 0,
+  &quot;page&quot;: null,
+  &quot;per_page&quot;: null,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the organization to limit environments on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/available_lifecycle_environments.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-available_lifecycle_environments'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id/content/available_lifecycle_environments
+          </a>
+          <br>
+          <small>List the lifecycle environments not attached to the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-available_lifecycle_environments' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143/content/available_lifecycle_environments
+200
+{
+  &quot;total&quot;: 14,
+  &quot;subtotal&quot;: 14,
+  &quot;selectable&quot;: 14,
+  &quot;page&quot;: null,
+  &quot;per_page&quot;: null,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;library&quot;: true,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 779215191,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;label&quot;: &quot;organization1_library&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;organization_id&quot;: 447626438,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 1&quot;,
+        &quot;label&quot;: &quot;Organization_1&quot;,
+        &quot;id&quot;: 447626438
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: null,
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0,
+        &quot;packages&quot;: 0,
+        &quot;module_streams&quot;: 0,
+        &quot;errata&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0
+        },
+        &quot;yum_repositories&quot;: 0,
+        &quot;docker_repositories&quot;: 0,
+        &quot;ostree_repositories&quot;: 0,
+        &quot;products&quot;: 0,
+        &quot;debs&quot;: 0,
+        &quot;deb_repositories&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: false,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 292811013,
+      &quot;name&quot;: &quot;Dev&quot;,
+      &quot;label&quot;: &quot;dev_label&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;id&quot;: 562075838
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;Test_env&quot;,
+        &quot;id&quot;: 411008527
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 1,
+        &quot;content_views&quot;: 2
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: false,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: [
+        {
+          &quot;name&quot;: &quot;Published Library and dev view&quot;,
+          &quot;id&quot;: 909058347
+        },
+        {
+          &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+          &quot;id&quot;: 419082953
+        }
+      ]
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 1028819239,
+      &quot;name&quot;: &quot;Staging&quot;,
+      &quot;label&quot;: &quot;staging_label&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;id&quot;: 562075838
+      },
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 1
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: [
+        {
+          &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+          &quot;id&quot;: 419082953
+        }
+      ]
+    },
+    {
+      &quot;library&quot;: true,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 396772849,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;label&quot;: &quot;candlepin_library&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;organization_id&quot;: 61304186,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 2&quot;,
+        &quot;label&quot;: &quot;Organization_2&quot;,
+        &quot;id&quot;: 61304186
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: null,
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0,
+        &quot;packages&quot;: 0,
+        &quot;module_streams&quot;: 0,
+        &quot;errata&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0
+        },
+        &quot;yum_repositories&quot;: 0,
+        &quot;docker_repositories&quot;: 0,
+        &quot;ostree_repositories&quot;: 0,
+        &quot;products&quot;: 0,
+        &quot;debs&quot;: 0,
+        &quot;deb_repositories&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: false,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 427995936,
+      &quot;name&quot;: &quot;QA Path2&quot;,
+      &quot;label&quot;: &quot;qa_path2_label&quot;,
+      &quot;description&quot;: &quot;QA environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Dev Path2&quot;,
+        &quot;id&quot;: 28194273
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;Staging Path2&quot;,
+        &quot;id&quot;: 122484616
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 413623389,
+      &quot;name&quot;: &quot;Dev Path1&quot;,
+      &quot;label&quot;: &quot;dev_path1_label&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;id&quot;: 562075838
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;QA Path1&quot;,
+        &quot;id&quot;: 9167524
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 28194273,
+      &quot;name&quot;: &quot;Dev Path2&quot;,
+      &quot;label&quot;: &quot;dev_path2_label&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;id&quot;: 562075838
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;QA Path2&quot;,
+        &quot;id&quot;: 427995936
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 411008527,
+      &quot;name&quot;: &quot;Test_env&quot;,
+      &quot;label&quot;: &quot;test_label&quot;,
+      &quot;description&quot;: &quot;Test environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;id&quot;: 292811013
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;Beta&quot;,
+        &quot;id&quot;: 261162085
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 9167524,
+      &quot;name&quot;: &quot;QA Path1&quot;,
+      &quot;label&quot;: &quot;qa_path1_label&quot;,
+      &quot;description&quot;: &quot;QA environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Dev Path1&quot;,
+        &quot;id&quot;: 413623389
+      },
+      &quot;successor&quot;: {
+        &quot;name&quot;: &quot;Staging Path1&quot;,
+        &quot;id&quot;: 507881024
+      },
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 797271385,
+      &quot;name&quot;: &quot;Candlepin Dev&quot;,
+      &quot;label&quot;: &quot;candlepin_dev_label&quot;,
+      &quot;description&quot;: &quot;Dev environment.&quot;,
+      &quot;organization_id&quot;: 61304186,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Organization 2&quot;,
+        &quot;label&quot;: &quot;Organization_2&quot;,
+        &quot;id&quot;: 61304186
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;id&quot;: 396772849
+      },
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 1
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: [
+        {
+          &quot;name&quot;: &quot;Candlepin Library and Dev Content View&quot;,
+          &quot;id&quot;: 566851579
+        }
+      ]
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 261162085,
+      &quot;name&quot;: &quot;Beta&quot;,
+      &quot;label&quot;: &quot;beta_label&quot;,
+      &quot;description&quot;: &quot;Beta environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;Test_env&quot;,
+        &quot;id&quot;: 411008527
+      },
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: true,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 562075838,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;label&quot;: &quot;library_label&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: null,
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 2,
+        &quot;content_views&quot;: 4,
+        &quot;packages&quot;: 5,
+        &quot;module_streams&quot;: 2,
+        &quot;errata&quot;: {
+          &quot;security&quot;: 1,
+          &quot;bugfix&quot;: 1,
+          &quot;enhancement&quot;: 1,
+          &quot;total&quot;: 3
+        },
+        &quot;yum_repositories&quot;: 13,
+        &quot;docker_repositories&quot;: 4,
+        &quot;ostree_repositories&quot;: 1,
+        &quot;products&quot;: 9,
+        &quot;debs&quot;: 4,
+        &quot;deb_repositories&quot;: 5
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: false,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: [
+        {
+          &quot;name&quot;: &quot;Composite view&quot;,
+          &quot;id&quot;: 64601712
+        },
+        {
+          &quot;name&quot;: &quot;Published LIbrary view&quot;,
+          &quot;id&quot;: 405955044
+        },
+        {
+          &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+          &quot;id&quot;: 419082953
+        },
+        {
+          &quot;name&quot;: &quot;Published Library and dev view&quot;,
+          &quot;id&quot;: 909058347
+        }
+      ]
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 507881024,
+      &quot;name&quot;: &quot;Staging Path1&quot;,
+      &quot;label&quot;: &quot;staging_path1_label&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;QA Path1&quot;,
+        &quot;id&quot;: 9167524
+      },
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    },
+    {
+      &quot;library&quot;: false,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 122484616,
+      &quot;name&quot;: &quot;Staging Path2&quot;,
+      &quot;label&quot;: &quot;staging_path2_label&quot;,
+      &quot;description&quot;: &quot;Staging environment.&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: {
+        &quot;name&quot;: &quot;QA Path2&quot;,
+        &quot;id&quot;: 427995936
+      },
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 0,
+        &quot;content_views&quot;: 0
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: true,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: []
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the organization to limit environments on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/add_lifecycle_environment.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_lifecycle_environment'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/capsules/:id/content/lifecycle_environments
+          </a>
+          <br>
+          <small>Add lifecycle environments to the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_lifecycle_environment' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/capsules/281110143/content/lifecycle_environments
+{
+  &quot;environment_id&quot;: 562075838,
+  &quot;capsule_content&quot;: {
+    &quot;environment_id&quot;: 562075838
+  }
+}
+204</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the lifecycle environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/remove_lifecycle_environment.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_lifecycle_environment'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/capsules/:id/content/lifecycle_environments/:environment_id
+          </a>
+          <br>
+          <small>Remove lifecycle environments from the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_lifecycle_environment' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /katello/api/capsules/281110143/content/lifecycle_environments/562075838
+{
+  &quot;capsule_content&quot;: {}
+}
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;selectable&quot;: 0,
+  &quot;page&quot;: null,
+  &quot;per_page&quot;: null,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the lifecycle environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/sync.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/capsules/:id/content/sync
+          </a>
+          <br>
+          <small>Synchronize the content to the smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/capsules/281110143/content/sync
+{
+  &quot;repository_id&quot;: 841753487,
+  &quot;capsule_content&quot;: {
+    &quot;repository_id&quot;: 841753487
+  }
+}
+202
+{
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;pending&quot;: null,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: null,
+  &quot;ended_at&quot;: null,
+  &quot;state&quot;: null,
+  &quot;result&quot;: null,
+  &quot;progress&quot;: null,
+  &quot;input&quot;: null,
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: null,
+  &quot;cli_example&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: null
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the environment to limit the synchronization on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the content view to limit the synchronization on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the repository to limit the synchronization on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>skip_metadata_check</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Skip metadata check on each repository on the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/sync_status.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync_status'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id/content/sync
+          </a>
+          <br>
+          <small>Get current smart proxy synchronization status</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync_status' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143/content/sync
+200
+{
+  &quot;last_sync_time&quot;: null,
+  &quot;download_policy&quot;: null,
+  &quot;active_sync_tasks&quot;: [],
+  &quot;last_failed_sync_tasks&quot;: [],
+  &quot;last_sync_task&quot;: null,
+  &quot;last_failed_reclaim_tasks&quot;: [],
+  &quot;lifecycle_environments&quot;: [],
+  &quot;last_sync_words&quot;: null,
+  &quot;unsyncable_content_types&quot;: [],
+  &quot;content_counts&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the organization to get the status for</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/cancel_sync.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel_sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/capsules/:id/content/sync
+          </a>
+          <br>
+          <small>Cancel running smart proxy synchronization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel_sync' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143/content/sync
+200
+{
+  &quot;message&quot;: &quot;There&#39;s no running synchronization for this smart proxy.&quot;
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/reclaim_space.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-reclaim_space'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/capsules/:id/content/reclaim_space
+          </a>
+          <br>
+          <small>Reclaim space from all On Demand repositories on a smart proxy</small>
+        </h2>
+    </div>
+
+
+    <div id='description-reclaim_space' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/capsules/281110143/content/reclaim_space
+{
+  &quot;capsule_content&quot;: {}
+}
+202
+{
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;pending&quot;: null,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: null,
+  &quot;ended_at&quot;: null,
+  &quot;state&quot;: null,
+  &quot;result&quot;: null,
+  &quot;progress&quot;: null,
+  &quot;input&quot;: null,
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: null,
+  &quot;cli_example&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: null
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsule_content/verify_checksum.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-verify_checksum'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/capsules/:id/content/verify_checksum
+          </a>
+          <br>
+          <small>Check for missing or corrupted artifacts, and attempt to redownload them.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-verify_checksum' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the environment to limit verifying checksum on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the content view to limit verifying checksum on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the repository to limit verifying checksum on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

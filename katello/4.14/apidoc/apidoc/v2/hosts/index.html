@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/hosts.html'>
+      Hosts
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts
+      <br>
+      <small>List all hosts</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/hostgroups/:hostgroup_id/hosts
+      <br>
+      <small>List all hosts for a host group</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/locations/:location_id/hosts
+      <br>
+      <small>List hosts per location</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/hosts
+      <br>
+      <small>List hosts per organization</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/hosts/post_index
+200
+{
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 8,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host1.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;errata_status&quot;: 0,
+      &quot;errata_status_label&quot;: &quot;All errata applied&quot;,
+      &quot;name&quot;: &quot;host1.example.com&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;display_name&quot;: &quot;host1.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null,
+      &quot;content_facet_attributes&quot;: {
+        &quot;id&quot;: 497076783,
+        &quot;uuid&quot;: &quot;content_facet_one&quot;,
+        &quot;content_source_id&quot;: null,
+        &quot;content_source_name&quot;: null,
+        &quot;kickstart_repository_id&quot;: null,
+        &quot;kickstart_repository_name&quot;: null,
+        &quot;errata_counts&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0,
+          &quot;applicable&quot;: {
+            &quot;bugfix&quot;: 0,
+            &quot;security&quot;: 1,
+            &quot;enhancement&quot;: 1,
+            &quot;total&quot;: 2
+          }
+        },
+        &quot;applicable_deb_count&quot;: 0,
+        &quot;upgradable_deb_count&quot;: 0,
+        &quot;applicable_package_count&quot;: 0,
+        &quot;upgradable_package_count&quot;: 0,
+        &quot;applicable_module_stream_count&quot;: 0,
+        &quot;upgradable_module_stream_count&quot;: 0,
+        &quot;content_view_environments&quot;: [
+          {
+            &quot;content_view&quot;: {
+              &quot;id&quot;: 30237652,
+              &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+              &quot;composite&quot;: false,
+              &quot;content_view_version&quot;: &quot;1.0&quot;,
+              &quot;content_view_version_id&quot;: 840492357,
+              &quot;content_view_version_latest&quot;: true,
+              &quot;content_view_default&quot;: true
+            },
+            &quot;lifecycle_environment&quot;: {
+              &quot;id&quot;: 562075838,
+              &quot;name&quot;: &quot;Library&quot;,
+              &quot;lifecycle_environment_library&quot;: true
+            },
+            &quot;candlepin_name&quot;: &quot;library_label&quot;
+          }
+        ],
+        &quot;content_source&quot;: null,
+        &quot;kickstart_repository&quot;: null,
+        &quot;content_view&quot;: {
+          &quot;id&quot;: 30237652,
+          &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+          &quot;composite&quot;: false
+        },
+        &quot;lifecycle_environment&quot;: {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;
+        }
+      },
+      &quot;subscription_facet_attributes&quot;: {
+        &quot;id&quot;: 980190962,
+        &quot;uuid&quot;: &quot;uuid-1&quot;,
+        &quot;last_checkin&quot;: null,
+        &quot;service_level&quot;: null,
+        &quot;release_version&quot;: null,
+        &quot;autoheal&quot;: false,
+        &quot;registered_at&quot;: &quot;2024-08-26 18:00:28 UTC&quot;,
+        &quot;registered_through&quot;: null,
+        &quot;purpose_role&quot;: null,
+        &quot;purpose_usage&quot;: null,
+        &quot;hypervisor&quot;: false,
+        &quot;convert2rhel_through_foreman&quot;: null,
+        &quot;user&quot;: null,
+        &quot;purpose_addons&quot;: []
+      }
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 1073012906,
+      &quot;operatingsystem_name&quot;: &quot;operatingsystem33 33&quot;,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;creator_id&quot;: 135138680,
+      &quot;creator&quot;: &quot;Admin User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host248&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:22:42 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:22:42 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 447626438,
+      &quot;organization_name&quot;: &quot;Organization 1&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;name&quot;: &quot;host248&quot;,
+      &quot;id&quot;: 980191210,
+      &quot;display_name&quot;: &quot;host248&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 1073012907,
+      &quot;operatingsystem_name&quot;: &quot;operatingsystem34 34&quot;,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;creator_id&quot;: 135138680,
+      &quot;creator&quot;: &quot;Admin User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host249&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:22:42 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:22:42 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 447626438,
+      &quot;organization_name&quot;: &quot;Organization 1&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;errata_status&quot;: 0,
+      &quot;errata_status_label&quot;: &quot;All errata applied&quot;,
+      &quot;name&quot;: &quot;host249&quot;,
+      &quot;id&quot;: 980191211,
+      &quot;display_name&quot;: &quot;host249&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null,
+      &quot;content_facet_attributes&quot;: {
+        &quot;id&quot;: 906413909,
+        &quot;uuid&quot;: &quot;uuid-154&quot;,
+        &quot;content_source_id&quot;: null,
+        &quot;content_source_name&quot;: null,
+        &quot;kickstart_repository_id&quot;: null,
+        &quot;kickstart_repository_name&quot;: null,
+        &quot;errata_counts&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0,
+          &quot;applicable&quot;: {
+            &quot;bugfix&quot;: 0,
+            &quot;security&quot;: 0,
+            &quot;enhancement&quot;: 0,
+            &quot;total&quot;: 0
+          }
+        },
+        &quot;applicable_deb_count&quot;: 0,
+        &quot;upgradable_deb_count&quot;: 0,
+        &quot;applicable_package_count&quot;: 0,
+        &quot;upgradable_package_count&quot;: 0,
+        &quot;applicable_module_stream_count&quot;: 0,
+        &quot;upgradable_module_stream_count&quot;: 0,
+        &quot;content_view_environments&quot;: [
+          {
+            &quot;content_view&quot;: {
+              &quot;id&quot;: 30237652,
+              &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+              &quot;composite&quot;: false,
+              &quot;content_view_version&quot;: &quot;1.0&quot;,
+              &quot;content_view_version_id&quot;: 840492357,
+              &quot;content_view_version_latest&quot;: true,
+              &quot;content_view_default&quot;: true
+            },
+            &quot;lifecycle_environment&quot;: {
+              &quot;id&quot;: 562075838,
+              &quot;name&quot;: &quot;Library&quot;,
+              &quot;lifecycle_environment_library&quot;: true
+            },
+            &quot;candlepin_name&quot;: &quot;library_label&quot;
+          }
+        ],
+        &quot;content_source&quot;: null,
+        &quot;kickstart_repository&quot;: null,
+        &quot;content_view&quot;: {
+          &quot;id&quot;: 30237652,
+          &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+          &quot;composite&quot;: false
+        },
+        &quot;lifecycle_environment&quot;: {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;
+        }
+      }
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host2.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;errata_status&quot;: 0,
+      &quot;errata_status_label&quot;: &quot;All errata applied&quot;,
+      &quot;name&quot;: &quot;host2.example.com&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;display_name&quot;: &quot;host2.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null,
+      &quot;content_facet_attributes&quot;: {
+        &quot;id&quot;: 906413753,
+        &quot;uuid&quot;: &quot;content_facet_two&quot;,
+        &quot;content_source_id&quot;: null,
+        &quot;content_source_name&quot;: null,
+        &quot;kickstart_repository_id&quot;: null,
+        &quot;kickstart_repository_name&quot;: null,
+        &quot;errata_counts&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0,
+          &quot;applicable&quot;: {
+            &quot;bugfix&quot;: 0,
+            &quot;security&quot;: 1,
+            &quot;enhancement&quot;: 1,
+            &quot;total&quot;: 2
+          }
+        },
+        &quot;applicable_deb_count&quot;: 0,
+        &quot;upgradable_deb_count&quot;: 0,
+        &quot;applicable_package_count&quot;: 0,
+        &quot;upgradable_package_count&quot;: 0,
+        &quot;applicable_module_stream_count&quot;: 0,
+        &quot;upgradable_module_stream_count&quot;: 0,
+        &quot;content_view_environments&quot;: [
+          {
+            &quot;content_view&quot;: {
+              &quot;id&quot;: 909058347,
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;composite&quot;: false,
+              &quot;content_view_version&quot;: &quot;1.0&quot;,
+              &quot;content_view_version_id&quot;: 172022917,
+              &quot;content_view_version_latest&quot;: true,
+              &quot;content_view_default&quot;: false
+            },
+            &quot;lifecycle_environment&quot;: {
+              &quot;id&quot;: 292811013,
+              &quot;name&quot;: &quot;Dev&quot;,
+              &quot;lifecycle_environment_library&quot;: false
+            },
+            &quot;candlepin_name&quot;: &quot;dev_label/published_dev_view&quot;
+          }
+        ],
+        &quot;content_source&quot;: null,
+        &quot;kickstart_repository&quot;: null,
+        &quot;content_view&quot;: {
+          &quot;id&quot;: 909058347,
+          &quot;name&quot;: &quot;Published Library and dev view&quot;,
+          &quot;composite&quot;: false
+        },
+        &quot;lifecycle_environment&quot;: {
+          &quot;id&quot;: 292811013,
+          &quot;name&quot;: &quot;Dev&quot;
+        }
+      },
+      &quot;subscription_facet_attributes&quot;: {
+        &quot;id&quot;: 298486374,
+        &quot;uuid&quot;: &quot;uuid-2&quot;,
+        &quot;last_checkin&quot;: null,
+        &quot;service_level&quot;: null,
+        &quot;release_version&quot;: null,
+        &quot;autoheal&quot;: false,
+        &quot;registered_at&quot;: &quot;2024-08-26 18:00:28 UTC&quot;,
+        &quot;registered_through&quot;: null,
+        &quot;purpose_role&quot;: null,
+        &quot;purpose_usage&quot;: null,
+        &quot;hypervisor&quot;: false,
+        &quot;convert2rhel_through_foreman&quot;: null,
+        &quot;user&quot;: null,
+        &quot;purpose_addons&quot;: []
+      }
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host3.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;name&quot;: &quot;host3.example.com&quot;,
+      &quot;id&quot;: 692292738,
+      &quot;display_name&quot;: &quot;host3.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host4.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;errata_status&quot;: 0,
+      &quot;errata_status_label&quot;: &quot;All errata applied&quot;,
+      &quot;name&quot;: &quot;host4.example.com&quot;,
+      &quot;id&quot;: 529902380,
+      &quot;display_name&quot;: &quot;host4.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null,
+      &quot;content_facet_attributes&quot;: {
+        &quot;id&quot;: 529902380,
+        &quot;uuid&quot;: &quot;without_errata&quot;,
+        &quot;content_source_id&quot;: null,
+        &quot;content_source_name&quot;: null,
+        &quot;kickstart_repository_id&quot;: null,
+        &quot;kickstart_repository_name&quot;: null,
+        &quot;errata_counts&quot;: {
+          &quot;security&quot;: 0,
+          &quot;bugfix&quot;: 0,
+          &quot;enhancement&quot;: 0,
+          &quot;total&quot;: 0,
+          &quot;applicable&quot;: {
+            &quot;bugfix&quot;: 0,
+            &quot;security&quot;: 0,
+            &quot;enhancement&quot;: 0,
+            &quot;total&quot;: 0
+          }
+        },
+        &quot;applicable_deb_count&quot;: 0,
+        &quot;upgradable_deb_count&quot;: 0,
+        &quot;applicable_package_count&quot;: 0,
+        &quot;upgradable_package_count&quot;: 0,
+        &quot;applicable_module_stream_count&quot;: 0,
+        &quot;upgradable_module_stream_count&quot;: 0,
+        &quot;content_view_environments&quot;: [
+          {
+            &quot;content_view&quot;: {
+              &quot;id&quot;: 30237652,
+              &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+              &quot;composite&quot;: false,
+              &quot;content_view_version&quot;: &quot;1.0&quot;,
+              &quot;content_view_version_id&quot;: 840492357,
+              &quot;content_view_version_latest&quot;: true,
+              &quot;content_view_default&quot;: true
+            },
+            &quot;lifecycle_environment&quot;: {
+              &quot;id&quot;: 562075838,
+              &quot;name&quot;: &quot;Library&quot;,
+              &quot;lifecycle_environment_library&quot;: true
+            },
+            &quot;candlepin_name&quot;: &quot;library_label&quot;
+          }
+        ],
+        &quot;content_source&quot;: null,
+        &quot;kickstart_repository&quot;: null,
+        &quot;content_view&quot;: {
+          &quot;id&quot;: 30237652,
+          &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+          &quot;composite&quot;: false
+        },
+        &quot;lifecycle_environment&quot;: {
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;
+        }
+      }
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host5.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: null,
+      &quot;organization_name&quot;: null,
+      &quot;location_id&quot;: null,
+      &quot;location_name&quot;: null,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;name&quot;: &quot;host5.example.com&quot;,
+      &quot;id&quot;: 651939722,
+      &quot;display_name&quot;: &quot;host5.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: &quot;&quot;,
+      &quot;disk&quot;: null,
+      &quot;initiated_at&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_name&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;creator_id&quot;: null,
+      &quot;creator&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;no-sub-facet.example.com&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;bmc_available&quot;: false,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;build_status&quot;: 0,
+      &quot;build_status_label&quot;: &quot;Installed&quot;,
+      &quot;execution_status&quot;: 2,
+      &quot;execution_status_label&quot;: &quot;Unknown execution status&quot;,
+      &quot;name&quot;: &quot;no-sub-facet.example.com&quot;,
+      &quot;id&quot;: 835059072,
+      &quot;display_name&quot;: &quot;no-sub-facet.example.com&quot;,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;cockpit_url&quot;: null,
+      &quot;compute_resource_provider&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>thin</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Only list ID and name of hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of host group</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of location</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of extra information types to include</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>parameters</code>, <code>all_parameters</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h2>Search fields</h2>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>activation_key</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>activation_key_id</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>addon</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>applicable_debs</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>applicable_errata</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>applicable_errata_issued</td>
+      <td>date</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>applicable_rpms</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>architecture</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>autoheal</td>
+      <td>boolean</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>boot_time</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>build</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>build_status</td>
+      <td></td>
+      <td>built, pending, token_expired, build_failed</td>
+    </tr>
+    <tr>
+      <td>comment</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>compute_resource</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>compute_resource_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.applied</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.enabled</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>configuration_status.failed</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.failed_restarts</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.interesting</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>configuration_status.pending</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.restarted</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>configuration_status.skipped</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>content_source</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>content_views</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>convert2rhel_through_foreman</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>created_at</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>domain</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>domain_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>errata_status</td>
+      <td></td>
+      <td>security_needed, errata_needed, updated, unknown</td>
+    </tr>
+    <tr>
+      <td>execution_status</td>
+      <td></td>
+      <td>ok, error</td>
+    </tr>
+    <tr>
+      <td>facts</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>global_status</td>
+      <td></td>
+      <td>ok, warning, error</td>
+    </tr>
+    <tr>
+      <td>has_ip</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>has_ip6</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>has_mac</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_fullname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hypervisor</td>
+      <td>boolean</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hypervisor_host</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>infrastructure_facet.foreman</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>infrastructure_facet.smart_proxy_id</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>installable_errata</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>installed_at</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ip</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ip6</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>job_invocation.id</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>job_invocation.result</td>
+      <td></td>
+      <td>cancelled, failed, pending, success</td>
+    </tr>
+    <tr>
+      <td>last_checkin</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>last_report</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>lifecycle_environments</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>mac</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>managed</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>model</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>origin</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_description</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_major</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_minor</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner_type</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>params</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>params_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>parent_hostgroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppet_ca</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppet_proxy_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppetmaster</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>pxe_loader</td>
+      <td></td>
+      <td>PXELinux_BIOS, PXELinux_UEFI, Grub_UEFI, Grub2_BIOS, Grub2_ELF, Grub2_UEFI, Grub2_UEFI_SecureBoot, Grub2_UEFI_HTTP, Grub2_UEFI_HTTPS, Grub2_UEFI_HTTPS_SecureBoot, iPXE_Embedded, iPXE_UEFI_HTTP, iPXE_Chain_BIOS, iPXE_Chain_UEFI</td>
+    </tr>
+    <tr>
+      <td>realm</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>realm_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>registered_at</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>registered_through</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>release_version</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.bios_release_date</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.bios_vendor</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.bios_version</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.boot_time</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.cores</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.disks_total</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.kernel_version</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.ram</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.sockets</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reported.virtual</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>repository</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>repository_content_label</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>rhel_lifecycle_status</td>
+      <td></td>
+      <td>full_support, maintenance_support, approaching_end_of_maintenance, extended_support, approaching_end_of_support, support_ended</td>
+    </tr>
+    <tr>
+      <td>role</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>service_level</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>smart_proxy</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.applied</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.enabled</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>status.failed</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.failed_restarts</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.interesting</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>status.pending</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.restarted</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.skipped</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet.name</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet6</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet6.name</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subscription_id</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subscription_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subscription_uuid</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>trace_status</td>
+      <td></td>
+      <td>reboot_needed, process_restart_needed, updated</td>
+    </tr>
+    <tr>
+      <td>upgradable_debs</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>upgradable_rpms</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>usage</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.firstname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.lastname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.login</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.mail</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>usergroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>usergroup.name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>uuid</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

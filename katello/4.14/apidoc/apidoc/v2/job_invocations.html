@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Job_invocations
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Job_invocations
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/job_invocations
+          </a>
+          <br>
+          <small>List job invocations</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/job_invocations
+200
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 187,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 152&quot;,
+      &quot;targeting_id&quot;: 212,
+      &quot;status&quot;: 0,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;succeeded&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: {
+        &quot;id&quot;: &quot;d5f530c2-dce6-4e8b-ac2b-7d557047149a&quot;,
+        &quot;state&quot;: &quot;stopped&quot;
+      },
+      &quot;template_id&quot;: 1007982000,
+      &quot;template_name&quot;: &quot;Job template 156&quot;,
+      &quot;effective_user&quot;: &quot;root&quot;,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    },
+    {
+      &quot;id&quot;: 186,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 178&quot;,
+      &quot;targeting_id&quot;: 214,
+      &quot;status&quot;: 2,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;queued&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: null,
+      &quot;template_id&quot;: null,
+      &quot;template_name&quot;: null,
+      &quot;effective_user&quot;: null,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    },
+    {
+      &quot;id&quot;: 185,
+      &quot;description&quot;: null,
+      &quot;job_category&quot;: &quot;Job name 177&quot;,
+      &quot;targeting_id&quot;: 213,
+      &quot;status&quot;: 2,
+      &quot;start_at&quot;: null,
+      &quot;status_label&quot;: &quot;queued&quot;,
+      &quot;ssh_user&quot;: null,
+      &quot;time_to_pickup&quot;: null,
+      &quot;dynflow_task&quot;: null,
+      &quot;template_id&quot;: null,
+      &quot;template_name&quot;: null,
+      &quot;effective_user&quot;: null,
+      &quot;succeeded&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;cancelled&quot;: 0,
+      &quot;total&quot;: &quot;N/A&quot;,
+      &quot;missing&quot;: 0,
+      &quot;total_hosts&quot;: &quot;N/A&quot;
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/job_invocations/:id
+          </a>
+          <br>
+          <small>Show job invocation</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/job_invocations/221
+200
+{
+  &quot;id&quot;: 221,
+  &quot;description&quot;: null,
+  &quot;job_category&quot;: &quot;Job name 184&quot;,
+  &quot;targeting_id&quot;: 251,
+  &quot;status&quot;: 0,
+  &quot;start_at&quot;: null,
+  &quot;status_label&quot;: &quot;succeeded&quot;,
+  &quot;ssh_user&quot;: null,
+  &quot;time_to_pickup&quot;: null,
+  &quot;dynflow_task&quot;: {
+    &quot;id&quot;: &quot;a327720e-911d-4a46-ac7d-803503225b4a&quot;,
+    &quot;state&quot;: &quot;stopped&quot;
+  },
+  &quot;template_id&quot;: 1007982073,
+  &quot;template_name&quot;: &quot;Job template 190&quot;,
+  &quot;effective_user&quot;: &quot;root&quot;,
+  &quot;succeeded&quot;: 0,
+  &quot;failed&quot;: 0,
+  &quot;pending&quot;: 0,
+  &quot;cancelled&quot;: 0,
+  &quot;total&quot;: &quot;N/A&quot;,
+  &quot;missing&quot;: 0,
+  &quot;total_hosts&quot;: &quot;N/A&quot;,
+  &quot;targeting&quot;: {
+    &quot;bookmark_id&quot;: null,
+    &quot;search_query&quot;: &quot;name = foo&quot;,
+    &quot;targeting_type&quot;: &quot;static_query&quot;,
+    &quot;user_id&quot;: 988725846,
+    &quot;randomized_ordering&quot;: false,
+    &quot;hosts&quot;: []
+  },
+  &quot;task&quot;: {
+    &quot;id&quot;: &quot;a327720e-911d-4a46-ac7d-803503225b4a&quot;,
+    &quot;state&quot;: &quot;stopped&quot;
+  },
+  &quot;mode&quot;: &quot;immediate&quot;
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_status</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Show Job status for the hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/job_invocations
+          </a>
+          <br>
+          <small>Create a job invocation</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/job_invocations
+{
+  &quot;job_invocation&quot;: {
+    &quot;job_category&quot;: &quot;Job name 26&quot;,
+    &quot;name&quot;: &quot;RandomName&quot;,
+    &quot;job_template_id&quot;: 1007981782,
+    &quot;targeting_type&quot;: &quot;static_query&quot;,
+    &quot;search_query&quot;: &quot;foobar&quot;,
+    &quot;recurrence&quot;: {
+      &quot;cron_line&quot;: &quot;5 * * * *&quot;
+    }
+  }
+}
+201
+{
+  &quot;id&quot;: 42,
+  &quot;description&quot;: &quot;Job template 26 with inputs Template input 10=\&quot;&#39;&#39;\&quot;&quot;,
+  &quot;job_category&quot;: &quot;Job name 26&quot;,
+  &quot;targeting_id&quot;: 49,
+  &quot;status&quot;: 2,
+  &quot;start_at&quot;: &quot;2024-08-26 18:05:00 UTC&quot;,
+  &quot;status_label&quot;: &quot;queued&quot;,
+  &quot;ssh_user&quot;: null,
+  &quot;time_to_pickup&quot;: null,
+  &quot;dynflow_task&quot;: {
+    &quot;id&quot;: &quot;d63ded11-d594-4013-b4b0-f2ee47d3c55a&quot;,
+    &quot;state&quot;: &quot;scheduled&quot;
+  },
+  &quot;template_id&quot;: 1007981782,
+  &quot;template_name&quot;: &quot;Job template 26&quot;,
+  &quot;effective_user&quot;: &quot;root&quot;,
+  &quot;succeeded&quot;: 0,
+  &quot;failed&quot;: 0,
+  &quot;pending&quot;: 0,
+  &quot;cancelled&quot;: 0,
+  &quot;total&quot;: &quot;N/A&quot;,
+  &quot;missing&quot;: 0,
+  &quot;total_hosts&quot;: 0,
+  &quot;targeting&quot;: {
+    &quot;bookmark_id&quot;: null,
+    &quot;search_query&quot;: &quot;foobar&quot;,
+    &quot;targeting_type&quot;: &quot;static_query&quot;,
+    &quot;user_id&quot;: 135138680,
+    &quot;randomized_ordering&quot;: null,
+    &quot;hosts&quot;: []
+  },
+  &quot;task&quot;: {
+    &quot;id&quot;: &quot;d63ded11-d594-4013-b4b0-f2ee47d3c55a&quot;,
+    &quot;state&quot;: &quot;scheduled&quot;
+  },
+  &quot;mode&quot;: &quot;recurring&quot;,
+  &quot;recurrence&quot;: {
+    &quot;id&quot;: 1,
+    &quot;cron_line&quot;: &quot;5 * * * *&quot;,
+    &quot;end_time&quot;: null,
+    &quot;iteration&quot;: 1,
+    &quot;task_group_id&quot;: 9,
+    &quot;state&quot;: &quot;active&quot;,
+    &quot;max_iteration&quot;: null,
+    &quot;purpose&quot;: null,
+    &quot;task_count&quot;: 1,
+    &quot;action&quot;: &quot;Run hosts job:&quot;,
+    &quot;last_occurence&quot;: null,
+    &quot;next_occurence&quot;: &quot;2024-08-26 18:05:00 UTC&quot;
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>job_invocation</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[job_template_id]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The job template to use, parameter is required unless feature was specified</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[targeting_type]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Invocation type, one of {“static_query”=&gt;“Static Query”, “dynamic_query”=&gt;“Dynamic Query”}</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[randomized_ordering]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Execute the jobs on hosts in randomized order</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[inputs]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Inputs to use</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[ssh]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>SSH provider specific options</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[ssh][effective_user]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>What user should be used to run the script (using sudo-like mechanisms). Defaults to a template parameter or global setting.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[ssh][effective_user_password]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set password for effective user (using sudo-like mechanisms)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[ssh_user]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set SSH user</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[password]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set SSH password</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[key_passphrase]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set SSH key passphrase</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[recurrence]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Create a recurring job</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[recurrence][cron_line]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How often the job should occur, in the cron format</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[recurrence][max_iteration]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Repeat a maximum of N times</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[recurrence][end_time]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Perform no more executions after this time</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>DateTime</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[recurrence][purpose]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Designation of a special purpose</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[scheduling]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Schedule the job to start at a later time</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[scheduling][start_at]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Schedule the job for a future time</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>DateTime</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[scheduling][start_before]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Indicates that the action should be cancelled if it cannot be started before this time.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>DateTime</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[concurrency_control]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Control concurrency level and distribution over time</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_invocation[concurrency_control][concurrency_level]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Run at most N tasks at a time</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[bookmark_id]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[search_query]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[description_format]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override the description format from the template for this invocation only</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[execution_timeout_interval]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override the timeout interval from the template for this invocation only</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[feature]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Remote execution feature label that should be triggered, job template assigned to this feature will be used</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_invocation[time_to_pickup]</strong>
+      <br>
+      <small>
+        optional
+        , nil allowed
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override the global time to pickup interval for this invocation only</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/output.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-output'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/job_invocations/:id/hosts/:host_id
+          </a>
+          <br>
+          <small>Get output for a host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-output' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/job_invocations/103/hosts/76
+200
+{
+  &quot;complete&quot;: true,
+  &quot;refresh&quot;: false,
+  &quot;output&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>since</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/raw_output.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-raw_output'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/job_invocations/:id/hosts/:host_id/raw
+          </a>
+          <br>
+          <small>Get raw output for a host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-raw_output' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/job_invocations/368/hosts/255/raw
+200
+{
+  &quot;complete&quot;: false,
+  &quot;refresh&quot;: true,
+  &quot;output&quot;: null,
+  &quot;delayed&quot;: true,
+  &quot;start_at&quot;: &quot;2024-08-26T14:11:15.492-04:00&quot;
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/cancel.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/job_invocations/:id/cancel
+          </a>
+          <br>
+          <small>Cancel job invocation</small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/job_invocations/160/cancel
+{
+  &quot;job_invocation&quot;: {}
+}
+422
+{
+  &quot;message&quot;: &quot;The job could not be cancelled.&quot;
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>force</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/rerun.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-rerun'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/job_invocations/:id/rerun
+          </a>
+          <br>
+          <small>Rerun job on failed hosts</small>
+        </h2>
+    </div>
+
+
+    <div id='description-rerun' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/job_invocations/166/rerun
+{
+  &quot;failed_only&quot;: true,
+  &quot;job_invocation&quot;: {}
+}
+201
+{
+  &quot;id&quot;: 167,
+  &quot;targeting_id&quot;: 194,
+  &quot;job_category&quot;: &quot;Job name 135&quot;,
+  &quot;task_id&quot;: &quot;eb910cff-1833-42ef-a937-a98339470bb9&quot;,
+  &quot;task_group_id&quot;: 21,
+  &quot;triggering_id&quot;: 19,
+  &quot;description&quot;: null,
+  &quot;concurrency_level&quot;: null,
+  &quot;execution_timeout_interval&quot;: null,
+  &quot;password&quot;: null,
+  &quot;key_passphrase&quot;: null,
+  &quot;remote_execution_feature_id&quot;: null,
+  &quot;effective_user_password&quot;: null,
+  &quot;ssh_user&quot;: null,
+  &quot;time_to_pickup&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>failed_only</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>succeeded_only</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/job_invocations/outputs.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-outputs'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/job_invocations/:id/outputs
+          </a>
+          <br>
+          <small>Get outputs of hosts in a job</small>
+        </h2>
+    </div>
+
+
+    <div id='description-outputs' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/job_invocations/143/outputs
+{
+  &quot;search_query&quot;: &quot;id = 101&quot;,
+  &quot;job_invocation&quot;: {}
+}
+200
+{
+  &quot;outputs&quot;: [
+    {
+      &quot;complete&quot;: true,
+      &quot;refresh&quot;: false,
+      &quot;output&quot;: [],
+      &quot;host_id&quot;: 101
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search_query</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>since</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>raw</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

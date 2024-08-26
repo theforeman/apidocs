@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Alternate_content_sources
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Alternate_content_sources
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/alternate_content_sources
+          </a>
+          <br>
+          <small>List alternate content sources.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/alternate_content_sources
+200
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;selectable&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;name&quot;,
+    &quot;order&quot;: &quot;asc&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;File ACS&quot;,
+      &quot;alternate_content_source_type&quot;: &quot;custom&quot;,
+      &quot;content_type&quot;: &quot;file&quot;,
+      &quot;base_url&quot;: &quot;https://fixtures.pulpproject.org/&quot;,
+      &quot;subpaths&quot;: [],
+      &quot;upstream_username&quot;: &quot;admin&quot;,
+      &quot;smart_proxies&quot;: [],
+      &quot;verify_ssl&quot;: true,
+      &quot;use_http_proxies&quot;: null,
+      &quot;id&quot;: 175019167,
+      &quot;label&quot;: &quot;file_acs_fixture&quot;,
+      &quot;description&quot;: null,
+      &quot;ssl_ca_cert&quot;: {
+        &quot;id&quot;: 70104267,
+        &quot;name&quot;: &quot;Fedora CA&quot;
+      },
+      &quot;ssl_client_cert&quot;: {
+        &quot;id&quot;: 60750479,
+        &quot;name&quot;: &quot;Fedora Cert&quot;
+      },
+      &quot;ssl_client_key&quot;: {
+        &quot;id&quot;: 81778079,
+        &quot;name&quot;: &quot;Fedora Key&quot;
+      },
+      &quot;last_refresh&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;File Simplified ACS&quot;,
+      &quot;alternate_content_source_type&quot;: &quot;simplified&quot;,
+      &quot;content_type&quot;: &quot;file&quot;,
+      &quot;products&quot;: [],
+      &quot;smart_proxies&quot;: [],
+      &quot;use_http_proxies&quot;: null,
+      &quot;id&quot;: 364480250,
+      &quot;label&quot;: &quot;file_simplified_acs_fixture&quot;,
+      &quot;description&quot;: null,
+      &quot;last_refresh&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;Yum ACS&quot;,
+      &quot;alternate_content_source_type&quot;: &quot;custom&quot;,
+      &quot;content_type&quot;: &quot;yum&quot;,
+      &quot;base_url&quot;: &quot;https://fixtures.pulpproject.org/&quot;,
+      &quot;subpaths&quot;: [
+        &quot;content/&quot;,
+        &quot;isos/&quot;,
+        &quot;packages/&quot;
+      ],
+      &quot;upstream_username&quot;: &quot;admin&quot;,
+      &quot;smart_proxies&quot;: [],
+      &quot;verify_ssl&quot;: true,
+      &quot;use_http_proxies&quot;: null,
+      &quot;id&quot;: 209079975,
+      &quot;label&quot;: &quot;yum_acs_fixture&quot;,
+      &quot;description&quot;: null,
+      &quot;ssl_ca_cert&quot;: {
+        &quot;id&quot;: 70104267,
+        &quot;name&quot;: &quot;Fedora CA&quot;
+      },
+      &quot;ssl_client_cert&quot;: {
+        &quot;id&quot;: 60750479,
+        &quot;name&quot;: &quot;Fedora Cert&quot;
+      },
+      &quot;ssl_client_key&quot;: {
+        &quot;id&quot;: 81778079,
+        &quot;name&quot;: &quot;Fedora Key&quot;
+      },
+      &quot;last_refresh&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;Yum ACS RHUI&quot;,
+      &quot;alternate_content_source_type&quot;: &quot;rhui&quot;,
+      &quot;content_type&quot;: &quot;yum&quot;,
+      &quot;base_url&quot;: &quot;https://fixtures.pulpproject.org/&quot;,
+      &quot;subpaths&quot;: [],
+      &quot;upstream_username&quot;: &quot;admin&quot;,
+      &quot;smart_proxies&quot;: [],
+      &quot;verify_ssl&quot;: true,
+      &quot;use_http_proxies&quot;: null,
+      &quot;id&quot;: 350917440,
+      &quot;label&quot;: &quot;yum_acs_fixture_rhui&quot;,
+      &quot;description&quot;: null,
+      &quot;ssl_ca_cert&quot;: {
+        &quot;id&quot;: 70104267,
+        &quot;name&quot;: &quot;Fedora CA&quot;
+      },
+      &quot;ssl_client_cert&quot;: {
+        &quot;id&quot;: 60750479,
+        &quot;name&quot;: &quot;Fedora Cert&quot;
+      },
+      &quot;ssl_client_key&quot;: {
+        &quot;id&quot;: 81778079,
+        &quot;name&quot;: &quot;Fedora Key&quot;
+      },
+      &quot;last_refresh&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;Yum Simplified ACS&quot;,
+      &quot;alternate_content_source_type&quot;: &quot;simplified&quot;,
+      &quot;content_type&quot;: &quot;yum&quot;,
+      &quot;products&quot;: [],
+      &quot;smart_proxies&quot;: [],
+      &quot;use_http_proxies&quot;: null,
+      &quot;id&quot;: 508877521,
+      &quot;label&quot;: &quot;yum_simplified_acs_fixture&quot;,
+      &quot;description&quot;: null,
+      &quot;last_refresh&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the alternate content source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>alternate_content_source_type</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>base_url</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>content_type</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>product_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>smart_proxy_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>smart_proxy_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subpath</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>upstream_username</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/alternate_content_sources/:id
+          </a>
+          <br>
+          <small>Show an alternate content source.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/alternate_content_sources/209079975
+200
+{
+  &quot;name&quot;: &quot;Yum ACS&quot;,
+  &quot;alternate_content_source_type&quot;: &quot;custom&quot;,
+  &quot;content_type&quot;: &quot;yum&quot;,
+  &quot;base_url&quot;: &quot;https://fixtures.pulpproject.org/&quot;,
+  &quot;subpaths&quot;: [
+    &quot;content/&quot;,
+    &quot;isos/&quot;,
+    &quot;packages/&quot;
+  ],
+  &quot;upstream_username&quot;: &quot;admin&quot;,
+  &quot;smart_proxies&quot;: [],
+  &quot;verify_ssl&quot;: true,
+  &quot;use_http_proxies&quot;: null,
+  &quot;id&quot;: 209079975,
+  &quot;label&quot;: &quot;yum_acs_fixture&quot;,
+  &quot;description&quot;: null,
+  &quot;ssl_ca_cert&quot;: {
+    &quot;id&quot;: 70104267,
+    &quot;name&quot;: &quot;Fedora CA&quot;
+  },
+  &quot;ssl_client_cert&quot;: {
+    &quot;id&quot;: 60750479,
+    &quot;name&quot;: &quot;Fedora Cert&quot;
+  },
+  &quot;ssl_client_key&quot;: {
+    &quot;id&quot;: 81778079,
+    &quot;name&quot;: &quot;Fedora Key&quot;
+  },
+  &quot;last_refresh&quot;: null,
+  &quot;upstream_password_exists&quot;: true
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alternate content source ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/alternate_content_sources
+          </a>
+          <br>
+          <small>Create an alternate content source to download content from during repository syncing.  Note: alternate content sources are global and affect ALL sync actions on their smart proxies regardless of organization.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/alternate_content_sources
+{
+  &quot;name&quot;: &quot;Yum Simplified ACS&quot;,
+  &quot;smart_proxy_ids&quot;: [
+    767380118
+  ],
+  &quot;content_type&quot;: &quot;yum&quot;,
+  &quot;alternate_content_source_type&quot;: &quot;simplified&quot;,
+  &quot;product_ids&quot;: [
+    785257261
+  ],
+  &quot;alternate_content_source&quot;: {
+    &quot;name&quot;: &quot;Yum Simplified ACS&quot;,
+    &quot;content_type&quot;: &quot;yum&quot;,
+    &quot;alternate_content_source_type&quot;: &quot;simplified&quot;,
+    &quot;smart_proxy_ids&quot;: [
+      767380118
+    ],
+    &quot;product_ids&quot;: [
+      785257261
+    ]
+  }
+}
+201
+{
+  &quot;name&quot;: &quot;Yum Simplified ACS&quot;,
+  &quot;alternate_content_source_type&quot;: &quot;simplified&quot;,
+  &quot;content_type&quot;: &quot;yum&quot;,
+  &quot;products&quot;: [],
+  &quot;smart_proxies&quot;: [],
+  &quot;use_http_proxies&quot;: null,
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;description&quot;: null,
+  &quot;last_refresh&quot;: null
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The content type for the Alternate Content Source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>file</code>, <code>yum</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>alternate_content_source_type</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The Alternate Content Source type</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>custom</code>, <code>simplified</code>, <code>rhui</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the alternate content source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Description for the alternate content source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>base_url</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Base URL for finding alternate content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subpaths</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Path suffixes for finding alternate content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy_ids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Ids of smart proxies to associate</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy_names</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Names of smart proxies to associate</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_username</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Basic authentication username</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_password</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Basic authentication password</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_ca_cert_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL CA Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_cert_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_key_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Key</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>verify_ssl</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If SSL should be verified for the upstream URL</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>use_http_proxies</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If the smart proxies&#39; assigned HTTP proxies should be used</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_ids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>IDs of products to copy repository information from into a Simplified Alternate Content Source. Products must include at least one repository of the chosen content type.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/alternate_content_sources/:id
+          </a>
+          <br>
+          <small>Update an alternate content source.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /katello/api/alternate_content_sources/508877521
+{
+  &quot;verify_ssl&quot;: true,
+  &quot;alternate_content_source&quot;: {
+    &quot;verify_ssl&quot;: true
+  }
+}
+422
+{
+  &quot;displayMessage&quot;: &quot;Validation failed: Verify ssl cannot be provided for simplified ACS&quot;,
+  &quot;errors&quot;: {
+    &quot;verify_ssl&quot;: [
+      &quot;cannot be provided for simplified ACS&quot;
+    ]
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the alternate content source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Description for the alternate content source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>base_url</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Base URL for finding alternate content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subpaths</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Path suffixes for finding alternate content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy_ids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Ids of smart proxies to associate</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_proxy_names</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Names of smart proxies to associate</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_username</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Basic authentication username</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upstream_password</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Basic authentication password</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_ca_cert_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL CA Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_cert_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Cert</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ssl_client_key_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the content credential containing the SSL Client Key</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>verify_ssl</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If SSL should be verified for the upstream URL</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>use_http_proxies</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If the smart proxies&#39; assigned HTTP proxies should be used</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_ids</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>IDs of products to copy repository information from into a Simplified Alternate Content Source. Products must include at least one repository of the chosen content type.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alternate content source ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/alternate_content_sources/:id
+          </a>
+          <br>
+          <small>Destroy an alternate content source.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /katello/api/alternate_content_sources/209079975
+{
+  &quot;alternate_content_source&quot;: {}
+}
+200
+{
+  &quot;name&quot;: &quot;Yum ACS&quot;,
+  &quot;alternate_content_source_type&quot;: &quot;custom&quot;,
+  &quot;content_type&quot;: &quot;yum&quot;,
+  &quot;base_url&quot;: &quot;https://fixtures.pulpproject.org/&quot;,
+  &quot;subpaths&quot;: [
+    &quot;content/&quot;,
+    &quot;isos/&quot;,
+    &quot;packages/&quot;
+  ],
+  &quot;upstream_username&quot;: &quot;admin&quot;,
+  &quot;smart_proxies&quot;: [],
+  &quot;verify_ssl&quot;: true,
+  &quot;use_http_proxies&quot;: null,
+  &quot;id&quot;: 209079975,
+  &quot;label&quot;: &quot;yum_acs_fixture&quot;,
+  &quot;description&quot;: null,
+  &quot;ssl_ca_cert&quot;: {
+    &quot;id&quot;: 70104267,
+    &quot;name&quot;: &quot;Fedora CA&quot;
+  },
+  &quot;ssl_client_cert&quot;: {
+    &quot;id&quot;: 60750479,
+    &quot;name&quot;: &quot;Fedora Cert&quot;
+  },
+  &quot;ssl_client_key&quot;: {
+    &quot;id&quot;: 81778079,
+    &quot;name&quot;: &quot;Fedora Key&quot;
+  },
+  &quot;last_refresh&quot;: null,
+  &quot;upstream_password_exists&quot;: true
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alternate content source ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/alternate_content_sources/refresh.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-refresh'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/alternate_content_sources/:id/refresh
+          </a>
+          <br>
+          <small>Refresh an alternate content source. Refreshing, like repository syncing, is required before using an alternate content source.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-refresh' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/alternate_content_sources/209079975/refresh
+{
+  &quot;alternate_content_source&quot;: {}
+}
+202
+{
+  &quot;id&quot;: null,
+  &quot;label&quot;: null,
+  &quot;pending&quot;: null,
+  &quot;username&quot;: null,
+  &quot;started_at&quot;: null,
+  &quot;ended_at&quot;: null,
+  &quot;state&quot;: null,
+  &quot;result&quot;: null,
+  &quot;progress&quot;: null,
+  &quot;input&quot;: null,
+  &quot;output&quot;: {},
+  &quot;humanized&quot;: null,
+  &quot;cli_example&quot;: null,
+  &quot;available_actions&quot;: {
+    &quot;cancellable&quot;: null,
+    &quot;resumable&quot;: null
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alternate content source ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

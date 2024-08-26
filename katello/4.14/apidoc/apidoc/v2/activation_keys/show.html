@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/activation_keys.html'>
+      Activation_keys
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/activation_keys/:id
+      <br>
+      <small>Show an activation key</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/activation_keys/568942081
+200
+{
+  &quot;service_level&quot;: null,
+  &quot;content_overrides&quot;: [],
+  &quot;id&quot;: 568942081,
+  &quot;name&quot;: &quot;Simple Activation Key&quot;,
+  &quot;description&quot;: &quot;A simple activation key.&quot;,
+  &quot;unlimited_hosts&quot;: true,
+  &quot;auto_attach&quot;: true,
+  &quot;content_view_id&quot;: 30237652,
+  &quot;environment_id&quot;: 562075838,
+  &quot;usage_count&quot;: 0,
+  &quot;user_id&quot;: null,
+  &quot;max_hosts&quot;: null,
+  &quot;release_version&quot;: null,
+  &quot;purpose_usage&quot;: null,
+  &quot;purpose_role&quot;: null,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+  &quot;content_view&quot;: {
+    &quot;id&quot;: 30237652,
+    &quot;name&quot;: &quot;ACME Default ContentView&quot;
+  },
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;Library&quot;,
+    &quot;id&quot;: 562075838
+  },
+  &quot;products&quot;: [
+    {
+      &quot;id&quot;: 785257261,
+      &quot;name&quot;: &quot;Fedora&quot;
+    }
+  ],
+  &quot;host_collections&quot;: [],
+  &quot;purpose_addons&quot;: [],
+  &quot;permissions&quot;: {
+    &quot;view_activation_keys&quot;: true,
+    &quot;edit_activation_keys&quot;: true,
+    &quot;destroy_activation_keys&quot;: true
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the activation key</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>show_hosts</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Show hosts associated to an activation key</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

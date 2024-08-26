@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Capsules
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Capsules
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsules/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules
+          </a>
+          <br>
+          <small>List all smart proxies that have content</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;hosts_count&quot;: 0,
+      &quot;name&quot;: &quot;Pulp Primary Proxy&quot;,
+      &quot;id&quot;: 767380118,
+      &quot;url&quot;: &quot;https://devel.example.com:9090&quot;,
+      &quot;remote_execution_pubkey&quot;: null,
+      &quot;download_policy&quot;: null,
+      &quot;supported_pulp_types&quot;: [
+        &quot;ansible_collection&quot;,
+        &quot;deb&quot;,
+        &quot;docker&quot;,
+        &quot;file&quot;,
+        &quot;ostree&quot;,
+        &quot;python&quot;,
+        &quot;yum&quot;
+      ],
+      &quot;lifecycle_environments&quot;: [],
+      &quot;features&quot;: [
+        {
+          &quot;capabilities&quot;: [],
+          &quot;name&quot;: &quot;Pulp&quot;,
+          &quot;id&quot;: 17596590
+        },
+        {
+          &quot;capabilities&quot;: [
+            &quot;ansible&quot;,
+            &quot;certguard&quot;,
+            &quot;container&quot;,
+            &quot;core&quot;,
+            &quot;deb&quot;,
+            &quot;file&quot;,
+            &quot;rpm&quot;,
+            &quot;python&quot;,
+            &quot;ostree&quot;
+          ],
+          &quot;name&quot;: &quot;Pulpcore&quot;,
+          &quot;id&quot;: 990889162
+        }
+      ]
+    },
+    {
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+      &quot;hosts_count&quot;: 0,
+      &quot;name&quot;: &quot;Unused Proxy&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;url&quot;: &quot;http://else.where:45672&quot;,
+      &quot;remote_execution_pubkey&quot;: null,
+      &quot;download_policy&quot;: null,
+      &quot;supported_pulp_types&quot;: [],
+      &quot;lifecycle_environments&quot;: [],
+      &quot;features&quot;: [
+        {
+          &quot;capabilities&quot;: [],
+          &quot;name&quot;: &quot;Pulp Node&quot;,
+          &quot;id&quot;: 1006510649
+        },
+        {
+          &quot;capabilities&quot;: [],
+          &quot;name&quot;: &quot;Container_Gateway&quot;,
+          &quot;id&quot;: 1006510650
+        },
+        {
+          &quot;capabilities&quot;: [
+            &quot;core&quot;
+          ],
+          &quot;name&quot;: &quot;Pulpcore&quot;,
+          &quot;id&quot;: 990889162
+        }
+      ]
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/capsules/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id
+          </a>
+          <br>
+          <small>Show the smart proxy details</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/capsules/281110143
+200
+{
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:14:05 UTC&quot;,
+  &quot;hosts_count&quot;: 0,
+  &quot;name&quot;: &quot;Unused Proxy&quot;,
+  &quot;id&quot;: 281110143,
+  &quot;url&quot;: &quot;http://else.where:45672&quot;,
+  &quot;remote_execution_pubkey&quot;: null,
+  &quot;download_policy&quot;: null,
+  &quot;supported_pulp_types&quot;: [],
+  &quot;lifecycle_environments&quot;: [],
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Pulp Node&quot;,
+      &quot;id&quot;: 1006510647
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Container_Gateway&quot;,
+      &quot;id&quot;: 1006510648
+    },
+    {
+      &quot;capabilities&quot;: [
+        &quot;core&quot;
+      ],
+      &quot;name&quot;: &quot;Pulpcore&quot;,
+      &quot;id&quot;: 990889162
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 373111740,
+      &quot;name&quot;: &quot;Location 2&quot;,
+      &quot;title&quot;: &quot;Location 2&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the smart proxy</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

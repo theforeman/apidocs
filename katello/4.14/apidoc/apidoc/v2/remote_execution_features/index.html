@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/remote_execution_features.html'>
+      Remote_execution_features
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/remote_execution_features
+      <br>
+      <small>List remote execution features</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/remote_execution_features
+200
+{
+  &quot;total&quot;: 19,
+  &quot;subtotal&quot;: 19,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;label&quot;: &quot;katello_package_install&quot;,
+      &quot;name&quot;: &quot;Katello: Install Package&quot;,
+      &quot;description&quot;: &quot;Install package via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;label&quot;: &quot;katello_package_install_by_search&quot;,
+      &quot;name&quot;: &quot;Katello: Install packages by search query&quot;,
+      &quot;description&quot;: &quot;Install packages via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;label&quot;: &quot;katello_package_update&quot;,
+      &quot;name&quot;: &quot;Katello: Update Package&quot;,
+      &quot;description&quot;: &quot;Update package via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;label&quot;: &quot;katello_packages_update_by_search&quot;,
+      &quot;name&quot;: &quot;Katello: Update Packages by search query&quot;,
+      &quot;description&quot;: &quot;Update packages via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;label&quot;: &quot;katello_package_remove&quot;,
+      &quot;name&quot;: &quot;Katello: Remove Package&quot;,
+      &quot;description&quot;: &quot;Remove package via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 6,
+      &quot;label&quot;: &quot;katello_packages_remove_by_search&quot;,
+      &quot;name&quot;: &quot;Katello: Remove Packages by search query&quot;,
+      &quot;description&quot;: &quot;Remove packages via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 7,
+      &quot;label&quot;: &quot;katello_group_install&quot;,
+      &quot;name&quot;: &quot;Katello: Install Package Group&quot;,
+      &quot;description&quot;: &quot;Install package group via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 8,
+      &quot;label&quot;: &quot;katello_group_update&quot;,
+      &quot;name&quot;: &quot;Katello: Update Package Group&quot;,
+      &quot;description&quot;: &quot;Update package group via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 9,
+      &quot;label&quot;: &quot;katello_group_remove&quot;,
+      &quot;name&quot;: &quot;Katello: Remove Package Group&quot;,
+      &quot;description&quot;: &quot;Remove package group via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 10,
+      &quot;label&quot;: &quot;katello_errata_install&quot;,
+      &quot;name&quot;: &quot;Katello: Install Errata&quot;,
+      &quot;description&quot;: &quot;Install errata via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 11,
+      &quot;label&quot;: &quot;katello_errata_install_by_search&quot;,
+      &quot;name&quot;: &quot;Katello: Install errata by search query&quot;,
+      &quot;description&quot;: &quot;Install errata using scoped search query&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 12,
+      &quot;label&quot;: &quot;katello_service_restart&quot;,
+      &quot;name&quot;: &quot;Katello: Service Restart&quot;,
+      &quot;description&quot;: &quot;Restart Services via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 13,
+      &quot;label&quot;: &quot;katello_host_tracer_resolve&quot;,
+      &quot;name&quot;: &quot;Katello: Resolve Traces&quot;,
+      &quot;description&quot;: &quot;Resolve traces via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 14,
+      &quot;label&quot;: &quot;katello_change_content_source&quot;,
+      &quot;name&quot;: &quot;Katello: Configure host for new content source&quot;,
+      &quot;description&quot;: &quot;Replace content source on the target machine&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 15,
+      &quot;label&quot;: &quot;katello_upload_profile&quot;,
+      &quot;name&quot;: &quot;Katello: Upload Profile&quot;,
+      &quot;description&quot;: &quot;Upload package / repos profile&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 16,
+      &quot;label&quot;: &quot;katello_module_stream_action&quot;,
+      &quot;name&quot;: &quot;Katello: Module Stream Actions&quot;,
+      &quot;description&quot;: &quot;Perform a module stream action via Katello interface&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 17,
+      &quot;label&quot;: &quot;puppet_run_host&quot;,
+      &quot;name&quot;: &quot;Run Puppet Once&quot;,
+      &quot;description&quot;: &quot;Perform a single Puppet run&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: true
+    },
+    {
+      &quot;id&quot;: 18,
+      &quot;label&quot;: &quot;run_script&quot;,
+      &quot;name&quot;: &quot;Run Script&quot;,
+      &quot;description&quot;: &quot;Run a script&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    },
+    {
+      &quot;id&quot;: 30,
+      &quot;label&quot;: &quot;my_awesome_feature&quot;,
+      &quot;name&quot;: &quot;My awesome feature&quot;,
+      &quot;description&quot;: &quot;You will not believe what it does&quot;,
+      &quot;job_template_id&quot;: null,
+      &quot;job_template_name&quot;: null,
+      &quot;host_action_button&quot;: false
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

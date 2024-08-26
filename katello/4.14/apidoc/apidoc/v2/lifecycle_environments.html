@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Lifecycle_environments
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Lifecycle_environments
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+  <div>
+<p># Description</p>
+
+<p>An environment is a basic organization structure that groups hosts, products, repositories, etc.  Every host belongs to one environment and it&#39;s isolated inside so that it can see only content that is in its environment.</p>
+
+<p>## Chains</p>
+
+<p>Environments are ordered into chains and their content (products, repositories, tempaltes, packages) can be moved to an environment only from its prior environment. You can have for example chain like:</p>
+
+<pre>Library -&gt; Development -&gt; Testing -&gt; Production</pre>
+
+<p>Each change in an environment is done through a changeset in an action called promotion.</p>
+
+<p>## Library</p>
+
+<p>Library is a special environment that has no ascendant: All the content starts in this environment. More chains can start from the library environment but no further branching of a chain is enabled.</p>
+</div>
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/environments
+          </a>
+          <br>
+          <small>List environments in an organization</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments
+          </a>
+          <br>
+          <small>List environments in an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/organizations/114267492/environments
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;name&quot;,
+    &quot;order&quot;: &quot;asc&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;library&quot;: true,
+      &quot;registry_name_pattern&quot;: null,
+      &quot;registry_unauthenticated_pull&quot;: false,
+      &quot;id&quot;: 562075838,
+      &quot;name&quot;: &quot;Library&quot;,
+      &quot;label&quot;: &quot;library_label&quot;,
+      &quot;description&quot;: &quot;This is the Library&quot;,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+      &quot;prior&quot;: null,
+      &quot;successor&quot;: null,
+      &quot;counts&quot;: {
+        &quot;content_hosts&quot;: 2,
+        &quot;content_views&quot;: 4,
+        &quot;packages&quot;: 5,
+        &quot;module_streams&quot;: 2,
+        &quot;errata&quot;: {
+          &quot;security&quot;: 1,
+          &quot;bugfix&quot;: 1,
+          &quot;enhancement&quot;: 1,
+          &quot;total&quot;: 3
+        },
+        &quot;yum_repositories&quot;: 13,
+        &quot;docker_repositories&quot;: 4,
+        &quot;ostree_repositories&quot;: 1,
+        &quot;products&quot;: 9,
+        &quot;debs&quot;: 4,
+        &quot;deb_repositories&quot;: 5
+      },
+      &quot;permissions&quot;: {
+        &quot;create_lifecycle_environments&quot;: true,
+        &quot;view_lifecycle_environments&quot;: true,
+        &quot;edit_lifecycle_environments&quot;: true,
+        &quot;destroy_lifecycle_environments&quot;: false,
+        &quot;promote_or_remove_content_views_to_environments&quot;: true
+      },
+      &quot;content_views&quot;: [
+        {
+          &quot;name&quot;: &quot;Composite view&quot;,
+          &quot;id&quot;: 64601712
+        },
+        {
+          &quot;name&quot;: &quot;Published LIbrary view&quot;,
+          &quot;id&quot;: 405955044
+        },
+        {
+          &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+          &quot;id&quot;: 419082953
+        },
+        {
+          &quot;name&quot;: &quot;Published Library and dev view&quot;,
+          &quot;id&quot;: 909058347
+        }
+      ]
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>library</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>set true if you want to see only library environments</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter only environments containing this name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter only environments containing this label</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. &#39;id DESC&#39;</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Show an environment</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments/:environment_id
+          </a>
+          <br>
+          <small>Show an environment</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/environments
+          </a>
+          <br>
+          <small>Create an environment</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations/:organization_id/environments
+          </a>
+          <br>
+          <small>Create an environment in an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /katello/api/organizations/114267492/environments
+{
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;dev env&quot;,
+    &quot;label&quot;: &quot;dev_env&quot;,
+    &quot;description&quot;: &quot;This environment is for development.&quot;,
+    &quot;prior&quot;: 562075838,
+    &quot;registry_name_pattern&quot;: &quot;&lt;%= repository.label %&gt; &lt;%= lifecycle_environment.label %&gt;&quot;
+  }
+}
+201
+{
+  &quot;library&quot;: false,
+  &quot;registry_name_pattern&quot;: &quot;&lt;%= repository.label %&gt; &lt;%= lifecycle_environment.label %&gt;&quot;,
+  &quot;registry_unauthenticated_pull&quot;: false,
+  &quot;id&quot;: 1028819242,
+  &quot;name&quot;: &quot;dev env&quot;,
+  &quot;label&quot;: &quot;dev_env&quot;,
+  &quot;description&quot;: &quot;This environment is for development.&quot;,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;created_at&quot;: &quot;2024-08-26 18:20:53 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:20:53 UTC&quot;,
+  &quot;prior&quot;: {
+    &quot;name&quot;: &quot;Library&quot;,
+    &quot;id&quot;: 562075838
+  },
+  &quot;successor&quot;: null,
+  &quot;counts&quot;: {
+    &quot;content_hosts&quot;: 0,
+    &quot;content_views&quot;: 0
+  },
+  &quot;permissions&quot;: {
+    &quot;create_lifecycle_environments&quot;: true,
+    &quot;view_lifecycle_environments&quot;: true,
+    &quot;edit_lifecycle_environments&quot;: true,
+    &quot;destroy_lifecycle_environments&quot;: true,
+    &quot;promote_or_remove_content_views_to_environments&quot;: true
+  },
+  &quot;content_views&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>label of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>description of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>registry_name_pattern</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pattern for container image names</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>registry_unauthenticated_pull</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>allow unauthenticed pull of container images</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>prior_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of an environment that is prior to the new environment in the chain. It has to be either the ID of Library or the ID of an environment at the end of a chain.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Update an environment</small>
+        </h2>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/environments/:id
+          </a>
+          <br>
+          <small>Update an environment in an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /katello/api/organizations/114267492/environments/1028819239
+{
+  &quot;async&quot;: false,
+  &quot;environment&quot;: {
+    &quot;new_name&quot;: &quot;New Name&quot;,
+    &quot;label&quot;: &quot;New Label&quot;,
+    &quot;registry_unauthenticated_pull&quot;: true
+  }
+}
+200
+{
+  &quot;library&quot;: false,
+  &quot;registry_name_pattern&quot;: null,
+  &quot;registry_unauthenticated_pull&quot;: true,
+  &quot;id&quot;: 1028819239,
+  &quot;name&quot;: &quot;New Name&quot;,
+  &quot;label&quot;: &quot;staging_label&quot;,
+  &quot;description&quot;: &quot;Staging environment.&quot;,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:20:51 UTC&quot;,
+  &quot;prior&quot;: {
+    &quot;name&quot;: &quot;Library&quot;,
+    &quot;id&quot;: 562075838
+  },
+  &quot;successor&quot;: null,
+  &quot;counts&quot;: {
+    &quot;content_hosts&quot;: 0,
+    &quot;content_views&quot;: 1
+  },
+  &quot;permissions&quot;: {
+    &quot;create_lifecycle_environments&quot;: true,
+    &quot;view_lifecycle_environments&quot;: true,
+    &quot;edit_lifecycle_environments&quot;: true,
+    &quot;destroy_lifecycle_environments&quot;: true,
+    &quot;promote_or_remove_content_views_to_environments&quot;: true
+  },
+  &quot;content_views&quot;: [
+    {
+      &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+      &quot;id&quot;: 419082953
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of the organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>new_name</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>new name to be given to the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>description of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>registry_name_pattern</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pattern for container image names</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>registry_unauthenticated_pull</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>allow unauthenticed pull of container images</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>async</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Do not wait for the update action to finish. Default: true</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Destroy an environment</small>
+        </h2>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/organizations/:organization_id/environments/:id
+          </a>
+          <br>
+          <small>Destroy an environment in an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /katello/api/organizations/114267492/environments/1028819241
+{
+  &quot;environment&quot;: {}
+}
+200
+{
+  &quot;library&quot;: false,
+  &quot;registry_name_pattern&quot;: null,
+  &quot;registry_unauthenticated_pull&quot;: false,
+  &quot;id&quot;: 1028819241,
+  &quot;name&quot;: &quot;DestroyAble&quot;,
+  &quot;label&quot;: &quot;DestroyAble&quot;,
+  &quot;description&quot;: null,
+  &quot;organization_id&quot;: 114267492,
+  &quot;organization&quot;: {
+    &quot;name&quot;: &quot;Empty Organization&quot;,
+    &quot;label&quot;: &quot;Empty_Organization&quot;,
+    &quot;id&quot;: 114267492
+  },
+  &quot;created_at&quot;: &quot;2024-08-26 18:20:51 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2024-08-26 18:20:51 UTC&quot;,
+  &quot;prior&quot;: {
+    &quot;name&quot;: &quot;Staging&quot;,
+    &quot;id&quot;: 1028819239
+  },
+  &quot;successor&quot;: null,
+  &quot;counts&quot;: {
+    &quot;content_hosts&quot;: 0,
+    &quot;content_views&quot;: 0
+  },
+  &quot;permissions&quot;: {
+    &quot;create_lifecycle_environments&quot;: true,
+    &quot;view_lifecycle_environments&quot;: true,
+    &quot;edit_lifecycle_environments&quot;: true,
+    &quot;destroy_lifecycle_environments&quot;: true,
+    &quot;promote_or_remove_content_views_to_environments&quot;: true
+  },
+  &quot;content_views&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/lifecycle_environments/paths.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-paths'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments/paths
+          </a>
+          <br>
+          <small>List environment paths</small>
+        </h2>
+    </div>
+
+
+    <div id='description-paths' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /katello/api/organizations/114267492/environments/paths
+200
+{
+  &quot;total&quot;: 4,
+  &quot;subtotal&quot;: 4,
+  &quot;selectable&quot;: 4,
+  &quot;page&quot;: null,
+  &quot;per_page&quot;: null,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;environments&quot;: [
+        {
+          &quot;library&quot;: true,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;description&quot;: &quot;This is the Library&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: null,
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 2,
+            &quot;content_views&quot;: 4,
+            &quot;packages&quot;: 5,
+            &quot;module_streams&quot;: 2,
+            &quot;errata&quot;: {
+              &quot;security&quot;: 1,
+              &quot;bugfix&quot;: 1,
+              &quot;enhancement&quot;: 1,
+              &quot;total&quot;: 3
+            },
+            &quot;yum_repositories&quot;: 13,
+            &quot;docker_repositories&quot;: 4,
+            &quot;ostree_repositories&quot;: 1,
+            &quot;products&quot;: 9,
+            &quot;debs&quot;: 4,
+            &quot;deb_repositories&quot;: 5
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: false,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Composite view&quot;,
+              &quot;id&quot;: 64601712
+            },
+            {
+              &quot;name&quot;: &quot;Published LIbrary view&quot;,
+              &quot;id&quot;: 405955044
+            },
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            },
+            {
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;id&quot;: 909058347
+            }
+          ]
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 292811013,
+          &quot;name&quot;: &quot;Dev&quot;,
+          &quot;label&quot;: &quot;dev_label&quot;,
+          &quot;description&quot;: &quot;Dev environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Library&quot;,
+            &quot;id&quot;: 562075838
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;Test_env&quot;,
+            &quot;id&quot;: 411008527
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 1,
+            &quot;content_views&quot;: 2
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: false,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            },
+            {
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;id&quot;: 909058347
+            }
+          ]
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 411008527,
+          &quot;name&quot;: &quot;Test_env&quot;,
+          &quot;label&quot;: &quot;test_label&quot;,
+          &quot;description&quot;: &quot;Test environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Dev&quot;,
+            &quot;id&quot;: 292811013
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;Beta&quot;,
+            &quot;id&quot;: 261162085
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 261162085,
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;label&quot;: &quot;beta_label&quot;,
+          &quot;description&quot;: &quot;Beta environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Test_env&quot;,
+            &quot;id&quot;: 411008527
+          },
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;environments&quot;: [
+        {
+          &quot;library&quot;: true,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;description&quot;: &quot;This is the Library&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: null,
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 2,
+            &quot;content_views&quot;: 4,
+            &quot;packages&quot;: 5,
+            &quot;module_streams&quot;: 2,
+            &quot;errata&quot;: {
+              &quot;security&quot;: 1,
+              &quot;bugfix&quot;: 1,
+              &quot;enhancement&quot;: 1,
+              &quot;total&quot;: 3
+            },
+            &quot;yum_repositories&quot;: 13,
+            &quot;docker_repositories&quot;: 4,
+            &quot;ostree_repositories&quot;: 1,
+            &quot;products&quot;: 9,
+            &quot;debs&quot;: 4,
+            &quot;deb_repositories&quot;: 5
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: false,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Composite view&quot;,
+              &quot;id&quot;: 64601712
+            },
+            {
+              &quot;name&quot;: &quot;Published LIbrary view&quot;,
+              &quot;id&quot;: 405955044
+            },
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            },
+            {
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;id&quot;: 909058347
+            }
+          ]
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 413623389,
+          &quot;name&quot;: &quot;Dev Path1&quot;,
+          &quot;label&quot;: &quot;dev_path1_label&quot;,
+          &quot;description&quot;: &quot;Dev environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Library&quot;,
+            &quot;id&quot;: 562075838
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;QA Path1&quot;,
+            &quot;id&quot;: 9167524
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 9167524,
+          &quot;name&quot;: &quot;QA Path1&quot;,
+          &quot;label&quot;: &quot;qa_path1_label&quot;,
+          &quot;description&quot;: &quot;QA environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Dev Path1&quot;,
+            &quot;id&quot;: 413623389
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;Staging Path1&quot;,
+            &quot;id&quot;: 507881024
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 507881024,
+          &quot;name&quot;: &quot;Staging Path1&quot;,
+          &quot;label&quot;: &quot;staging_path1_label&quot;,
+          &quot;description&quot;: &quot;Staging environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;QA Path1&quot;,
+            &quot;id&quot;: 9167524
+          },
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;environments&quot;: [
+        {
+          &quot;library&quot;: true,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;description&quot;: &quot;This is the Library&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: null,
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 2,
+            &quot;content_views&quot;: 4,
+            &quot;packages&quot;: 5,
+            &quot;module_streams&quot;: 2,
+            &quot;errata&quot;: {
+              &quot;security&quot;: 1,
+              &quot;bugfix&quot;: 1,
+              &quot;enhancement&quot;: 1,
+              &quot;total&quot;: 3
+            },
+            &quot;yum_repositories&quot;: 13,
+            &quot;docker_repositories&quot;: 4,
+            &quot;ostree_repositories&quot;: 1,
+            &quot;products&quot;: 9,
+            &quot;debs&quot;: 4,
+            &quot;deb_repositories&quot;: 5
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: false,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Composite view&quot;,
+              &quot;id&quot;: 64601712
+            },
+            {
+              &quot;name&quot;: &quot;Published LIbrary view&quot;,
+              &quot;id&quot;: 405955044
+            },
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            },
+            {
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;id&quot;: 909058347
+            }
+          ]
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 28194273,
+          &quot;name&quot;: &quot;Dev Path2&quot;,
+          &quot;label&quot;: &quot;dev_path2_label&quot;,
+          &quot;description&quot;: &quot;Dev environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Library&quot;,
+            &quot;id&quot;: 562075838
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;QA Path2&quot;,
+            &quot;id&quot;: 427995936
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 427995936,
+          &quot;name&quot;: &quot;QA Path2&quot;,
+          &quot;label&quot;: &quot;qa_path2_label&quot;,
+          &quot;description&quot;: &quot;QA environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Dev Path2&quot;,
+            &quot;id&quot;: 28194273
+          },
+          &quot;successor&quot;: {
+            &quot;name&quot;: &quot;Staging Path2&quot;,
+            &quot;id&quot;: 122484616
+          },
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 122484616,
+          &quot;name&quot;: &quot;Staging Path2&quot;,
+          &quot;label&quot;: &quot;staging_path2_label&quot;,
+          &quot;description&quot;: &quot;Staging environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;QA Path2&quot;,
+            &quot;id&quot;: 427995936
+          },
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 0
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;environments&quot;: [
+        {
+          &quot;library&quot;: true,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 562075838,
+          &quot;name&quot;: &quot;Library&quot;,
+          &quot;label&quot;: &quot;library_label&quot;,
+          &quot;description&quot;: &quot;This is the Library&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: null,
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 2,
+            &quot;content_views&quot;: 4,
+            &quot;packages&quot;: 5,
+            &quot;module_streams&quot;: 2,
+            &quot;errata&quot;: {
+              &quot;security&quot;: 1,
+              &quot;bugfix&quot;: 1,
+              &quot;enhancement&quot;: 1,
+              &quot;total&quot;: 3
+            },
+            &quot;yum_repositories&quot;: 13,
+            &quot;docker_repositories&quot;: 4,
+            &quot;ostree_repositories&quot;: 1,
+            &quot;products&quot;: 9,
+            &quot;debs&quot;: 4,
+            &quot;deb_repositories&quot;: 5
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: false,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Composite view&quot;,
+              &quot;id&quot;: 64601712
+            },
+            {
+              &quot;name&quot;: &quot;Published LIbrary view&quot;,
+              &quot;id&quot;: 405955044
+            },
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            },
+            {
+              &quot;name&quot;: &quot;Published Library and dev view&quot;,
+              &quot;id&quot;: 909058347
+            }
+          ]
+        },
+        {
+          &quot;library&quot;: false,
+          &quot;registry_name_pattern&quot;: null,
+          &quot;registry_unauthenticated_pull&quot;: false,
+          &quot;id&quot;: 1028819239,
+          &quot;name&quot;: &quot;Staging&quot;,
+          &quot;label&quot;: &quot;staging_label&quot;,
+          &quot;description&quot;: &quot;Staging environment.&quot;,
+          &quot;organization_id&quot;: 114267492,
+          &quot;organization&quot;: {
+            &quot;name&quot;: &quot;Empty Organization&quot;,
+            &quot;label&quot;: &quot;Empty_Organization&quot;,
+            &quot;id&quot;: 114267492
+          },
+          &quot;created_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2024-08-26 18:14:06 UTC&quot;,
+          &quot;prior&quot;: {
+            &quot;name&quot;: &quot;Library&quot;,
+            &quot;id&quot;: 562075838
+          },
+          &quot;successor&quot;: null,
+          &quot;counts&quot;: {
+            &quot;content_hosts&quot;: 0,
+            &quot;content_views&quot;: 1
+          },
+          &quot;permissions&quot;: {
+            &quot;create_lifecycle_environments&quot;: true,
+            &quot;view_lifecycle_environments&quot;: true,
+            &quot;edit_lifecycle_environments&quot;: true,
+            &quot;destroy_lifecycle_environments&quot;: true,
+            &quot;promote_or_remove_content_views_to_environments&quot;: true
+          },
+          &quot;content_views&quot;: [
+            {
+              &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+              &quot;id&quot;: 419082953
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_source_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Show whether each lifecycle environment is associated with the given Smart Proxy id.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>permission_type</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The associated permission type. One of (readable | promotable) Default: readable</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

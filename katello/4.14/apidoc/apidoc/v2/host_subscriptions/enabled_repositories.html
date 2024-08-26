@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/host_subscriptions.html'>
+      Host_subscriptions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>enabled_repositories</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts/:host_id/subscriptions/enabled_repositories
+      <br>
+      <small>Show repositories enabled on the host that are known to Katello</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/hosts/980191065/subscriptions/enabled_repositories
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 1,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;backend_identifier&quot;: &quot;fedora_17_acme_dev&quot;,
+      &quot;relative_path&quot;: &quot;ACME_Corporation/dev/fedora_17_dev_label&quot;,
+      &quot;container_repository_name&quot;: null,
+      &quot;full_path&quot;: &quot;https://devel.example.com/pulp/content/ACME_Corporation/dev/fedora_17_dev_label/&quot;,
+      &quot;library_instance_id&quot;: null,
+      &quot;version_href&quot;: null,
+      &quot;remote_href&quot;: null,
+      &quot;publication_href&quot;: null,
+      &quot;content_counts&quot;: {
+        &quot;rpm&quot;: 0,
+        &quot;erratum&quot;: 0,
+        &quot;package_group&quot;: 0,
+        &quot;srpm&quot;: 0,
+        &quot;module_stream&quot;: 0
+      },
+      &quot;mirroring_policy&quot;: &quot;mirror_content_only&quot;,
+      &quot;id&quot;: 841170190,
+      &quot;name&quot;: &quot;Fedora 17 x86_64&quot;,
+      &quot;label&quot;: &quot;fedora_17_x86_64_label&quot;,
+      &quot;description&quot;: &quot;My description&quot;,
+      &quot;content_view_versions&quot;: [],
+      &quot;filters&quot;: [],
+      &quot;last_sync&quot;: null,
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 30237652,
+        &quot;name&quot;: &quot;ACME Default ContentView&quot;
+      },
+      &quot;content_view_version&quot;: {
+        &quot;id&quot;: 840492357,
+        &quot;name&quot;: &quot;ACME Default ContentView 1.0&quot;,
+        &quot;content_view_id&quot;: 30237652
+      },
+      &quot;kt_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;
+      },
+      &quot;content_type&quot;: &quot;yum&quot;,
+      &quot;url&quot;: &quot;http://myrepo.com&quot;,
+      &quot;arch&quot;: &quot;noarch&quot;,
+      &quot;os_versions&quot;: null,
+      &quot;content_id&quot;: &quot;1&quot;,
+      &quot;generic_remote_options&quot;: null,
+      &quot;major&quot;: null,
+      &quot;minor&quot;: null,
+      &quot;product&quot;: {
+        &quot;id&quot;: 785257261,
+        &quot;cp_id&quot;: &quot;123123123001&quot;,
+        &quot;name&quot;: &quot;Fedora&quot;,
+        &quot;orphaned&quot;: false,
+        &quot;redhat&quot;: false,
+        &quot;sync_plan&quot;: null
+      },
+      &quot;content_label&quot;: &quot;fedora&quot;,
+      &quot;last_sync_words&quot;: null
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>id of host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
