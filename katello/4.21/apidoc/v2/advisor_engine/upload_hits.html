@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/advisor_engine.html'>
+      Advisor_engine
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>upload_hits</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PATCH /api/advisor_engine/upload_hits
+      <br>
+      <small>Upload hits from iop-advisor-engine</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_uuid</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>payload</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>iop payload including resolutions, rules, hits</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[resolutions]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>upload resolutions related to the hits</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[resolutions][rule_id]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rule id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[resolutions][description]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>resolution description</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[resolutions][needs_reboot]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether the resolution requires reboot</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[resolutions][resolution_risk]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>resolution risk</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[resolutions][resolution_type]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>type</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[rules]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Upload rules related to the hits</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][rule_id]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rule id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][description]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rule description</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][category_name]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>category name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][impact_name]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>impact name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][summary]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>summary</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][generic]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>generic</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][reason]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>reason</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][total_risk]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>total risk</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][reboot_required]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>reboot required</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][more_info]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>more info</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[rules][rating]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rating</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[hits]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Upload hits information</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][rule_id]</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rule id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][title]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rule title</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][solution_url]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>solution url</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][total_risk]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>total risk</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][likelihood]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>likelihood number</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][publish_date]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>publish date (YYYY-MM-DD)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>payload[hits][results_url]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>result url</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[details]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>upload hits details json</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
