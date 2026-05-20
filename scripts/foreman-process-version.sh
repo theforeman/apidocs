@@ -9,10 +9,6 @@ if [ -z "$VERSION" ]; then
     exit 1
 fi
 
-# Clean up any old apidoc artifacts to ensure we're using the correct one
-echo "Cleaning up old apidoc artifacts..."
-find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} + 2>/dev/null || true
-
 # Find downloaded artifact
 APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | head -n 1)
 if [ -z "$APIDOC_DIR" ]; then

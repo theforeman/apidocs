@@ -12,6 +12,7 @@ help:
 	@echo "  make foreman-version VERSION=3.18"
 
 foreman-download:
+	@find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} + 2>/dev/null || true
 	@./scripts/foreman-download.sh $(VERSION)
 
 cleanup:
