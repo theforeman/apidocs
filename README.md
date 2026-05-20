@@ -38,18 +38,23 @@ Prepare folder for the new version (X.Y)
 
 Generate API docs in a Foreman + Katello development environment:
 
-1. cd to the katello directory and checkout the relevant release branch
-1. cd to the foreman directory and checkout the relevant stable branch
-1. `APIPIE_RECORD=examples bundle exec rake test`
-1. `RAILS_ENV=production FOREMAN_APIPIE_LANGS=en bundle exec rake apipie:cache`
+1. Go to https://github.com/Katello/katello/actions/workflows/ruby.yml?query=branch%3AKATELLO-X.Y
+1. Pick the latest run of the action
+1. Download the `apidoc-*` artifact (there might be multiple, pick any one of them)
+
+You can also do this from the CLI using `gh`:
+```
+gh run download --repo Katello/katello --pattern 'apidoc-*' $(gh run list --repo Katello/katello --workflow ruby.yml --branch KATELLO-X.Y --status completed --limit 1 --json databaseId --jq '.[].databaseId')
+```
+Note: `gh` will automatically unzip the artifacts, so you only have to copy them.
 
 Prepare folder for the new version (X.Y)
 
-1. cd to the apidocs/katello directory
+1. `cd katello`
 1. `cp -r TEMPLATE X.Y`
 1. `ln -snf X.Y latest`
-1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* X.Y/apidoc`
-1. run cleanup script in apidocs repo: `cleanup.sh`
+1. `unzip -d X.Y/apidoc ~/Downloads/apidoc-<…>.zip`
+1. run cleanup script in the root of the apidocs repo: `cleanup.sh`
 1. update index.html file with a link to the new page
 
 ## LICENSE
