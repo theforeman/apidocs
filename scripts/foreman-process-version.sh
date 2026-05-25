@@ -9,6 +9,11 @@ if [ -z "$VERSION" ]; then
     exit 1
 fi
 
+if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
+    echo "ERROR: VERSION must be in X.Y format (e.g., 3.19)"
+    exit 1
+fi
+
 # Find downloaded artifact
 APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | head -n 1)
 if [ -z "$APIDOC_DIR" ]; then
@@ -19,8 +24,7 @@ fi
 if [ -d "foreman/$VERSION" ]; then
     echo "Updating existing version $VERSION..."
 
-    # Remove old version-specific content (preserve static assets: javascripts, stylesheets)
-    echo "Removing old version-specific apidoc files from foreman/$VERSION/apidoc..."
+    echo "Removing old apidoc files (preserving static assets)..."
     find "foreman/$VERSION/apidoc" -mindepth 1 -maxdepth 1 \
         ! -name 'javascripts' \
         ! -name 'stylesheets' \

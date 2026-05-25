@@ -9,6 +9,11 @@ if [ -z "$VERSION" ]; then
     exit 1
 fi
 
+if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
+    echo "ERROR: VERSION must be in X.Y format (e.g., 3.19)"
+    exit 1
+fi
+
 echo "Downloading apidoc artifact for Foreman $VERSION..."
 gh run download --repo theforeman/foreman --pattern 'apidoc-*' \
     $(gh run list --repo theforeman/foreman --workflow foreman.yml \
