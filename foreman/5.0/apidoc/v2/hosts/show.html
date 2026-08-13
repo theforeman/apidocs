@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/hosts.html'>
+      Hosts
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts/:id
+      <br>
+      <small>Show a host</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/hosts/host3.example5.com?show_hidden_parameters=true
+200
+{
+  &quot;ip&quot;: &quot;0.0.0.2&quot;,
+  &quot;ip6&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;mac&quot;: &quot;00:53:67:ab:00:02&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;sp_mac&quot;: null,
+  &quot;sp_ip&quot;: null,
+  &quot;sp_name&quot;: null,
+  &quot;domain_id&quot;: 759776764,
+  &quot;domain_name&quot;: &quot;example5.com&quot;,
+  &quot;architecture_id&quot;: 922134522,
+  &quot;architecture_name&quot;: &quot;x86_64-2&quot;,
+  &quot;operatingsystem_id&quot;: 1073012829,
+  &quot;operatingsystem_name&quot;: &quot;operatingsystem2 2&quot;,
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;sp_subnet_id&quot;: null,
+  &quot;ptable_id&quot;: 1007981702,
+  &quot;ptable_name&quot;: &quot;ptable2&quot;,
+  &quot;medium_id&quot;: 1011586619,
+  &quot;medium_name&quot;: &quot;medium2&quot;,
+  &quot;pxe_loader&quot;: &quot;Grub2 UEFI&quot;,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: &quot;&quot;,
+  &quot;disk&quot;: null,
+  &quot;initiated_at&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: null,
+  &quot;hostgroup_id&quot;: null,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_name&quot;: &quot;Admin User&quot;,
+  &quot;owner_type&quot;: &quot;User&quot;,
+  &quot;creator_id&quot;: 135138680,
+  &quot;creator&quot;: &quot;Admin User&quot;,
+  &quot;enabled&quot;: true,
+  &quot;managed&quot;: true,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;rebuild_requires_poweroff&quot;: false,
+  &quot;compute_resource_id&quot;: null,
+  &quot;compute_resource_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;certname&quot;: &quot;host3.example5.com&quot;,
+  &quot;image_id&quot;: null,
+  &quot;image_name&quot;: null,
+  &quot;created_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;global_status_label&quot;: &quot;OK&quot;,
+  &quot;global_status_fulltext&quot;: [],
+  &quot;bmc_available&quot;: false,
+  &quot;organization_id&quot;: 447626438,
+  &quot;organization_name&quot;: &quot;Organization 1&quot;,
+  &quot;location_id&quot;: 255093256,
+  &quot;location_name&quot;: &quot;Location 1&quot;,
+  &quot;puppet_status&quot;: 0,
+  &quot;model_name&quot;: null,
+  &quot;build_status&quot;: 0,
+  &quot;build_status_label&quot;: &quot;Installed&quot;,
+  &quot;name&quot;: &quot;host3.example5.com&quot;,
+  &quot;id&quot;: 1,
+  &quot;display_name&quot;: &quot;host3.example5.com&quot;,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: null,
+  &quot;global_status&quot;: 0,
+  &quot;operatingsystem_icon&quot;: &quot;/assets/icons16x16/stub/black-x-0e46f84b6e93cc2f712b33043e5dcc4e4101f3455e411128d58f62ac890d981a.png&quot;,
+  &quot;compute_resource_provider&quot;: null,
+  &quot;hostgroup_name&quot;: null,
+  &quot;hostgroup_title&quot;: null,
+  &quot;parameters&quot;: [],
+  &quot;all_parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;id&quot;: 513706444,
+      &quot;name&quot;: &quot;loc_param&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;location&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;abc&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;id&quot;: 32400255,
+      &quot;name&quot;: &quot;org_param&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;organization&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;xyz&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;test&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;global&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;myvalue&quot;
+    }
+  ],
+  &quot;interfaces&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: 759776764,
+      &quot;domain_name&quot;: &quot;example5.com&quot;,
+      &quot;host_id&quot;: 1,
+      &quot;host_name&quot;: &quot;host3.example5.com&quot;,
+      &quot;created_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth2&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;host3.example5.com&quot;,
+      &quot;ip&quot;: &quot;0.0.0.2&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:53:67:ab:00:02&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host3.example5.com&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    }
+  ],
+  &quot;permissions&quot;: {
+    &quot;view_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;build_hosts&quot;: true,
+    &quot;power_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
+    &quot;ipmi_boot_hosts&quot;: true
+  }
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>show_hidden_parameters</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Display hidden parameter values</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
