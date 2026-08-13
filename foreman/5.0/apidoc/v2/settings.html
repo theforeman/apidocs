@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Settings
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Settings
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/settings
+          </a>
+          <br>
+          <small>List all settings</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          
+    
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort and order by a searchable field, e.g. ‘&lt;field&gt; DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, ‘all’ to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d*|all)\Z$/</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>description</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/settings/:id
+          </a>
+          <br>
+          <small>Show a setting</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          
+    
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/settings/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/settings/:id
+          </a>
+          <br>
+          <small>Update a setting</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/settings/default_timezone
+{
+  &quot;id&quot;: &quot;default_timezone&quot;,
+  &quot;name&quot;: &quot;default_timezone&quot;,
+  &quot;category&quot;: &quot;general&quot;,
+  &quot;description&quot;: &quot;Timezone to use for new users&quot;,
+  &quot;settingsType&quot;: null,
+  &quot;default&quot;: null,
+  &quot;readonly&quot;: false,
+  &quot;fullName&quot;: &quot;Default timezone&quot;,
+  &quot;configFile&quot;: null,
+  &quot;selectValues&quot;: {
+    &quot;&quot;: &quot;Browser timezone&quot;,
+    &quot;International Date Line West&quot;: &quot;(GMT -12:00) International Date Line West&quot;,
+    &quot;American Samoa&quot;: &quot;(GMT -11:00) American Samoa&quot;,
+    &quot;Midway Island&quot;: &quot;(GMT -11:00) Midway Island&quot;,
+    &quot;Hawaii&quot;: &quot;(GMT -10:00) Hawaii&quot;,
+    &quot;Alaska&quot;: &quot;(GMT -09:00) Alaska&quot;,
+    &quot;Pacific Time (US &amp; Canada)&quot;: &quot;(GMT -08:00) Pacific Time (US &amp; Canada)&quot;,
+    &quot;Tijuana&quot;: &quot;(GMT -08:00) Tijuana&quot;,
+    &quot;Arizona&quot;: &quot;(GMT -07:00) Arizona&quot;,
+    &quot;Mazatlan&quot;: &quot;(GMT -07:00) Mazatlan&quot;,
+    &quot;Mountain Time (US &amp; Canada)&quot;: &quot;(GMT -07:00) Mountain Time (US &amp; Canada)&quot;,
+    &quot;Central America&quot;: &quot;(GMT -06:00) Central America&quot;,
+    &quot;Central Time (US &amp; Canada)&quot;: &quot;(GMT -06:00) Central Time (US &amp; Canada)&quot;,
+    &quot;Chihuahua&quot;: &quot;(GMT -06:00) Chihuahua&quot;,
+    &quot;Guadalajara&quot;: &quot;(GMT -06:00) Guadalajara&quot;,
+    &quot;Mexico City&quot;: &quot;(GMT -06:00) Mexico City&quot;,
+    &quot;Monterrey&quot;: &quot;(GMT -06:00) Monterrey&quot;,
+    &quot;Saskatchewan&quot;: &quot;(GMT -06:00) Saskatchewan&quot;,
+    &quot;Bogota&quot;: &quot;(GMT -05:00) Bogota&quot;,
+    &quot;Eastern Time (US &amp; Canada)&quot;: &quot;(GMT -05:00) Eastern Time (US &amp; Canada)&quot;,
+    &quot;Indiana (East)&quot;: &quot;(GMT -05:00) Indiana (East)&quot;,
+    &quot;Lima&quot;: &quot;(GMT -05:00) Lima&quot;,
+    &quot;Quito&quot;: &quot;(GMT -05:00) Quito&quot;,
+    &quot;Atlantic Time (Canada)&quot;: &quot;(GMT -04:00) Atlantic Time (Canada)&quot;,
+    &quot;Caracas&quot;: &quot;(GMT -04:00) Caracas&quot;,
+    &quot;Georgetown&quot;: &quot;(GMT -04:00) Georgetown&quot;,
+    &quot;La Paz&quot;: &quot;(GMT -04:00) La Paz&quot;,
+    &quot;Puerto Rico&quot;: &quot;(GMT -04:00) Puerto Rico&quot;,
+    &quot;Santiago&quot;: &quot;(GMT -04:00) Santiago&quot;,
+    &quot;Newfoundland&quot;: &quot;(GMT -03:30) Newfoundland&quot;,
+    &quot;Brasilia&quot;: &quot;(GMT -03:00) Brasilia&quot;,
+    &quot;Buenos Aires&quot;: &quot;(GMT -03:00) Buenos Aires&quot;,
+    &quot;Montevideo&quot;: &quot;(GMT -03:00) Montevideo&quot;,
+    &quot;Greenland&quot;: &quot;(GMT -02:00) Greenland&quot;,
+    &quot;Mid-Atlantic&quot;: &quot;(GMT -02:00) Mid-Atlantic&quot;,
+    &quot;Azores&quot;: &quot;(GMT -01:00) Azores&quot;,
+    &quot;Cape Verde Is.&quot;: &quot;(GMT -01:00) Cape Verde Is.&quot;,
+    &quot;Casablanca&quot;: &quot;(GMT +00:00) Casablanca&quot;,
+    &quot;Dublin&quot;: &quot;(GMT +00:00) Dublin&quot;,
+    &quot;Edinburgh&quot;: &quot;(GMT +00:00) Edinburgh&quot;,
+    &quot;Lisbon&quot;: &quot;(GMT +00:00) Lisbon&quot;,
+    &quot;London&quot;: &quot;(GMT +00:00) London&quot;,
+    &quot;Monrovia&quot;: &quot;(GMT +00:00) Monrovia&quot;,
+    &quot;UTC&quot;: &quot;(GMT +00:00) UTC&quot;,
+    &quot;Amsterdam&quot;: &quot;(GMT +01:00) Amsterdam&quot;,
+    &quot;Belgrade&quot;: &quot;(GMT +01:00) Belgrade&quot;,
+    &quot;Berlin&quot;: &quot;(GMT +01:00) Berlin&quot;,
+    &quot;Bern&quot;: &quot;(GMT +01:00) Bern&quot;,
+    &quot;Bratislava&quot;: &quot;(GMT +01:00) Bratislava&quot;,
+    &quot;Brussels&quot;: &quot;(GMT +01:00) Brussels&quot;,
+    &quot;Budapest&quot;: &quot;(GMT +01:00) Budapest&quot;,
+    &quot;Copenhagen&quot;: &quot;(GMT +01:00) Copenhagen&quot;,
+    &quot;Ljubljana&quot;: &quot;(GMT +01:00) Ljubljana&quot;,
+    &quot;Madrid&quot;: &quot;(GMT +01:00) Madrid&quot;,
+    &quot;Paris&quot;: &quot;(GMT +01:00) Paris&quot;,
+    &quot;Prague&quot;: &quot;(GMT +01:00) Prague&quot;,
+    &quot;Rome&quot;: &quot;(GMT +01:00) Rome&quot;,
+    &quot;Sarajevo&quot;: &quot;(GMT +01:00) Sarajevo&quot;,
+    &quot;Skopje&quot;: &quot;(GMT +01:00) Skopje&quot;,
+    &quot;Stockholm&quot;: &quot;(GMT +01:00) Stockholm&quot;,
+    &quot;Vienna&quot;: &quot;(GMT +01:00) Vienna&quot;,
+    &quot;Warsaw&quot;: &quot;(GMT +01:00) Warsaw&quot;,
+    &quot;West Central Africa&quot;: &quot;(GMT +01:00) West Central Africa&quot;,
+    &quot;Zagreb&quot;: &quot;(GMT +01:00) Zagreb&quot;,
+    &quot;Zurich&quot;: &quot;(GMT +01:00) Zurich&quot;,
+    &quot;Athens&quot;: &quot;(GMT +02:00) Athens&quot;,
+    &quot;Bucharest&quot;: &quot;(GMT +02:00) Bucharest&quot;,
+    &quot;Cairo&quot;: &quot;(GMT +02:00) Cairo&quot;,
+    &quot;Harare&quot;: &quot;(GMT +02:00) Harare&quot;,
+    &quot;Helsinki&quot;: &quot;(GMT +02:00) Helsinki&quot;,
+    &quot;Jerusalem&quot;: &quot;(GMT +02:00) Jerusalem&quot;,
+    &quot;Kaliningrad&quot;: &quot;(GMT +02:00) Kaliningrad&quot;,
+    &quot;Kyiv&quot;: &quot;(GMT +02:00) Kyiv&quot;,
+    &quot;Pretoria&quot;: &quot;(GMT +02:00) Pretoria&quot;,
+    &quot;Riga&quot;: &quot;(GMT +02:00) Riga&quot;,
+    &quot;Sofia&quot;: &quot;(GMT +02:00) Sofia&quot;,
+    &quot;Tallinn&quot;: &quot;(GMT +02:00) Tallinn&quot;,
+    &quot;Vilnius&quot;: &quot;(GMT +02:00) Vilnius&quot;,
+    &quot;Baghdad&quot;: &quot;(GMT +03:00) Baghdad&quot;,
+    &quot;Istanbul&quot;: &quot;(GMT +03:00) Istanbul&quot;,
+    &quot;Kuwait&quot;: &quot;(GMT +03:00) Kuwait&quot;,
+    &quot;Minsk&quot;: &quot;(GMT +03:00) Minsk&quot;,
+    &quot;Moscow&quot;: &quot;(GMT +03:00) Moscow&quot;,
+    &quot;Nairobi&quot;: &quot;(GMT +03:00) Nairobi&quot;,
+    &quot;Riyadh&quot;: &quot;(GMT +03:00) Riyadh&quot;,
+    &quot;St. Petersburg&quot;: &quot;(GMT +03:00) St. Petersburg&quot;,
+    &quot;Volgograd&quot;: &quot;(GMT +03:00) Volgograd&quot;,
+    &quot;Tehran&quot;: &quot;(GMT +03:30) Tehran&quot;,
+    &quot;Abu Dhabi&quot;: &quot;(GMT +04:00) Abu Dhabi&quot;,
+    &quot;Baku&quot;: &quot;(GMT +04:00) Baku&quot;,
+    &quot;Muscat&quot;: &quot;(GMT +04:00) Muscat&quot;,
+    &quot;Samara&quot;: &quot;(GMT +04:00) Samara&quot;,
+    &quot;Tbilisi&quot;: &quot;(GMT +04:00) Tbilisi&quot;,
+    &quot;Yerevan&quot;: &quot;(GMT +04:00) Yerevan&quot;,
+    &quot;Kabul&quot;: &quot;(GMT +04:30) Kabul&quot;,
+    &quot;Almaty&quot;: &quot;(GMT +05:00) Almaty&quot;,
+    &quot;Ekaterinburg&quot;: &quot;(GMT +05:00) Ekaterinburg&quot;,
+    &quot;Islamabad&quot;: &quot;(GMT +05:00) Islamabad&quot;,
+    &quot;Karachi&quot;: &quot;(GMT +05:00) Karachi&quot;,
+    &quot;Tashkent&quot;: &quot;(GMT +05:00) Tashkent&quot;,
+    &quot;Chennai&quot;: &quot;(GMT +05:30) Chennai&quot;,
+    &quot;Kolkata&quot;: &quot;(GMT +05:30) Kolkata&quot;,
+    &quot;Mumbai&quot;: &quot;(GMT +05:30) Mumbai&quot;,
+    &quot;New Delhi&quot;: &quot;(GMT +05:30) New Delhi&quot;,
+    &quot;Sri Jayawardenepura&quot;: &quot;(GMT +05:30) Sri Jayawardenepura&quot;,
+    &quot;Kathmandu&quot;: &quot;(GMT +05:45) Kathmandu&quot;,
+    &quot;Astana&quot;: &quot;(GMT +06:00) Astana&quot;,
+    &quot;Dhaka&quot;: &quot;(GMT +06:00) Dhaka&quot;,
+    &quot;Urumqi&quot;: &quot;(GMT +06:00) Urumqi&quot;,
+    &quot;Rangoon&quot;: &quot;(GMT +06:30) Rangoon&quot;,
+    &quot;Bangkok&quot;: &quot;(GMT +07:00) Bangkok&quot;,
+    &quot;Hanoi&quot;: &quot;(GMT +07:00) Hanoi&quot;,
+    &quot;Jakarta&quot;: &quot;(GMT +07:00) Jakarta&quot;,
+    &quot;Krasnoyarsk&quot;: &quot;(GMT +07:00) Krasnoyarsk&quot;,
+    &quot;Novosibirsk&quot;: &quot;(GMT +07:00) Novosibirsk&quot;,
+    &quot;Beijing&quot;: &quot;(GMT +08:00) Beijing&quot;,
+    &quot;Chongqing&quot;: &quot;(GMT +08:00) Chongqing&quot;,
+    &quot;Hong Kong&quot;: &quot;(GMT +08:00) Hong Kong&quot;,
+    &quot;Irkutsk&quot;: &quot;(GMT +08:00) Irkutsk&quot;,
+    &quot;Kuala Lumpur&quot;: &quot;(GMT +08:00) Kuala Lumpur&quot;,
+    &quot;Perth&quot;: &quot;(GMT +08:00) Perth&quot;,
+    &quot;Singapore&quot;: &quot;(GMT +08:00) Singapore&quot;,
+    &quot;Taipei&quot;: &quot;(GMT +08:00) Taipei&quot;,
+    &quot;Ulaanbaatar&quot;: &quot;(GMT +08:00) Ulaanbaatar&quot;,
+    &quot;Osaka&quot;: &quot;(GMT +09:00) Osaka&quot;,
+    &quot;Sapporo&quot;: &quot;(GMT +09:00) Sapporo&quot;,
+    &quot;Seoul&quot;: &quot;(GMT +09:00) Seoul&quot;,
+    &quot;Tokyo&quot;: &quot;(GMT +09:00) Tokyo&quot;,
+    &quot;Yakutsk&quot;: &quot;(GMT +09:00) Yakutsk&quot;,
+    &quot;Adelaide&quot;: &quot;(GMT +09:30) Adelaide&quot;,
+    &quot;Darwin&quot;: &quot;(GMT +09:30) Darwin&quot;,
+    &quot;Brisbane&quot;: &quot;(GMT +10:00) Brisbane&quot;,
+    &quot;Canberra&quot;: &quot;(GMT +10:00) Canberra&quot;,
+    &quot;Guam&quot;: &quot;(GMT +10:00) Guam&quot;,
+    &quot;Hobart&quot;: &quot;(GMT +10:00) Hobart&quot;,
+    &quot;Melbourne&quot;: &quot;(GMT +10:00) Melbourne&quot;,
+    &quot;Port Moresby&quot;: &quot;(GMT +10:00) Port Moresby&quot;,
+    &quot;Sydney&quot;: &quot;(GMT +10:00) Sydney&quot;,
+    &quot;Vladivostok&quot;: &quot;(GMT +10:00) Vladivostok&quot;,
+    &quot;Magadan&quot;: &quot;(GMT +11:00) Magadan&quot;,
+    &quot;New Caledonia&quot;: &quot;(GMT +11:00) New Caledonia&quot;,
+    &quot;Solomon Is.&quot;: &quot;(GMT +11:00) Solomon Is.&quot;,
+    &quot;Srednekolymsk&quot;: &quot;(GMT +11:00) Srednekolymsk&quot;,
+    &quot;Auckland&quot;: &quot;(GMT +12:00) Auckland&quot;,
+    &quot;Fiji&quot;: &quot;(GMT +12:00) Fiji&quot;,
+    &quot;Kamchatka&quot;: &quot;(GMT +12:00) Kamchatka&quot;,
+    &quot;Marshall Is.&quot;: &quot;(GMT +12:00) Marshall Is.&quot;,
+    &quot;Wellington&quot;: &quot;(GMT +12:00) Wellington&quot;,
+    &quot;Chatham Is.&quot;: &quot;(GMT +12:45) Chatham Is.&quot;,
+    &quot;Nuku&#39;alofa&quot;: &quot;(GMT +13:00) Nuku&#39;alofa&quot;,
+    &quot;Samoa&quot;: &quot;(GMT +13:00) Samoa&quot;,
+    &quot;Tokelau Is.&quot;: &quot;(GMT +13:00) Tokelau Is.&quot;
+  },
+  &quot;value&quot;: &quot;Berlin&quot;,
+  &quot;encrypted&quot;: false
+}
+200
+{
+  &quot;description&quot;: &quot;Timezone to use for new users&quot;,
+  &quot;settings_type&quot;: null,
+  &quot;default&quot;: null,
+  &quot;updated_at&quot;: &quot;2026-08-13 07:52:20 UTC&quot;,
+  &quot;id&quot;: &quot;default_timezone&quot;,
+  &quot;name&quot;: &quot;default_timezone&quot;,
+  &quot;full_name&quot;: &quot;Default timezone&quot;,
+  &quot;value&quot;: &quot;Berlin&quot;,
+  &quot;category&quot;: &quot;general&quot;,
+  &quot;category_name&quot;: &quot;General&quot;,
+  &quot;readonly&quot;: false,
+  &quot;config_file&quot;: null,
+  &quot;encrypted&quot;: false,
+  &quot;select_values&quot;: {
+    &quot;&quot;: &quot;Browser timezone&quot;,
+    &quot;International Date Line West&quot;: &quot;(GMT -12:00) International Date Line West&quot;,
+    &quot;American Samoa&quot;: &quot;(GMT -11:00) American Samoa&quot;,
+    &quot;Midway Island&quot;: &quot;(GMT -11:00) Midway Island&quot;,
+    &quot;Hawaii&quot;: &quot;(GMT -10:00) Hawaii&quot;,
+    &quot;Alaska&quot;: &quot;(GMT -09:00) Alaska&quot;,
+    &quot;Pacific Time (US &amp; Canada)&quot;: &quot;(GMT -08:00) Pacific Time (US &amp; Canada)&quot;,
+    &quot;Tijuana&quot;: &quot;(GMT -08:00) Tijuana&quot;,
+    &quot;Arizona&quot;: &quot;(GMT -07:00) Arizona&quot;,
+    &quot;Mazatlan&quot;: &quot;(GMT -07:00) Mazatlan&quot;,
+    &quot;Mountain Time (US &amp; Canada)&quot;: &quot;(GMT -07:00) Mountain Time (US &amp; Canada)&quot;,
+    &quot;Central America&quot;: &quot;(GMT -06:00) Central America&quot;,
+    &quot;Central Time (US &amp; Canada)&quot;: &quot;(GMT -06:00) Central Time (US &amp; Canada)&quot;,
+    &quot;Chihuahua&quot;: &quot;(GMT -06:00) Chihuahua&quot;,
+    &quot;Guadalajara&quot;: &quot;(GMT -06:00) Guadalajara&quot;,
+    &quot;Mexico City&quot;: &quot;(GMT -06:00) Mexico City&quot;,
+    &quot;Monterrey&quot;: &quot;(GMT -06:00) Monterrey&quot;,
+    &quot;Saskatchewan&quot;: &quot;(GMT -06:00) Saskatchewan&quot;,
+    &quot;Bogota&quot;: &quot;(GMT -05:00) Bogota&quot;,
+    &quot;Eastern Time (US &amp; Canada)&quot;: &quot;(GMT -05:00) Eastern Time (US &amp; Canada)&quot;,
+    &quot;Indiana (East)&quot;: &quot;(GMT -05:00) Indiana (East)&quot;,
+    &quot;Lima&quot;: &quot;(GMT -05:00) Lima&quot;,
+    &quot;Quito&quot;: &quot;(GMT -05:00) Quito&quot;,
+    &quot;Atlantic Time (Canada)&quot;: &quot;(GMT -04:00) Atlantic Time (Canada)&quot;,
+    &quot;Caracas&quot;: &quot;(GMT -04:00) Caracas&quot;,
+    &quot;Georgetown&quot;: &quot;(GMT -04:00) Georgetown&quot;,
+    &quot;La Paz&quot;: &quot;(GMT -04:00) La Paz&quot;,
+    &quot;Puerto Rico&quot;: &quot;(GMT -04:00) Puerto Rico&quot;,
+    &quot;Santiago&quot;: &quot;(GMT -04:00) Santiago&quot;,
+    &quot;Newfoundland&quot;: &quot;(GMT -03:30) Newfoundland&quot;,
+    &quot;Brasilia&quot;: &quot;(GMT -03:00) Brasilia&quot;,
+    &quot;Buenos Aires&quot;: &quot;(GMT -03:00) Buenos Aires&quot;,
+    &quot;Montevideo&quot;: &quot;(GMT -03:00) Montevideo&quot;,
+    &quot;Greenland&quot;: &quot;(GMT -02:00) Greenland&quot;,
+    &quot;Mid-Atlantic&quot;: &quot;(GMT -02:00) Mid-Atlantic&quot;,
+    &quot;Azores&quot;: &quot;(GMT -01:00) Azores&quot;,
+    &quot;Cape Verde Is.&quot;: &quot;(GMT -01:00) Cape Verde Is.&quot;,
+    &quot;Casablanca&quot;: &quot;(GMT +00:00) Casablanca&quot;,
+    &quot;Dublin&quot;: &quot;(GMT +00:00) Dublin&quot;,
+    &quot;Edinburgh&quot;: &quot;(GMT +00:00) Edinburgh&quot;,
+    &quot;Lisbon&quot;: &quot;(GMT +00:00) Lisbon&quot;,
+    &quot;London&quot;: &quot;(GMT +00:00) London&quot;,
+    &quot;Monrovia&quot;: &quot;(GMT +00:00) Monrovia&quot;,
+    &quot;UTC&quot;: &quot;(GMT +00:00) UTC&quot;,
+    &quot;Amsterdam&quot;: &quot;(GMT +01:00) Amsterdam&quot;,
+    &quot;Belgrade&quot;: &quot;(GMT +01:00) Belgrade&quot;,
+    &quot;Berlin&quot;: &quot;(GMT +01:00) Berlin&quot;,
+    &quot;Bern&quot;: &quot;(GMT +01:00) Bern&quot;,
+    &quot;Bratislava&quot;: &quot;(GMT +01:00) Bratislava&quot;,
+    &quot;Brussels&quot;: &quot;(GMT +01:00) Brussels&quot;,
+    &quot;Budapest&quot;: &quot;(GMT +01:00) Budapest&quot;,
+    &quot;Copenhagen&quot;: &quot;(GMT +01:00) Copenhagen&quot;,
+    &quot;Ljubljana&quot;: &quot;(GMT +01:00) Ljubljana&quot;,
+    &quot;Madrid&quot;: &quot;(GMT +01:00) Madrid&quot;,
+    &quot;Paris&quot;: &quot;(GMT +01:00) Paris&quot;,
+    &quot;Prague&quot;: &quot;(GMT +01:00) Prague&quot;,
+    &quot;Rome&quot;: &quot;(GMT +01:00) Rome&quot;,
+    &quot;Sarajevo&quot;: &quot;(GMT +01:00) Sarajevo&quot;,
+    &quot;Skopje&quot;: &quot;(GMT +01:00) Skopje&quot;,
+    &quot;Stockholm&quot;: &quot;(GMT +01:00) Stockholm&quot;,
+    &quot;Vienna&quot;: &quot;(GMT +01:00) Vienna&quot;,
+    &quot;Warsaw&quot;: &quot;(GMT +01:00) Warsaw&quot;,
+    &quot;West Central Africa&quot;: &quot;(GMT +01:00) West Central Africa&quot;,
+    &quot;Zagreb&quot;: &quot;(GMT +01:00) Zagreb&quot;,
+    &quot;Zurich&quot;: &quot;(GMT +01:00) Zurich&quot;,
+    &quot;Athens&quot;: &quot;(GMT +02:00) Athens&quot;,
+    &quot;Bucharest&quot;: &quot;(GMT +02:00) Bucharest&quot;,
+    &quot;Cairo&quot;: &quot;(GMT +02:00) Cairo&quot;,
+    &quot;Harare&quot;: &quot;(GMT +02:00) Harare&quot;,
+    &quot;Helsinki&quot;: &quot;(GMT +02:00) Helsinki&quot;,
+    &quot;Jerusalem&quot;: &quot;(GMT +02:00) Jerusalem&quot;,
+    &quot;Kaliningrad&quot;: &quot;(GMT +02:00) Kaliningrad&quot;,
+    &quot;Kyiv&quot;: &quot;(GMT +02:00) Kyiv&quot;,
+    &quot;Pretoria&quot;: &quot;(GMT +02:00) Pretoria&quot;,
+    &quot;Riga&quot;: &quot;(GMT +02:00) Riga&quot;,
+    &quot;Sofia&quot;: &quot;(GMT +02:00) Sofia&quot;,
+    &quot;Tallinn&quot;: &quot;(GMT +02:00) Tallinn&quot;,
+    &quot;Vilnius&quot;: &quot;(GMT +02:00) Vilnius&quot;,
+    &quot;Baghdad&quot;: &quot;(GMT +03:00) Baghdad&quot;,
+    &quot;Istanbul&quot;: &quot;(GMT +03:00) Istanbul&quot;,
+    &quot;Kuwait&quot;: &quot;(GMT +03:00) Kuwait&quot;,
+    &quot;Minsk&quot;: &quot;(GMT +03:00) Minsk&quot;,
+    &quot;Moscow&quot;: &quot;(GMT +03:00) Moscow&quot;,
+    &quot;Nairobi&quot;: &quot;(GMT +03:00) Nairobi&quot;,
+    &quot;Riyadh&quot;: &quot;(GMT +03:00) Riyadh&quot;,
+    &quot;St. Petersburg&quot;: &quot;(GMT +03:00) St. Petersburg&quot;,
+    &quot;Volgograd&quot;: &quot;(GMT +03:00) Volgograd&quot;,
+    &quot;Tehran&quot;: &quot;(GMT +03:30) Tehran&quot;,
+    &quot;Abu Dhabi&quot;: &quot;(GMT +04:00) Abu Dhabi&quot;,
+    &quot;Baku&quot;: &quot;(GMT +04:00) Baku&quot;,
+    &quot;Muscat&quot;: &quot;(GMT +04:00) Muscat&quot;,
+    &quot;Samara&quot;: &quot;(GMT +04:00) Samara&quot;,
+    &quot;Tbilisi&quot;: &quot;(GMT +04:00) Tbilisi&quot;,
+    &quot;Yerevan&quot;: &quot;(GMT +04:00) Yerevan&quot;,
+    &quot;Kabul&quot;: &quot;(GMT +04:30) Kabul&quot;,
+    &quot;Almaty&quot;: &quot;(GMT +05:00) Almaty&quot;,
+    &quot;Ekaterinburg&quot;: &quot;(GMT +05:00) Ekaterinburg&quot;,
+    &quot;Islamabad&quot;: &quot;(GMT +05:00) Islamabad&quot;,
+    &quot;Karachi&quot;: &quot;(GMT +05:00) Karachi&quot;,
+    &quot;Tashkent&quot;: &quot;(GMT +05:00) Tashkent&quot;,
+    &quot;Chennai&quot;: &quot;(GMT +05:30) Chennai&quot;,
+    &quot;Kolkata&quot;: &quot;(GMT +05:30) Kolkata&quot;,
+    &quot;Mumbai&quot;: &quot;(GMT +05:30) Mumbai&quot;,
+    &quot;New Delhi&quot;: &quot;(GMT +05:30) New Delhi&quot;,
+    &quot;Sri Jayawardenepura&quot;: &quot;(GMT +05:30) Sri Jayawardenepura&quot;,
+    &quot;Kathmandu&quot;: &quot;(GMT +05:45) Kathmandu&quot;,
+    &quot;Astana&quot;: &quot;(GMT +06:00) Astana&quot;,
+    &quot;Dhaka&quot;: &quot;(GMT +06:00) Dhaka&quot;,
+    &quot;Urumqi&quot;: &quot;(GMT +06:00) Urumqi&quot;,
+    &quot;Rangoon&quot;: &quot;(GMT +06:30) Rangoon&quot;,
+    &quot;Bangkok&quot;: &quot;(GMT +07:00) Bangkok&quot;,
+    &quot;Hanoi&quot;: &quot;(GMT +07:00) Hanoi&quot;,
+    &quot;Jakarta&quot;: &quot;(GMT +07:00) Jakarta&quot;,
+    &quot;Krasnoyarsk&quot;: &quot;(GMT +07:00) Krasnoyarsk&quot;,
+    &quot;Novosibirsk&quot;: &quot;(GMT +07:00) Novosibirsk&quot;,
+    &quot;Beijing&quot;: &quot;(GMT +08:00) Beijing&quot;,
+    &quot;Chongqing&quot;: &quot;(GMT +08:00) Chongqing&quot;,
+    &quot;Hong Kong&quot;: &quot;(GMT +08:00) Hong Kong&quot;,
+    &quot;Irkutsk&quot;: &quot;(GMT +08:00) Irkutsk&quot;,
+    &quot;Kuala Lumpur&quot;: &quot;(GMT +08:00) Kuala Lumpur&quot;,
+    &quot;Perth&quot;: &quot;(GMT +08:00) Perth&quot;,
+    &quot;Singapore&quot;: &quot;(GMT +08:00) Singapore&quot;,
+    &quot;Taipei&quot;: &quot;(GMT +08:00) Taipei&quot;,
+    &quot;Ulaanbaatar&quot;: &quot;(GMT +08:00) Ulaanbaatar&quot;,
+    &quot;Osaka&quot;: &quot;(GMT +09:00) Osaka&quot;,
+    &quot;Sapporo&quot;: &quot;(GMT +09:00) Sapporo&quot;,
+    &quot;Seoul&quot;: &quot;(GMT +09:00) Seoul&quot;,
+    &quot;Tokyo&quot;: &quot;(GMT +09:00) Tokyo&quot;,
+    &quot;Yakutsk&quot;: &quot;(GMT +09:00) Yakutsk&quot;,
+    &quot;Adelaide&quot;: &quot;(GMT +09:30) Adelaide&quot;,
+    &quot;Darwin&quot;: &quot;(GMT +09:30) Darwin&quot;,
+    &quot;Brisbane&quot;: &quot;(GMT +10:00) Brisbane&quot;,
+    &quot;Canberra&quot;: &quot;(GMT +10:00) Canberra&quot;,
+    &quot;Guam&quot;: &quot;(GMT +10:00) Guam&quot;,
+    &quot;Hobart&quot;: &quot;(GMT +10:00) Hobart&quot;,
+    &quot;Melbourne&quot;: &quot;(GMT +10:00) Melbourne&quot;,
+    &quot;Port Moresby&quot;: &quot;(GMT +10:00) Port Moresby&quot;,
+    &quot;Sydney&quot;: &quot;(GMT +10:00) Sydney&quot;,
+    &quot;Vladivostok&quot;: &quot;(GMT +10:00) Vladivostok&quot;,
+    &quot;Magadan&quot;: &quot;(GMT +11:00) Magadan&quot;,
+    &quot;New Caledonia&quot;: &quot;(GMT +11:00) New Caledonia&quot;,
+    &quot;Solomon Is.&quot;: &quot;(GMT +11:00) Solomon Is.&quot;,
+    &quot;Srednekolymsk&quot;: &quot;(GMT +11:00) Srednekolymsk&quot;,
+    &quot;Auckland&quot;: &quot;(GMT +12:00) Auckland&quot;,
+    &quot;Fiji&quot;: &quot;(GMT +12:00) Fiji&quot;,
+    &quot;Kamchatka&quot;: &quot;(GMT +12:00) Kamchatka&quot;,
+    &quot;Marshall Is.&quot;: &quot;(GMT +12:00) Marshall Is.&quot;,
+    &quot;Wellington&quot;: &quot;(GMT +12:00) Wellington&quot;,
+    &quot;Chatham Is.&quot;: &quot;(GMT +12:45) Chatham Is.&quot;,
+    &quot;Nuku&#39;alofa&quot;: &quot;(GMT +13:00) Nuku&#39;alofa&quot;,
+    &quot;Samoa&quot;: &quot;(GMT +13:00) Samoa&quot;,
+    &quot;Tokelau Is.&quot;: &quot;(GMT +13:00) Tokelau Is.&quot;
+  }
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          
+    
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>setting</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Hash</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>setting[value]</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
