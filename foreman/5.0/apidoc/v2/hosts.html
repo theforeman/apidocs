@@ -113,11 +113,11 @@
   &quot;results&quot;: [
     {
       &quot;id&quot;: 1,
-      &quot;name&quot;: &quot;host96.example88.com&quot;
+      &quot;name&quot;: &quot;host82.example80.com&quot;
     },
     {
       &quot;id&quot;: 2,
-      &quot;name&quot;: &quot;host97&quot;
+      &quot;name&quot;: &quot;host83&quot;
     }
   ]
 }</pre>
@@ -311,7 +311,7 @@
     </td>
     <td>
       
-<p>Sort and order by a searchable field, e.g. ‘&lt;field&gt; DESC’</p>
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -367,7 +367,7 @@
     </td>
     <td>
       
-<p>Number of results per page to return, ‘all’ to return all results</p>
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -935,37 +935,37 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hosts/host3.example5.com?show_hidden_parameters=true
+    <pre class="prettyprint">GET /api/hosts/myhost1.mydomain.net?show_hidden_parameters=true
 200
 {
-  &quot;ip&quot;: &quot;0.0.0.2&quot;,
-  &quot;ip6&quot;: null,
+  &quot;ip&quot;: &quot;1.1.1.1&quot;,
+  &quot;ip6&quot;: &quot;&quot;,
   &quot;last_report&quot;: null,
-  &quot;mac&quot;: &quot;00:53:67:ab:00:02&quot;,
+  &quot;mac&quot;: null,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
-  &quot;domain_id&quot;: 759776764,
-  &quot;domain_name&quot;: &quot;example5.com&quot;,
-  &quot;architecture_id&quot;: 922134522,
-  &quot;architecture_name&quot;: &quot;x86_64-2&quot;,
-  &quot;operatingsystem_id&quot;: 1073012829,
-  &quot;operatingsystem_name&quot;: &quot;operatingsystem2 2&quot;,
+  &quot;domain_id&quot;: 22495316,
+  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;architecture_id&quot;: 922134523,
+  &quot;architecture_name&quot;: &quot;x86_64-6&quot;,
+  &quot;operatingsystem_id&quot;: 1073012830,
+  &quot;operatingsystem_name&quot;: &quot;Ubuntu 14.10&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;subnet6_id&quot;: null,
   &quot;subnet6_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
-  &quot;ptable_id&quot;: 1007981702,
-  &quot;ptable_name&quot;: &quot;ptable2&quot;,
-  &quot;medium_id&quot;: 1011586619,
-  &quot;medium_name&quot;: &quot;medium2&quot;,
-  &quot;pxe_loader&quot;: &quot;Grub2 UEFI&quot;,
+  &quot;ptable_id&quot;: 1007981703,
+  &quot;ptable_name&quot;: &quot;ptable6&quot;,
+  &quot;medium_id&quot;: 1011586620,
+  &quot;medium_name&quot;: &quot;medium6&quot;,
+  &quot;pxe_loader&quot;: null,
   &quot;build&quot;: false,
   &quot;comment&quot;: &quot;&quot;,
-  &quot;disk&quot;: null,
+  &quot;disk&quot;: &quot;&quot;,
   &quot;initiated_at&quot;: null,
   &quot;installed_at&quot;: null,
   &quot;model_id&quot;: null,
@@ -981,19 +981,21 @@
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
   &quot;rebuild_requires_poweroff&quot;: false,
-  &quot;compute_resource_id&quot;: null,
-  &quot;compute_resource_name&quot;: null,
+  &quot;compute_resource_id&quot;: 980190963,
+  &quot;compute_resource_name&quot;: &quot;compute_resource4&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
   &quot;capabilities&quot;: [
-    &quot;build&quot;
+    &quot;build&quot;,
+    &quot;image&quot;,
+    &quot;new_volume&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host3.example5.com&quot;,
+  &quot;certname&quot;: &quot;myhost1.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+  &quot;created_at&quot;: &quot;2026-10-02 20:49:39 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2026-10-02 20:49:39 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status_label&quot;: &quot;OK&quot;,
   &quot;global_status_fulltext&quot;: [],
@@ -1006,9 +1008,9 @@
   &quot;model_name&quot;: null,
   &quot;build_status&quot;: 0,
   &quot;build_status_label&quot;: &quot;Installed&quot;,
-  &quot;name&quot;: &quot;host3.example5.com&quot;,
-  &quot;id&quot;: 1,
-  &quot;display_name&quot;: &quot;host3.example5.com&quot;,
+  &quot;name&quot;: &quot;myhost1.mydomain.net&quot;,
+  &quot;id&quot;: 2,
+  &quot;display_name&quot;: &quot;myhost1.mydomain.net&quot;,
   &quot;puppet_proxy_id&quot;: null,
   &quot;puppet_proxy_name&quot;: null,
   &quot;puppet_ca_proxy_id&quot;: null,
@@ -1016,16 +1018,27 @@
   &quot;puppet_proxy&quot;: null,
   &quot;puppet_ca_proxy&quot;: null,
   &quot;global_status&quot;: 0,
-  &quot;operatingsystem_icon&quot;: &quot;/assets/icons16x16/stub/black-x-0e46f84b6e93cc2f712b33043e5dcc4e4101f3455e411128d58f62ac890d981a.png&quot;,
-  &quot;compute_resource_provider&quot;: null,
+  &quot;operatingsystem_icon&quot;: &quot;/assets/icons16x16/ubuntu-c23bf1196004a84e256e4e1ca22e1e7fb75cc0f998fe9bd2b9a1b001514982af.png&quot;,
+  &quot;compute_resource_provider&quot;: &quot;libvirt&quot;,
   &quot;hostgroup_name&quot;: null,
   &quot;hostgroup_title&quot;: null,
   &quot;parameters&quot;: [],
   &quot;all_parameters&quot;: [
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;associated_type&quot;: &quot;domain&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;value&quot;: &quot;value1&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;parameter_type&quot;: &quot;string&quot;,
@@ -1035,8 +1048,8 @@
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;parameter_type&quot;: &quot;string&quot;,
@@ -1046,8 +1059,8 @@
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2026-08-13 07:30:55 UTC&quot;,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-10-02 20:49:29 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;parameter_type&quot;: &quot;string&quot;,
@@ -1062,21 +1075,21 @@
       &quot;subnet_name&quot;: null,
       &quot;subnet6_id&quot;: null,
       &quot;subnet6_name&quot;: null,
-      &quot;domain_id&quot;: 759776764,
-      &quot;domain_name&quot;: &quot;example5.com&quot;,
-      &quot;host_id&quot;: 1,
-      &quot;host_name&quot;: &quot;host3.example5.com&quot;,
-      &quot;created_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2026-08-13 07:30:58 UTC&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;host_id&quot;: 2,
+      &quot;host_name&quot;: &quot;myhost1.mydomain.net&quot;,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:39 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-10-02 20:49:39 UTC&quot;,
       &quot;managed&quot;: true,
-      &quot;identifier&quot;: &quot;eth2&quot;,
-      &quot;id&quot;: 1,
-      &quot;name&quot;: &quot;host3.example5.com&quot;,
-      &quot;ip&quot;: &quot;0.0.0.2&quot;,
-      &quot;ip6&quot;: null,
-      &quot;mac&quot;: &quot;00:53:67:ab:00:02&quot;,
+      &quot;identifier&quot;: &quot;&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;myhost1.mydomain.net&quot;,
+      &quot;ip&quot;: &quot;1.1.1.1&quot;,
+      &quot;ip6&quot;: &quot;&quot;,
+      &quot;mac&quot;: null,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host3.example5.com&quot;,
+      &quot;fqdn&quot;: &quot;myhost1.mydomain.net&quot;,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
       &quot;type&quot;: &quot;interface&quot;,
@@ -1454,7 +1467,7 @@
     </td>
     <td>
       
-<p>required for managed host that is bare metal, not required if it’s a virtual machine</p>
+<p>required for managed host that is bare metal, not required if it&#39;s a virtual machine</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1924,7 +1937,7 @@
     </td>
     <td>
       
-<p>Host’s owner type</p>
+<p>Host&#39;s owner type</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1978,7 +1991,7 @@
     </td>
     <td>
       
-<p>Host’s parameters (array or indexed hash)</p>
+<p>Host&#39;s parameters (array or indexed hash)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2334,7 +2347,7 @@
     </td>
     <td>
       
-<p>Host’s network interfaces.</p>
+<p>Host&#39;s network interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2501,7 +2514,7 @@
     </td>
     <td>
       
-<p>Interface’s DNS name</p>
+<p>Interface&#39;s DNS name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2949,7 +2962,7 @@
     </td>
     <td>
       
-<p>Identifiers of attached interfaces, e.g. ‘[’eth1’, ‘eth2’]‘. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
+<p>Identifiers of attached interfaces, e.g. `[&#39;eth1&#39;, &#39;eth2&#39;]`. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3345,7 +3358,7 @@
     </td>
     <td>
       
-<p>required for managed host that is bare metal, not required if it’s a virtual machine</p>
+<p>required for managed host that is bare metal, not required if it&#39;s a virtual machine</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3815,7 +3828,7 @@
     </td>
     <td>
       
-<p>Host’s owner type</p>
+<p>Host&#39;s owner type</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3869,7 +3882,7 @@
     </td>
     <td>
       
-<p>Host’s parameters (array or indexed hash)</p>
+<p>Host&#39;s parameters (array or indexed hash)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4225,7 +4238,7 @@
     </td>
     <td>
       
-<p>Host’s network interfaces.</p>
+<p>Host&#39;s network interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4392,7 +4405,7 @@
     </td>
     <td>
       
-<p>Interface’s DNS name</p>
+<p>Interface&#39;s DNS name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4840,7 +4853,7 @@
     </td>
     <td>
       
-<p>Identifiers of attached interfaces, e.g. ‘[’eth1’, ‘eth2’]‘. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
+<p>Identifiers of attached interfaces, e.g. `[&#39;eth1&#39;, &#39;eth2&#39;]`. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4974,16 +4987,16 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host95
+    <pre class="prettyprint">DELETE /api/hosts/host81
 200
 {
   &quot;id&quot;: 2,
-  &quot;name&quot;: &quot;host95&quot;,
+  &quot;name&quot;: &quot;host81&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_report&quot;: null,
-  &quot;updated_at&quot;: &quot;2026-08-13T07:51:05.306Z&quot;,
-  &quot;created_at&quot;: &quot;2026-08-13T07:51:05.306Z&quot;,
-  &quot;root_pass&quot;: &quot;$6$OYsDJz6jzzGFN5AH$WIhiLBNGj/6KcHg5jRc4SDI9I8k9D91PnNrteDGLcaPnZfg3li2YukDiLeSoSBvvBu/116OkRWD85XBTihFKb1&quot;,
+  &quot;updated_at&quot;: &quot;2026-10-02T21:08:28.024Z&quot;,
+  &quot;created_at&quot;: &quot;2026-10-02T21:08:28.024Z&quot;,
+  &quot;root_pass&quot;: &quot;$6$0VLYalwXSB6FWSIk$6vphPMqWBSbiamBPB8d8A2aQI/VpIGWKfGSp7NXojwm7m60hKrUn6zX9KICTB8diBD5xA5qIeVAQXDsq.TwWV.&quot;,
   &quot;architecture_id&quot;: null,
   &quot;operatingsystem_id&quot;: null,
   &quot;ptable_id&quot;: null,
@@ -5004,7 +5017,7 @@
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: null,
   &quot;puppet_proxy_id&quot;: null,
-  &quot;certname&quot;: &quot;host95&quot;,
+  &quot;certname&quot;: &quot;host81&quot;,
   &quot;image_id&quot;: null,
   &quot;organization_id&quot;: 447626438,
   &quot;location_id&quot;: 255093256,
@@ -5014,7 +5027,7 @@
   &quot;provision_method&quot;: &quot;build&quot;,
   &quot;grub_pass&quot;: null,
   &quot;global_status&quot;: 0,
-  &quot;lookup_value_matcher&quot;: &quot;fqdn=host95&quot;,
+  &quot;lookup_value_matcher&quot;: &quot;fqdn=host81&quot;,
   &quot;pxe_loader&quot;: null,
   &quot;initiated_at&quot;: null,
   &quot;build_errors&quot;: null,
@@ -5565,7 +5578,7 @@
 
     <div id='description-vm_compute_attributes' class='collapse accordion-body'>
       
-<p>Return the host’s compute attributes that can be used to create a clone of this VM</p>
+<p>Return the host&#39;s compute attributes that can be used to create a clone of this VM</p>
 
 
 
@@ -5968,12 +5981,13 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hosts/host3.example5.com/power?timeout=30
-404
+    <pre class="prettyprint">GET /api/hosts/myhost1.mydomain.net/power?timeout=30
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource host not found by id &#39;host3.example5.com&#39;&quot;
-  }
+  &quot;id&quot;: 2,
+  &quot;state&quot;: &quot;na&quot;,
+  &quot;title&quot;: &quot;N/A&quot;,
+  &quot;statusText&quot;: &quot;Power operations are not enabled on this host.&quot;
 }</pre>
 
   <h3>Params</h3>

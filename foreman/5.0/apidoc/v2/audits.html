@@ -78,19 +78,91 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/audits?search=host%3Dhost3.example5.com&amp;per_page=3
+    <pre class="prettyprint">GET /api/audits?search=host%3Dmyhost1.mydomain.net&amp;per_page=3
 200
 {
-  &quot;total&quot;: 3,
-  &quot;subtotal&quot;: 0,
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 3,
-  &quot;search&quot;: &quot;host=host3.example5.com&quot;,
+  &quot;search&quot;: &quot;host=myhost1.mydomain.net&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
   },
-  &quot;results&quot;: []
+  &quot;results&quot;: [
+    {
+      &quot;user_id&quot;: 135138680,
+      &quot;user_type&quot;: null,
+      &quot;user_name&quot;: &quot;secret_admin&quot;,
+      &quot;version&quot;: 1,
+      &quot;comment&quot;: null,
+      &quot;associated_id&quot;: null,
+      &quot;associated_type&quot;: null,
+      &quot;remote_address&quot;: &quot;127.0.0.1&quot;,
+      &quot;associated_name&quot;: null,
+      &quot;created_at&quot;: &quot;2026-10-02 20:49:39 UTC&quot;,
+      &quot;request_uuid&quot;: &quot;62ddf5b8-c298-4a4d-b373-64a8f073336a&quot;,
+      &quot;id&quot;: 980190966,
+      &quot;auditable_id&quot;: 2,
+      &quot;auditable_name&quot;: &quot;myhost1.mydomain.net&quot;,
+      &quot;auditable_type&quot;: &quot;Host::Base&quot;,
+      &quot;action&quot;: &quot;create&quot;,
+      &quot;audited_changes&quot;: {
+        &quot;name&quot;: &quot;myhost1.mydomain.net&quot;,
+        &quot;root_pass&quot;: &quot;$6$DbSDsGSec7OtRZAJ$.Z0QPy4aUzFZvkCg5KidFquD06YxkmR.das7T7ufBNOWJbOHKadmWls15KDR0K5E5SB5gcO57gVdGGjPNHhta.&quot;,
+        &quot;architecture_id&quot;: 922134523,
+        &quot;operatingsystem_id&quot;: 1073012830,
+        &quot;ptable_id&quot;: 1007981703,
+        &quot;medium_id&quot;: 1011586620,
+        &quot;build&quot;: false,
+        &quot;comment&quot;: &quot;&quot;,
+        &quot;disk&quot;: &quot;&quot;,
+        &quot;installed_at&quot;: null,
+        &quot;model_id&quot;: null,
+        &quot;hostgroup_id&quot;: null,
+        &quot;owner_id&quot;: 135138680,
+        &quot;owner_type&quot;: &quot;User&quot;,
+        &quot;enabled&quot;: true,
+        &quot;puppet_ca_proxy_id&quot;: null,
+        &quot;managed&quot;: true,
+        &quot;use_image&quot;: null,
+        &quot;image_file&quot;: null,
+        &quot;uuid&quot;: null,
+        &quot;compute_resource_id&quot;: 980190963,
+        &quot;puppet_proxy_id&quot;: null,
+        &quot;certname&quot;: null,
+        &quot;image_id&quot;: null,
+        &quot;organization_id&quot;: 447626438,
+        &quot;location_id&quot;: 255093256,
+        &quot;otp&quot;: null,
+        &quot;realm_id&quot;: null,
+        &quot;compute_profile_id&quot;: null,
+        &quot;provision_method&quot;: &quot;build&quot;,
+        &quot;grub_pass&quot;: null,
+        &quot;pxe_loader&quot;: &quot;&quot;,
+        &quot;initiated_at&quot;: null,
+        &quot;build_errors&quot;: null,
+        &quot;creator_id&quot;: 135138680
+      },
+      &quot;locations&quot;: [
+        {
+          &quot;id&quot;: 255093256,
+          &quot;name&quot;: &quot;Location 1&quot;,
+          &quot;title&quot;: &quot;Location 1&quot;,
+          &quot;description&quot;: null
+        }
+      ],
+      &quot;organizations&quot;: [
+        {
+          &quot;id&quot;: 447626438,
+          &quot;name&quot;: &quot;Organization 1&quot;,
+          &quot;title&quot;: &quot;Organization 1&quot;,
+          &quot;description&quot;: null
+        }
+      ]
+    }
+  ]
 }</pre>
 
   <h3>Params</h3>
@@ -198,7 +270,7 @@
     </td>
     <td>
       
-<p>Sort and order by a searchable field, e.g. ‘&lt;field&gt; DESC’</p>
+<p>Sort and order by a searchable field, e.g. &#39;&lt;field&gt; DESC&#39;</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -254,7 +326,7 @@
     </td>
     <td>
       
-<p>Number of results per page to return, ‘all’ to return all results</p>
+<p>Number of results per page to return, &#39;all&#39; to return all results</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
