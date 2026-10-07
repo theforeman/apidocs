@@ -30,22 +30,42 @@ make cleanup                              # Remove i18n/JSON files
 
 ### Katello
 
-**Step 1: Generate API docs in a Foreman + Katello development environment**
+To add or update a Katello version:
 
-1. cd to the katello directory and checkout the relevant release branch
-1. cd to the foreman directory and checkout the relevant stable branch
-1. `APIPIE_RECORD=examples bundle exec rake test`
-1. `RAILS_ENV=production FOREMAN_APIPIE_LANGS=en bundle exec rake apipie:cache`
+```bash
+make katello-version VERSION=X.Y
+```
 
-**Step 2: Prepare folder for the new version (X.Y)**
+This downloads apidocs from the latest successful `ruby.yml` push run of the
+`KATELLO-X.Y` branch in GitHub Actions and either:
+- **New version**: Creates directory, updates index.html, sets `latest` symlink (if newest)
+- **Existing version**: Updates apidoc files, preserves static assets (CSS/JS)
 
-In the apidocs repository root:
+Individual steps:
+```bash
+make katello-download VERSION=X.Y        # Download only
+./scripts/katello-process-version.sh X.Y # Process after manual download
+make cleanup                              # Remove i18n/JSON files
+```
 
-1. `cp -r katello/TEMPLATE katello/X.Y`
-1. `ln -snf X.Y katello/latest`
-1. `cp -r /path/to/foreman/public/apipie-cache/apidoc/* katello/X.Y/apidoc`
-1. Update index.html with a link to the new version
-1. Run cleanup script: `./scripts/cleanup.sh`
+The artifacts only exist if the Katello CI has `generate_apidoc` enabled (an
+input of the `foreman_plugin.yml` workflow in
+[theforeman/actions](https://github.com/theforeman/actions)) on that branch.
+The CI uploads one `apidoc-*` artifact per Ruby version; they have identical
+content and the first one is used.
+
+To do it manually, download an `apidoc-*` artifact from
+https://github.com/Katello/katello/actions/workflows/ruby.yml?query=branch%3AKATELLO-X.Y
+(pick a successful run) or use `gh`:
+```bash
+gh run download --repo Katello/katello --pattern 'apidoc-*' \
+    $(gh run list --repo Katello/katello --workflow ruby.yml --branch KATELLO-X.Y \
+    --status success --event push --limit 1 --json databaseId --jq '.[].databaseId')
+./scripts/katello-process-version.sh X.Y
+make cleanup
+```
+`gh` unzips the artifacts into `apidoc-*` directories, which the process script
+picks up and removes afterwards.
 
 ## LICENSE
 

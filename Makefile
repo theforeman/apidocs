@@ -1,4 +1,4 @@
-.PHONY: help foreman-download foreman-version cleanup
+.PHONY: help foreman-download foreman-version katello-download katello-version cleanup
 
 help:
 	@echo "Foreman API Documentation Makefile"
@@ -6,6 +6,8 @@ help:
 	@echo "Usage:"
 	@echo "  make foreman-version VERSION=X.Y         - Add or update Foreman version (auto-detects)"
 	@echo "  make foreman-download VERSION=X.Y        - Download apidoc artifact from GitHub Actions"
+	@echo "  make katello-version VERSION=X.Y         - Add or update Katello version (auto-detects)"
+	@echo "  make katello-download VERSION=X.Y        - Download apidoc artifact from GitHub Actions"
 	@echo "  make cleanup                             - Run cleanup script"
 	@echo ""
 	@echo "Example:"
@@ -15,11 +17,21 @@ foreman-download:
 	@find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} + 2>/dev/null || true
 	@./scripts/foreman-download.sh $(VERSION)
 
+katello-download:
+	@find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} + 2>/dev/null || true
+	@./scripts/katello-download.sh $(VERSION)
+
 cleanup:
 	@./scripts/cleanup.sh
 
 foreman-version: foreman-download
 	@./scripts/foreman-process-version.sh $(VERSION)
+	@$(MAKE) cleanup
+	@echo ""
+	@echo "Please review the changes and commit them."
+
+katello-version: katello-download
+	@./scripts/katello-process-version.sh $(VERSION)
 	@$(MAKE) cleanup
 	@echo ""
 	@echo "Please review the changes and commit them."
