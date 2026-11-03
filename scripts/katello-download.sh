@@ -25,6 +25,12 @@ if [ -z "$RUN_ID" ]; then
     exit 1
 fi
 
-gh run download --repo Katello/katello --pattern 'apidoc-*' "$RUN_ID"
+# Remove artifacts left over from a previous download
+find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} +
+
+gh run download --repo Katello/katello --pattern 'apidoc-*' "$RUN_ID" || {
+    echo "ERROR: No apidoc-* artifact in run $RUN_ID (expired, or generate_apidoc not enabled on KATELLO-${VERSION})"
+    exit 1
+}
 
 echo "Download complete. Artifact saved to current directory."

@@ -18,7 +18,6 @@ foreman-download:
 	@./scripts/foreman-download.sh $(VERSION)
 
 katello-download:
-	@find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} + 2>/dev/null || true
 	@./scripts/katello-download.sh $(VERSION)
 
 cleanup:

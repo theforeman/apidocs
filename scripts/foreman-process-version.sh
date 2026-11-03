@@ -15,7 +15,7 @@ if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
 fi
 
 # Find downloaded artifact
-APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | head -n 1)
+APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | sort -rV | head -n 1)
 if [ -z "$APIDOC_DIR" ]; then
     echo "ERROR: No apidoc-* directory found. Run foreman-download.sh first"
     exit 1

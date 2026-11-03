@@ -51,8 +51,9 @@ make cleanup                              # Remove i18n/JSON files
 The artifacts only exist if the Katello CI has `generate_apidoc` enabled (an
 input of the `foreman_plugin.yml` workflow in
 [theforeman/actions](https://github.com/theforeman/actions)) on that branch.
-The CI uploads one `apidoc-*` artifact per Ruby version; they have identical
-content and the first one is used.
+The CI uploads one `apidoc-*` artifact per Ruby version. The API descriptions
+are the same, but the recorded examples can differ, because they come from the
+test runs; the process script uses the artifact for the newest Ruby.
 
 To do it manually, download an `apidoc-*` artifact from
 https://github.com/Katello/katello/actions/workflows/ruby.yml?query=branch%3AKATELLO-X.Y
@@ -66,6 +67,19 @@ make cleanup
 ```
 `gh` unzips the artifacts into `apidoc-*` directories, which the process script
 picks up and removes afterwards.
+
+For branches without artifacts (e.g. `KATELLO-4.21` and older), generate the
+docs in a Foreman + Katello development environment:
+1. cd to the katello directory and checkout the relevant release branch
+1. cd to the foreman directory and checkout the relevant stable branch
+1. `APIPIE_RECORD=examples bundle exec rake test:katello`
+1. `RAILS_ENV=production FOREMAN_APIPIE_LANGS=en bundle exec rake apipie:cache`
+1. In the apidocs repository root:
+   ```bash
+   cp -r /path/to/foreman/public/apipie-cache/apidoc apidoc-local
+   ./scripts/katello-process-version.sh X.Y
+   make cleanup
+   ```
 
 ## LICENSE
 

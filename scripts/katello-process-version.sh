@@ -14,10 +14,15 @@ if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
     exit 1
 fi
 
-# Find downloaded artifact
-APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | sort | head -n 1)
+# Find downloaded artifact; with one per Ruby version, use the newest Ruby
+APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | sort -rV | head -n 1)
 if [ -z "$APIDOC_DIR" ]; then
     echo "ERROR: No apidoc-* directory found. Run katello-download.sh first"
+    exit 1
+fi
+
+if [ ! -s "$APIDOC_DIR/v2.html" ] || [ ! -d "$APIDOC_DIR/v2" ]; then
+    echo "ERROR: $APIDOC_DIR does not look like an apidoc artifact (missing v2.html or v2/)"
     exit 1
 fi
 
