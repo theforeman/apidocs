@@ -66,7 +66,8 @@ gh run download --repo Katello/katello --pattern 'apidoc-*' \
 make cleanup
 ```
 `gh` unzips the artifacts into `apidoc-*` directories, which the process script
-picks up and removes afterwards.
+picks up and removes afterwards. If other `apidoc-*` directories are present,
+pass the one to use as the second argument.
 
 For branches without artifacts (e.g. `KATELLO-4.21` and older), generate the
 docs in a Foreman + Katello development environment:
@@ -77,7 +78,7 @@ docs in a Foreman + Katello development environment:
 1. In the apidocs repository root:
    ```bash
    cp -r /path/to/foreman/public/apipie-cache/apidoc apidoc-local
-   ./scripts/katello-process-version.sh X.Y
+   ./scripts/katello-process-version.sh X.Y apidoc-local
    make cleanup
    ```
 

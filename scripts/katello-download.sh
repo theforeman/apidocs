@@ -25,12 +25,17 @@ if [ -z "$RUN_ID" ]; then
     exit 1
 fi
 
-# Remove artifacts left over from a previous download
-find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} +
+# Download to a temporary directory, so a failed download leaves existing files alone
+DOWNLOAD_DIR=$(mktemp -d)
+trap 'rm -rf "$DOWNLOAD_DIR"' EXIT
 
-gh run download --repo Katello/katello --pattern 'apidoc-*' "$RUN_ID" || {
-    echo "ERROR: No apidoc-* artifact in run $RUN_ID (expired, or generate_apidoc not enabled on KATELLO-${VERSION})"
+gh run download --repo Katello/katello --pattern 'apidoc-katello-*' --dir "$DOWNLOAD_DIR" "$RUN_ID" || {
+    echo "ERROR: No apidoc-katello-* artifact in run $RUN_ID (expired, or generate_apidoc not enabled on KATELLO-${VERSION})"
     exit 1
 }
+
+# Replace artifacts from a previous download only
+find . -maxdepth 1 -type d -name 'apidoc-katello-*' -exec rm -rf {} +
+mv "$DOWNLOAD_DIR"/apidoc-katello-* .
 
 echo "Download complete. Artifact saved to current directory."

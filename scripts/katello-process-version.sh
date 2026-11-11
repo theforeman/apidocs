@@ -2,10 +2,11 @@
 set -e
 
 VERSION="$1"
+APIDOC_DIR="$2"
 
 if [ -z "$VERSION" ]; then
     echo "ERROR: VERSION is required"
-    echo "Usage: $0 X.Y"
+    echo "Usage: $0 X.Y [APIDOC_DIR]"
     exit 1
 fi
 
@@ -14,15 +15,23 @@ if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
     exit 1
 fi
 
-# Find downloaded artifact; with one per Ruby version, use the newest Ruby
-APIDOC_DIR=$(find . -maxdepth 1 -type d -name 'apidoc-*' | sort -rV | head -n 1)
 if [ -z "$APIDOC_DIR" ]; then
-    echo "ERROR: No apidoc-* directory found. Run katello-download.sh first"
-    exit 1
+    # Find downloaded artifact; with one per Ruby version, use the newest Ruby
+    mapfile -t CANDIDATES < <(find . -maxdepth 1 -type d -name 'apidoc-*' | sort -rV)
+    if [ ${#CANDIDATES[@]} -eq 0 ]; then
+        echo "ERROR: No apidoc-* directory found. Run katello-download.sh first"
+        exit 1
+    fi
+    if [ ${#CANDIDATES[@]} -gt 1 ] && printf '%s\n' "${CANDIDATES[@]}" | grep -qv '^\./apidoc-katello-'; then
+        echo "ERROR: Multiple apidoc-* directories found: ${CANDIDATES[*]}"
+        echo "Pass the one to use: $0 $VERSION APIDOC_DIR"
+        exit 1
+    fi
+    APIDOC_DIR="${CANDIDATES[0]}"
 fi
 
-if [ ! -s "$APIDOC_DIR/v2.html" ] || [ ! -d "$APIDOC_DIR/v2" ]; then
-    echo "ERROR: $APIDOC_DIR does not look like an apidoc artifact (missing v2.html or v2/)"
+if [ ! -s "$APIDOC_DIR/v2.html" ] || [ -z "$(find "$APIDOC_DIR/v2" -name '*.html' -print -quit 2>/dev/null)" ]; then
+    echo "ERROR: $APIDOC_DIR does not look like an apidoc artifact (missing v2.html or v2/*.html)"
     exit 1
 fi
 
@@ -70,5 +79,6 @@ else
     echo "Successfully created Katello $VERSION"
 fi
 
-echo "Cleaning up downloaded artifact..."
-find . -maxdepth 1 -type d -name 'apidoc-*' -exec rm -rf {} +
+echo "Cleaning up artifacts..."
+rm -rf "$APIDOC_DIR"
+find . -maxdepth 1 -type d -name 'apidoc-katello-*' -exec rm -rf {} +
