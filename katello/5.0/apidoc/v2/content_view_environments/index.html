@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/content_view_environments.html'>
+      Content_view_environments
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/content_view_environments
+      <br>
+      <small>List content view environments</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/content_view_environments
+200
+{
+  &quot;total&quot;: 12,
+  &quot;subtotal&quot;: 12,
+  &quot;selectable&quot;: 12,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;id&quot;,
+    &quot;order&quot;: &quot;asc&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 9463430,
+      &quot;name&quot;: &quot;Rolling view library environment&quot;,
+      &quot;label&quot;: &quot;rolling_view_library&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 623031031,
+        &quot;name&quot;: &quot;Rolling CV&quot;,
+        &quot;label&quot;: &quot;rolling_cv&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 23226134,
+      &quot;name&quot;: &quot;Published Library and dev view dev environment&quot;,
+      &quot;label&quot;: &quot;published_dev_view_dev&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 909058347,
+        &quot;name&quot;: &quot;Published Library and dev view&quot;,
+        &quot;label&quot;: &quot;published_dev_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 1,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 23784056,
+      &quot;name&quot;: &quot;Published acme view dev environment&quot;,
+      &quot;label&quot;: &quot;published_acme_view_dev&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 30237652,
+        &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+        &quot;label&quot;: &quot;org_default_label&quot;,
+        &quot;default&quot;: true
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 232000441,
+      &quot;name&quot;: &quot;Published Library Composite Content View Environment&quot;,
+      &quot;label&quot;: &quot;library/composite_view&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 64601712,
+        &quot;name&quot;: &quot;Composite view&quot;,
+        &quot;label&quot;: &quot;composite_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 263550601,
+      &quot;name&quot;: &quot;Published Library - staging- dev view staging environment&quot;,
+      &quot;label&quot;: &quot;library_dev_staging_view_staging&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 419082953,
+        &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+        &quot;label&quot;: &quot;published_dev_staging_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 1028819239,
+        &quot;name&quot;: &quot;Staging&quot;,
+        &quot;label&quot;: &quot;staging_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 1028819239,
+        &quot;name&quot;: &quot;Staging&quot;,
+        &quot;label&quot;: &quot;staging_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 325543714,
+      &quot;name&quot;: &quot;Published Library - staging- dev view staging environment&quot;,
+      &quot;label&quot;: &quot;library_dev_staging_view_library&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 419082953,
+        &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+        &quot;label&quot;: &quot;published_dev_staging_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 350001148,
+      &quot;name&quot;: &quot;Published Library and Dev view library environment&quot;,
+      &quot;label&quot;: &quot;published_dev_view_library&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 909058347,
+        &quot;name&quot;: &quot;Published Library and dev view&quot;,
+        &quot;label&quot;: &quot;published_dev_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: true,
+      &quot;id&quot;: 361865081,
+      &quot;name&quot;: &quot;Published Library view library environment&quot;,
+      &quot;label&quot;: &quot;library_default_view_library&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [
+        {
+          &quot;id&quot;: 568942081,
+          &quot;name&quot;: &quot;Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 734311356,
+          &quot;name&quot;: &quot;Another Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 323709460,
+          &quot;name&quot;: &quot;Yet Another Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 939253911,
+          &quot;name&quot;: &quot;And Yet Another Simple Activation Key&quot;
+        },
+        {
+          &quot;id&quot;: 757667888,
+          &quot;name&quot;: &quot;Activation Key&quot;
+        }
+      ],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 30237652,
+        &quot;name&quot;: &quot;ACME Default ContentView&quot;,
+        &quot;label&quot;: &quot;org_default_label&quot;,
+        &quot;default&quot;: true
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 5,
+      &quot;hosts_count&quot;: 2,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 557819232,
+      &quot;name&quot;: &quot;Debian content view test environment&quot;,
+      &quot;label&quot;: &quot;debian_cv_test&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 597832364,
+        &quot;name&quot;: &quot;Debian Default Content View&quot;,
+        &quot;label&quot;: &quot;debian_default_contentview_label&quot;,
+        &quot;default&quot;: true
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 411008527,
+        &quot;name&quot;: &quot;Test_env&quot;,
+        &quot;label&quot;: &quot;test_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 411008527,
+        &quot;name&quot;: &quot;Test_env&quot;,
+        &quot;label&quot;: &quot;test_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 720145956,
+      &quot;name&quot;: &quot;Debian content view dev environment&quot;,
+      &quot;label&quot;: &quot;debian_cv_dev&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 597832364,
+        &quot;name&quot;: &quot;Debian Default Content View&quot;,
+        &quot;label&quot;: &quot;debian_default_contentview_label&quot;,
+        &quot;default&quot;: true
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 801054860,
+      &quot;name&quot;: &quot;Published Library - staging- dev view staging environment&quot;,
+      &quot;label&quot;: &quot;library_dev_staging_view_dev&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [
+        {
+          &quot;id&quot;: 878475814,
+          &quot;name&quot;: &quot;Lib Dev Staging Activation Key&quot;
+        }
+      ],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 419082953,
+        &quot;name&quot;: &quot;Published Library - dev - staging view&quot;,
+        &quot;label&quot;: &quot;published_dev_staging_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 292811013,
+        &quot;name&quot;: &quot;Dev&quot;,
+        &quot;label&quot;: &quot;dev_label&quot;,
+        &quot;library&quot;: false
+      },
+      &quot;activation_keys_count&quot;: 1,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    },
+    {
+      &quot;default&quot;: false,
+      &quot;id&quot;: 881278656,
+      &quot;name&quot;: &quot;Published Library view library environment&quot;,
+      &quot;label&quot;: &quot;published_library_view_library&quot;,
+      &quot;created_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2026-11-03 08:05:52 UTC&quot;,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;activation_keys&quot;: [],
+      &quot;hostgroups&quot;: [],
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 405955044,
+        &quot;name&quot;: &quot;Published LIbrary view&quot;,
+        &quot;label&quot;: &quot;published_library_view&quot;,
+        &quot;default&quot;: false
+      },
+      &quot;lifecycle_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;,
+        &quot;label&quot;: &quot;library_label&quot;,
+        &quot;library&quot;: true
+      },
+      &quot;activation_keys_count&quot;: 0,
+      &quot;hosts_count&quot;: 0,
+      &quot;hostgroups_count&quot;: 0
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>lifecycle_environment_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>environment identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content view identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>activation_key_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Activation key identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Host identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Host group identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_source_id</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content source identifier to filter by available lifecycle environments</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘id DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_result</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_by</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort_order</strong>
+      <br>
+      <small>
+        optional
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
