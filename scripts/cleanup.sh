@@ -6,11 +6,11 @@
 # Remove the i18n files
 for L in ca cs_CZ de en en_GB es fr gl it ja ko nl_NL pl pt_BR ru sv_SE zh_CN zh_TW
 do
-  find . -name "*.$L.html" -exec rm -f {} +
+  find foreman katello -name "*.$L.html" -exec rm -f {} +
 done
 
 # Remove unwanted JSON files
-find . -name "*.json" -exec rm -f {} +
+find foreman katello -name "*.json" -exec rm -f {} +
 
 # Remove the links at the top of each file to i18n files
-find . -name "*.html" -exec sed -i 's/&nbsp;\[.*\]//' {} \;
+find foreman katello -name "*.html" -exec sed -i 's/&nbsp;\[.*\]//' {} \;

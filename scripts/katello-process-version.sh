@@ -28,9 +28,12 @@ if [ -z "$APIDOC_DIR" ]; then
         exit 1
     fi
     APIDOC_DIR="${CANDIDATES[0]}"
+    # Only CI downloads are selected automatically; those are removed after import
+    CLEANUP_DOWNLOADS=1
 fi
 
-if [ ! -s "$APIDOC_DIR/v2.html" ] || [ -z "$(find "$APIDOC_DIR/v2" -name '*.html' -print -quit 2>/dev/null)" ]; then
+# Require a non-localized resource page, as cleanup.sh removes the localized ones
+if [ ! -s "$APIDOC_DIR/v2.html" ] || [ -z "$(find "$APIDOC_DIR/v2" -name '*.html' ! -name '*.*.html' -print -quit 2>/dev/null)" ]; then
     echo "ERROR: $APIDOC_DIR does not look like an apidoc artifact (missing v2.html or v2/*.html)"
     exit 1
 fi
@@ -79,6 +82,7 @@ else
     echo "Successfully created Katello $VERSION"
 fi
 
-echo "Cleaning up artifacts..."
-rm -rf "$APIDOC_DIR"
-find . -maxdepth 1 -type d -name 'apidoc-katello-*' -exec rm -rf {} +
+if [ -n "$CLEANUP_DOWNLOADS" ]; then
+    echo "Cleaning up downloaded artifacts..."
+    find . -maxdepth 1 -type d -name 'apidoc-katello-*' -exec rm -rf {} +
+fi
