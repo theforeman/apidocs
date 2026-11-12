@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/docker_tags.html'>
+      Docker_tags
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>repositories</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/docker_tags/:id/repositories
+      <br>
+      <small>List of repositories for a docker meta tag</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /katello/api/docker_tags/33/repositories
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;selectable&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 1,
+  &quot;error&quot;: null,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;backend_identifier&quot;: &quot;Default_Organization-Test-redis&quot;,
+      &quot;relative_path&quot;: &quot;ACME_Corporation/library/redis&quot;,
+      &quot;container_repository_name&quot;: &quot;empty_organization/puppet_product/redis&quot;,
+      &quot;full_path&quot;: &quot;runnervm7aw5e/empty_organization/puppet_product/redis&quot;,
+      &quot;library_instance_id&quot;: null,
+      &quot;full_gpg_key_path&quot;: &quot;https://runnervm7aw5e/katello/api/v2/repositories/992333848/gpg_key_content&quot;,
+      &quot;version_href&quot;: null,
+      &quot;remote_href&quot;: null,
+      &quot;publication_href&quot;: null,
+      &quot;content_counts&quot;: {
+        &quot;docker_manifest&quot;: 1,
+        &quot;docker_manifest_list&quot;: 0,
+        &quot;docker_tag&quot;: 1
+      },
+      &quot;mirroring_policy&quot;: &quot;mirror_content_only&quot;,
+      &quot;id&quot;: 992333848,
+      &quot;name&quot;: &quot;redis&quot;,
+      &quot;label&quot;: &quot;redis&quot;,
+      &quot;description&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization&quot;: {
+        &quot;name&quot;: &quot;Empty Organization&quot;,
+        &quot;label&quot;: &quot;Empty_Organization&quot;,
+        &quot;id&quot;: 114267492
+      },
+      &quot;content_view_versions&quot;: [],
+      &quot;filters&quot;: [],
+      &quot;last_sync&quot;: null,
+      &quot;content_view&quot;: {
+        &quot;id&quot;: 30237652,
+        &quot;name&quot;: &quot;ACME Default ContentView&quot;
+      },
+      &quot;content_view_version&quot;: {
+        &quot;id&quot;: 840492357,
+        &quot;name&quot;: &quot;ACME Default ContentView 1.0&quot;,
+        &quot;content_view_id&quot;: 30237652
+      },
+      &quot;kt_environment&quot;: {
+        &quot;id&quot;: 562075838,
+        &quot;name&quot;: &quot;Library&quot;
+      },
+      &quot;content_type&quot;: &quot;docker&quot;,
+      &quot;url&quot;: null,
+      &quot;docker_upstream_name&quot;: null,
+      &quot;arch&quot;: &quot;noarch&quot;,
+      &quot;os_versions&quot;: null,
+      &quot;content_id&quot;: &quot;1&quot;,
+      &quot;generic_remote_options&quot;: null,
+      &quot;major&quot;: null,
+      &quot;minor&quot;: null,
+      &quot;product&quot;: {
+        &quot;id&quot;: 516337990,
+        &quot;cp_id&quot;: &quot;123123123002&quot;,
+        &quot;name&quot;: &quot;Puppet Product&quot;,
+        &quot;orphaned&quot;: true,
+        &quot;redhat&quot;: false,
+        &quot;sync_plan&quot;: null
+      },
+      &quot;content_label&quot;: &quot;fedora&quot;,
+      &quot;last_sync_words&quot;: null,
+      &quot;flatpak_dependencies&quot;: false
+    }
+  ]
+}</pre>
+
+
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

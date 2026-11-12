@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/settings.html'>
+      Settings
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/settings/:id
+      <br>
+      <small>Show a setting</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          
+    
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+  <h2>Returns</h2>
+    <h3>Code: 200</h3>
+      <h4>Description:</h4>
+      <p>Information about the setting</p>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alias for setting name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Setting unique name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Setting full user readable name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>category</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The category of setting</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>category_name</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The human readable name of settings category</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>settings_type</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Value type, that the setting accepts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Describes the purpose of the setting</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>default</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Default value for the setting</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>value</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Setting current value. If this setting is encypted, the value will not be returned</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>readonly</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Is this setting readonly?</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>config_file</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Configuration file that controls the setting, if any</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>encrypted</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Is this setting encrypted?</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>select_values</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If this setting has list of possible values, this includes the list of the values.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>updated_at</strong>
+      <br>
+      <small>
+        required
+        
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Last updated. NOTE: this will be reset to application install time, when setting is reset to default value.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Time</p>
+</li>
+        </ul>
+
+      
+
+    </td>
+
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+
+    
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
